@@ -1,58 +1,84 @@
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AB6B0
 void SetBirdFrig__Fb(unknown f) {
 }
 
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AB6E4
 unsigned char BirdDistanceOK__Fiiii(int WorldXa, int WorldYa, int WorldXb, int WorldYb) {
 	int wx;
 	int wy;
 }
 
-void AlterBirdPos__FP10BIRDSTRUCTUc(Bird b, unsigned char rnd) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AB73C
+void AlterBirdPos__FP10BIRDSTRUCTUc(struct BIRDSTRUCT *b, unsigned char rnd) {
 	int offsx;
 	int offsy;
 }
 
-void BirdWorld__FP10BIRDSTRUCTii(Bird b, int wx, int wy) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AB894
+void BirdWorld__FP10BIRDSTRUCTii(struct BIRDSTRUCT *b, int wx, int wy) {
 	int x;
 	int y;
 }
 
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AB910
 unknown CheckDist__Fii(int x, int y) {
 	int x1;
 	int y1;
 	int i;
 }
 
-int BirdScared__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AB9F8
+int BirdScared__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	int scared;
 	int p;
 	int i;
-	PlayerStruct player;
+	struct PlayerStruct *player;
 }
 
-int GetPerch__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABB24
+int GetPerch__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	int n;
 }
 
-void BIRD_StartHop__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABB78
+void BIRD_StartHop__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	int nd;
 	int x;
 	int y;
-	Perch p;
+	struct Perch *p;
 }
 
-void BIRD_DoHop__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABD4C
+void BIRD_DoHop__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void BIRD_StartPerch__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABE50
+void BIRD_StartPerch__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void BIRD_DoPerch__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABEB8
+void BIRD_DoPerch__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void BIRD_DoScatter__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABF3C
+void BIRD_DoScatter__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void CheckDirOk__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ABFE0
+void CheckDirOk__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	int x;
 	int y;
 	int ofx;
@@ -62,208 +88,99 @@ void CheckDirOk__FP10BIRDSTRUCT(Bird b) {
 	int i;
 }
 
-void BIRD_StartScatter__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC0F0
+void BIRD_StartScatter__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void BIRD_StartFly__FP10BIRDSTRUCT(Bird b) {
-	Bird leader;
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC190
+void BIRD_StartFly__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
+	struct BIRDSTRUCT *leader;
 	int i;
 }
 
-void BIRD_DoFly__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC21C
+void BIRD_DoFly__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	int pnum;
 	int x;
 	int y;
 }
 
-void BIRD_StartLanding__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC514
+void BIRD_StartLanding__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void BIRD_DoLanding__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC520
+void BIRD_DoLanding__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 }
 
-void PlaceFlock__FP10BIRDSTRUCT(Bird leader) {
-	Bird b;
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC58C
+void PlaceFlock__FP10BIRDSTRUCT(struct BIRDSTRUCT *leader) {
+	struct BIRDSTRUCT *b;
 	int i;
 }
 
-void ProcessFlock__FP10BIRDSTRUCT(Bird b) {
-	Bird leader;
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC674
+void ProcessFlock__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
+	struct BIRDSTRUCT *leader;
 	int x;
 	int y;
 }
 
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC764
 void InitBird__Fv() {
-	Bird b;
+	struct BIRDSTRUCT *b;
 	int i;
 }
 
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC838
 void ProcessBird__Fv() {
-	Bird b;
+	struct BIRDSTRUCT *b;
 	int i;
 }
 
-int GetBirdFrame__FP10BIRDSTRUCT(Bird b) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800AC97C
+int GetBirdFrame__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	int banim;
 }
 
-void bscale__FP8POLY_FT4i(OBJ_PFUNC Ft4, int height) {
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ACA14
+void bscale__FP8POLY_FT4i(struct POLY_FT4 *Ft4, int height) {
 	int x;
 	int y;
 }
 
-void doshadow__FP10BIRDSTRUCTii(Bird b, int x, int y) {
-	CBlocks gb;
-	OBJ_PFUNC Ft4;
-	TextDat Dat;
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ACB44
+void doshadow__FP10BIRDSTRUCTii(struct BIRDSTRUCT *b, int x, int y) {
+	struct CBlocks *gb;
+	struct POLY_FT4 *Ft4;
+	struct TextDat *Dat;
 	int ot;
 }
 
+// Path: C:\diabpsx\PSXSRC\BIRD.CPP
+// Addr: 0x800ACC6C
 void DrawLBird__Fv() {
-	Bird ThisBird;
-	OBJ_PFUNC Ft4;
-	CBlocks gblock;
+	struct BIRDSTRUCT *ThisBird;
+	struct POLY_FT4 *Ft4;
+	struct CBlocks *gblock;
 	int ScrXOff;
 	int ScrYOff;
 	int x;
 	int y;
-	LPCRECT R;
-	TextDat Dat;
-	int i;
-	int ot;
-}
-
-void SetBirdFrig__Fb(unknown f) {
-}
-
-unsigned char BirdDistanceOK__Fiiii(int WorldXa, int WorldYa, int WorldXb, int WorldYb) {
-	int wx;
-	int wy;
-}
-
-void AlterBirdPos__FP10BIRDSTRUCTUc(Bird b, unsigned char rnd) {
-	int offsx;
-	int offsy;
-}
-
-void BirdWorld__FP10BIRDSTRUCTii(Bird b, int wx, int wy) {
-	int x;
-	int y;
-}
-
-unknown CheckDist__Fii(int x, int y) {
-	int x1;
-	int y1;
-	int i;
-}
-
-int BirdScared__FP10BIRDSTRUCT(Bird b) {
-	int scared;
-	int p;
-	int i;
-	PlayerStruct player;
-}
-
-int GetPerch__FP10BIRDSTRUCT(Bird b) {
-	int n;
-}
-
-void BIRD_StartHop__FP10BIRDSTRUCT(Bird b) {
-	int nd;
-	int x;
-	int y;
-	Perch p;
-}
-
-void BIRD_DoHop__FP10BIRDSTRUCT(Bird b) {
-}
-
-void BIRD_StartPerch__FP10BIRDSTRUCT(Bird b) {
-}
-
-void BIRD_DoPerch__FP10BIRDSTRUCT(Bird b) {
-}
-
-void BIRD_DoScatter__FP10BIRDSTRUCT(Bird b) {
-}
-
-void CheckDirOk__FP10BIRDSTRUCT(Bird b) {
-	int x;
-	int y;
-	int ofx;
-	int ofy;
-	unknown posok;
-	int d;
-	int i;
-}
-
-void BIRD_StartScatter__FP10BIRDSTRUCT(Bird b) {
-}
-
-void BIRD_StartFly__FP10BIRDSTRUCT(Bird b) {
-	Bird leader;
-	int i;
-}
-
-void BIRD_DoFly__FP10BIRDSTRUCT(Bird b) {
-	int pnum;
-	int x;
-	int y;
-}
-
-void BIRD_StartLanding__FP10BIRDSTRUCT(Bird b) {
-}
-
-void BIRD_DoLanding__FP10BIRDSTRUCT(Bird b) {
-}
-
-void PlaceFlock__FP10BIRDSTRUCT(Bird leader) {
-	Bird b;
-	int i;
-}
-
-void ProcessFlock__FP10BIRDSTRUCT(Bird b) {
-	Bird leader;
-	int x;
-	int y;
-}
-
-void InitBird__Fv() {
-	Bird b;
-	int i;
-}
-
-void ProcessBird__Fv() {
-	Bird b;
-	int i;
-}
-
-int GetBirdFrame__FP10BIRDSTRUCT(Bird b) {
-	int banim;
-}
-
-void bscale__FP8POLY_FT4i(OBJ_PFUNC Ft4, int height) {
-	int x;
-	int y;
-}
-
-void doshadow__FP10BIRDSTRUCTii(Bird b, int x, int y) {
-	CBlocks gb;
-	OBJ_PFUNC Ft4;
-	TextDat Dat;
-	int ot;
-}
-
-void DrawLBird__Fv() {
-	Bird ThisBird;
-	OBJ_PFUNC Ft4;
-	CBlocks gblock;
-	int ScrXOff;
-	int ScrYOff;
-	int x;
-	int y;
-	LPCRECT R;
-	TextDat Dat;
+	struct RECT R;
+	struct TextDat *Dat;
 	int i;
 	int ot;
 }

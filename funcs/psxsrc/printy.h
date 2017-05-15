@@ -1,36 +1,30 @@
-void ClearFont__5CFont(CFont this) {
+// Path: C:\diabpsx\PSXSRC\PRINTY.H
+// Addr: 0x8008ACE4
+void ClearFont__5CFont(struct CFont *this) {
 }
 
-unknown IsDefined__5CFontUc(CFont this, unsigned char C) {
+// Path: C:\diabpsx\PSXSRC\PRINTY.H
+// Addr: 0x8008AD08
+unknown IsDefined__5CFontUc(struct CFont *this, unsigned char C) {
 }
 
-int GetCharFrameNum__5CFontUc(CFont this, unsigned char ch) {
+// Path: C:\diabpsx\PSXSRC\PRINTY.H
+// Addr: 0x8008AD28
+int GetCharFrameNum__5CFontUc(struct CFont *this, unsigned char ch) {
 }
 
-void Init__5CFont(CFont this) {
+// Path: C:\diabpsx\PSXSRC\PRINTY.H
+// Addr: 0x8008AD40
+void Init__5CFont(struct CFont *this) {
 }
 
-void ClearFont__5CFont(CFont this) {
+// Path: C:\diabpsx\PSXSRC\PRINTY.H
+// Addr: 0x8013E0B8
+void ClearFont__5CFont(struct CFont *this) {
 }
 
-unknown IsDefined__5CFontUc(CFont this, unsigned char C) {
-}
-
-int GetCharFrameNum__5CFontUc(CFont this, unsigned char ch) {
-}
-
-void Init__5CFont(CFont this) {
-}
-
-void ClearFont__5CFont(CFont this) {
-}
-
-int GetCharHeight__5CFontUc(CFont this, unsigned char ch) {
-}
-
-void ClearFont__5CFont(CFont this) {
-}
-
-int GetCharHeight__5CFontUc(CFont this, unsigned char ch) {
+// Path: C:\diabpsx\PSXSRC\PRINTY.H
+// Addr: 0x8013E0DC
+int GetCharHeight__5CFontUc(struct CFont *this, unsigned char ch) {
 }
 

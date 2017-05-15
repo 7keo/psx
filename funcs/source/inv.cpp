@@ -1,31 +1,45 @@
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80157274
 void FreeInvGFX__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015727C
 void InvDrawSlot__Fiii(int X, int Y, int Frame) {
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80157300
 void InvDrawSlotBack__FiiiiUc(int X, int Y, int W, int H, int Flag) {
 	unsigned char Flag;
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801575B8
 void InvDrawItem__FiiiUci(int ItemX, int ItemY, int ItemNo, unsigned char StatFlag, int TransFlag) {
 	int TransFlag;
-	OBJ_PFUNC Ft4;
-	TextDat TData;
+	struct POLY_FT4 *Ft4;
+	struct TextDat *TData;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80157688
 void InvDrawSlots__Fv() {
 	int Bx;
 	int By;
 }
 
-void PrintStat__FiiPcUc(int Y, int Txt0, char* Txt1, unsigned char Col) {
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801579A0
+void PrintStat__FiiPcUc(int Y, int Txt0, char *Txt1, unsigned char Col) {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80157A6C
 void DrawInvStats__Fv() {
-	Dialog InvBack;
+	struct Dialog InvBack;
 	char c;
 	char chrstr[10];
 	long mind;
@@ -34,55 +48,71 @@ void DrawInvStats__Fv() {
 	int ac;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80158588
 void DrawInvBack__Fv() {
-	Dialog InvBack;
+	struct Dialog InvBack;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80158634
 void DrawInvCursor__Fv() {
 	int ItemX;
 	int ItemY;
 	int LoopX;
 	int LoopY;
-	OBJ_PFUNC Ft4;
-	TextDat TData;
+	struct POLY_FT4 *Ft4;
+	struct TextDat *TData;
 	int GoldAmount;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80158C00
 void DrawInvMsg__Fv() {
-	OBJ_PFUNC Ft4;
-	LPCRECT InfoRect;
+	struct POLY_FT4 *Ft4;
+	struct RECT InfoRect;
 	int InfoY;
 	int InfoW;
 	int InfoH;
-	Dialog InvBack;
+	struct Dialog InvBack;
 	int OldOt;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80158DCC
 void DrawInvHelpTxt__Fv() {
 	char TempStr[128];
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801590B4
 void DrawInv__Fv() {
 }
 
-void DrawInvTSK__FP4TASK(TASK T) {
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801590FC
+void DrawInvTSK__FP4TASK(struct TASK *T) {
 	int omp;
 	int osel;
-	CBlocks BgBlocks;
+	struct CBlocks *BgBlocks;
 	int ThisIsShit;
 	int OldPad;
 	int OldOt;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80159714
 void DoThatDrawInv__Fv() {
 	int Loop;
 	int ii;
 	int ItemX;
 	int ItemY;
 	int ItemNo;
-	LPCRECT ClipRect;
+	struct RECT ClipRect;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80159F24
 unsigned char AutoPlace__FiiiiUc(int pnum, int ii, int sx, int sy, int saveflag) {
 	unsigned char saveflag;
 	int i;
@@ -92,6 +122,8 @@ unsigned char AutoPlace__FiiiiUc(int pnum, int ii, int sx, int sy, int saveflag)
 	unsigned char done;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015A24C
 unsigned char SpecialAutoPlace__FiiiiUc(int pnum, int ii, int sx, int sy, int saveflag) {
 	unsigned char saveflag;
 	int i;
@@ -101,6 +133,8 @@ unsigned char SpecialAutoPlace__FiiiiUc(int pnum, int ii, int sx, int sy, int sa
 	unsigned char done;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015A5F0
 unsigned char GoldAutoPlace__Fi(int pnum) {
 	int i;
 	int ii;
@@ -110,13 +144,19 @@ unsigned char GoldAutoPlace__Fi(int pnum) {
 	unsigned char done;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015AAC8
 unsigned char WeaponAutoPlace__Fi(int pnum) {
 }
 
-int SwapItem__FP10ItemStructT0(ItemStruct a, ItemStruct b) {
-	ItemStruct h;
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015AD5C
+int SwapItem__FP10ItemStructT0(struct ItemStruct *a, struct ItemStruct *b) {
+	struct ItemStruct h;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015AE70
 void CheckInvPaste__Fiii(int pnum, int mx, int my) {
 	int r;
 	int sx;
@@ -134,40 +174,58 @@ void CheckInvPaste__Fiii(int pnum, int mx, int my) {
 	int iv;
 	int ig;
 	long gt;
-	ItemStruct tempitem;
+	struct ItemStruct tempitem;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015CBF8
 void CheckInvCut__Fiii(int pnum, int mx, int my) {
 	int r;
 	int ii;
 	int iv;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015D6FC
 void RemoveInvItem__Fii(int pnum, int iv) {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015D9AC
 void RemoveSpdBarItem__Fii(int pnum, int iv) {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015DAA0
 void CheckInvScrn__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015DB18
 void CheckItemStats__Fi(int pnum) {
-	PlayerStruct p;
+	struct PlayerStruct *p;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015DB9C
 void CheckBookLevel__Fi(int pnum) {
 	int slvl;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015DCD0
 void CheckQuestItem__Fi(int pnum) {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015E180
 void InvGetItem__Fii(int pnum, int ii) {
 	int j;
 	int jj;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015E45C
 void AutoGetItem__Fii(int pnum, int ii) {
 	int i;
 	int g;
@@ -179,6 +237,8 @@ void AutoGetItem__Fii(int pnum, int ii) {
 	int jj;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015EEB8
 void SyncGetItem__FiiiUsi(int x, int y, int idx, unsigned short ci, int iseed) {
 	int iseed;
 	int ii;
@@ -186,11 +246,15 @@ void SyncGetItem__FiiiUsi(int x, int y, int idx, unsigned short ci, int iseed) {
 	int jj;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015F020
 unsigned char TryInvPut__Fv() {
 	int Dist;
 	int d;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015F16C
 int InvPutItem__Fiii(int pnum, int x, int y) {
 	int ii;
 	unsigned char done;
@@ -198,6 +262,8 @@ int InvPutItem__Fiii(int pnum, int x, int y) {
 	int d;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015F504
 int SyncPutItem__FiiiiUsiUciiiiiUl(int pnum, int x, int y, int idx, int icreateinfo, int iseed, int Id, int dur, int mdur, int ch, int mch, int ivalue, unsigned long ibuff) {
 	unsigned short icreateinfo;
 	unsigned char Id;
@@ -212,369 +278,114 @@ int SyncPutItem__FiiiiUsiUciiiiiUl(int pnum, int x, int y, int idx, int icreatei
 	int xx;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015FA64
 char CheckInvHLight__Fv() {
 	int r;
 	char rv;
-	ItemStruct pi;
-	PlayerStruct p;
+	struct ItemStruct *pi;
+	struct PlayerStruct *p;
 	int nGold;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015FDFC
 void RemoveScroll__Fi(int pnum) {
 	int i;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8015FFE0
 unsigned char UseScroll__Fv() {
 	int i;
 }
 
-void UseStaffCharge__FP12PlayerStruct(PlayerStruct ptrplr) {
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80160248
+void UseStaffCharge__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801602AC
 unsigned char UseStaff__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8016036C
 void StartGoldDrop__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80160470
 unsigned char UseInvItem__Fii(int pnum, int cii) {
 	int c;
 	int idata;
 	int it;
-	ItemStruct Item;
+	struct ItemStruct *Item;
 	unsigned char speedlist;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80160A34
 void DoTelekinesis__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80160B64
 long CalculateGold__Fi(int pnum) {
 	int i;
 	long gold;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80160C9C
 unsigned char DropItemBeforeTrig__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80160CF4
 void ControlInv__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801610B0
 void InvGetItemWH__Fi(int Pos) {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801611A8
 void InvAlignObject__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x8016135C
 void InvSetItemCurs__Fv() {
 	int ItemNo;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801614FC
 void InvMoveCursLeft__Fv() {
 	int ItemInc;
 	int OldPos;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x801616A4
 void InvMoveCursRight__Fv() {
 	int ItemInc;
 	int OldPos;
 }
 
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80161958
 void InvMoveCursUp__Fv() {
 	int ItemInc;
 	int OldPos;
 }
 
-void InvMoveCursDown__Fv() {
-	int ItemInc;
-	int OldPos;
-}
-
-void FreeInvGFX__Fv() {
-}
-
-void InvDrawSlot__Fiii(int X, int Y, int Frame) {
-	OBJ_PFUNC Ft4;
-}
-
-void InvDrawSlotBack__FiiiiUc(int X, int Y, int W, int H, int Flag) {
-	unsigned char Flag;
-	OBJ_PFUNC Ft4;
-}
-
-void InvDrawItem__FiiiUci(int ItemX, int ItemY, int ItemNo, unsigned char StatFlag, int TransFlag) {
-	int TransFlag;
-	OBJ_PFUNC Ft4;
-	TextDat TData;
-}
-
-void InvDrawSlots__Fv() {
-	int Bx;
-	int By;
-}
-
-void PrintStat__FiiPcUc(int Y, int Txt0, char* Txt1, unsigned char Col) {
-}
-
-void DrawInvStats__Fv() {
-	Dialog InvBack;
-	char c;
-	char chrstr[10];
-	long mind;
-	long maxd;
-	int hper;
-	int ac;
-}
-
-void DrawInvBack__Fv() {
-	Dialog InvBack;
-}
-
-void DrawInvCursor__Fv() {
-	int ItemX;
-	int ItemY;
-	int LoopX;
-	int LoopY;
-	OBJ_PFUNC Ft4;
-	TextDat TData;
-	int GoldAmount;
-}
-
-void DrawInvMsg__Fv() {
-	OBJ_PFUNC Ft4;
-	LPCRECT InfoRect;
-	int InfoY;
-	int InfoW;
-	int InfoH;
-	Dialog InvBack;
-	int OldOt;
-}
-
-void DrawInvHelpTxt__Fv() {
-	char TempStr[128];
-}
-
-void DrawInv__Fv() {
-}
-
-void DrawInvTSK__FP4TASK(TASK T) {
-	int omp;
-	int osel;
-	CBlocks BgBlocks;
-	int ThisIsShit;
-	int OldPad;
-	int OldOt;
-}
-
-void DoThatDrawInv__Fv() {
-	int Loop;
-	int ii;
-	int ItemX;
-	int ItemY;
-	int ItemNo;
-	LPCRECT ClipRect;
-}
-
-unsigned char AutoPlace__FiiiiUc(int pnum, int ii, int sx, int sy, int saveflag) {
-	unsigned char saveflag;
-	int i;
-	int j;
-	int xx;
-	int yy;
-	unsigned char done;
-}
-
-unsigned char SpecialAutoPlace__FiiiiUc(int pnum, int ii, int sx, int sy, int saveflag) {
-	unsigned char saveflag;
-	int i;
-	int j;
-	int xx;
-	int yy;
-	unsigned char done;
-}
-
-unsigned char GoldAutoPlace__Fi(int pnum) {
-	int i;
-	int ii;
-	int xx;
-	int yy;
-	long gt;
-	unsigned char done;
-}
-
-unsigned char WeaponAutoPlace__Fi(int pnum) {
-}
-
-int SwapItem__FP10ItemStructT0(ItemStruct a, ItemStruct b) {
-	ItemStruct h;
-}
-
-void CheckInvPaste__Fiii(int pnum, int mx, int my) {
-	int r;
-	int sx;
-	int sy;
-	int i;
-	int j;
-	int xx;
-	int yy;
-	int ii;
-	unsigned char done;
-	unsigned char done2h;
-	int il;
-	int cn;
-	int it;
-	int iv;
-	int ig;
-	long gt;
-	ItemStruct tempitem;
-}
-
-void CheckInvCut__Fiii(int pnum, int mx, int my) {
-	int r;
-	int ii;
-	int iv;
-}
-
-void RemoveInvItem__Fii(int pnum, int iv) {
-}
-
-void RemoveSpdBarItem__Fii(int pnum, int iv) {
-}
-
-void CheckInvScrn__Fv() {
-}
-
-void CheckItemStats__Fi(int pnum) {
-	PlayerStruct p;
-}
-
-void CheckBookLevel__Fi(int pnum) {
-	int slvl;
-}
-
-void CheckQuestItem__Fi(int pnum) {
-}
-
-void InvGetItem__Fii(int pnum, int ii) {
-	int j;
-	int jj;
-}
-
-void AutoGetItem__Fii(int pnum, int ii) {
-	int i;
-	int g;
-	int w;
-	int h;
-	int idx;
-	unsigned char done;
-	int j;
-	int jj;
-}
-
-void SyncGetItem__FiiiUsi(int x, int y, int idx, unsigned short ci, int iseed) {
-	int iseed;
-	int ii;
-	int j;
-	int jj;
-}
-
-unsigned char TryInvPut__Fv() {
-	int Dist;
-	int d;
-}
-
-int InvPutItem__Fiii(int pnum, int x, int y) {
-	int ii;
-	unsigned char done;
-	int Dist;
-	int d;
-}
-
-int SyncPutItem__FiiiiUsiUciiiiiUl(int pnum, int x, int y, int idx, int icreateinfo, int iseed, int Id, int dur, int mdur, int ch, int mch, int ivalue, unsigned long ibuff) {
-	unsigned short icreateinfo;
-	unsigned char Id;
-	int ii;
-	int d;
-	int dy;
-	unsigned char done;
-	int l;
-	int j;
-	int yy;
-	int i;
-	int xx;
-}
-
-char CheckInvHLight__Fv() {
-	int r;
-	char rv;
-	ItemStruct pi;
-	PlayerStruct p;
-	int nGold;
-}
-
-void RemoveScroll__Fi(int pnum) {
-	int i;
-}
-
-unsigned char UseScroll__Fv() {
-	int i;
-}
-
-void UseStaffCharge__FP12PlayerStruct(PlayerStruct ptrplr) {
-}
-
-unsigned char UseStaff__Fv() {
-}
-
-void StartGoldDrop__Fv() {
-}
-
-unsigned char UseInvItem__Fii(int pnum, int cii) {
-	int c;
-	int idata;
-	int it;
-	ItemStruct Item;
-	unsigned char speedlist;
-}
-
-void DoTelekinesis__Fv() {
-}
-
-long CalculateGold__Fi(int pnum) {
-	int i;
-	long gold;
-}
-
-unsigned char DropItemBeforeTrig__Fv() {
-}
-
-void ControlInv__Fv() {
-}
-
-void InvGetItemWH__Fi(int Pos) {
-}
-
-void InvAlignObject__Fv() {
-}
-
-void InvSetItemCurs__Fv() {
-	int ItemNo;
-}
-
-void InvMoveCursLeft__Fv() {
-	int ItemInc;
-	int OldPos;
-}
-
-void InvMoveCursRight__Fv() {
-	int ItemInc;
-	int OldPos;
-}
-
-void InvMoveCursUp__Fv() {
-	int ItemInc;
-	int OldPos;
-}
-
+// Path: C:\diabpsx\SOURCE\INV.CPP
+// Addr: 0x80161B50
 void InvMoveCursDown__Fv() {
 	int ItemInc;
 	int OldPos;

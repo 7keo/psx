@@ -1,90 +1,63 @@
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AE38C
 void RemoveHelp__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AE3A0
 void HelpPad__Fv() {
-	CPad Pad;
+	struct CPad *Pad;
 }
 
-int GetControlKey__FiPb(int str, unknown* iscombo) {
-	key_assigns ta;
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AE648
+int GetControlKey__FiPb(int str, unknown *iscombo) {
+	struct KEY_ASSIGNS *ta;
 	int i;
 }
 
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AE6F0
 void InitHelp__Fv() {
 }
 
-int DrawHelpLine__FiiPccccP10HelpStruct(int x, int y, char* txt, char R, int G, int B, HelpStruct hp) {
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AE73C
+int DrawHelpLine__FiiPccccP10HelpStruct(int x, int y, char *txt, char R, int G, int B, struct HelpStruct *hp) {
 	char G;
 	char B;
-	HelpStruct hp;
+	struct HelpStruct *hp;
 	int eln;
 	int key;
 	unknown combo;
 	int nkey;
 }
 
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AE950
 void DisplayHelp__Fv() {
-	HelpStruct hp;
+	struct HelpStruct *hp;
 	int y;
 	int i;
-	char* txt;
+	char *txt;
 	int nlen;
 }
 
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AECD0
 void DrawHelp__Fv() {
 	int otpos;
 	int oldDot;
 	int OldPrintOT;
 }
 
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AEF48
 void _GLOBAL_.D.DrawHelp__Fv() {
 }
 
-void _GLOBAL_.I.DrawHelp__Fv() {
-}
-
-void RemoveHelp__Fv() {
-}
-
-void HelpPad__Fv() {
-	CPad Pad;
-}
-
-int GetControlKey__FiPb(int str, unknown* iscombo) {
-	key_assigns ta;
-	int i;
-}
-
-void InitHelp__Fv() {
-}
-
-int DrawHelpLine__FiiPccccP10HelpStruct(int x, int y, char* txt, char R, int G, int B, HelpStruct hp) {
-	char G;
-	char B;
-	HelpStruct hp;
-	int eln;
-	int key;
-	unknown combo;
-	int nkey;
-}
-
-void DisplayHelp__Fv() {
-	HelpStruct hp;
-	int y;
-	int i;
-	char* txt;
-	int nlen;
-}
-
-void DrawHelp__Fv() {
-	int otpos;
-	int oldDot;
-	int OldPrintOT;
-}
-
-void _GLOBAL_.D.DrawHelp__Fv() {
-}
-
+// Path: C:\diabpsx\PSXSRC\PSXHELP.CPP
+// Addr: 0x800AEF88
 void _GLOBAL_.I.DrawHelp__Fv() {
 }
 

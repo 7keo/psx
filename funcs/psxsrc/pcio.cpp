@@ -1,63 +1,45 @@
-PCIO __4PCIOUl(PCIO this, unsigned long OurMemId) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x800860B4
+struct PCIO* __4PCIOUl(struct PCIO *this, unsigned long OurMemId) {
 }
 
-void _._4PCIO(PCIO this, int __in_chrg) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x8008611C
+void _._4PCIO(struct PCIO *this, int __in_chrg) {
 }
 
-unknown FileExists__4PCIOPCc(PCIO this, char* Name) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x80086174
+unknown FileExists__4PCIOPCc(struct PCIO *this, char *Name) {
 	int FileHnd;
 }
 
-unknown LoReadFileAtAddr__4PCIOPCcPUci(PCIO this, char* Name, unsigned char* Dest, int Len) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x800861B8
+unknown LoReadFileAtAddr__4PCIOPCcPUci(struct PCIO *this, char *Name, unsigned char *Dest, int Len) {
 	int FileHnd;
 }
 
-int GetFileLength__4PCIOPCc(PCIO this, char* Name) {
-	int FileHnd;
-	int Len;
-}
-
-unknown LoSave__4PCIOPCcPUci(PCIO this, char* Name, unsigned char* Addr, int Len) {
-	int FileHnd;
-}
-
-unknown LoStreamFile__4PCIOPCciPFPUciib_bii(PCIO this, char* Name, int Slice, unknown* Func, int Offset, int Size) {
-	int Size;
-	int FileHnd;
-	long hnd;
-	unsigned char* Dest;
-	int OrigSize;
-	int SizeToRead;
-}
-
-PCIO __4PCIOUl(PCIO this, unsigned long OurMemId) {
-}
-
-void _._4PCIO(PCIO this, int __in_chrg) {
-}
-
-unknown FileExists__4PCIOPCc(PCIO this, char* Name) {
-	int FileHnd;
-}
-
-unknown LoReadFileAtAddr__4PCIOPCcPUci(PCIO this, char* Name, unsigned char* Dest, int Len) {
-	int FileHnd;
-}
-
-int GetFileLength__4PCIOPCc(PCIO this, char* Name) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x8008627C
+int GetFileLength__4PCIOPCc(struct PCIO *this, char *Name) {
 	int FileHnd;
 	int Len;
 }
 
-unknown LoSave__4PCIOPCcPUci(PCIO this, char* Name, unsigned char* Addr, int Len) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x80086334
+unknown LoSave__4PCIOPCcPUci(struct PCIO *this, char *Name, unsigned char *Addr, int Len) {
 	int FileHnd;
 }
 
-unknown LoStreamFile__4PCIOPCciPFPUciib_bii(PCIO this, char* Name, int Slice, unknown* Func, int Offset, int Size) {
+// Path: C:\diabpsx\PSXSRC\PCIO.CPP
+// Addr: 0x80086408
+unknown LoStreamFile__4PCIOPCciPFPUciib_bii(struct PCIO *this, char *Name, int Slice, unknown (*Func)(), int Offset, int Size) {
 	int Size;
 	int FileHnd;
 	long hnd;
-	unsigned char* Dest;
+	unsigned char *Dest;
 	int OrigSize;
 	int SizeToRead;
 }

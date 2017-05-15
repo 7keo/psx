@@ -1,66 +1,55 @@
-int GetDatMaxSize__7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x80067440
+struct CPlayer* GetPlayer__7CPlayeri(int PNum) {
 }
 
-int GetTexId__7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x80067490
+int GetLastOtPos__C7CPlayer(struct CPlayer *this) {
 }
 
-CPlayer GetPlayer__7CPlayeri(int PNum) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x8006749C
+int GetLastScrY__C7CPlayer(struct CPlayer *this) {
 }
 
-int GetLastOtPos__C7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x800674A8
+int GetLastScrX__C7CPlayer(struct CPlayer *this) {
 }
 
-CPlayer GetPlayer__7CPlayeri(int PNum) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x8007D560
+struct CPlayer* GetPlayer__7CPlayeri(int PNum) {
 }
 
-int GetLastOtPos__C7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x8007D5B0
+int GetLastScrY__C7CPlayer(struct CPlayer *this) {
 }
 
-int GetLastScrY__C7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x8007D5BC
+int GetLastScrX__C7CPlayer(struct CPlayer *this) {
 }
 
-int GetLastScrX__C7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x80096720
+int GetDatMaxSize__7CPlayer(struct CPlayer *this) {
 }
 
-CPlayer GetPlayer__7CPlayeri(int PNum) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x8009C520
+int GetTexId__7CPlayer(struct CPlayer *this) {
 }
 
-int GetLastScrY__C7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x800A0928
+struct CPlayer* GetPlayer__7CPlayeri(int PNum) {
 }
 
-int GetLastScrX__C7CPlayer(CPlayer this) {
-}
-
-int GetDatMaxSize__7CPlayer(CPlayer this) {
-}
-
-int GetTexId__7CPlayer(CPlayer this) {
-}
-
-CPlayer GetPlayer__7CPlayeri(int PNum) {
-}
-
-int GetLastOtPos__C7CPlayer(CPlayer this) {
-}
-
-CPlayer GetPlayer__7CPlayeri(int PNum) {
-}
-
-int GetLastOtPos__C7CPlayer(CPlayer this) {
-}
-
-int GetLastScrY__C7CPlayer(CPlayer this) {
-}
-
-int GetLastScrX__C7CPlayer(CPlayer this) {
-}
-
-CPlayer GetPlayer__7CPlayeri(int PNum) {
-}
-
-int GetLastScrY__C7CPlayer(CPlayer this) {
-}
-
-int GetLastScrX__C7CPlayer(CPlayer this) {
+// Path: C:\diabpsx\PSXSRC\CPLAYER.H
+// Addr: 0x800A0978
+int GetLastOtPos__C7CPlayer(struct CPlayer *this) {
 }
 

@@ -1,108 +1,84 @@
-FileIO __6FileIOUl(FileIO this, unsigned long OurMemId) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x8008587C
+struct FileIO* __6FileIOUl(struct FileIO *this, unsigned long OurMemId) {
 }
 
-void _._6FileIO(FileIO this, int __in_chrg) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x800858CC
+void _._6FileIO(struct FileIO *this, int __in_chrg) {
 }
 
-long Read__6FileIOPCcUl(FileIO this, char* Name, unsigned long RamId) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085920
+long Read__6FileIOPCcUl(struct FileIO *this, char *Name, unsigned long RamId) {
 	int MemSize;
 	long MyHnd;
-	unsigned char* LoadAddr;
+	unsigned char *LoadAddr;
 }
 
-int FileLen__6FileIOPCc(FileIO this, char* Name) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085A90
+int FileLen__6FileIOPCc(struct FileIO *this, char *Name) {
 }
 
-void FileNotFound__6FileIOPCc(FileIO this, char* Name) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085AF4
+void FileNotFound__6FileIOPCc(struct FileIO *this, char *Name) {
 }
 
-unknown StreamFile__6FileIOPCciPFPUciib_bii(FileIO this, char* Name, int Slice, unknown* Func, int Offset, int Size) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085B14
+unknown StreamFile__6FileIOPCciPFPUciib_bii(struct FileIO *this, char *Name, int Slice, unknown (*Func)(), int Offset, int Size) {
 	int Offset;
 	int Size;
 }
 
-unknown ReadAtAddr__6FileIOPCcPUci(FileIO this, char* Name, unsigned char* Dest, int Len) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085BF4
+unknown ReadAtAddr__6FileIOPCcPUci(struct FileIO *this, char *Name, unsigned char *Dest, int Len) {
 }
 
-void DumpOldPath__6FileIO(FileIO this) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085CB8
+void DumpOldPath__6FileIO(struct FileIO *this) {
 }
 
-void SetSearchPath__6FileIOPCc(FileIO this, char* Path) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085D1C
+void SetSearchPath__6FileIOPCc(struct FileIO *this, char *Path) {
 }
 
-unknown FindFile__6FileIOPCcPc(FileIO this, char* Name, char* Buffa) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085DF8
+unknown FindFile__6FileIOPCcPc(struct FileIO *this, char *Name, char *Buffa) {
 	unknown Success;
-	char* Path;
+	char *Path;
 }
 
-char* CopyPathItem__6FileIOPcPCc(FileIO this, char* Dst, char* Src) {
-	char* Ptr;
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085F0C
+char* CopyPathItem__6FileIOPcPCc(struct FileIO *this, char *Dst, char *Src) {
+	char *Ptr;
 	int Len;
 }
 
-void LockSearchPath__6FileIO(FileIO this) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80085FB4
+void LockSearchPath__6FileIO(struct FileIO *this) {
 }
 
-void UnlockSearchPath__6FileIO(FileIO this) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x8008600C
+void UnlockSearchPath__6FileIO(struct FileIO *this) {
 }
 
-unknown SearchPathExists__6FileIO(FileIO this) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80086064
+unknown SearchPathExists__6FileIO(struct FileIO *this) {
 }
 
-unknown Save__6FileIOPCcPUci(FileIO this, char* Name, unsigned char* Addr, int Len) {
-}
-
-FileIO __6FileIOUl(FileIO this, unsigned long OurMemId) {
-}
-
-void _._6FileIO(FileIO this, int __in_chrg) {
-}
-
-long Read__6FileIOPCcUl(FileIO this, char* Name, unsigned long RamId) {
-	int MemSize;
-	long MyHnd;
-	unsigned char* LoadAddr;
-}
-
-int FileLen__6FileIOPCc(FileIO this, char* Name) {
-}
-
-void FileNotFound__6FileIOPCc(FileIO this, char* Name) {
-}
-
-unknown StreamFile__6FileIOPCciPFPUciib_bii(FileIO this, char* Name, int Slice, unknown* Func, int Offset, int Size) {
-	int Offset;
-	int Size;
-}
-
-unknown ReadAtAddr__6FileIOPCcPUci(FileIO this, char* Name, unsigned char* Dest, int Len) {
-}
-
-void DumpOldPath__6FileIO(FileIO this) {
-}
-
-void SetSearchPath__6FileIOPCc(FileIO this, char* Path) {
-}
-
-unknown FindFile__6FileIOPCcPc(FileIO this, char* Name, char* Buffa) {
-	unknown Success;
-	char* Path;
-}
-
-char* CopyPathItem__6FileIOPcPCc(FileIO this, char* Dst, char* Src) {
-	char* Ptr;
-	int Len;
-}
-
-void LockSearchPath__6FileIO(FileIO this) {
-}
-
-void UnlockSearchPath__6FileIO(FileIO this) {
-}
-
-unknown SearchPathExists__6FileIO(FileIO this) {
-}
-
-unknown Save__6FileIOPCcPUci(FileIO this, char* Name, unsigned char* Addr, int Len) {
+// Path: C:\diabpsx\PSXSRC\FILEIO.CPP
+// Addr: 0x80086078
+unknown Save__6FileIOPCcPUci(struct FileIO *this, char *Name, unsigned char *Addr, int Len) {
 }
 

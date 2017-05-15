@@ -1,312 +1,238 @@
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x80139C24
 void FeInitBuffer__Fv() {
 }
 
-void FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont(int X, int Y, TXT_JUST Just, unsigned short Str, FeTable MenuPtr, CFont Font) {
-	FeTable MenuPtr;
-	CFont Font;
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x80139C50
+void FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont(int X, int Y, enum TXT_JUST Just, unsigned short Str, struct FeTable *MenuPtr, struct CFont *Font) {
+	struct FeTable *MenuPtr;
+	struct CFont *Font;
 }
 
-void FeAddTable__FP11FeMenuTablei(FeMenuTable Table, int Count) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x80139CD4
+void FeAddTable__FP11FeMenuTablei(struct FeMenuTable *Table, int Count) {
 	int Loop;
 }
 
-void FeAddNameTable__FPUci(unsigned char* Table, int Count) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x80139D50
+void FeAddNameTable__FPUci(unsigned char *Table, int Count) {
 	int YLoop;
 	int XLoop;
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x80139E78
 void FeDrawBuffer__Fv() {
-	Dialog FeBack;
-	LPCRECT FeRect;
-	LPCRECT ARect;
+	struct Dialog FeBack;
+	struct RECT FeRect;
+	struct RECT ARect;
 	int X;
 	int Y;
-	TXT_JUST Just;
-	TextDat PanelGfx;
+	enum TXT_JUST Just;
+	struct TextDat *PanelGfx;
 	int SelX;
 	int SelY;
 	char Text[2];
 	int Loop;
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 	int Loop;
 }
 
-void FeNewMenu__FP7FeTable(FeTable Menu) {
-	FeTable LastMenu;
-	void* FuncPtr;
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A4A4
+void FeNewMenu__FP7FeTable(struct FeTable *Menu) {
+	struct FeTable *LastMenu;
+	void (*FuncPtr)();
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A524
 void FePrevMenu__Fv() {
-	void* FuncPtr;
+	void (*FuncPtr)();
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A66C
 void FeSelUp__Fi(int No) {
 	int OldSel;
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A754
 void FeSelDown__Fi(int No) {
 	int OldSel;
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A83C
 int FeGetCursor__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A850
 void FeSelect__Fv() {
 }
 
-void FeMainKeyCtrl__FP7CScreen(CScreen FeScreen) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013A8A0
+void FeMainKeyCtrl__FP7CScreen(struct CScreen *FeScreen) {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AA68
 void InitDummyMenu__Fv() {
 }
 
-void InitFrontEnd__FP9FE_CREATE(FE_CREATE CreateStruct) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AA70
+void InitFrontEnd__FP9FE_CREATE(struct FE_CREATE *CreateStruct) {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013ABA4
 void FeInitMainMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AC20
 void FeInitNewGameMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013ACB0
 void FeNewGameMenuCtrl__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AE64
 void FeInitPlayer1ClassMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AEE8
 void FeInitPlayer2ClassMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AF6C
 void FePlayerClassMenuCtrl__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013AFB4
 void FeDrawChrClass__Fv() {
-	Dialog FeBack;
-	LPCRECT FeRect;
+	struct Dialog FeBack;
+	struct RECT FeRect;
 	char TempStr[4];
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013B43C
 void FeInitNewP1NameMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013B498
 void FeInitNewP2NameMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013B4EC
 void FeNewNameMenuCtrl__Fv() {
 	char asd[2];
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BAB4
 void FeCopyPlayerInfoForReturn__Fv() {
 	int Loop;
 	int i;
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BBC8
 void FeEnterGame__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BBF0
 void FeInitLoadMemcardSelect__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BC70
 void FeInitLoadChar1Menu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BCD8
 void FeInitLoadChar2Menu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BD48
 void FeInitDifficultyMenu__Fv() {
 	int MaxLevel;
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BDEC
 void FeDifficultyMenuCtrl__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BED0
 void FeInitBackgroundMenu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BF1C
 void FeInitBook1Menu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BF6C
 void FeInitBook2Menu__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013BFBC
 void FeBackBookMenuCtrl__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013C200
 void PlayDemo__Fv() {
 }
 
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013C214
 void FadeFEOut__Fv() {
 }
 
-void DrawBackTSK__FP4TASK(TASK T) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013C2D8
+void DrawBackTSK__FP4TASK(struct TASK *T) {
 }
 
-void FeInitMainStuff__FP4TASK(TASK T2) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013C460
+void FeInitMainStuff__FP4TASK(struct TASK *T2) {
 }
 
-void FrontEndTask__FP4TASK(TASK T) {
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013C50C
+void FrontEndTask__FP4TASK(struct TASK *T) {
 	int len;
 	int Fefadeval;
-	TASK T2;
+	struct TASK *T2;
 }
 
-void DrawFeTwinkle__Fii(int TwinkX, int TwinkY) {
-}
-
-void FeInitBuffer__Fv() {
-}
-
-void FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont(int X, int Y, TXT_JUST Just, unsigned short Str, FeTable MenuPtr, CFont Font) {
-	FeTable MenuPtr;
-	CFont Font;
-}
-
-void FeAddTable__FP11FeMenuTablei(FeMenuTable Table, int Count) {
-	int Loop;
-}
-
-void FeAddNameTable__FPUci(unsigned char* Table, int Count) {
-	int YLoop;
-	int XLoop;
-}
-
-void FeDrawBuffer__Fv() {
-	Dialog FeBack;
-	LPCRECT FeRect;
-	LPCRECT ARect;
-	int X;
-	int Y;
-	TXT_JUST Just;
-	TextDat PanelGfx;
-	int SelX;
-	int SelY;
-	char Text[2];
-	int Loop;
-	OBJ_PFUNC Ft4;
-	int Loop;
-}
-
-void FeNewMenu__FP7FeTable(FeTable Menu) {
-	FeTable LastMenu;
-	void* FuncPtr;
-}
-
-void FePrevMenu__Fv() {
-	void* FuncPtr;
-}
-
-void FeSelUp__Fi(int No) {
-	int OldSel;
-}
-
-void FeSelDown__Fi(int No) {
-	int OldSel;
-}
-
-int FeGetCursor__Fv() {
-}
-
-void FeSelect__Fv() {
-}
-
-void FeMainKeyCtrl__FP7CScreen(CScreen FeScreen) {
-}
-
-void InitDummyMenu__Fv() {
-}
-
-void InitFrontEnd__FP9FE_CREATE(FE_CREATE CreateStruct) {
-}
-
-void FeInitMainMenu__Fv() {
-}
-
-void FeInitNewGameMenu__Fv() {
-}
-
-void FeNewGameMenuCtrl__Fv() {
-}
-
-void FeInitPlayer1ClassMenu__Fv() {
-}
-
-void FeInitPlayer2ClassMenu__Fv() {
-}
-
-void FePlayerClassMenuCtrl__Fv() {
-}
-
-void FeDrawChrClass__Fv() {
-	Dialog FeBack;
-	LPCRECT FeRect;
-	char TempStr[4];
-}
-
-void FeInitNewP1NameMenu__Fv() {
-}
-
-void FeInitNewP2NameMenu__Fv() {
-}
-
-void FeNewNameMenuCtrl__Fv() {
-	char asd[2];
-}
-
-void FeCopyPlayerInfoForReturn__Fv() {
-	int Loop;
-	int i;
-}
-
-void FeEnterGame__Fv() {
-}
-
-void FeInitLoadMemcardSelect__Fv() {
-}
-
-void FeInitLoadChar1Menu__Fv() {
-}
-
-void FeInitLoadChar2Menu__Fv() {
-}
-
-void FeInitDifficultyMenu__Fv() {
-	int MaxLevel;
-}
-
-void FeDifficultyMenuCtrl__Fv() {
-}
-
-void FeInitBackgroundMenu__Fv() {
-}
-
-void FeInitBook1Menu__Fv() {
-}
-
-void FeInitBook2Menu__Fv() {
-}
-
-void FeBackBookMenuCtrl__Fv() {
-}
-
-void PlayDemo__Fv() {
-}
-
-void FadeFEOut__Fv() {
-}
-
-void DrawBackTSK__FP4TASK(TASK T) {
-}
-
-void FeInitMainStuff__FP4TASK(TASK T2) {
-}
-
-void FrontEndTask__FP4TASK(TASK T) {
-	int len;
-	int Fefadeval;
-	TASK T2;
-}
-
+// Path: C:\diabpsx\PSXSRC\FE.CPP
+// Addr: 0x8013C9B8
 void DrawFeTwinkle__Fii(int TwinkX, int TwinkY) {
 }
 

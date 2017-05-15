@@ -1,16 +1,12 @@
-short PlayFMV__FPcii(char* str, int w, int h) {
+// Path: C:\diabpsx\PSXSRC\COREFMV.CPP
+// Addr: 0x800ACF58
+short PlayFMV__FPcii(char *str, int w, int h) {
 	short RetVal;
-	OVER_TYPE CurrentOver;
+	enum OVER_TYPE CurrentOver;
 }
 
-void play_movie(char* pszMovie) {
-}
-
-short PlayFMV__FPcii(char* str, int w, int h) {
-	short RetVal;
-	OVER_TYPE CurrentOver;
-}
-
-void play_movie(char* pszMovie) {
+// Path: C:\diabpsx\PSXSRC\COREFMV.CPP
+// Addr: 0x800AD128
+void play_movie(char *pszMovie) {
 }
 

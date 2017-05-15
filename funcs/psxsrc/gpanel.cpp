@@ -1,120 +1,80 @@
-unsigned int GetPal__6GPaneli(GPanel this, int Frm) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x800975CC
+unsigned int GetPal__6GPaneli(struct GPanel *this, int Frm) {
 }
 
-GPanel __6GPaneli(GPanel this, int Ofs) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80097610
+struct GPanel* __6GPaneli(struct GPanel *this, int Ofs) {
 }
 
-void DrawFlask__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80097674
+void DrawFlask__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
 	int HealthHeight;
 	int ManaHeight;
 	int HealthAnim;
 	int ManaAnim;
 	int BarY;
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 	int X;
 	int Y;
 	int xof;
 }
 
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80097AE8
 unsigned char SpdTrimCol__Fs(short col) {
 }
 
-void DrawSpeedBar__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80097B20
+void DrawSpeedBar__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
 	int X;
 	int Y;
 	int Loop;
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 	int Bx;
 	int By;
-	POLY_G4 G4;
+	struct POLY_G4 *G4;
 }
 
-void DrawSpell__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x8009824C
+void DrawSpell__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
 	int X;
 	int Y;
 	int Anim;
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 	int SpellNo;
 	char YT[16];
 }
 
-void DrawMsgWindow__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x800983E8
+void DrawMsgWindow__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
 }
 
-int DrawDurThingy__6GPaneliiP10ItemStructi(GPanel this, int X, int Y, ItemStruct Item, int ItemType) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80098438
+int DrawDurThingy__6GPaneliiP10ItemStructi(struct GPanel *this, int X, int Y, struct ItemStruct *Item, int ItemType) {
 	int ItemType;
-	OBJ_PFUNC Ft4;
+	struct POLY_FT4 *Ft4;
 	unsigned char NewR;
 	unsigned char NewG;
 	unsigned char NewB;
 	int Loop;
 }
 
-void DrawDurIcon__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80098704
+void DrawDurIcon__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
 	int X;
 	int Y;
 }
 
-void Print__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
-}
-
-unsigned int GetPal__6GPaneli(GPanel this, int Frm) {
-}
-
-GPanel __6GPaneli(GPanel this, int Ofs) {
-}
-
-void DrawFlask__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
-	int HealthHeight;
-	int ManaHeight;
-	int HealthAnim;
-	int ManaAnim;
-	int BarY;
-	OBJ_PFUNC Ft4;
-	int X;
-	int Y;
-	int xof;
-}
-
-unsigned char SpdTrimCol__Fs(short col) {
-}
-
-void DrawSpeedBar__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
-	int X;
-	int Y;
-	int Loop;
-	OBJ_PFUNC Ft4;
-	int Bx;
-	int By;
-	POLY_G4 G4;
-}
-
-void DrawSpell__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
-	int X;
-	int Y;
-	int Anim;
-	OBJ_PFUNC Ft4;
-	int SpellNo;
-	char YT[16];
-}
-
-void DrawMsgWindow__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
-}
-
-int DrawDurThingy__6GPaneliiP10ItemStructi(GPanel this, int X, int Y, ItemStruct Item, int ItemType) {
-	int ItemType;
-	OBJ_PFUNC Ft4;
-	unsigned char NewR;
-	unsigned char NewG;
-	unsigned char NewB;
-	int Loop;
-}
-
-void DrawDurIcon__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
-	int X;
-	int Y;
-}
-
-void Print__6GPanelP7PanelXYP12PlayerStruct(GPanel this, PanelXY XY, PlayerStruct Plr) {
+// Path: C:\diabpsx\PSXSRC\GPANEL.CPP
+// Addr: 0x80098830
+void Print__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
 }
 

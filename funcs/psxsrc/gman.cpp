@@ -1,45 +1,67 @@
-TextDat __7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80091E54
+struct TextDat* __7TextDat(struct TextDat *this) {
 }
 
-void OnceOnlyInit__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80091E88
+void OnceOnlyInit__7TextDat(struct TextDat *this) {
 }
 
-void _._7TextDat(TextDat this, int __in_chrg) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80091EA8
+void _._7TextDat(struct TextDat *this, int __in_chrg) {
 }
 
-void ReloadTP__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80091EF0
+void ReloadTP__7TextDat(struct TextDat *this) {
 }
 
-void Use__7TextDatlbi(TextDat this, long NewHndDat, unknown DatLoaded, int size) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80091F30
+void Use__7TextDatlbi(struct TextDat *this, long NewHndDat, unknown DatLoaded, int size) {
 	char NameBuff[40];
-	LPCRECT R;
+	struct RECT R;
 	int DecompSize;
 }
 
-unknown TpLoadCallBack__FPUciib(unsigned char* Mem, int ReadSoFar, int Size, unknown LastChunk) {
-	LPCRECT R;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092170
+unknown TpLoadCallBack__FPUciib(unsigned char *Mem, int ReadSoFar, int Size, unknown LastChunk) {
+	struct RECT R;
 	int Dx;
 	int Dy;
 }
 
-void StreamLoadTP__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092218
+void StreamLoadTP__7TextDat(struct TextDat *this) {
 	char TheName[20];
 }
 
-void FinishedUsing__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800922D0
+void FinishedUsing__7TextDat(struct TextDat *this) {
 }
 
-void MakeBlockOffsetTab__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092368
+void MakeBlockOffsetTab__7TextDat(struct TextDat *this) {
 }
 
-long MakeOffsetTab__C9CBlockHdr(CBlockHdr this) {
-	CBlock MyBlock;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800923B4
+long MakeOffsetTab__C9CBlockHdr(struct CBlockHdr *this) {
+	struct CBlock *MyBlock;
 	long hndRet;
-	int* Tab;
+	int *Tab;
 	unsigned int f;
 }
 
-void SetUVTp__7TextDatP9FRAME_HDRP8POLY_FT4ii(TextDat this, FRAME_HDR Fr, OBJ_PFUNC FT4, int XFlip, int YFlip) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800924E0
+void SetUVTp__7TextDatP9FRAME_HDRP8POLY_FT4ii(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_FT4 *FT4, int XFlip, int YFlip) {
 	int YFlip;
 	int Rotated;
 	int Tpage;
@@ -49,11 +71,15 @@ void SetUVTp__7TextDatP9FRAME_HDRP8POLY_FT4ii(TextDat this, FRAME_HDR Fr, OBJ_PF
 	int H;
 }
 
-unknown IsCompressed__7TextDatiiii(TextDat this, int Creature, int Action, int Dir, int Frame) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800925E0
+unknown IsCompressed__7TextDatiiii(struct TextDat *this, int Creature, int Action, int Dir, int Frame) {
 	int Frame;
 }
 
-OBJ_PFUNC PrintMonster__7TextDatiiiiiii(TextDat this, int Creature, int Action, int Dir, int Frame, int x, int y, int OtPos) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x8009262C
+struct POLY_FT4* PrintMonster__7TextDatiiiiiii(struct TextDat *this, int Creature, int Action, int Dir, int Frame, int x, int y, int OtPos) {
 	int Frame;
 	int x;
 	int y;
@@ -61,17 +87,19 @@ OBJ_PFUNC PrintMonster__7TextDatiiiiiii(TextDat this, int Creature, int Action, 
 	int PhysFrame;
 }
 
-OBJ_PFUNC PrintMonsterA__7TextDatiiibi(TextDat this, int Frm, int X, int Y, unknown XFlip, int OtPos) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800926D8
+struct POLY_FT4* PrintMonsterA__7TextDatiiibi(struct TextDat *this, int Frm, int X, int Y, unknown XFlip, int OtPos) {
 	unknown XFlip;
 	int OtPos;
-	OBJ_PFUNC FT4;
-	FRAME_HDR Fr;
+	struct POLY_FT4 *FT4;
+	struct FRAME_HDR *Fr;
 	int W;
 	int H;
-	unsigned char* Dest;
+	unsigned char *Dest;
 	int DecompSize;
-	unsigned char* CompFrAddr;
-	DR_LOAD2 DrPtr;
+	unsigned char *CompFrAddr;
+	struct DR_LOAD2 *DrPtr;
 	unsigned long NumOfPrims;
 	int VH;
 	int TpX;
@@ -85,27 +113,33 @@ OBJ_PFUNC PrintMonsterA__7TextDatiiibi(TextDat this, int Frm, int X, int Y, unkn
 	int u2;
 	int u3;
 	unsigned int f;
-	LPCRECT mrect;
+	struct RECT mrect;
 }
 
-void PrepareFt4__7TextDatP8POLY_FT4iiiii(TextDat this, OBJ_PFUNC FT4, int Frm, int X, int Y, int XFlip, int YFlip) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092A80
+void PrepareFt4__7TextDatP8POLY_FT4iiiii(struct TextDat *this, struct POLY_FT4 *FT4, int Frm, int X, int Y, int XFlip, int YFlip) {
 	int Y;
 	int XFlip;
-	FRAME_HDR Fr;
+	struct FRAME_HDR *Fr;
 	int W;
 	int H;
-	LPCRECT R;
+	struct RECT R;
 	unsigned char sw;
 }
 
-unsigned char* GetDecompBufffer__7TextDati(TextDat this, int Size) {
-	long* DecArray;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092D14
+unsigned char* GetDecompBufffer__7TextDati(struct TextDat *this, int Size) {
+	long *DecArray;
 	int DecIndex;
 	long hnd;
-	unsigned char* RetAddr;
+	unsigned char *RetAddr;
 }
 
-void SetUVTpGT4__7TextDatP9FRAME_HDRP8POLY_GT4ii(TextDat this, FRAME_HDR Fr, POLY_GT4 FT4, int XFlip, int YFlip) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092E74
+void SetUVTpGT4__7TextDatP9FRAME_HDRP8POLY_GT4ii(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_GT4 *FT4, int XFlip, int YFlip) {
 	int YFlip;
 	int Rotated;
 	int Tpage;
@@ -115,22 +149,26 @@ void SetUVTpGT4__7TextDatP9FRAME_HDRP8POLY_GT4ii(TextDat this, FRAME_HDR Fr, POL
 	int H;
 }
 
-void PrepareGt4__7TextDatP8POLY_GT4iiiii(TextDat this, POLY_GT4 GT4, int Frm, int X, int Y, int XFlip, int YFlip) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80092F74
+void PrepareGt4__7TextDatP8POLY_GT4iiiii(struct TextDat *this, struct POLY_GT4 *GT4, int Frm, int X, int Y, int XFlip, int YFlip) {
 	int Y;
 	int XFlip;
 	int YFlip;
-	FRAME_HDR Fr;
+	struct FRAME_HDR *Fr;
 	int W;
 	int H;
 	unsigned char sw;
-	PAL Pal;
-	LPCRECT R;
+	struct PAL *Pal;
+	struct RECT R;
 	int DecX;
 	int DecY;
-	LPCRECT R;
+	struct RECT R;
 }
 
-void SetUVTpGT3__7TextDatP9FRAME_HDRP8POLY_GT3(TextDat this, FRAME_HDR Fr, POLY_GT3 GT3) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800931CC
+void SetUVTpGT3__7TextDatP9FRAME_HDRP8POLY_GT3(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_GT3 *GT3) {
 	int Rotated;
 	int Tpage;
 	int U;
@@ -139,89 +177,123 @@ void SetUVTpGT3__7TextDatP9FRAME_HDRP8POLY_GT3(TextDat this, FRAME_HDR Fr, POLY_
 	int H;
 }
 
-void PrepareGt3__7TextDatP8POLY_GT3iii(TextDat this, POLY_GT3 GT3, int Frm, int X, int Y) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093250
+void PrepareGt3__7TextDatP8POLY_GT3iii(struct TextDat *this, struct POLY_GT3 *GT3, int Frm, int X, int Y) {
 	int Y;
-	FRAME_HDR Fr;
+	struct FRAME_HDR *Fr;
 	int W;
 	int H;
-	PAL Pal;
-	LPCRECT R;
+	struct PAL *Pal;
+	struct RECT R;
 	int DecX;
 	int DecY;
-	LPCRECT R;
+	struct RECT R;
 }
 
-OBJ_PFUNC PrintFt4__7TextDatiiiiii(TextDat this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093418
+struct POLY_FT4* PrintFt4__7TextDatiiiiii(struct TextDat *this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
 	int XFlip;
 	int OtPos;
 	int YFlip;
-	OBJ_PFUNC FT4;
+	struct POLY_FT4 *FT4;
 }
 
-POLY_GT4 PrintGt4__7TextDatiiiiii(TextDat this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x8009356C
+struct POLY_GT4* PrintGt4__7TextDatiiiiii(struct TextDat *this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
 	int XFlip;
 	int OtPos;
 	int YFlip;
-	POLY_GT4 GT4;
+	struct POLY_GT4 *GT4;
 }
 
-void DecompFrame__7TextDatP9FRAME_HDR(TextDat this, FRAME_HDR Fr) {
-	unsigned char* CompFrAddr;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800936C0
+void DecompFrame__7TextDatP9FRAME_HDR(struct TextDat *this, struct FRAME_HDR *Fr) {
+	unsigned char *CompFrAddr;
 	int DecompSize;
-	unsigned char* Dest;
+	unsigned char *Dest;
 }
 
-void MakeCreatureOffsetTab__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093818
+void MakeCreatureOffsetTab__7TextDat(struct TextDat *this) {
 	int NumOfCreatures;
-	unsigned char* ThisAddr;
+	unsigned char *ThisAddr;
 	unsigned int f;
 	int f;
 }
 
-void MakePalOffsetTab__7TextDat(TextDat this) {
-	PAL ThisPal;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093958
+void MakePalOffsetTab__7TextDat(struct TextDat *this) {
+	struct PAL *ThisPal;
 	unsigned int f;
 }
 
-void InitData__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093A54
+void InitData__7TextDat(struct TextDat *this) {
 }
 
-void DumpData__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093A84
+void DumpData__7TextDat(struct TextDat *this) {
 }
 
-void DumpHdr__7TextDat(TextDat this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093BAC
+void DumpHdr__7TextDat(struct TextDat *this) {
 }
 
-TextDat GM_UseTexData__Fi(int Id) {
-	TextDat Dat2Use;
-	CTextFileInfo Tab;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093C10
+struct TextDat* GM_UseTexData__Fi(int Id) {
+	struct TextDat *Dat2Use;
+	struct CTextFileInfo **Tab;
 	int f;
 }
 
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093D44
 void GM_ForceTpLoad__Fi(int Id) {
 }
 
-void GM_FinishedUsing__FP7TextDat(TextDat Fin) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093D80
+void GM_FinishedUsing__FP7TextDat(struct TextDat *Fin) {
 }
 
-void SetPal__7TextDatP9FRAME_HDRP8POLY_FT4(TextDat this, FRAME_HDR Fr, OBJ_PFUNC FT4) {
-	PAL Pal;
-	LPCRECT R;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093DD4
+void SetPal__7TextDatP9FRAME_HDRP8POLY_FT4(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_FT4 *FT4) {
+	struct PAL *Pal;
+	struct RECT R;
 }
 
-int GetFrNum__7TextDatiiii(TextDat this, int Creature, int Action, int Direction, int Frame) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093E98
+int GetFrNum__7TextDatiiii(struct TextDat *this, int Creature, int Action, int Direction, int Frame) {
 	int Frame;
 }
 
-unknown IsDirAliased__7TextDatiii(TextDat this, int Creature, int Action, int Direction) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093EEC
+unknown IsDirAliased__7TextDatiii(struct TextDat *this, int Creature, int Action, int Direction) {
 }
 
-void DoDecompRequests__7TextDat(TextDat this) {
-	long* DecArray;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80093F44
+void DoDecompRequests__7TextDat(struct TextDat *this) {
+	long *DecArray;
 	int f;
 }
 
-void FindDecompArea__7TextDatR4RECT(TextDat this, LPCRECT R) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094068
+void FindDecompArea__7TextDatR4RECT(struct TextDat *this, struct RECT *R) {
 	int NumOfFrames;
 	int Widest;
 	int Tallest;
@@ -230,17 +302,25 @@ void FindDecompArea__7TextDatR4RECT(TextDat this, LPCRECT R) {
 	int h;
 }
 
-CTextFileInfo GetFileInfo__7TextDati(int Id) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094140
+struct CTextFileInfo* GetFileInfo__7TextDati(int Id) {
 }
 
-int GetSize__C15CCreatureAction(CCreatureAction this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094190
+int GetSize__C15CCreatureAction(struct CCreatureAction *this) {
 }
 
-int GetFrNum__C15CCreatureActionii(CCreatureAction this, int Direction, int Frame) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800941B8
+int GetFrNum__C15CCreatureActionii(struct CCreatureAction *this, int Direction, int Frame) {
 	int LocFrame;
 }
 
-void InitDirRemap__15CCreatureAction(CCreatureAction this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800941E8
+void InitDirRemap__15CCreatureAction(struct CCreatureAction *this) {
 	unknown Dir2Remap[8];
 	int f;
 	int RemapNum;
@@ -248,69 +328,95 @@ void InitDirRemap__15CCreatureAction(CCreatureAction this) {
 	int g;
 }
 
-int GetFrNum__C12CCreatureHdriii(CCreatureHdr this, int Action, int Direction, int Frame) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800942A8
+int GetFrNum__C12CCreatureHdriii(struct CCreatureHdr *this, int Action, int Direction, int Frame) {
 }
 
-CCreatureAction GetAction__C12CCreatureHdri(CCreatureHdr this, int ActNum) {
-	CCreatureAction CAct;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800942EC
+struct CCreatureAction* GetAction__C12CCreatureHdri(struct CCreatureHdr *this, int ActNum) {
+	struct CCreatureAction *CAct;
 	int f;
 }
 
-void InitActionDirRemaps__12CCreatureHdr(CCreatureHdr this) {
-	CCreatureAction CAct;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x8009437C
+void InitActionDirRemaps__12CCreatureHdr(struct CCreatureHdr *this) {
+	struct CCreatureAction *CAct;
 	int f;
 }
 
-int GetSize__C12CCreatureHdr(CCreatureHdr this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800943EC
+int GetSize__C12CCreatureHdr(struct CCreatureHdr *this) {
 	int Size;
-	CCreatureAction CAct;
+	struct CCreatureAction *CAct;
 	int f;
 	int ThisSize;
 }
 
-void LoadDat__C13CTextFileInfoli(CTextFileInfo this, long hnd, int size) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094458
+void LoadDat__C13CTextFileInfoli(struct CTextFileInfo *this, long hnd, int size) {
 	char FName[13];
-	unsigned char* Dest;
-	FileIO MyFileIO;
+	unsigned char *Dest;
+	struct FileIO *MyFileIO;
 }
 
-long LoadDat__C13CTextFileInfo(CTextFileInfo this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x8009458C
+long LoadDat__C13CTextFileInfo(struct CTextFileInfo *this) {
 }
 
-long LoadHdr__C13CTextFileInfo(CTextFileInfo this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800945E4
+long LoadHdr__C13CTextFileInfo(struct CTextFileInfo *this) {
 }
 
-void MakeFname__C13CTextFileInfoPcPCc(CTextFileInfo this, char* Dest, char* Ext) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x8009460C
+void MakeFname__C13CTextFileInfoPcPCc(struct CTextFileInfo *this, char *Dest, char *Ext) {
 }
 
-long GetFile__C13CTextFileInfoPcUl(CTextFileInfo this, char* Ext, unsigned long RamId) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094654
+long GetFile__C13CTextFileInfoPcUl(struct CTextFileInfo *this, char *Ext, unsigned long RamId) {
 	char FName[13];
 	long hnd;
 }
 
-unknown HasFile__C13CTextFileInfoPc(CTextFileInfo this, char* Ext) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800946F4
+unknown HasFile__C13CTextFileInfoPc(struct CTextFileInfo *this, char *Ext) {
 	char FName[13];
-	FileIO MyFileIO;
+	struct FileIO *MyFileIO;
 }
 
-void Un64__FPUcT0l(unsigned char* Src, unsigned char* Dest, long SizeBytes) {
-	unsigned char* EndDest;
-	unsigned long* BigDest;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094788
+void Un64__FPUcT0l(unsigned char *Src, unsigned char *Dest, long SizeBytes) {
+	unsigned char *EndDest;
+	unsigned long *BigDest;
 	unsigned long Code;
 	unsigned long Run;
 	unsigned long BigCode;
 }
 
-CScreen __7CScreen(CScreen this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x8009485C
+struct CScreen* __7CScreen(struct CScreen *this) {
 }
 
-void Load__7CScreeniii(CScreen this, int Id, int tpx, int tpy) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094890
+void Load__7CScreeniii(struct CScreen *this, int Id, int tpx, int tpy) {
 	unsigned char r;
 	unsigned char g;
 	unsigned char b;
-	FRAME_HDR Fr;
-	LPCRECT R;
-	PAL Pal;
+	struct FRAME_HDR *Fr;
+	struct RECT R;
+	struct PAL *Pal;
 	unsigned short MyPal[256];
 	int i;
 	int i;
@@ -320,386 +426,47 @@ void Load__7CScreeniii(CScreen this, int Id, int tpx, int tpy) {
 	unsigned short c;
 }
 
-void Unload__7CScreen(CScreen this) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094BA4
+void Unload__7CScreen(struct CScreen *this) {
 }
 
-void Display__7CScreeniiii(CScreen this, int Id, int tpx, int tpy, int fadeval) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094BC8
+void Display__7CScreeniiii(struct CScreen *this, int Id, int tpx, int tpy, int fadeval) {
 	int fadeval;
-	OBJ_PFUNC FT4;
+	struct POLY_FT4 *FT4;
 }
 
-void SetRect__5CPartR7TextDatR4RECT(CPart this, TextDat TDat, LPCRECT R) {
-	FRAME_HDR Fr;
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094EA8
+void SetRect__5CPartR7TextDatR4RECT(struct CPart *this, struct TextDat *TDat, struct RECT *R) {
+	struct FRAME_HDR *Fr;
 }
 
-void GetBoundingBox__6CBlockR7TextDatR4RECT(CBlock this, TextDat TDat, LPCRECT R) {
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80094F24
+void GetBoundingBox__6CBlockR7TextDatR4RECT(struct CBlock *this, struct TextDat *TDat, struct RECT *R) {
 	int left;
 	int right;
 	int top;
 	int bottom;
-	LPCRECT Pr;
+	struct RECT Pr;
 	unsigned int f;
 }
 
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x80095080
 void _GLOBAL_.D.DatPool() {
 }
 
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800950D8
 void _GLOBAL_.I.DatPool() {
 }
 
-TextDat __7TextDat(TextDat this) {
-}
-
-void OnceOnlyInit__7TextDat(TextDat this) {
-}
-
-void _._7TextDat(TextDat this, int __in_chrg) {
-}
-
-void ReloadTP__7TextDat(TextDat this) {
-}
-
-void Use__7TextDatlbi(TextDat this, long NewHndDat, unknown DatLoaded, int size) {
-	char NameBuff[40];
-	LPCRECT R;
-	int DecompSize;
-}
-
-unknown TpLoadCallBack__FPUciib(unsigned char* Mem, int ReadSoFar, int Size, unknown LastChunk) {
-	LPCRECT R;
-	int Dx;
-	int Dy;
-}
-
-void StreamLoadTP__7TextDat(TextDat this) {
-	char TheName[20];
-}
-
-void FinishedUsing__7TextDat(TextDat this) {
-}
-
-void MakeBlockOffsetTab__7TextDat(TextDat this) {
-}
-
-long MakeOffsetTab__C9CBlockHdr(CBlockHdr this) {
-	CBlock MyBlock;
-	long hndRet;
-	int* Tab;
-	unsigned int f;
-}
-
-void SetUVTp__7TextDatP9FRAME_HDRP8POLY_FT4ii(TextDat this, FRAME_HDR Fr, OBJ_PFUNC FT4, int XFlip, int YFlip) {
-	int YFlip;
-	int Rotated;
-	int Tpage;
-	int U;
-	int V;
-	int W;
-	int H;
-}
-
-unknown IsCompressed__7TextDatiiii(TextDat this, int Creature, int Action, int Dir, int Frame) {
-	int Frame;
-}
-
-OBJ_PFUNC PrintMonster__7TextDatiiiiiii(TextDat this, int Creature, int Action, int Dir, int Frame, int x, int y, int OtPos) {
-	int Frame;
-	int x;
-	int y;
-	int OtPos;
-	int PhysFrame;
-}
-
-OBJ_PFUNC PrintMonsterA__7TextDatiiibi(TextDat this, int Frm, int X, int Y, unknown XFlip, int OtPos) {
-	unknown XFlip;
-	int OtPos;
-	OBJ_PFUNC FT4;
-	FRAME_HDR Fr;
-	int W;
-	int H;
-	unsigned char* Dest;
-	int DecompSize;
-	unsigned char* CompFrAddr;
-	DR_LOAD2 DrPtr;
-	unsigned long NumOfPrims;
-	int VH;
-	int TpX;
-	int TpY;
-	int U;
-	int V;
-	int W;
-	int H;
-	int u0;
-	int u1;
-	int u2;
-	int u3;
-	unsigned int f;
-	LPCRECT mrect;
-}
-
-void PrepareFt4__7TextDatP8POLY_FT4iiiii(TextDat this, OBJ_PFUNC FT4, int Frm, int X, int Y, int XFlip, int YFlip) {
-	int Y;
-	int XFlip;
-	FRAME_HDR Fr;
-	int W;
-	int H;
-	LPCRECT R;
-	unsigned char sw;
-}
-
-unsigned char* GetDecompBufffer__7TextDati(TextDat this, int Size) {
-	long* DecArray;
-	int DecIndex;
-	long hnd;
-	unsigned char* RetAddr;
-}
-
-void SetUVTpGT4__7TextDatP9FRAME_HDRP8POLY_GT4ii(TextDat this, FRAME_HDR Fr, POLY_GT4 FT4, int XFlip, int YFlip) {
-	int YFlip;
-	int Rotated;
-	int Tpage;
-	int U;
-	int V;
-	int W;
-	int H;
-}
-
-void PrepareGt4__7TextDatP8POLY_GT4iiiii(TextDat this, POLY_GT4 GT4, int Frm, int X, int Y, int XFlip, int YFlip) {
-	int Y;
-	int XFlip;
-	int YFlip;
-	FRAME_HDR Fr;
-	int W;
-	int H;
-	unsigned char sw;
-	PAL Pal;
-	LPCRECT R;
-	int DecX;
-	int DecY;
-	LPCRECT R;
-}
-
-void SetUVTpGT3__7TextDatP9FRAME_HDRP8POLY_GT3(TextDat this, FRAME_HDR Fr, POLY_GT3 GT3) {
-	int Rotated;
-	int Tpage;
-	int U;
-	int V;
-	int W;
-	int H;
-}
-
-void PrepareGt3__7TextDatP8POLY_GT3iii(TextDat this, POLY_GT3 GT3, int Frm, int X, int Y) {
-	int Y;
-	FRAME_HDR Fr;
-	int W;
-	int H;
-	PAL Pal;
-	LPCRECT R;
-	int DecX;
-	int DecY;
-	LPCRECT R;
-}
-
-OBJ_PFUNC PrintFt4__7TextDatiiiiii(TextDat this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
-	int XFlip;
-	int OtPos;
-	int YFlip;
-	OBJ_PFUNC FT4;
-}
-
-POLY_GT4 PrintGt4__7TextDatiiiiii(TextDat this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
-	int XFlip;
-	int OtPos;
-	int YFlip;
-	POLY_GT4 GT4;
-}
-
-void DecompFrame__7TextDatP9FRAME_HDR(TextDat this, FRAME_HDR Fr) {
-	unsigned char* CompFrAddr;
-	int DecompSize;
-	unsigned char* Dest;
-}
-
-void MakeCreatureOffsetTab__7TextDat(TextDat this) {
-	int NumOfCreatures;
-	unsigned char* ThisAddr;
-	unsigned int f;
-	int f;
-}
-
-void MakePalOffsetTab__7TextDat(TextDat this) {
-	PAL ThisPal;
-	unsigned int f;
-}
-
-void InitData__7TextDat(TextDat this) {
-}
-
-void DumpData__7TextDat(TextDat this) {
-}
-
-void DumpHdr__7TextDat(TextDat this) {
-}
-
-TextDat GM_UseTexData__Fi(int Id) {
-	TextDat Dat2Use;
-	CTextFileInfo Tab;
-	int f;
-}
-
-void GM_ForceTpLoad__Fi(int Id) {
-}
-
-void GM_FinishedUsing__FP7TextDat(TextDat Fin) {
-}
-
-void SetPal__7TextDatP9FRAME_HDRP8POLY_FT4(TextDat this, FRAME_HDR Fr, OBJ_PFUNC FT4) {
-	PAL Pal;
-	LPCRECT R;
-}
-
-int GetFrNum__7TextDatiiii(TextDat this, int Creature, int Action, int Direction, int Frame) {
-	int Frame;
-}
-
-unknown IsDirAliased__7TextDatiii(TextDat this, int Creature, int Action, int Direction) {
-}
-
-void DoDecompRequests__7TextDat(TextDat this) {
-	long* DecArray;
-	int f;
-}
-
-void FindDecompArea__7TextDatR4RECT(TextDat this, LPCRECT R) {
-	int NumOfFrames;
-	int Widest;
-	int Tallest;
-	int f;
-	int w;
-	int h;
-}
-
-CTextFileInfo GetFileInfo__7TextDati(int Id) {
-}
-
-int GetSize__C15CCreatureAction(CCreatureAction this) {
-}
-
-int GetFrNum__C15CCreatureActionii(CCreatureAction this, int Direction, int Frame) {
-	int LocFrame;
-}
-
-void InitDirRemap__15CCreatureAction(CCreatureAction this) {
-	unknown Dir2Remap[8];
-	int f;
-	int RemapNum;
-	int OrigNum;
-	int g;
-}
-
-int GetFrNum__C12CCreatureHdriii(CCreatureHdr this, int Action, int Direction, int Frame) {
-}
-
-CCreatureAction GetAction__C12CCreatureHdri(CCreatureHdr this, int ActNum) {
-	CCreatureAction CAct;
-	int f;
-}
-
-void InitActionDirRemaps__12CCreatureHdr(CCreatureHdr this) {
-	CCreatureAction CAct;
-	int f;
-}
-
-int GetSize__C12CCreatureHdr(CCreatureHdr this) {
-	int Size;
-	CCreatureAction CAct;
-	int f;
-	int ThisSize;
-}
-
-void LoadDat__C13CTextFileInfoli(CTextFileInfo this, long hnd, int size) {
-	char FName[13];
-	unsigned char* Dest;
-	FileIO MyFileIO;
-}
-
-long LoadDat__C13CTextFileInfo(CTextFileInfo this) {
-}
-
-long LoadHdr__C13CTextFileInfo(CTextFileInfo this) {
-}
-
-void MakeFname__C13CTextFileInfoPcPCc(CTextFileInfo this, char* Dest, char* Ext) {
-}
-
-long GetFile__C13CTextFileInfoPcUl(CTextFileInfo this, char* Ext, unsigned long RamId) {
-	char FName[13];
-	long hnd;
-}
-
-unknown HasFile__C13CTextFileInfoPc(CTextFileInfo this, char* Ext) {
-	char FName[13];
-	FileIO MyFileIO;
-}
-
-void Un64__FPUcT0l(unsigned char* Src, unsigned char* Dest, long SizeBytes) {
-	unsigned char* EndDest;
-	unsigned long* BigDest;
-	unsigned long Code;
-	unsigned long Run;
-	unsigned long BigCode;
-}
-
-CScreen __7CScreen(CScreen this) {
-}
-
-void Load__7CScreeniii(CScreen this, int Id, int tpx, int tpy) {
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-	FRAME_HDR Fr;
-	LPCRECT R;
-	PAL Pal;
-	unsigned short MyPal[256];
-	int i;
-	int i;
-	int i;
-	int nocols;
-	int v;
-	unsigned short c;
-}
-
-void Unload__7CScreen(CScreen this) {
-}
-
-void Display__7CScreeniiii(CScreen this, int Id, int tpx, int tpy, int fadeval) {
-	int fadeval;
-	OBJ_PFUNC FT4;
-}
-
-void SetRect__5CPartR7TextDatR4RECT(CPart this, TextDat TDat, LPCRECT R) {
-	FRAME_HDR Fr;
-}
-
-void GetBoundingBox__6CBlockR7TextDatR4RECT(CBlock this, TextDat TDat, LPCRECT R) {
-	int left;
-	int right;
-	int top;
-	int bottom;
-	LPCRECT Pr;
-	unsigned int f;
-}
-
-void _GLOBAL_.D.DatPool() {
-}
-
-void _GLOBAL_.I.DatPool() {
-}
-
-void GM_Open__Fv() {
-	int f;
-}
-
+// Path: C:\diabpsx\PSXSRC\GMAN.CPP
+// Addr: 0x800B0760
 void GM_Open__Fv() {
 	int f;
 }

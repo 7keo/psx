@@ -1,102 +1,148 @@
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80077F90
 void ClrCursor__Fi(int num) {
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80077FEC
 void HappyMan__Fi(int n) {
 }
 
-void flyabout__7GamePad(GamePad this) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80077FFC
+void flyabout__7GamePad(struct GamePad *this) {
 	int cp;
 	int owx;
 	int owy;
 	int wx;
 	int wy;
-	CBlocks gblocks;
+	struct CBlocks *gblocks;
 	int step;
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800783F8
 void CloseInvChr__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078440
 void WorldToOffset__Fiii(int pnum, int WorldX, int WorldY) {
 	int x;
 	int y;
-	PlayerStruct player;
+	struct PlayerStruct *player;
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800784C0
 char pad_UpIsUpRight__Fic(int pval, char other) {
 	int walk_dir;
 }
 
-GamePad __7GamePadi(GamePad this, int player_num) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007857C
+struct GamePad* __7GamePadi(struct GamePad *this, int player_num) {
 }
 
-void SetMoveStyle__7GamePadc(GamePad this, char style_num) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078630
+void SetMoveStyle__7GamePadc(struct GamePad *this, char style_num) {
 }
 
-void SetDownButton__7GamePadiPFi_v(GamePad this, int pad_val, void* func) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078638
+void SetDownButton__7GamePadiPFi_v(struct GamePad *this, int pad_val, void (*func)()) {
 }
 
-void SetComboDownButton__7GamePadiPFi_v(GamePad this, int pad_val, void* func) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007867C
+void SetComboDownButton__7GamePadiPFi_v(struct GamePad *this, int pad_val, void (*func)()) {
 }
 
-void SetAllButtons__7GamePadP11KEY_ASSIGNS(GamePad this, key_assigns actions) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800786C0
+void SetAllButtons__7GamePadP11KEY_ASSIGNS(struct GamePad *this, struct KEY_ASSIGNS *actions) {
 	int i;
 }
 
-void GetAllButtons__7GamePadP11KEY_ASSIGNS(GamePad this, key_assigns actions) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078928
+void GetAllButtons__7GamePadP11KEY_ASSIGNS(struct GamePad *this, struct KEY_ASSIGNS *actions) {
 	int i;
 	int oc;
 }
 
-int GetActionButton__7GamePadPFi_v(GamePad this, void* func) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078AE0
+int GetActionButton__7GamePadPFi_v(struct GamePad *this, void (*func)()) {
 }
 
-void SetUpAction__7GamePadPFi_vT1(GamePad this, void* func, void* upfunc) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078B3C
+void SetUpAction__7GamePadPFi_vT1(struct GamePad *this, void (*func)(), void (*upfunc)()) {
 }
 
-void RunFunc__7GamePadi(GamePad this, int pad) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078B78
+void RunFunc__7GamePadi(struct GamePad *this, int pad) {
 	int i;
 }
 
-void ButtonDown__7GamePadi(GamePad this, int button) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80078C64
+void ButtonDown__7GamePadi(struct GamePad *this, int button) {
 }
 
-void TestButtons__7GamePad(GamePad this) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007907C
+void TestButtons__7GamePad(struct GamePad *this) {
 	int hand;
 	int joydown;
 }
 
-unknown CheckCentre__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80079188
+unknown CheckCentre__7GamePadi(struct GamePad *this, int dir) {
 	int wx;
 	int wy;
 	int ret;
 }
 
-int CheckDirs__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80079280
+int CheckDirs__7GamePadi(struct GamePad *this, int dir) {
 }
 
-int CheckDirs__7GamePadiii(GamePad this, int dir, int wx, int wy) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800792B0
+int CheckDirs__7GamePadiii(struct GamePad *this, int dir, int wx, int wy) {
 }
 
-int CheckSide__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800793B8
+int CheckSide__7GamePadi(struct GamePad *this, int dir) {
 }
 
-unknown newDirOk__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800793F8
+unknown newDirOk__7GamePadi(struct GamePad *this, int dir) {
 	int x;
 	int y;
 	int wx;
 	int wy;
 }
 
-int CheckDiagBodge__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x800794A8
+int CheckDiagBodge__7GamePadi(struct GamePad *this, int dir) {
 	int x;
 	int y;
 	int lnd;
 	int rnd;
 	int wx;
 	int wy;
-	char* poffset_x;
-	char* poffset_y;
+	char *poffset_x;
+	char *poffset_y;
 	unknown pl;
 	unknown pr;
 	unknown pf;
@@ -104,7 +150,9 @@ int CheckDiagBodge__7GamePadi(GamePad this, int dir) {
 	unknown prr;
 }
 
-int CheckIsoBodge__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007979C
+int CheckIsoBodge__7GamePadi(struct GamePad *this, int dir) {
 	int x;
 	int y;
 	int newdir;
@@ -112,257 +160,99 @@ int CheckIsoBodge__7GamePadi(GamePad this, int dir) {
 	int wy;
 	int lnd;
 	int rnd;
-	char* poffset_x;
-	char* poffset_y;
+	char *poffset_x;
+	char *poffset_y;
 }
 
-int CheckBodge__7GamePadi(GamePad this, int dir) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80079B08
+int CheckBodge__7GamePadi(struct GamePad *this, int dir) {
 	int fx;
 	int fy;
-	map_info dm;
+	struct map_info *dm;
 	int wx;
 	int wy;
 }
 
-void walk__7GamePadi(GamePad this, int cmd) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80079C68
+void walk__7GamePadi(struct GamePad *this, int cmd) {
 	int xv;
 	int yv;
 	int dir;
-	PlayerStruct plr2;
+	struct PlayerStruct *plr2;
 }
 
-void check_around_player__7GamePad(GamePad this) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x80079FB0
+void check_around_player__7GamePad(struct GamePad *this) {
 	int x;
 	int y;
-	ItemStruct pi;
+	struct ItemStruct *pi;
 }
 
-void show_combos__7GamePad(GamePad this) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007A2EC
+void show_combos__7GamePad(struct GamePad *this) {
 	int y;
-	LPCRECT crect;
-	TXT_JUST J;
+	struct RECT crect;
+	enum TXT_JUST J;
 	int i;
 }
 
-void Handle__7GamePad(GamePad this) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007A578
+void Handle__7GamePad(struct GamePad *this) {
 	int cp;
 	int abut;
 	int owait;
 	int dir;
 }
 
-void GamePadTask__FP4TASK(TASK T) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007AC34
+void GamePadTask__FP4TASK(struct TASK *T) {
 	int omp;
 	int oms;
 }
 
-GamePad GetGamePad__Fi(int pnum) {
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007AD2C
+struct GamePad* GetGamePad__Fi(int pnum) {
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007AD4C
 void PostGamePad__Fiiii(int val, int var1, int var2, int var3) {
-	GamePad GP1;
-	GamePad GP2;
+	struct GamePad *GP1;
+	struct GamePad *GP2;
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007AE50
 void Init_GamePad__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007AE80
 void InitGamePadVars__Fv() {
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007B00C
 int SetWalkStyle__Fii(int pnum, int style) {
 	int ret;
-	key_assigns ta;
+	struct KEY_ASSIGNS *ta;
 }
 
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007B07C
 char GetPadStyle__Fi(int pnum) {
-	GamePad GPad;
+	struct GamePad *GPad;
 }
 
-void _GLOBAL_.I.flyflag() {
-}
-
-void ClrCursor__Fi(int num) {
-}
-
-void HappyMan__Fi(int n) {
-}
-
-void flyabout__7GamePad(GamePad this) {
-	int cp;
-	int owx;
-	int owy;
-	int wx;
-	int wy;
-	CBlocks gblocks;
-	int step;
-}
-
-void CloseInvChr__Fv() {
-}
-
-void WorldToOffset__Fiii(int pnum, int WorldX, int WorldY) {
-	int x;
-	int y;
-	PlayerStruct player;
-}
-
-char pad_UpIsUpRight__Fic(int pval, char other) {
-	int walk_dir;
-}
-
-GamePad __7GamePadi(GamePad this, int player_num) {
-}
-
-void SetMoveStyle__7GamePadc(GamePad this, char style_num) {
-}
-
-void SetDownButton__7GamePadiPFi_v(GamePad this, int pad_val, void* func) {
-}
-
-void SetComboDownButton__7GamePadiPFi_v(GamePad this, int pad_val, void* func) {
-}
-
-void SetAllButtons__7GamePadP11KEY_ASSIGNS(GamePad this, key_assigns actions) {
-	int i;
-}
-
-void GetAllButtons__7GamePadP11KEY_ASSIGNS(GamePad this, key_assigns actions) {
-	int i;
-	int oc;
-}
-
-int GetActionButton__7GamePadPFi_v(GamePad this, void* func) {
-}
-
-void SetUpAction__7GamePadPFi_vT1(GamePad this, void* func, void* upfunc) {
-}
-
-void RunFunc__7GamePadi(GamePad this, int pad) {
-	int i;
-}
-
-void ButtonDown__7GamePadi(GamePad this, int button) {
-}
-
-void TestButtons__7GamePad(GamePad this) {
-	int hand;
-	int joydown;
-}
-
-unknown CheckCentre__7GamePadi(GamePad this, int dir) {
-	int wx;
-	int wy;
-	int ret;
-}
-
-int CheckDirs__7GamePadi(GamePad this, int dir) {
-}
-
-int CheckDirs__7GamePadiii(GamePad this, int dir, int wx, int wy) {
-}
-
-int CheckSide__7GamePadi(GamePad this, int dir) {
-}
-
-unknown newDirOk__7GamePadi(GamePad this, int dir) {
-	int x;
-	int y;
-	int wx;
-	int wy;
-}
-
-int CheckDiagBodge__7GamePadi(GamePad this, int dir) {
-	int x;
-	int y;
-	int lnd;
-	int rnd;
-	int wx;
-	int wy;
-	char* poffset_x;
-	char* poffset_y;
-	unknown pl;
-	unknown pr;
-	unknown pf;
-	unknown pll;
-	unknown prr;
-}
-
-int CheckIsoBodge__7GamePadi(GamePad this, int dir) {
-	int x;
-	int y;
-	int newdir;
-	int wx;
-	int wy;
-	int lnd;
-	int rnd;
-	char* poffset_x;
-	char* poffset_y;
-}
-
-int CheckBodge__7GamePadi(GamePad this, int dir) {
-	int fx;
-	int fy;
-	map_info dm;
-	int wx;
-	int wy;
-}
-
-void walk__7GamePadi(GamePad this, int cmd) {
-	int xv;
-	int yv;
-	int dir;
-	PlayerStruct plr2;
-}
-
-void check_around_player__7GamePad(GamePad this) {
-	int x;
-	int y;
-	ItemStruct pi;
-}
-
-void show_combos__7GamePad(GamePad this) {
-	int y;
-	LPCRECT crect;
-	TXT_JUST J;
-	int i;
-}
-
-void Handle__7GamePad(GamePad this) {
-	int cp;
-	int abut;
-	int owait;
-	int dir;
-}
-
-void GamePadTask__FP4TASK(TASK T) {
-	int omp;
-	int oms;
-}
-
-GamePad GetGamePad__Fi(int pnum) {
-}
-
-void PostGamePad__Fiiii(int val, int var1, int var2, int var3) {
-	GamePad GP1;
-	GamePad GP2;
-}
-
-void Init_GamePad__Fv() {
-}
-
-void InitGamePadVars__Fv() {
-}
-
-int SetWalkStyle__Fii(int pnum, int style) {
-	int ret;
-	key_assigns ta;
-}
-
-char GetPadStyle__Fi(int pnum) {
-	GamePad GPad;
-}
-
+// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
+// Addr: 0x8007B0A0
 void _GLOBAL_.I.flyflag() {
 }
 
