@@ -1,6 +1,6 @@
 # psx
 
-The aim of this project is to facilitate attempts at understanding inner workings of the Diablo 1 game engine, by looking at the debug information of the Japanese PSX release of Diablo 1.
+The aim of this project is to facilitate attempts at understanding the inner workings of the Diablo 1 game engine, by looking at the debug information of the Japanese PSX release of Diablo 1.
 
 ## Public domain
 
