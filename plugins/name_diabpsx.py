@@ -1,7 +1,5 @@
-from collections import namedtuple
 from ida_name import set_name
-
-Ident = namedtuple('Ident', ['addr', 'name', 'decl'])
+from base_types import Ident
 
 funcs = [
 	Ident(addr=0x8001FEFC, name="DoEpi", decl="void DoEpi(struct TASK *T)"),
