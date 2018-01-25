@@ -1,66 +1,24 @@
 [
 	Ident(addr=0x80139BFC, name="GameOnlyTestRoutine__Fv", decl="void GameOnlyTestRoutine__Fv()"), # diabpsx/psxsrc/gameonly.cpp
 	Ident(addr=0x80139BFC, name="PreGameOnlyTestRoutine__Fv", decl="void PreGameOnlyTestRoutine__Fv()"), # diabpsx/psxsrc/pregame.cpp
-	Ident(addr=0x80139BFC, name="PresOnlyTestRoutine__Fv", decl="void PresOnlyTestRoutine__Fv()"), # diabpsx/psxsrc/presonly.cpp
 	Ident(addr=0x80139C04, name="GetDamageAmt__FiPiT1", decl="void GetDamageAmt__FiPiT1(int i, int *mind, int *maxd)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x80139C24, name="FeInitBuffer__Fv", decl="void FeInitBuffer__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x80139C50, name="FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont", decl="void FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont(int X, int Y, enum TXT_JUST Just, unsigned short Str, struct FeTable *MenuPtr, struct CFont *Font)"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x80139CD4, name="FeAddTable__FP11FeMenuTablei", decl="void FeAddTable__FP11FeMenuTablei(struct FeMenuTable *Table, int Count)"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x80139D50, name="FeAddNameTable__FPUci", decl="void FeAddNameTable__FPUci(unsigned char *Table, int Count)"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x80139E78, name="FeDrawBuffer__Fv", decl="void FeDrawBuffer__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013A1FC, name="CheckBlock__Fiiii", decl="int CheckBlock__Fiiii(int fx, int fy, int tx, int ty)"), # diabpsx/source/missiles.cpp
 	Ident(addr=0x8013A2B0, name="FindClosest__Fiii", decl="int FindClosest__Fiii(int sx, int sy, int rad)"), # diabpsx/source/missiles.cpp
 	Ident(addr=0x8013A43C, name="GetSpellLevel__Fii", decl="int GetSpellLevel__Fii(int id, int sn)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013A4A4, name="FeNewMenu__FP7FeTable", decl="void FeNewMenu__FP7FeTable(struct FeTable *Menu)"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013A4B0, name="GetDirection8__Fiiii", decl="int GetDirection8__Fiiii(int x1, int y1, int x2, int y2)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013A524, name="FePrevMenu__Fv", decl="void FePrevMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013A66C, name="FeSelUp__Fi", decl="void FeSelUp__Fi(int No)"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013A6CC, name="GetDirection16__Fiiii", decl="int GetDirection16__Fiiii(int x1, int y1, int x2, int y2)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013A754, name="FeSelDown__Fi", decl="void FeSelDown__Fi(int No)"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013A83C, name="FeGetCursor__Fv", decl="int FeGetCursor__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013A850, name="FeSelect__Fv", decl="void FeSelect__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013A8A0, name="FeMainKeyCtrl__FP7CScreen", decl="void FeMainKeyCtrl__FP7CScreen(struct CScreen *FeScreen)"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013A8E8, name="DeleteMissile__Fii", decl="void DeleteMissile__Fii(int mi, int i)"), # diabpsx/source/missiles.cpp
 	Ident(addr=0x8013A988, name="GetMissileVel__Fiiiiii", decl="void GetMissileVel__Fiiiiii(int i, int sx, int sy, int dx, int dy, int v)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013AA68, name="InitDummyMenu__Fv", decl="void InitDummyMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013AA70, name="InitFrontEnd__FP9FE_CREATE", decl="void InitFrontEnd__FP9FE_CREATE(struct FE_CREATE *CreateStruct)"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013AB44, name="PutMissile__Fi", decl="void PutMissile__Fi(int i)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013ABA4, name="FeInitMainMenu__Fv", decl="void FeInitMainMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013AC20, name="FeInitNewGameMenu__Fv", decl="void FeInitNewGameMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013ACB0, name="FeNewGameMenuCtrl__Fv", decl="void FeNewGameMenuCtrl__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013ADA0, name="GetMissilePos__Fi", decl="void GetMissilePos__Fi(int i)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013AE64, name="FeInitPlayer1ClassMenu__Fv", decl="void FeInitPlayer1ClassMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013AED4, name="MoveMissilePos__Fi", decl="void MoveMissilePos__Fi(int i)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013AEE8, name="FeInitPlayer2ClassMenu__Fv", decl="void FeInitPlayer2ClassMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013AF6C, name="FePlayerClassMenuCtrl__Fv", decl="void FePlayerClassMenuCtrl__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013AFB4, name="FeDrawChrClass__Fv", decl="void FeDrawChrClass__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013B04C, name="MonsterTrapHit__FiiiiiUc", decl="unsigned char MonsterTrapHit__FiiiiiUc(int m, int mindam, int maxdam, int dist, int t, int shift)"), # diabpsx/source/missiles.cpp
 	Ident(addr=0x8013B3D0, name="MonsterMHit__FiiiiiiUc", decl="unsigned char MonsterMHit__FiiiiiiUc(int pnum, int m, int mindam, int maxdam, int dist, int t, int shift)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013B43C, name="FeInitNewP1NameMenu__Fv", decl="void FeInitNewP1NameMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013B498, name="FeInitNewP2NameMenu__Fv", decl="void FeInitNewP2NameMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013B4EC, name="FeNewNameMenuCtrl__Fv", decl="void FeNewNameMenuCtrl__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BAB4, name="FeCopyPlayerInfoForReturn__Fv", decl="void FeCopyPlayerInfoForReturn__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013BB90, name="PlayerMHit__FiiiiiiUcUc", decl="unsigned char PlayerMHit__FiiiiiiUcUc(int pnum, int m, int dist, int mind, int maxd, int mtype, int shift, int earflag)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013BBC8, name="FeEnterGame__Fv", decl="void FeEnterGame__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BBF0, name="FeInitLoadMemcardSelect__Fv", decl="void FeInitLoadMemcardSelect__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BC70, name="FeInitLoadChar1Menu__Fv", decl="void FeInitLoadChar1Menu__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013BCB0, name="DRLG_PlaceDoor__Fii", decl="void DRLG_PlaceDoor__Fii(int x, int y)"), # diabpsx/source/drlg_l1.cpp
-	Ident(addr=0x8013BCD8, name="FeInitLoadChar2Menu__Fv", decl="void FeInitLoadChar2Menu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BD48, name="FeInitDifficultyMenu__Fv", decl="void FeInitDifficultyMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BDEC, name="FeDifficultyMenuCtrl__Fv", decl="void FeDifficultyMenuCtrl__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BED0, name="FeInitBackgroundMenu__Fv", decl="void FeInitBackgroundMenu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BF1C, name="FeInitBook1Menu__Fv", decl="void FeInitBook1Menu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BF6C, name="FeInitBook2Menu__Fv", decl="void FeInitBook2Menu__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013BFBC, name="FeBackBookMenuCtrl__Fv", decl="void FeBackBookMenuCtrl__Fv()"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013C190, name="DRLG_L1Shadows__Fv", decl="void DRLG_L1Shadows__Fv()"), # diabpsx/source/drlg_l1.cpp
-	Ident(addr=0x8013C200, name="PlayDemo__Fv", decl="void PlayDemo__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013C214, name="FadeFEOut__Fv", decl="void FadeFEOut__Fv()"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013C2D8, name="DrawBackTSK__FP4TASK", decl="void DrawBackTSK__FP4TASK(struct TASK *T)"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013C460, name="FeInitMainStuff__FP4TASK", decl="void FeInitMainStuff__FP4TASK(struct TASK *T2)"), # diabpsx/psxsrc/fe.cpp
-	Ident(addr=0x8013C50C, name="FrontEndTask__FP4TASK", decl="void FrontEndTask__FP4TASK(struct TASK *T)"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013C5A0, name="DRLG_PlaceMiniSet__FPCUciiiiiii", decl="int DRLG_PlaceMiniSet__FPCUciiiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int noquad, int ldir)"), # diabpsx/source/drlg_l1.cpp
 	Ident(addr=0x8013C5EC, name="Plr2PlrMHit__FiiiiiiUc", decl="unsigned char Plr2PlrMHit__FiiiiiiUc(int pnum, int p, int mindam, int maxdam, int dist, int mtype, int shift)"), # diabpsx/source/missiles.cpp
-	Ident(addr=0x8013C9B8, name="DrawFeTwinkle__Fii", decl="void DrawFeTwinkle__Fii(int TwinkX, int TwinkY)"), # diabpsx/psxsrc/fe.cpp
 	Ident(addr=0x8013CA08, name="DRLG_SetWalls__Fv", decl="void DRLG_SetWalls__Fv()"), # diabpsx/source/drlg_l1.cpp
 	Ident(addr=0x8013CA94, name="_._6Dialog", decl="void _._6Dialog(struct Dialog *this, int __in_chrg)"), # diabpsx/psxsrc/dialog.h
 	Ident(addr=0x8013CABC, name="__6Dialog", decl="struct Dialog* __6Dialog(struct Dialog *this)"), # diabpsx/psxsrc/dialog.h
