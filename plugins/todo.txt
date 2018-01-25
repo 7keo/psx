@@ -2835,36 +2835,19 @@
 	Ident(addr=0x80161EA8, name="__6Dialog", decl="struct Dialog* __6Dialog(struct Dialog *this)"), # diabpsx/psxsrc/dialog.h
 	Ident(addr=0x80161F28, name="DumpMonsters__7CBlocks", decl="void DumpMonsters__7CBlocks(struct CBlocks *this)"), # diabpsx/psxsrc/block.h
 	Ident(addr=0x80161F50, name="GetOverlayOtBase__7CBlocks", decl="int GetOverlayOtBase__7CBlocks()"), # diabpsx/psxsrc/block.h
-	Ident(addr=0x80161F58, name="StartAutomap__Fv", decl="void StartAutomap__Fv()"), # diabpsx/source/automap.cpp
-	Ident(addr=0x80161F68, name="AutomapUp__Fv", decl="void AutomapUp__Fv()"), # diabpsx/source/automap.cpp
-	Ident(addr=0x80161F88, name="AutomapDown__Fv", decl="void AutomapDown__Fv()"), # diabpsx/source/automap.cpp
-	Ident(addr=0x80161FA8, name="AutomapLeft__Fv", decl="void AutomapLeft__Fv()"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80161FB0, name="IsGoat__Fi", decl="unsigned char IsGoat__Fi(int mt)"), # diabpsx/source/premon.cpp
-	Ident(addr=0x80161FC8, name="AutomapRight__Fv", decl="void AutomapRight__Fv()"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80161FDC, name="InitMissiles__Fv", decl="void InitMissiles__Fv()"), # diabpsx/source/premiss.cpp
-	Ident(addr=0x80161FE8, name="AMGetLine__FUcUcUc", decl="struct LINE_F2* AMGetLine__FUcUcUc(unsigned char R, unsigned char G, unsigned char B)"), # diabpsx/source/automap.cpp
-	Ident(addr=0x801620A0, name="AmDrawPlayer__Fiiiii", decl="void AmDrawPlayer__Fiiiii(int x0, int y0, int x1, int y1, int PNum)"), # diabpsx/source/automap.cpp
-	Ident(addr=0x80162124, name="DrawAutomapPlr__Fv", decl="void DrawAutomapPlr__Fv()"), # diabpsx/source/automap.cpp
 	Ident(addr=0x801621AC, name="InitNoTriggers__Fv", decl="void InitNoTriggers__Fv()"), # diabpsx/source/pretrigs.cpp
 	Ident(addr=0x801621D0, name="InitTownTriggers__Fv", decl="void InitTownTriggers__Fv()"), # diabpsx/source/pretrigs.cpp
-	Ident(addr=0x80162490, name="DrawAutoMapVertDoor__Fii", decl="void DrawAutoMapVertDoor__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80162530, name="InitL1Triggers__Fv", decl="void InitL1Triggers__Fv()"), # diabpsx/source/pretrigs.cpp
-	Ident(addr=0x8016264C, name="DrawAutoMapHorzDoor__Fii", decl="void DrawAutoMapHorzDoor__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
 	Ident(addr=0x8016265C, name="InitL2Triggers__Fv", decl="void InitL2Triggers__Fv()"), # diabpsx/source/pretrigs.cpp
-	Ident(addr=0x8016280C, name="DrawAutoMapVertGrate__Fii", decl="void DrawAutoMapVertGrate__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80162824, name="InitL3Triggers__Fv", decl="void InitL3Triggers__Fv()"), # diabpsx/source/pretrigs.cpp
-	Ident(addr=0x801628A4, name="DrawAutoMapHorzGrate__Fii", decl="void DrawAutoMapHorzGrate__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
-	Ident(addr=0x8016293C, name="DrawAutoMapSquare__Fii", decl="void DrawAutoMapSquare__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
 	Ident(addr=0x801629B0, name="InitL4Triggers__Fv", decl="void InitL4Triggers__Fv()"), # diabpsx/source/pretrigs.cpp
-	Ident(addr=0x80162A70, name="DrawVertArch__Fii", decl="void DrawVertArch__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
-	Ident(addr=0x80162BA4, name="DrawHorzArch__Fii", decl="void DrawHorzArch__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80162BF8, name="InitSKingTriggers__Fv", decl="void InitSKingTriggers__Fv()"), # diabpsx/source/pretrigs.cpp
 	Ident(addr=0x80162C44, name="InitSChambTriggers__Fv", decl="void InitSChambTriggers__Fv()"), # diabpsx/source/pretrigs.cpp
 	Ident(addr=0x80162C90, name="InitPWaterTriggers__Fv", decl="void InitPWaterTriggers__Fv()"), # diabpsx/source/pretrigs.cpp
-	Ident(addr=0x80162CD8, name="DrawAutoMapStairs__Fii", decl="void DrawAutoMapStairs__Fii(int X, int Y)"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80162CDC, name="InitStores__Fv", decl="void InitStores__Fv()"), # diabpsx/source/prestore.cpp
 	Ident(addr=0x80162DD0, name="SetupTownStores__Fv", decl="void SetupTownStores__Fv()"), # diabpsx/source/prestore.cpp
-	Ident(addr=0x80162E50, name="DrawAutomap__Fv", decl="void DrawAutomap__Fv()"), # diabpsx/source/automap.cpp
 	Ident(addr=0x80162FD4, name="DefragItems__FPUci", decl="void DefragItems__FPUci(unsigned char *ilist, int num)"), # diabpsx/source/premsg.cpp
 	Ident(addr=0x8016301C, name="removellist__FPUcUc", decl="void removellist__FPUcUc(unsigned char *ilist, unsigned char val)"), # diabpsx/source/premsg.cpp
 	Ident(addr=0x80163054, name="DeltaLoadLevel__Fv", decl="void DeltaLoadLevel__Fv()"), # diabpsx/source/premsg.cpp
