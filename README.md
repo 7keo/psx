@@ -27,4 +27,4 @@ The debug information split into overlays.
 
 ## sym_dump
 
-The information contained within this repository has been recovered by parsing the `DIABPSX.SYM` file contained on the Japanese release of Diablo 1 on Playstation 1 () using the [sym_dump](https://github.com/sanctuary/sym) tool.
+The information contained within this repository has been recovered by parsing the `DIABPSX.SYM` file contained on the Japanese release of Diablo 1 on Playstation 1 (SLPS-01416) using the [sym_dump](https://github.com/sanctuary/sym) tool.
