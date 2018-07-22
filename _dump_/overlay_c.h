@@ -601,48 +601,72 @@ void PreGameOnlyTestRoutine__Fv() {
 
 // address: 0x8013BCB0
 void DRLG_PlaceDoor__Fii(int x, int y) {
-	unsigned char c;
-	unsigned char df;
+	// register: 7
+	register unsigned char c;
+	// register: 8
+	register unsigned char df;
 }
 
 
 // address: 0x8013C190
 void DRLG_L1Shadows__Fv() {
-	int x;
-	int y;
-	int i;
-	int patflag;
-	unsigned char sd[2][2];
-	unsigned char tnv3;
+	// register: 11
+	register int x;
+	// register: 13
+	register int y;
+	// register: 7
+	register int i;
+	// register: 5
+	register int patflag;
+	// address: 0xFFFFFFE8
+	// size: 0x4
+	auto unsigned char sd[2][2];
+	// register: 2
+	register unsigned char tnv3;
 }
 
 
 // address: 0x8013C5A0
 int DRLG_PlaceMiniSet__FPCUciiiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int noquad, int ldir) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int i;
-	int ii;
-	int numt;
-	int found;
-	int abort;
+	// register: 16
+	register int sx;
+	// register: 17
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 20
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 19
+	register int i;
+	// register: 9
+	register int ii;
+	// address: 0xFFFFFF90
+	auto int numt;
+	// register: 8
+	register int found;
+	// register: 12
+	register int abort;
 }
 
 
 // address: 0x8013CA08
 void DRLG_SetWalls__Fv() {
-	int i;
-	int j;
-	int yy;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 8
+	register int yy;
 	{
 		{
 			{
 				{
-					int v;
+					// register: 2
+					register int v;
 				}
 			}
 		}
@@ -652,23 +676,35 @@ void DRLG_SetWalls__Fv() {
 
 // address: 0x8013CAC4
 void DRLG_L1Floor__Fv() {
-	int i;
-	int j;
-	long rv;
+	// register: 17
+	register int i;
+	// register: 19
+	register int j;
+	// register: 3
+	register long rv;
 }
 
 
 // address: 0x8013CBA8
 void DRLG_L1Pass3__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long lv;
+	// register: 20
+	register int i;
+	// register: 30
+	register int j;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 7
+	register long v1;
+	// register: 22
+	register long v2;
+	// register: 21
+	register long v3;
+	// register: 23
+	register long v4;
+	// register: 2
+	register long lv;
 }
 
 
@@ -680,7 +716,8 @@ void DRLG_LoadL1SP__Fv() {
 // address: 0x8013CE7C
 void DRLG_FreeL1SP__Fv() {
 	{
-		void *p__p;
+		// register: 4
+		register void *p__p;
 	}
 }
 
@@ -692,8 +729,10 @@ void DRLG_Init_Globals__Fv() {
 
 // address: 0x8013CECC
 void set_restore_lighting__Fv() {
-	int x;
-	int y;
+	// register: 10
+	register int x;
+	// register: 6
+	register int y;
 }
 
 
@@ -704,12 +743,18 @@ void DRLG_InitL1Vals__Fv() {
 
 // address: 0x8013CF64
 void LoadL1Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 11
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 16
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
 	{
 	}
 }
@@ -717,12 +762,18 @@ void LoadL1Dungeon__FPcii(char *sFileName, int vx, int vy) {
 
 // address: 0x8013D138
 void LoadPreL1Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 11
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 16
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
 	{
 	}
 }
@@ -730,167 +781,233 @@ void LoadPreL1Dungeon__FPcii(char *sFileName, int vx, int vy) {
 
 // address: 0x8013D2F8
 void InitL5Dungeon__Fv() {
-	int i;
-	int j;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
 }
 
 
 // address: 0x8013D37C
 void L5ClearFlags__Fv() {
-	int i;
-	int j;
+	// register: 4
+	register int i;
+	// register: 6
+	register int j;
 }
 
 
 // address: 0x8013D3CC
 void L5drawRoom__Fiiii(int x, int y, int w, int h) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
 }
 
 
 // address: 0x8013D438
 unsigned char L5checkRoom__Fiiii(int x, int y, int width, int height) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
 }
 
 
 // address: 0x8013D4CC
 void L5roomGen__Fiiiii(int x, int y, int w, int h, int dir) {
-	int rx;
-	int ry;
-	int ry2;
-	int height;
-	int width;
-	int cx1;
-	int cy1;
-	int cw;
-	int ch;
-	int num;
-	int dirProb;
-	int ran;
+	// register: 23
+	register int rx;
+	// register: 30
+	register int ry;
+	// register: 20
+	register int ry2;
+	// register: 18
+	register int height;
+	// register: 19
+	register int width;
+	// register: 20
+	register int cx1;
+	// register: 16
+	register int cy1;
+	// register: 21
+	register int cw;
+	// register: 17
+	register int ch;
+	// register: 22
+	register int num;
+	// register: 3
+	register int dirProb;
+	// register: 3
+	register int ran;
 }
 
 
 // address: 0x8013D7FC
 void L5firstRoom__Fv() {
-	int x;
-	int y;
-	int xs;
-	int xe;
-	int ys;
-	int ye;
+	// register: 4
+	register int x;
+	// register: 5
+	register int y;
+	// register: 17
+	register int xs;
+	// register: 16
+	register int xe;
+	// register: 17
+	register int ys;
+	// register: 16
+	register int ye;
 }
 
 
 // address: 0x8013DB9C
 long L5GetArea__Fv() {
-	int i;
-	int j;
-	long rv;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 6
+	register long rv;
 }
 
 
 // address: 0x8013DBFC
 void L5makeDungeon__Fv() {
-	int i;
-	int j;
-	int l;
+	// register: 10
+	register int i;
+	// register: 11
+	register int j;
+	// register: 9
+	register int l;
 }
 
 
 // address: 0x8013DC88
 void L5makeDmt__Fv() {
-	int i;
-	int j;
-	int idx;
-	int val;
-	int dmty;
+	// register: 7
+	register int i;
+	// register: 8
+	register int j;
+	// register: 2
+	register int idx;
+	// register: 2
+	register int val;
+	// register: 12
+	register int dmty;
 }
 
 
 // address: 0x8013DD70
 int L5HWallOk__Fii(int i, int j) {
-	int x;
-	unsigned char wallok;
+	// register: 9
+	register int x;
+	// register: 4
+	register unsigned char wallok;
 }
 
 
 // address: 0x8013DEAC
 int L5VWallOk__Fii(int i, int j) {
-	int y;
-	unsigned char wallok;
+	// register: 8
+	register int y;
+	// register: 4
+	register unsigned char wallok;
 }
 
 
 // address: 0x8013DFF4
 void L5HorizWall__Fiici(int i, int j, char p, int dx) {
-	int xx;
-	char wt;
-	char dt;
+	// register: 6
+	register int xx;
+	// register: 18
+	register char wt;
+	// register: 16
+	register char dt;
 }
 
 
 // address: 0x8013E22C
 void L5VertWall__Fiici(int i, int j, char p, int dy) {
-	int yy;
-	char wt;
-	char dt;
+	// register: 5
+	register int yy;
+	// register: 19
+	register char wt;
+	// register: 16
+	register char dt;
 }
 
 
 // address: 0x8013E458
 void L5AddWall__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 2
+	register int x;
+	// register: 2
+	register int y;
 }
 
 
 // address: 0x8013E6B4
 void DRLG_L5GChamber__Fiiiiii(int sx, int sy, int topflag, int bottomflag, int leftflag, int rightflag) {
-	int i;
-	int j;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
 }
 
 
 // address: 0x8013E974
 void DRLG_L5GHall__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
+	// register: 8
+	register int i;
 }
 
 
 // address: 0x8013EA28
 void L5tileFix__Fv() {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 10
+	register int j;
 }
 
 
 // address: 0x8013F2EC
 void DRLG_L5Subs__Fv() {
-	int x;
-	int y;
-	int i;
-	int rv;
+	// register: 21
+	register int x;
+	// register: 22
+	register int y;
+	// register: 4
+	register int i;
+	// register: 3
+	register int rv;
 }
 
 
 // address: 0x8013F4F8
 void DRLG_L5SetRoom__Fii(int rx1, int ry1) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
+	// register: 12
+	register int rw;
+	// register: 13
+	register int rh;
+	// register: 7
+	register int i;
+	// register: 10
+	register int j;
+	// register: 8
+	register unsigned char *sp;
 }
 
 
 // address: 0x8013F5F8
 void L5FillChambers__Fv() {
-	int c;
+	// register: 16
+	register int c;
 }
 
 
@@ -901,41 +1018,56 @@ void DRLG_L5FTVR__Fiiiii(int i, int j, int x, int y, int d) {
 
 // address: 0x8014016C
 void DRLG_L5FloodTVal__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
+	// register: 16
+	register int i;
+	// register: 20
+	register int j;
+	// register: 19
+	register int xx;
+	// register: 21
+	register int yy;
 }
 
 
 // address: 0x80140264
 void DRLG_L5TransFix__Fv() {
-	int j;
-	int yy;
-	int v;
+	// register: 17
+	register int j;
+	// register: 16
+	register int yy;
+	// register: 6
+	register int v;
 }
 
 
 // address: 0x801406A8
 void DRLG_L5DirtFix__Fv() {
-	int j;
+	// register: 9
+	register int j;
 }
 
 
 // address: 0x80140824
 void DRLG_L5CornerFix__Fv() {
-	int i;
-	int j;
+	// register: 9
+	register int i;
+	// register: 11
+	register int j;
 }
 
 
 // address: 0x80140930
 void DRLG_L5__Fi(int entry) {
-	long minarea;
-	unsigned char doneflag;
-	int i;
-	int j;
-	int yy;
+	// register: 20
+	register long minarea;
+	// register: 16
+	register unsigned char doneflag;
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 22
+	register int yy;
 }
 
 
@@ -946,19 +1078,33 @@ void CreateL5Dungeon__FUii(unsigned int rseed, int entry) {
 
 // address: 0x80143408
 unsigned char DRLG_L2PlaceMiniSet__FPUciiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int ldir) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int i;
-	int ii;
-	int numt;
-	int found;
-	int randxy[128];
-	int rcount;
-	int failed;
+	// register: 9
+	register int sx;
+	// register: 11
+	register int sy;
+	// register: 17
+	register int sw;
+	// register: 18
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 16
+	register int i;
+	// register: 8
+	register int ii;
+	// address: 0xFFFFFFD0
+	auto int numt;
+	// register: 6
+	register int found;
+	// address: 0xFFFFFDB0
+	// size: 0x200
+	auto int randxy[128];
+	// register: 19
+	register int rcount;
+	// register: 14
+	register int failed;
 	{
 		{
 		}
@@ -968,44 +1114,68 @@ unsigned char DRLG_L2PlaceMiniSet__FPUciiiiii(unsigned char *miniset, int tmin, 
 
 // address: 0x80143798
 void DRLG_L2PlaceRndSet__FPUci(unsigned char *miniset, int rndper) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int ii;
-	int jj;
-	int kk;
-	int found;
+	// register: 16
+	register int sx;
+	// register: 19
+	register int sy;
+	// register: 17
+	register int sw;
+	// register: 20
+	register int sh;
+	// register: 4
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 8
+	register int ii;
+	// register: 4
+	register int jj;
+	// register: 18
+	register int kk;
+	// register: 9
+	register int found;
 }
 
 
 // address: 0x80143A90
 void DRLG_L2Subs__Fv() {
-	int x;
-	int y;
-	int i;
-	int j;
-	int k;
-	int rv;
+	// register: 17
+	register int x;
+	// register: 18
+	register int y;
+	// register: 7
+	register int i;
+	// register: 6
+	register int j;
+	// register: 4
+	register int k;
+	// register: 3
+	register int rv;
 }
 
 
 // address: 0x80143C80
 void DRLG_L2Shadows__Fv() {
-	int x;
-	int y;
-	int i;
-	int patflag;
-	unsigned char sd[2][2];
+	// register: 9
+	register int x;
+	// register: 12
+	register int y;
+	// register: 7
+	register int i;
+	// register: 6
+	register int patflag;
+	// address: 0xFFFFFFF8
+	// size: 0x4
+	auto unsigned char sd[2][2];
 }
 
 
 // address: 0x80143E44
 void InitDungeon__Fv() {
-	int i;
-	int j;
+	// register: 5
+	register int i;
+	// register: 4
+	register int j;
 }
 
 
@@ -1017,32 +1187,42 @@ void DRLG_LoadL2SP__Fv() {
 // address: 0x80143F2C
 void DRLG_FreeL2SP__Fv() {
 	{
-		void *p__p;
+		// register: 4
+		register void *p__p;
 	}
 }
 
 
 // address: 0x80143F5C
 void DRLG_L2SetRoom__Fii(int rx1, int ry1) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
+	// register: 12
+	register int rw;
+	// register: 13
+	register int rh;
+	// register: 7
+	register int i;
+	// register: 10
+	register int j;
+	// register: 8
+	register unsigned char *sp;
 }
 
 
 // address: 0x8014405C
 void DefineRoom__Fiiiii(int nX1, int nY1, int nX2, int nY2, int ForceHW) {
-	int i;
-	int j;
-	unsigned char ft;
+	// register: 5
+	register int i;
+	// register: 3
+	register int j;
+	// register: 13
+	register unsigned char ft;
 }
 
 
 // address: 0x80144260
 void CreateDoorType__Fii(int nX, int nY) {
-	unsigned char fDoneflag;
+	// register: 6
+	register unsigned char fDoneflag;
 }
 
 
@@ -1053,66 +1233,102 @@ void PlaceHallExt__Fii(int nX, int nY) {
 
 // address: 0x8014437C
 void AddHall__Fiiiii(int nX1, int nY1, int nX2, int nY2, int nHd) {
-	struct NODE *p1;
-	struct NODE *p2;
+	// register: 3
+	// size: 0x18
+	register struct NODE *p1;
+	// register: 4
+	// size: 0x18
+	register struct NODE *p2;
 }
 
 
 // address: 0x80144454
 void CreateRoom__Fiiiiiiiii(int nX1, int nY1, int nX2, int nY2, int nRDest, int nHDir, int ForceHW, int nH, int nW) {
-	int nAw;
-	int nAh;
-	int nRw;
-	int nRh;
-	int nRx1;
-	int nRy1;
-	int nRx2;
-	int nRy2;
-	int nHx1;
-	int nHy1;
-	int nHx2;
-	int nHy2;
-	int nRid;
+	// register: 4
+	register int nAw;
+	// register: 16
+	register int nAh;
+	// address: 0xFFFFFFB8
+	auto int nRw;
+	// address: 0xFFFFFFC0
+	auto int nRh;
+	// register: 21
+	register int nRx1;
+	// register: 20
+	register int nRy1;
+	// register: 22
+	register int nRx2;
+	// register: 23
+	register int nRy2;
+	// address: 0xFFFFFFC8
+	auto int nHx1;
+	// address: 0xFFFFFFD0
+	auto int nHy1;
+	// register: 18
+	register int nHx2;
+	// register: 17
+	register int nHy2;
+	// register: 30
+	register int nRid;
 }
 
 
 // address: 0x80144AC4
 void GetHall__FPiN40(int *nX1, int *nY1, int *nX2, int *nY2, int *nHd) {
-	struct NODE *p1;
+	// register: 16
+	// size: 0x18
+	register struct NODE *p1;
 	{
-		void *p__p;
+		// register: 4
+		register void *p__p;
 	}
 }
 
 
 // address: 0x80144B5C
 void ConnectHall__Fiiiii(int nX1, int nY1, int nX2, int nY2, int nHd) {
-	unsigned char fDoneflag;
-	unsigned char fInroom;
-	int nCurrd;
-	int nDx;
-	int nDy;
-	int nRp;
-	int nOrigX1;
-	int nOrigY1;
-	int fMinusFlag;
-	int fPlusFlag;
+	// address: 0xFFFFFFA8
+	auto unsigned char fDoneflag;
+	// address: 0xFFFFFFB0
+	auto unsigned char fInroom;
+	// register: 17
+	register int nCurrd;
+	// register: 21
+	register int nDx;
+	// register: 20
+	register int nDy;
+	// register: 16
+	register int nRp;
+	// address: 0xFFFFFFB8
+	auto int nOrigX1;
+	// address: 0xFFFFFFC0
+	auto int nOrigY1;
+	// address: 0xFFFFFFC8
+	auto int fMinusFlag;
+	// address: 0xFFFFFFD0
+	auto int fPlusFlag;
 }
 
 
 // address: 0x801451BC
 void DoPatternCheck__Fii(int i, int j) {
-	int k;
-	int l;
-	int x;
-	int y;
-	int nOk;
+	// register: 25
+	register int k;
+	// register: 8
+	register int l;
+	// register: 4
+	register int x;
+	// register: 7
+	register int y;
+	// register: 6
+	register int nOk;
 }
 
 
 // address: 0x80145494
 void L2TileFix__Fv() {
-	int j;
+	// register: 9
+	register int j;
 }
 
 
@@ -1123,70 +1339,109 @@ unsigned char DL2_Cont__FUcUcUcUc(unsigned char x1f, unsigned char y1f, unsigned
 
 // address: 0x80145638
 int DL2_NumNoChar__Fv() {
-	int t;
-	int ii;
-	int jj;
+	// register: 6
+	register int t;
+	// register: 4
+	register int ii;
+	// register: 5
+	register int jj;
 }
 
 
 // address: 0x80145694
 void DL2_DrawRoom__Fiiii(int x1, int y1, int x2, int y2) {
-	int ii;
-	int jj;
+	// register: 8
+	register int ii;
+	// register: 9
+	register int jj;
 }
 
 
 // address: 0x80145798
 void DL2_KnockWalls__Fiiii(int x1, int y1, int x2, int y2) {
-	int ii;
-	int jj;
+	// register: 8
+	register int ii;
+	// register: 8
+	register int jj;
 }
 
 
 // address: 0x80145968
 unsigned char DL2_FillVoids__Fv() {
-	int ii;
-	int jj;
-	int xx;
-	int yy;
-	int x1;
-	int x2;
-	int y1;
-	int y2;
-	unsigned char xf1;
-	unsigned char xf2;
-	unsigned char yf1;
-	unsigned char yf2;
-	int to;
+	// register: 4
+	register int ii;
+	// register: 3
+	register int jj;
+	// register: 17
+	register int xx;
+	// register: 19
+	register int yy;
+	// register: 16
+	register int x1;
+	// register: 18
+	register int x2;
+	// register: 17
+	register int y1;
+	// register: 19
+	register int y2;
+	// register: 23
+	register unsigned char xf1;
+	// register: 9
+	register unsigned char xf2;
+	// register: 30
+	register unsigned char yf1;
+	// register: 8
+	register unsigned char yf2;
+	// address: 0xFFFFFFC0
+	auto int to;
 }
 
 
 // address: 0x801462E4
 unsigned char CreateDungeon__Fv() {
-	int i;
-	int j;
-	int nHx1;
-	int nHy1;
-	int nHx2;
-	int nHy2;
-	int nHd;
-	int ForceH;
-	int ForceW;
-	int ForceHW;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// address: 0xFFFFFFD8
+	auto int nHx1;
+	// address: 0xFFFFFFDC
+	auto int nHy1;
+	// address: 0xFFFFFFE0
+	auto int nHx2;
+	// address: 0xFFFFFFE4
+	auto int nHy2;
+	// address: 0xFFFFFFE8
+	auto int nHd;
+	// register: 8
+	register int ForceH;
+	// register: 9
+	register int ForceW;
+	// register: 10
+	register int ForceHW;
 }
 
 
 // address: 0x801465F0
 void DRLG_L2Pass3__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long lv;
+	// register: 20
+	register int i;
+	// register: 30
+	register int j;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 7
+	register long v1;
+	// register: 22
+	register long v2;
+	// register: 21
+	register long v3;
+	// register: 23
+	register long v4;
+	// register: 2
+	register long lv;
 }
 
 
@@ -1197,50 +1452,65 @@ void DRLG_L2FTVR__Fiiiii(int i, int j, int x, int y, int d) {
 
 // address: 0x80146C70
 void DRLG_L2FloodTVal__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
+	// register: 16
+	register int i;
+	// register: 20
+	register int j;
+	// register: 19
+	register int xx;
+	// register: 21
+	register int yy;
 }
 
 
 // address: 0x80146D68
 void DRLG_L2TransFix__Fv() {
-	int j;
-	int yy;
+	// register: 13
+	register int j;
+	// register: 14
+	register int yy;
 }
 
 
 // address: 0x80146F94
 void L2DirtFix__Fv() {
-	int j;
+	// register: 9
+	register int j;
 }
 
 
 // address: 0x801470F4
 void L2LockoutFix__Fv() {
-	int i;
-	int j;
-	unsigned char doorok;
+	// register: 11
+	register int i;
+	// register: 12
+	register int j;
+	// register: 8
+	register unsigned char doorok;
 }
 
 
 // address: 0x80147478
 void L2DoorFix__Fv() {
-	int j;
+	// register: 7
+	register int j;
 }
 
 
 // address: 0x80147528
 void DRLG_L2SetWalls__Fv() {
-	int i;
-	int j;
-	int yy;
+	// register: 8
+	register int i;
+	// register: 10
+	register int j;
+	// register: 14
+	register int yy;
 	{
 		{
 			{
 				{
-					int v;
+					// register: 3
+					register int v;
 				}
 			}
 		}
@@ -1250,9 +1520,12 @@ void DRLG_L2SetWalls__Fv() {
 
 // address: 0x801476E0
 void DRLG_L2__Fi(int entry) {
-	int i;
-	int j;
-	unsigned char doneflag;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 16
+	register unsigned char doneflag;
 }
 
 
@@ -1263,12 +1536,18 @@ void DRLG_InitL2Vals__Fv() {
 
 // address: 0x8014813C
 void LoadL2Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 4
+	register int i;
+	// register: 6
+	register int j;
+	// register: 11
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 16
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
 	{
 	}
 }
@@ -1276,12 +1555,18 @@ void LoadL2Dungeon__FPcii(char *sFileName, int vx, int vy) {
 
 // address: 0x80148358
 void LoadPreL2Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 11
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 15
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
 	{
 	}
 }
@@ -1294,184 +1579,276 @@ void CreateL2Dungeon__FUii(unsigned int rseed, int entry) {
 
 // address: 0x80148F98
 void InitL3Dungeon__Fv() {
-	int i;
-	int j;
+	// register: 5
+	register int i;
+	// register: 4
+	register int j;
 }
 
 
 // address: 0x8014901C
 void SetBlankL3Dungeon__Fv() {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
 }
 
 
 // address: 0x80149078
 void FixL3Dungeon__Fv() {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
 }
 
 
 // address: 0x801490EC
 int DRLG_L3FillRoom__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int v;
-	int rv;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 4
+	register int v;
+	// register: 2
+	register int rv;
 }
 
 
 // address: 0x8014933C
 void DRLG_L3CreateBlock__Fiiii(int x, int y, int obs, int dir) {
-	int blksizex;
-	int blksizey;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int contflag;
+	// register: 17
+	register int blksizex;
+	// register: 16
+	register int blksizey;
+	// register: 18
+	register int x1;
+	// register: 19
+	register int y1;
+	// register: 22
+	register int x2;
+	// register: 30
+	register int y2;
+	// register: 20
+	register int contflag;
 }
 
 
 // address: 0x801495BC
 void DRLG_L3FloorArea__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
+	// register: 3
+	register int i;
+	// register: 5
+	register int j;
 }
 
 
 // address: 0x80149624
 void DRLG_L3FillDiags__Fv() {
-	int j;
-	int v;
+	// register: 22
+	register int j;
+	// register: 16
+	register int v;
 }
 
 
 // address: 0x80149750
 void DRLG_L3FillSingles__Fv() {
-	int i;
-	int j;
-	int v;
+	// register: 12
+	register int i;
+	// register: 13
+	register int j;
+	// register: 3
+	register int v;
 }
 
 
 // address: 0x8014981C
 void DRLG_L3FillStraights__Fv() {
-	int i;
-	int j;
-	int xc;
-	int xs;
-	int yc;
-	int ys;
-	int k;
+	// register: 19
+	register int i;
+	// register: 18
+	register int j;
+	// register: 5
+	register int xc;
+	// register: 22
+	register int xs;
+	// register: 4
+	register int yc;
+	// address: 0xFFFFFFD0
+	auto int ys;
+	// register: 16
+	register int k;
 }
 
 
 // address: 0x80149BC8
 void DRLG_L3Edges__Fv() {
-	int j;
+	// register: 3
+	register int j;
 }
 
 
 // address: 0x80149C08
 int DRLG_L3GetFloorArea__Fv() {
-	int i;
-	int j;
-	int gfa;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 6
+	register int gfa;
 }
 
 
 // address: 0x80149C58
 void DRLG_L3MakeMegas__Fv() {
-	int v;
+	// register: 6
+	register int v;
 }
 
 
 // address: 0x80149D94
 void DRLG_L3River__Fv() {
-	int rx;
-	int ry;
-	int px;
-	int py;
-	int dir;
-	int pdir;
-	int nodir;
-	int nodir2;
-	int dircheck;
-	int river[100][3];
-	int rivercnt;
-	int riveramt;
-	int i;
-	int trys;
-	int found;
-	int bridge;
-	int lpcnt;
-	int bail;
+	// register: 16
+	register int rx;
+	// register: 18
+	register int ry;
+	// register: 5
+	register int px;
+	// register: 6
+	register int py;
+	// register: 17
+	register int dir;
+	// register: 30
+	register int pdir;
+	// address: 0xFFFFFF98
+	auto int nodir;
+	// register: 19
+	register int nodir2;
+	// register: 20
+	register int dircheck;
+	// address: 0xFFFFFAE8
+	// size: 0x4B0
+	auto int river[100][3];
+	// register: 21
+	register int rivercnt;
+	// address: 0xFFFFFFA0
+	auto int riveramt;
+	// register: 9
+	register int i;
+	// address: 0xFFFFFFA8
+	auto int trys;
+	// register: 8
+	register int found;
+	// register: 16
+	register int bridge;
+	// register: 18
+	register int lpcnt;
+	// register: 19
+	register int bail;
 }
 
 
 // address: 0x8014A7BC
 int DRLG_L3SpawnEdge__FiiPi(int x, int y, int *totarea) {
-	unsigned char i;
-	unsigned char spawntable[15];
+	// register: 17
+	register unsigned char i;
+	// address: 0x801486B4
+	// size: 0xF
+	static unsigned char spawntable[15];
 }
 
 
 // address: 0x8014AA48
 int DRLG_L3Spawn__FiiPi(int x, int y, int *totarea) {
-	unsigned char i;
-	unsigned char spawntable[15];
+	// register: 19
+	register unsigned char i;
+	// address: 0x801486C4
+	// size: 0xF
+	static unsigned char spawntable[15];
 }
 
 
 // address: 0x8014AC54
 void DRLG_L3Pool__Fv() {
-	int i;
-	int j;
-	int found;
-	int dunx;
-	int duny;
-	int totarea;
-	int poolchance;
-	unsigned char k;
-	unsigned char poolsub[15];
+	// register: 8
+	register int i;
+	// register: 4
+	register int j;
+	// register: 16
+	register int found;
+	// register: 17
+	register int dunx;
+	// register: 18
+	register int duny;
+	// address: 0xFFFFFFD8
+	auto int totarea;
+	// register: 4
+	register int poolchance;
+	// register: 3
+	register unsigned char k;
+	// address: 0x801486D4
+	// size: 0xF
+	static unsigned char poolsub[15];
 }
 
 
 // address: 0x8014AEA4
 void DRLG_L3PoolFix__Fv() {
-	int duny;
+	// register: 10
+	register int duny;
 }
 
 
 // address: 0x8014B0C4
 int DRLG_L3PlaceMiniSet__FPCUciiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int ldir) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int i;
-	int ii;
-	int numt;
-	int found;
-	int trys;
+	// register: 17
+	register int sx;
+	// register: 16
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 19
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 30
+	register int i;
+	// register: 9
+	register int ii;
+	// address: 0xFFFFFFA0
+	auto int numt;
+	// register: 8
+	register int found;
+	// register: 20
+	register int trys;
 }
 
 
 // address: 0x8014B430
 void DRLG_L3PlaceRndSet__FPCUci(unsigned char *miniset, int rndper) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int ii;
-	int kk;
-	int found;
+	// register: 17
+	register int sx;
+	// register: 22
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 21
+	register int sh;
+	// register: 4
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 9
+	register int ii;
+	// register: 16
+	register int kk;
+	// register: 8
+	register int found;
 }
 
 
@@ -1497,58 +1874,85 @@ unsigned char WoodHorizR__Fii(int x, int j) {
 
 // address: 0x8014B9CC
 void AddFenceDoors__Fv() {
-	int j;
+	// register: 8
+	register int j;
 }
 
 
 // address: 0x8014BAB0
 void FenceDoorFix__Fv() {
-	int j;
+	// register: 11
+	register int j;
 }
 
 
 // address: 0x8014BCA4
 void DRLG_L3Wood__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
-	int xx;
-	int yy;
-	int rt;
-	int rp;
-	int skip;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
+	// register: 22
+	register int i;
+	// register: 23
+	register int j;
+	// register: 18
+	register int x;
+	// register: 19
+	register int y;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// address: 0xFFFFFFC8
+	auto int rt;
+	// register: 3
+	register int rp;
+	// register: 20
+	register int skip;
+	// register: 16
+	register int x1;
+	// register: 16
+	register int y1;
+	// register: 17
+	register int x2;
+	// register: 17
+	register int y2;
 }
 
 
 // address: 0x8014C478
 int DRLG_L3Anvil__Fv() {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int ii;
-	int found;
-	int trys;
+	// register: 18
+	register int sx;
+	// register: 11
+	register int sy;
+	// register: 17
+	register int sw;
+	// register: 19
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 8
+	register int ii;
+	// register: 6
+	register int found;
+	// register: 12
+	register int trys;
 }
 
 
 // address: 0x8014C6D0
 void FixL3Warp__Fv() {
-	int j;
+	// register: 10
+	register int j;
 }
 
 
 // address: 0x8014C7B8
 void FixL3HallofHeroes__Fv() {
-	int i;
-	int j;
+	// register: 6
+	register int i;
+	// register: 9
+	register int j;
 }
 
 
@@ -1559,24 +1963,33 @@ void DRLG_L3LockRec__Fii(int x, int y) {
 
 // address: 0x8014C9A8
 unsigned char DRLG_L3Lockout__Fv() {
-	int i;
-	int j;
-	int t;
-	int fx;
-	int fy;
+	// register: 7
+	register int i;
+	// register: 3
+	register int j;
+	// register: 16
+	register int t;
+	// register: 4
+	register int fx;
+	// register: 5
+	register int fy;
 }
 
 
 // address: 0x8014CA68
 void DRLG_L3SetWalls__Fv() {
-	int i;
-	int j;
-	int yy;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 9
+	register int yy;
 	{
 		{
 			{
 				{
-					int v;
+					// register: 3
+					register int v;
 				}
 			}
 		}
@@ -1586,29 +1999,47 @@ void DRLG_L3SetWalls__Fv() {
 
 // address: 0x8014CB1C
 void DRLG_L3__Fi(int entry) {
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int sx1;
-	int i;
-	int j;
-	int found;
-	unsigned char genok;
+	// register: 19
+	register int x1;
+	// register: 18
+	register int y1;
+	// register: 16
+	register int x2;
+	// register: 17
+	register int y2;
+	// register: 4
+	register int sx1;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 16
+	register int found;
+	// register: 2
+	register unsigned char genok;
 }
 
 
 // address: 0x8014D238
 void DRLG_L3Pass3__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long lv;
+	// register: 23
+	register int i;
+	// register: 30
+	register int j;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 6
+	register long v1;
+	// register: 22
+	register long v2;
+	// register: 20
+	register long v3;
+	// register: 21
+	register long v4;
+	// register: 2
+	register long lv;
 }
 
 
@@ -1619,12 +2050,18 @@ void CreateL3Dungeon__FUii(unsigned int rseed, int entry) {
 
 // address: 0x8014D4C8
 void LoadL3Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 9
+	register int rw;
+	// register: 10
+	register int rh;
+	// register: 16
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
 	{
 	}
 }
@@ -1632,12 +2069,18 @@ void LoadL3Dungeon__FPcii(char *sFileName, int vx, int vy) {
 
 // address: 0x8014D64C
 void LoadPreL3Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 9
+	register int rw;
+	// register: 10
+	register int rh;
+	// register: 12
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
 	{
 	}
 }
@@ -1645,24 +2088,31 @@ void LoadPreL3Dungeon__FPcii(char *sFileName, int vx, int vy) {
 
 // address: 0x8014F4A8
 void DRLG_L4Shadows__Fv() {
-	int x;
-	int y;
-	unsigned char okflag;
+	// register: 6
+	register int x;
+	// register: 8
+	register int y;
+	// register: 2
+	register unsigned char okflag;
 }
 
 
 // address: 0x8014F56C
 void InitL4Dungeon__Fv() {
 	{
-		int j;
+		// register: 5
+		register int j;
 		{
 			{
-				int i;
+				// register: 4
+				register int i;
 				{
-					int j;
+					// register: 7
+					register int j;
 					{
 						{
-							int i;
+							// register: 4
+							register int i;
 						}
 					}
 				}
@@ -1680,189 +2130,271 @@ void DRLG_LoadL4SP__Fv() {
 // address: 0x8014F6C4
 void DRLG_FreeL4SP__Fv() {
 	{
-		void *p__p;
+		// register: 4
+		register void *p__p;
 	}
 }
 
 
 // address: 0x8014F6F4
 void DRLG_L4SetSPRoom__Fii(int rx1, int ry1) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
+	// register: 12
+	register int rw;
+	// register: 13
+	register int rh;
+	// register: 7
+	register int i;
+	// register: 10
+	register int j;
+	// register: 8
+	register unsigned char *sp;
 }
 
 
 // address: 0x8014F7F4
 void L4makeDmt__Fv() {
-	int i;
-	int j;
-	int idx;
-	int val;
-	int dmty;
+	// register: 10
+	register int i;
+	// register: 11
+	register int j;
+	// register: 2
+	register int idx;
+	// register: 2
+	register int val;
+	// register: 12
+	register int dmty;
 }
 
 
 // address: 0x8014F898
 int L4HWallOk__Fii(int i, int j) {
-	int x;
-	unsigned char wallok;
+	// register: 9
+	register int x;
+	// register: 3
+	register unsigned char wallok;
 }
 
 
 // address: 0x8014F9E8
 int L4VWallOk__Fii(int i, int j) {
-	int y;
-	unsigned char wallok;
+	// register: 10
+	register int y;
+	// register: 3
+	register unsigned char wallok;
 }
 
 
 // address: 0x8014FB58
 void L4HorizWall__Fiii(int i, int j, int dx) {
-	int xx;
+	// register: 7
+	register int xx;
 }
 
 
 // address: 0x8014FD28
 void L4VertWall__Fiii(int i, int j, int dy) {
-	int yy;
+	// register: 3
+	register int yy;
 }
 
 
 // address: 0x8014FEEC
 void L4AddWall__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 2
+	register int x;
+	// register: 2
+	register int y;
 }
 
 
 // address: 0x80150394
 void L4tileFix__Fv() {
-	int j;
+	// register: 15
+	register int j;
 }
 
 
 // address: 0x8015257C
 void DRLG_L4Subs__Fv() {
-	int x;
-	int y;
-	int i;
-	int rv;
+	// register: 17
+	register int x;
+	// register: 19
+	register int y;
+	// register: 4
+	register int i;
+	// register: 3
+	register int rv;
 }
 
 
 // address: 0x8015275C
 void L4makeDungeon__Fv() {
-	int i;
-	int j;
-	int l;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 10
+	register int l;
 }
 
 
 // address: 0x80152994
 void uShape__Fv() {
-	int j;
-	int i;
-	int rv;
+	// register: 6
+	register int j;
+	// register: 7
+	register int i;
+	// register: 4
+	register int rv;
 }
 
 
 // address: 0x80152C30
 long GetArea__Fv() {
-	int i;
-	int j;
-	long rv;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 6
+	register long rv;
 }
 
 
 // address: 0x80152C8C
 void L4drawRoom__Fiiii(int x, int y, int width, int height) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
 }
 
 
 // address: 0x80152CF4
 unsigned char L4checkRoom__Fiiii(int x, int y, int width, int height) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
 }
 
 
 // address: 0x80152D90
 void L4roomGen__Fiiiii(int x, int y, int w, int h, int dir) {
-	int rx;
-	int ry;
-	int ry2;
-	int height;
-	int width;
-	int cx1;
-	int cy1;
-	int cw;
-	int ch;
-	int num;
-	int dirProb;
-	int ran;
+	// register: 23
+	register int rx;
+	// register: 30
+	register int ry;
+	// register: 19
+	register int ry2;
+	// register: 18
+	register int height;
+	// register: 20
+	register int width;
+	// register: 19
+	register int cx1;
+	// register: 16
+	register int cy1;
+	// register: 21
+	register int cw;
+	// register: 17
+	register int ch;
+	// register: 22
+	register int num;
+	// register: 3
+	register int dirProb;
+	// register: 3
+	register int ran;
 }
 
 
 // address: 0x80153078
 void L4firstRoom__Fv() {
-	int x;
-	int y;
-	int w;
-	int h;
-	int rndx;
-	int rndy;
-	int xmin;
-	int xmax;
-	int ymin;
-	int ymax;
+	// register: 19
+	register int x;
+	// register: 16
+	register int y;
+	// register: 18
+	register int w;
+	// register: 17
+	register int h;
+	// register: 4
+	register int rndx;
+	// register: 5
+	register int rndy;
+	// register: 16
+	register int xmin;
+	// register: 4
+	register int xmax;
+	// register: 16
+	register int ymin;
+	// register: 4
+	register int ymax;
 }
 
 
 // address: 0x80153284
 void L4SaveQuads__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
+	// register: 6
+	register int i;
+	// register: 9
+	register int j;
+	// register: 11
+	register int x;
+	// register: 12
+	register int y;
 }
 
 
 // address: 0x80153344
 void DRLG_L4SetRoom__FPUcii(unsigned char *pSetPiece, int rx1, int ry1) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
+	// register: 12
+	register int rw;
+	// register: 13
+	register int rh;
+	// register: 7
+	register int i;
+	// register: 10
+	register int j;
+	// register: 8
+	register unsigned char *sp;
 }
 
 
 // address: 0x80153418
 void DRLG_LoadDiabQuads__FUc(unsigned char preflag) {
-	unsigned char *ptrSetPiece;
+	// register: 4
+	register unsigned char *ptrSetPiece;
 }
 
 
 // address: 0x80153614
 unsigned char DRLG_L4PlaceMiniSet__FPCUciiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int ldir) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int i;
-	int ii;
-	int numt;
-	int found;
-	int bailcnt;
+	// register: 17
+	register int sx;
+	// register: 16
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 20
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 30
+	register int i;
+	// register: 9
+	register int ii;
+	// address: 0xFFFFFFA0
+	auto int numt;
+	// register: 8
+	register int found;
+	// register: 19
+	register int bailcnt;
 }
 
 
@@ -1873,10 +2405,14 @@ void DRLG_L4FTVR__Fiiiii(int i, int j, int x, int y, int d) {
 
 // address: 0x80153ED8
 void DRLG_L4FloodTVal__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 20
+	register int xx;
+	// register: 21
+	register int yy;
 }
 
 
@@ -1892,15 +2428,19 @@ unsigned char IsDLLWall__Fc(char dd) {
 
 // address: 0x80154150
 void DRLG_L4TransFix__Fv() {
-	int j;
-	int yy;
+	// register: 7
+	register int j;
+	// address: 0xFFFFFFB8
+	auto int yy;
 }
 
 
 // address: 0x801544BC
 void DRLG_L4Corners__Fv() {
-	int i;
-	int j;
+	// register: 7
+	register int i;
+	// register: 9
+	register int j;
 }
 
 
@@ -1908,7 +2448,8 @@ void DRLG_L4Corners__Fv() {
 void L4FixRim__Fv() {
 	{
 		{
-			int j;
+			// register: 3
+			register int j;
 		}
 	}
 }
@@ -1916,21 +2457,27 @@ void L4FixRim__Fv() {
 
 // address: 0x8015458C
 void DRLG_L4GeneralFix__Fv() {
-	int i;
-	int j;
+	// register: 6
+	register int i;
+	// register: 8
+	register int j;
 }
 
 
 // address: 0x80154630
 void DRLG_L4SetWalls__Fv() {
-	int i;
-	int j;
-	int yy;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 8
+	register int yy;
 	{
 		{
 			{
 				{
-					int v;
+					// register: 2
+					register int v;
 				}
 			}
 		}
@@ -1940,38 +2487,56 @@ void DRLG_L4SetWalls__Fv() {
 
 // address: 0x801546E0
 void DRLG_L4__Fi(int entry) {
-	unsigned char doneflag;
-	int i;
-	int j;
-	int spi;
-	int spj;
+	// register: 4
+	register unsigned char doneflag;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 5
+	register int spi;
+	// register: 3
+	register int spj;
 }
 
 
 // address: 0x80154FE0
 void DRLG_L4Pass3__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long lv;
+	// register: 23
+	register int i;
+	// register: 30
+	register int j;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 6
+	register long v1;
+	// register: 22
+	register long v2;
+	// register: 20
+	register long v3;
+	// register: 21
+	register long v4;
+	// register: 2
+	register long lv;
 }
 
 
 // address: 0x801551F8
 void CreateL4Dungeon__FUii(unsigned int rseed, int entry) {
 	{
-		void *p__p;
+		// register: 4
+		register void *p__p;
 		{
-			void *p__p;
+			// register: 4
+			register void *p__p;
 			{
-				void *p__p;
+				// register: 4
+				register void *p__p;
 				{
-					void *p__p;
+					// register: 4
+					register void *p__p;
 				}
 			}
 		}
@@ -1981,8 +2546,10 @@ void CreateL4Dungeon__FUii(unsigned int rseed, int entry) {
 
 // address: 0x801552D8
 int ObjIndex__Fii(int x, int y) {
-	int i;
-	int oi;
+	// register: 5
+	register int i;
+	// register: 4
+	register int oi;
 }
 
 
@@ -2003,13 +2570,20 @@ void AddVileObjs__Fv() {
 
 // address: 0x801555E4
 void DRLG_SetMapTrans__FPc(char *sFileName) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
-	long mapoff;
+	// register: 5
+	register int i;
+	// register: 8
+	register int j;
+	// register: 9
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 12
+	register unsigned char *pLevelMap;
+	// register: 6
+	register unsigned char *lm;
+	// register: 2
+	register long mapoff;
 	{
 	}
 }
@@ -2019,9 +2593,12 @@ void DRLG_SetMapTrans__FPc(char *sFileName) {
 void LoadSetMap__Fv() {
 	{
 		{
-			bool isdone;
-			int x;
-			int y;
+			// register: 3
+			register bool isdone;
+			// register: 18
+			register int x;
+			// register: 17
+			register int y;
 		}
 	}
 }
@@ -2029,7 +2606,8 @@ void LoadSetMap__Fv() {
 
 // address: 0x80155A04
 unsigned long CM_QuestToBitPattern__Fi(int QuestNum) {
-	unsigned long RetVal;
+	// register: 16
+	register unsigned long RetVal;
 }
 
 
@@ -2040,10 +2618,13 @@ void CM_ShowMonsterList__Fii(int Level, int List) {
 
 // address: 0x80155AE4
 int CM_ChooseMonsterList__FiUl(int Level, unsigned long QuestsNeededMask) {
-	struct DEF_ARGS *A;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
 	{
 		{
-			int ListChosen;
+			// address: 0xFFFFFFE8
+			auto int ListChosen;
 		}
 	}
 }
@@ -2056,38 +2637,64 @@ int NoUiListChoose__FiUl(int Level, unsigned long QuestsNeededMask) {
 
 // address: 0x80155B8C
 void ChooseTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *A;
-	int *List;
-	int Level;
-	unsigned int NumOfLists;
-	unsigned long QuestsNeededMask;
-	unsigned char ListsToChooseFrom[50];
-	unsigned int Selection;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	// register: 18
+	register int *List;
+	// register: 16
+	register int Level;
+	// register: 16
+	register unsigned int NumOfLists;
+	// register: 17
+	register unsigned long QuestsNeededMask;
+	// address: 0xFFFFFFB8
+	// size: 0x32
+	auto unsigned char ListsToChooseFrom[50];
+	// register: 2
+	register unsigned int Selection;
 }
 
 
 // address: 0x80155C5C
 void ShowTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *A;
-	int List;
-	int Level;
-	bool Finished;
-	struct MonstLevel *ThisLev;
-	char Buffer[100];
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	// address: 0xFFFFFFC8
+	auto int List;
+	// register: 16
+	register int Level;
+	// register: 20
+	register bool Finished;
+	// address: 0xFFFFFFD0
+	// size: 0x8
+	auto struct MonstLevel *ThisLev;
+	// address: 0xFFFFFF60
+	// size: 0x64
+	auto char Buffer[100];
 	{
-		unsigned int f;
-		struct MonstList *ThisList;
+		// register: 16
+		register unsigned int f;
+		// register: 18
+		// size: 0x10
+		register struct MonstList *ThisList;
 	}
 }
 
 
 // address: 0x80155E8C
 int GetListsAvailable__FiUlPUc(int Level, unsigned long QuestsNeededMask, unsigned char *ListofLists) {
-	int NumOfChoices;
-	int NumOfLists;
-	struct MonstLevel *ThisLev;
+	// register: 17
+	register int NumOfChoices;
+	// register: 19
+	register int NumOfLists;
+	// register: 20
+	// size: 0x8
+	register struct MonstLevel *ThisLev;
 	{
-		int f;
+		// register: 16
+		register int f;
 	}
 }
 
@@ -2124,8 +2731,10 @@ void AddL3Door__Fiiii(int i, int x, int y, int ot) {
 
 // address: 0x80156510
 void AddSarc__Fi(int i) {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 3
+	register int y;
 }
 
 
@@ -2136,7 +2745,8 @@ void AddFlameTrap__Fi(int i) {
 
 // address: 0x80156634
 void AddTrap__Fii(int i, int ot) {
-	int mt;
+	// register: 4
+	register int mt;
 }
 
 
@@ -2157,8 +2767,11 @@ void AddBarrel__Fii(int i, int ot) {
 
 // address: 0x80156920
 void AddShrine__Fi(int i) {
-	int st;
-	unsigned char slist[26];
+	// register: 3
+	register int st;
+	// address: 0xFFFFFFD0
+	// size: 0x1A
+	auto unsigned char slist[26];
 }
 
 
@@ -2179,8 +2792,10 @@ void AddBloodFtn__Fi(int i) {
 
 // address: 0x80156B50
 void AddPurifyingFountain__Fi(int i) {
-	int x;
-	int y;
+	// register: 3
+	register int x;
+	// register: 5
+	register int y;
 }
 
 
@@ -2196,8 +2811,10 @@ void AddCauldron__Fi(int i) {
 
 // address: 0x80156C9C
 void AddMurkyFountain__Fi(int i) {
-	int x;
-	int y;
+	// register: 3
+	register int x;
+	// register: 5
+	register int y;
 }
 
 
@@ -2233,7 +2850,8 @@ void AddPedistal__Fi(int i) {
 
 // address: 0x80156FC8
 void AddStoryBook__Fi(int i) {
-	int bookframe;
+	// register: 3
+	register int bookframe;
 }
 
 
@@ -2254,12 +2872,16 @@ void AddFlameLvr__Fi(int i) {
 
 // address: 0x80157288
 void GetRndObjLoc__FiRiT1(int randarea, int *xx, int *yy) {
-	int i;
-	int j;
-	unsigned char failed;
+	// register: 17
+	register int i;
+	// register: 16
+	register int j;
+	// register: 3
+	register unsigned char failed;
 	{
 		{
-			int tries;
+			// register: 19
+			register int tries;
 		}
 	}
 }
@@ -2267,11 +2889,14 @@ void GetRndObjLoc__FiRiT1(int randarea, int *xx, int *yy) {
 
 // address: 0x8015738C
 void AddMushPatch__Fv() {
-	int x;
-	int y;
+	// address: 0xFFFFFFF0
+	auto int x;
+	// address: 0xFFFFFFF4
+	auto int y;
 	{
 		{
-			int i;
+			// register: 16
+			register int i;
 		}
 	}
 }
@@ -2279,8 +2904,10 @@ void AddMushPatch__Fv() {
 
 // address: 0x80157480
 void AddSlainHero__Fv() {
-	int x;
-	int y;
+	// address: 0xFFFFFFF0
+	auto int x;
+	// address: 0xFFFFFFF4
+	auto int y;
 }
 
 
@@ -2296,100 +2923,148 @@ unsigned char TrapLocOk__Fii(int xp, int yp) {
 
 // address: 0x8015762C
 void InitRndLocObj__Fiii(int min, int max, int objtype) {
-	int xp;
-	int yp;
-	int numobjs;
+	// register: 20
+	register int xp;
+	// register: 21
+	register int yp;
+	// register: 23
+	register int numobjs;
 	{
-		int i;
+		// register: 22
+		register int i;
 	}
 }
 
 
 // address: 0x801577AC
 void InitRndLocBigObj__Fiii(int min, int max, int objtype) {
-	int xp;
-	int yp;
-	int numobjs;
+	// register: 18
+	register int xp;
+	// register: 21
+	register int yp;
+	// register: 23
+	register int numobjs;
 	{
-		int i;
+		// register: 22
+		register int i;
 	}
 }
 
 
 // address: 0x8015796C
 void InitRndLocObj5x5__Fiii(int min, int max, int objtype) {
-	int xp;
-	int yp;
-	int xx;
-	int yy;
-	int cnt;
-	unsigned char done;
-	int numobjs;
+	// register: 20
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 21
+	register int cnt;
+	// register: 19
+	register unsigned char done;
+	// register: 23
+	register int numobjs;
 	{
-		int i;
+		// register: 22
+		register int i;
 	}
 }
 
 
 // address: 0x80157A88
 void SetMapObjects__FPUcii(unsigned char *pMap, int startx, int starty) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *lm;
-	unsigned char *h;
-	long mapoff;
-	int ot;
-	unsigned char fileload[56];
-	char filestr[32];
+	// register: 16
+	register int i;
+	// register: 18
+	register int j;
+	// register: 19
+	register int rw;
+	// register: 20
+	register int rh;
+	// register: 17
+	register unsigned char *lm;
+	// register: 7
+	register unsigned char *h;
+	// register: 2
+	register long mapoff;
+	// register: 3
+	register int ot;
+	// address: 0xFFFFFF60
+	// size: 0x38
+	auto unsigned char fileload[56];
+	// address: 0xFFFFFF98
+	// size: 0x20
+	auto char filestr[32];
 }
 
 
 // address: 0x80157D28
 void ClrAllObjects__Fv() {
-	int i;
+	// register: 4
+	register int i;
 }
 
 
 // address: 0x80157E18
 void AddTortures__Fv() {
-	int yp;
-	int xp;
+	// register: 19
+	register int yp;
+	// register: 18
+	register int xp;
 }
 
 
 // address: 0x80157F98
 void AddCandles__Fv() {
-	int xp;
-	int yp;
+	// register: 16
+	register int xp;
+	// register: 17
+	register int yp;
 }
 
 
 // address: 0x80158020
 void AddBookLever__Fiiiiiiiii(int lx1, int ly1, int lx2, int ly2, int x1, int y1, int x2, int y2, int msg) {
-	int xp;
-	int yp;
-	int xx;
-	int yy;
-	int cnt;
-	unsigned char done;
-	int i;
+	// register: 20
+	register int xp;
+	// register: 19
+	register int yp;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 21
+	register int cnt;
+	// register: 18
+	register unsigned char done;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x80158214
 void InitRndBarrels__Fv() {
-	int xp;
-	int yp;
-	int o;
-	int c;
-	int t;
-	int numobjs;
+	// register: 19
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 4
+	register int o;
+	// register: 20
+	register int c;
+	// register: 17
+	register int t;
+	// register: 30
+	register int numobjs;
 	{
-		int i;
+		// register: 21
+		register int i;
 		{
-			unsigned char found;
+			// register: 16
+			register unsigned char found;
 		}
 	}
 }
@@ -2397,25 +3072,34 @@ void InitRndBarrels__Fv() {
 
 // address: 0x801583A0
 void AddL1Objs__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int pn;
+	// register: 17
+	register int i;
+	// register: 18
+	register int j;
+	// register: 16
+	register int pn;
 }
 
 
 // address: 0x801584AC
 void AddL2Objs__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int pn;
+	// register: 17
+	register int i;
+	// register: 18
+	register int j;
+	// register: 16
+	register int pn;
 }
 
 
 // address: 0x801585A8
 void AddL3Objs__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int pn;
+	// register: 16
+	register int i;
+	// register: 18
+	register int j;
+	// register: 17
+	register int pn;
 }
 
 
@@ -2431,46 +3115,66 @@ unsigned char TorchLocOK__Fii(int xp, int yp) {
 
 // address: 0x80158710
 void AddL2Torches__Fv() {
-	int i;
-	int j;
-	int pn;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 18
+	register int pn;
 }
 
 
 // address: 0x801588AC
 void AddObjTraps__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
-	int rndv;
-	char oi;
+	// register: 18
+	register int i;
+	// register: 19
+	register int j;
+	// register: 16
+	register int x;
+	// register: 17
+	register int y;
+	// register: 21
+	register int rndv;
+	// register: 20
+	register char oi;
 }
 
 
 // address: 0x80158B34
 void AddChestTraps__Fv() {
-	int i;
-	int j;
+	// register: 18
+	register int i;
+	// register: 19
+	register int j;
 }
 
 
 // address: 0x80158C70
 void LoadMapObjects__FPUciiiiiii(unsigned char *pMap, int startx, int starty, int x1, int y1, int w, int h, int leveridx) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	int ox;
-	int oy;
-	unsigned char *lm;
-	long mapoff;
+	// register: 17
+	register int i;
+	// register: 20
+	register int j;
+	// register: 21
+	register int rw;
+	// register: 22
+	register int rh;
+	// register: 16
+	register int ox;
+	// register: 19
+	register int oy;
+	// register: 18
+	register unsigned char *lm;
+	// register: 2
+	register long mapoff;
 }
 
 
 // address: 0x80158DDC
 void AddDiabObjs__Fv() {
-	unsigned char *lpSetPiece;
+	// register: 17
+	register unsigned char *lpSetPiece;
 	{
 		{
 			{
@@ -2482,21 +3186,31 @@ void AddDiabObjs__Fv() {
 
 // address: 0x80158F30
 void AddStoryBooks__Fv() {
-	int xp;
-	int yp;
-	int xx;
-	int yy;
-	int cnt;
-	unsigned char done;
+	// register: 19
+	register int xp;
+	// register: 20
+	register int yp;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 21
+	register int cnt;
+	// register: 18
+	register unsigned char done;
 }
 
 
 // address: 0x80159078
 void AddHookedBodies__Fi(int freq) {
-	int i;
-	int j;
-	int ii;
-	int jj;
+	// register: 23
+	register int i;
+	// address: 0xFFFFFFC8
+	auto int j;
+	// register: 19
+	register int ii;
+	// register: 17
+	register int jj;
 }
 
 
@@ -2507,12 +3221,18 @@ void AddL4Goodies__Fv() {
 
 // address: 0x8015931C
 void AddLazStand__Fv() {
-	int xp;
-	int yp;
-	int xx;
-	int yy;
-	int cnt;
-	unsigned char done;
+	// register: 19
+	register int xp;
+	// register: 20
+	register int yp;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 21
+	register int cnt;
+	// register: 18
+	register unsigned char done;
 }
 
 
@@ -2528,8 +3248,10 @@ void restoreplrpos__Fv() {
 
 // address: 0x801595D4
 void InitObjects__Fv() {
-	int textdef;
-	unsigned char *setp;
+	// register: 17
+	register int textdef;
+	// register: 16
+	register unsigned char *setp;
 	{
 		{
 			{
@@ -2560,13 +3282,18 @@ void PreObjObjAddSwitch__Fiiii(int ot, int ox, int oy, int oi) {
 
 // address: 0x80159EDC
 void FillSolidBlockTbls__Fv() {
-	unsigned long dwTiles;
-	unsigned char *pSBFile;
-	unsigned char *pTmp;
+	// address: 0xFFFFFFF0
+	auto unsigned long dwTiles;
+	// register: 16
+	register unsigned char *pSBFile;
+	// register: 6
+	register unsigned char *pTmp;
 	{
-		unsigned long d;
+		// register: 4
+		register unsigned long d;
 		{
-			unsigned char bv;
+			// register: 3
+			register unsigned char bv;
 			{
 			}
 		}
@@ -2581,15 +3308,19 @@ void SetDungeonMicros__Fv() {
 
 // address: 0x8015A070
 void DRLG_InitTrans__Fv() {
-	int x;
-	int y;
+	// register: 4
+	register int x;
+	// register: 5
+	register int y;
 }
 
 
 // address: 0x8015A0E4
 void DRLG_RectTrans__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 5
+	register int j;
 }
 
 
@@ -2600,21 +3331,31 @@ void DRLG_CopyTrans__Fiiii(int sx, int sy, int dx, int dy) {
 
 // address: 0x8015A1A0
 void DRLG_ListTrans__FiPUc(int num, unsigned char *List) {
-	int i;
-	unsigned char x1;
-	unsigned char y1;
-	unsigned char x2;
-	unsigned char y2;
+	// register: 17
+	register int i;
+	// register: 4
+	register unsigned char x1;
+	// register: 5
+	register unsigned char y1;
+	// register: 6
+	register unsigned char x2;
+	// register: 7
+	register unsigned char y2;
 }
 
 
 // address: 0x8015A214
 void DRLG_AreaTrans__FiPUc(int num, unsigned char *List) {
-	int i;
-	unsigned char x1;
-	unsigned char y1;
-	unsigned char x2;
-	unsigned char y2;
+	// register: 17
+	register int i;
+	// register: 4
+	register unsigned char x1;
+	// register: 5
+	register unsigned char y1;
+	// register: 6
+	register unsigned char x2;
+	// register: 7
+	register unsigned char y2;
 }
 
 
@@ -2625,55 +3366,86 @@ void DRLG_InitSetPC__Fv() {
 
 // address: 0x8015A2BC
 void DRLG_SetPC__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
-	int w;
-	int h;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 8
+	register int x;
+	// register: 10
+	register int y;
+	// register: 7
+	register int w;
+	// register: 9
+	register int h;
 }
 
 
 // address: 0x8015A35C
 void Make_SetPC__Fiiii(int x, int y, int w, int h) {
-	int i;
-	int j;
-	int dx;
-	int dy;
-	int dh;
-	int dw;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
+	// register: 4
+	register int dx;
+	// register: 5
+	register int dy;
+	// register: 7
+	register int dh;
+	// register: 6
+	register int dw;
 }
 
 
 // address: 0x8015A3EC
 unsigned char DRLG_WillThemeRoomFit__FiiiiiPiT5(int floor, int x, int y, int minSize, int maxSize, int *width, int *height) {
-	int ii;
-	int xx;
-	int yy;
-	int xSmallest;
-	int ySmallest;
-	int xArray[20];
-	int yArray[20];
-	int xCount;
-	int yCount;
-	unsigned char yFlag;
-	unsigned char xFlag;
+	// register: 7
+	register int ii;
+	// register: 4
+	register int xx;
+	// register: 4
+	register int yy;
+	// register: 3
+	register int xSmallest;
+	// register: 8
+	register int ySmallest;
+	// address: 0xFFFFFF20
+	// size: 0x50
+	auto int xArray[20];
+	// address: 0xFFFFFF70
+	// size: 0x50
+	auto int yArray[20];
+	// register: 19
+	register int xCount;
+	// register: 18
+	register int yCount;
+	// register: 21
+	register unsigned char yFlag;
+	// register: 20
+	register unsigned char xFlag;
 }
 
 
 // address: 0x8015A6B4
 void DRLG_CreateThemeRoom__Fi(int themeIndex) {
-	int xx;
-	int yy;
+	// register: 6
+	register int xx;
+	// register: 7
+	register int yy;
 }
 
 
 // address: 0x8015B6B8
 void DRLG_PlaceThemeRooms__FiiiiUc(int minSize, int maxSize, int floor, int freq, int rndSize) {
-	int i;
-	int j;
-	int themeW;
-	int themeH;
+	// register: 18
+	register int i;
+	// register: 19
+	register int j;
+	// address: 0xFFFFFFC0
+	auto int themeW;
+	// address: 0xFFFFFFC4
+	auto int themeH;
 	{
 		{
 			{
@@ -2684,9 +3456,12 @@ void DRLG_PlaceThemeRooms__FiiiiUc(int minSize, int maxSize, int floor, int freq
 								{
 									{
 										{
-											int rv2;
-											int min;
-											int max;
+											// register: 3
+											register int rv2;
+											// register: 16
+											register int min;
+											// register: 17
+											register int max;
 										}
 									}
 								}
@@ -2702,166 +3477,230 @@ void DRLG_PlaceThemeRooms__FiiiiUc(int minSize, int maxSize, int floor, int freq
 
 // address: 0x8015B958
 void DRLG_HoldThemeRooms__Fv() {
-	int i;
-	int x;
-	int y;
+	// register: 25
+	register int i;
+	// register: 7
+	register int x;
+	// register: 8
+	register int y;
 }
 
 
 // address: 0x8015BAFC
 unsigned char SkipThemeRoom__Fii(int x, int y) {
-	int i;
+	// register: 7
+	register int i;
 }
 
 
 // address: 0x8015BBC8
 void InitLevels__Fv() {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
 
 // address: 0x8015BC0C
 unsigned char TFit_Shrine__Fi(int i) {
-	int xp;
-	int yp;
-	int found;
+	// register: 17
+	register int xp;
+	// register: 21
+	register int yp;
+	// address: 0xFFFFFFB0
+	auto int found;
 }
 
 
 // address: 0x8015BEFC
 unsigned char TFit_Obj5__Fi(int t) {
-	int xp;
-	int yp;
-	int i;
-	int r;
-	int rs;
-	unsigned char found;
+	// register: 19
+	register int xp;
+	// register: 20
+	register int yp;
+	// register: 18
+	register int i;
+	// register: 22
+	register int r;
+	// register: 30
+	register int rs;
+	// register: 21
+	register unsigned char found;
 }
 
 
 // address: 0x8015C0C0
 unsigned char TFit_SkelRoom__Fi(int t) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x8015C170
 unsigned char TFit_GoatShrine__Fi(int t) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x8015C208
 unsigned char CheckThemeObj3__Fiiii(int xp, int yp, int t, int f) {
 	{
-		int i;
+		// register: 18
+		register int i;
 	}
 }
 
 
 // address: 0x8015C354
 unsigned char TFit_Obj3__Fi(int t) {
-	int xp;
-	int yp;
-	char objrnd[4];
+	// register: 16
+	register int xp;
+	// register: 17
+	register int yp;
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char objrnd[4];
 }
 
 
 // address: 0x8015C414
 unsigned char CheckThemeReqs__Fi(int t) {
-	unsigned char rv;
+	// register: 5
+	register unsigned char rv;
 }
 
 
 // address: 0x8015C4E0
 unsigned char SpecialThemeFit__Fii(int i, int t) {
-	unsigned char rv;
+	// register: 3
+	register unsigned char rv;
 }
 
 
 // address: 0x8015C6BC
 unsigned char CheckThemeRoom__Fi(int tv) {
-	int i;
-	int j;
-	int tarea;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 4
+	register int tarea;
 }
 
 
 // address: 0x8015C980
 void InitThemes__Fv() {
-	int i;
-	int t;
+	// register: 17
+	register int i;
+	// register: 16
+	register int t;
 }
 
 
 // address: 0x8015CCCC
 void HoldThemeRooms__Fv() {
-	int i;
-	int x;
-	int y;
+	// register: 6
+	register int i;
+	// register: 4
+	register int x;
+	// register: 5
+	register int y;
 }
 
 
 // address: 0x8015CDB0
 void PlaceThemeMonsts__Fii(int t, int f) {
-	int xp;
-	int yp;
-	int mtype;
-	int scattertypes[111];
-	int numscattypes;
-	int i;
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 19
+	register int mtype;
+	// address: 0xFFFFFE18
+	// size: 0x1BC
+	auto int scattertypes[111];
+	// register: 4
+	register int numscattypes;
+	// register: 3
+	register int i;
 }
 
 
 // address: 0x8015CF34
 void Theme_Barrel__Fi(int t) {
-	int xp;
-	int yp;
-	int r;
-	char barrnd[4];
-	char monstrnd[4];
+	// register: 16
+	register int xp;
+	// register: 17
+	register int yp;
+	// register: 4
+	register int r;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char barrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015D090
 void Theme_Shrine__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015D178
 void Theme_MonstPit__Fi(int t) {
-	int r;
-	int ixp;
-	int iyp;
-	char monstrnd[4];
+	// register: 19
+	register int r;
+	// register: 16
+	register int ixp;
+	// register: 17
+	register int iyp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015D2BC
 void Theme_SkelRoom__Fi(int t) {
-	int xp;
-	int yp;
-	char monstrnd[4];
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFE8
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015D5F8
 void Theme_Treasure__Fi(int t) {
-	int xp;
-	int yp;
-	int i;
-	char treasrnd[4];
-	char monstrnd[4];
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 4
+	register int i;
+	// address: 0xFFFFFFD0
+	// size: 0x4
+	auto char treasrnd[4];
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
 	{
 		{
 			{
 				{
 					{
 						{
-							int rv;
+							// register: 17
+							register int rv;
 						}
 					}
 				}
@@ -2873,18 +3712,26 @@ void Theme_Treasure__Fi(int t) {
 
 // address: 0x8015D83C
 void Theme_Library__Fi(int t) {
-	int xp;
-	int yp;
-	int oi;
-	char librnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 19
+	register int yp;
+	// register: 2
+	register int oi;
+	// address: 0xFFFFFFD0
+	// size: 0x4
+	auto char librnd[4];
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
 	{
 		{
 			{
 				{
 					{
 						{
-							int lnumobjects;
+							// register: 16
+							register int lnumobjects;
 						}
 					}
 				}
@@ -2896,115 +3743,166 @@ void Theme_Library__Fi(int t) {
 
 // address: 0x8015DAC0
 void Theme_Torture__Fi(int t) {
-	int xp;
-	int yp;
-	char tortrnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char tortrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015DC18
 void Theme_BloodFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015DC8C
 void Theme_Decap__Fi(int t) {
-	int xp;
-	int yp;
-	char decaprnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char decaprnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015DDE4
 void Theme_PurifyingFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015DE58
 void Theme_ArmorStand__Fi(int t) {
-	int xp;
-	int yp;
-	char armorrnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char armorrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015DFD4
 void Theme_GoatShrine__Fi(int t) {
-	int xx;
-	int yy;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
 }
 
 
 // address: 0x8015E108
 void Theme_Cauldron__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015E17C
 void Theme_MurkyFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015E1F0
 void Theme_TearFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015E264
 void Theme_BrnCross__Fi(int t) {
-	int xp;
-	int yp;
-	char monstrnd[4];
-	char bcrossrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char bcrossrnd[4];
 }
 
 
 // address: 0x8015E3C0
 void Theme_WeaponRack__Fi(int t) {
-	int xp;
-	int yp;
-	char weaponrnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char weaponrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
 
 // address: 0x8015E53C
 void UpdateL4Trans__Fv() {
-	int i;
-	int j;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
 }
 
 
 // address: 0x8015E598
 void CreateThemeRooms__Fv() {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x8015E77C
 void InitPortals__Fv() {
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 
 
 // address: 0x8015E7DC
 void InitQuests__Fv() {
-	int i;
-	int gri;
-	int deltaq;
+	// address: 0xFFFFFFE8
+	auto int i;
+	// register: 3
+	register int gri;
+	// register: 16
+	register int deltaq;
 	{
 		{
-			struct ItemStruct *Item;
+			// register: 4
+			// size: 0x6C
+			register struct ItemStruct *Item;
 		}
 	}
 }
@@ -3022,12 +3920,18 @@ void DrawSkelKing__Fiii(int q, int x, int y) {
 
 // address: 0x8015EE64
 void DrawWarLord__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 13
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 8
+	register int j;
+	// register: 9
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
 	{
 	}
 }
@@ -3035,14 +3939,22 @@ void DrawWarLord__Fii(int x, int y) {
 
 // address: 0x8015EF60
 void DrawSChamber__Fiii(int q, int x, int y) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	int xx;
-	int yy;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 7
+	register int i;
+	// register: 9
+	register int j;
+	// register: 13
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 2
+	register int xx;
+	// register: 2
+	register int yy;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
 	{
 	}
 }
@@ -3050,12 +3962,18 @@ void DrawSChamber__Fiii(int q, int x, int y) {
 
 // address: 0x8015F09C
 void DrawLTBanner__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 10
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
 	{
 	}
 }
@@ -3063,12 +3981,18 @@ void DrawLTBanner__Fii(int x, int y) {
 
 // address: 0x8015F178
 void DrawBlind__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 10
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
 	{
 	}
 }
@@ -3076,12 +4000,18 @@ void DrawBlind__Fii(int x, int y) {
 
 // address: 0x8015F254
 void DrawBlood__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 10
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
 	{
 	}
 }
@@ -3089,7 +4019,8 @@ void DrawBlood__Fii(int x, int y) {
 
 // address: 0x8015F334
 void DRLG_CheckQuests__Fii(int x, int y) {
-	int i;
+	// register: 18
+	register int i;
 }
 
 
@@ -3100,21 +4031,34 @@ void InitInv__Fv() {
 
 // address: 0x8015F4C4
 void InitAutomap__Fv() {
-	int i;
-	int j;
-	unsigned long dwTiles;
-	unsigned char *pTmp;
-	struct FileIO *FIO;
-	int x;
-	int y;
-	char *Name;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 6
+	register unsigned long dwTiles;
+	// register: 16
+	register unsigned char *pTmp;
+	// register: 18
+	// size: 0x14
+	register struct FileIO *FIO;
+	// register: 3
+	register int x;
+	// register: 5
+	register int y;
+	// register: 16
+	register char *Name;
 	{
 		{
-			int Len;
-			unsigned char b1;
-			unsigned char b2;
+			// register: 17
+			register int Len;
+			// register: 3
+			register unsigned char b1;
+			// register: 2
+			register unsigned char b2;
 			{
-				unsigned long d;
+				// register: 5
+				register unsigned long d;
 			}
 		}
 	}
@@ -3128,7 +4072,8 @@ void InitAutomapOnce__Fv() {
 
 // address: 0x8015F6E8
 void SwapMonsterType__FPi(int *oldmt) {
-	int mt;
+	// register: 5
+	register int mt;
 }
 
 
@@ -3139,10 +4084,16 @@ unsigned char MonstPlace__Fii(int xp, int yp) {
 
 // address: 0x8015F828
 void InitMonsterGFX__Fi(int monst) {
-	int anim;
-	char strBuff[256];
-	int mtype;
-	struct MonsterData *pmonsterdata;
+	// register: 6
+	register int anim;
+	// address: 0xFFFFFF00
+	// size: 0x100
+	auto char strBuff[256];
+	// register: 3
+	register int mtype;
+	// register: 7
+	// size: 0x3C
+	register struct MonsterData *pmonsterdata;
 }
 
 
@@ -3153,48 +4104,70 @@ void PlaceMonster__Fiiii(int i, int mtype, int x, int y) {
 
 // address: 0x8015F98C
 int AddMonsterType__Fii(int type, int placeflag) {
-	int i;
-	unsigned char done;
+	// register: 16
+	register int i;
+	// register: 4
+	register unsigned char done;
 }
 
 
 // address: 0x8015FA88
 void GetMonsterTypes__FUl(unsigned long QuestMask) {
-	int typelist[190];
-	int mt;
-	int nt;
+	// address: 0xFFFFFCE8
+	// size: 0x2F8
+	auto int typelist[190];
+	// address: 0xFFFFFFE0
+	auto int mt;
+	// register: 17
+	register int nt;
 }
 
 
 // address: 0x8015FB48
 void ClrAllMonsters__Fv() {
-	int i;
-	struct MonsterStruct *Monst;
+	// register: 17
+	register int i;
+	// register: 16
+	// size: 0x68
+	register struct MonsterStruct *Monst;
 }
 
 
 // address: 0x8015FC80
 void InitLevelMonsters__Fv() {
-	int i;
+	// register: 3
+	register int i;
 }
 
 
 // address: 0x8015FD04
 void GetLevelMTypes__Fv() {
-	int i;
-	int minl;
-	int maxl;
-	int typelist[190];
-	int mt;
-	int nt;
-	char mamask;
-	unsigned long QuestMask;
+	// register: 17
+	register int i;
+	// register: 4
+	register int minl;
+	// register: 2
+	register int maxl;
+	// address: 0xFFFFFB20
+	// size: 0x2F8
+	auto int typelist[190];
+	// address: 0xFFFFFFD8
+	auto int mt;
+	// register: 17
+	register int nt;
+	// register: 20
+	register char mamask;
+	// register: 18
+	register unsigned long QuestMask;
 	{
 		{
 			{
 				{
-					int skeltypes[111];
-					int numskeltypes;
+					// address: 0xFFFFFE18
+					// size: 0x1BC
+					auto int skeltypes[111];
+					// register: 19
+					register int numskeltypes;
 				}
 			}
 		}
@@ -3204,8 +4177,10 @@ void GetLevelMTypes__Fv() {
 
 // address: 0x801601D8
 void PlaceQuestMonsters__Fv() {
-	int skeltype;
-	unsigned char *setp;
+	// register: 16
+	register int skeltype;
+	// register: 16
+	register unsigned char *setp;
 	{
 		{
 			{
@@ -3251,7 +4226,8 @@ void PlaceQuestMonsters__Fv() {
 
 // address: 0x8016059C
 void LoadDiabMonsts__Fv() {
-	unsigned char *lpSetPiece;
+	// register: 16
+	register unsigned char *lpSetPiece;
 	{
 		{
 			{
@@ -3265,65 +4241,111 @@ void LoadDiabMonsts__Fv() {
 
 // address: 0x801606AC
 void PlaceGroup__FiiUci(int mtype, int num, unsigned char leaderf, int leader) {
-	int xp;
-	int yp;
-	int x1;
-	int y1;
-	int j;
-	int placed;
-	int try1;
-	int try2;
-	int rd;
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 21
+	register int x1;
+	// register: 23
+	register int y1;
+	// register: 20
+	register int j;
+	// register: 19
+	register int placed;
+	// address: 0xFFFFFFA8
+	auto int try1;
+	// register: 22
+	register int try2;
+	// register: 2
+	register int rd;
 }
 
 
 // address: 0x80160CA0
 void SetMapMonsters__FPUcii(unsigned char *pMap, int startx, int starty) {
-	int i;
-	int j;
-	unsigned short rw;
-	unsigned short rh;
-	unsigned short *lm;
-	int mt;
+	// register: 16
+	register int i;
+	// register: 18
+	register int j;
+	// register: 2
+	register unsigned short rw;
+	// register: 20
+	register unsigned short rh;
+	// register: 17
+	register unsigned short *lm;
+	// address: 0xFFFFFFC8
+	auto int mt;
 }
 
 
 // address: 0x80160ED4
 void InitMonsters__Fv() {
-	int i;
-	int mtype;
-	int na;
-	int nt;
-	int scattertypes[111];
-	int numscattypes;
-	long fv;
-	long j;
-	int numplacemonsters;
-	int s;
-	int t;
+	// register: 18
+	register int i;
+	// register: 16
+	register int mtype;
+	// register: 5
+	register int na;
+	// register: 20
+	register int nt;
+	// address: 0xFFFFFE08
+	// size: 0x1BC
+	auto int scattertypes[111];
+	// register: 21
+	register int numscattypes;
+	// register: 17
+	register long fv;
+	// register: 16
+	register long j;
+	// register: 4
+	register int numplacemonsters;
+	// register: 17
+	register int s;
+	// register: 16
+	register int t;
 }
 
 
 // address: 0x80161288
 void PlaceUniqueMonst__Fiii(int uniqindex, int miniontype, int unpackfilesize) {
-	struct UniqMonstStruct *Uniq;
-	struct MonsterStruct *Monst;
-	int xp;
-	int yp;
-	int x;
-	int y;
-	unsigned char done;
-	int count;
-	int count2;
-	char filestr[64];
-	int uniqtype;
-	int i;
-	unsigned char zharflag;
-	int mMinDamage;
-	int mMaxDamage;
+	// address: 0xFFFFFFA0
+	// size: 0x18
+	auto struct UniqMonstStruct *Uniq;
+	// register: 20
+	// size: 0x68
+	register struct MonsterStruct *Monst;
+	// register: 23
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 17
+	register int x;
+	// register: 16
+	register int y;
+	// register: 3
+	register unsigned char done;
+	// register: 19
+	register int count;
+	// address: 0xFFFFFFA8
+	auto int count2;
+	// address: 0xFFFFFF40
+	// size: 0x40
+	auto char filestr[64];
+	// address: 0xFFFFFFB0
+	auto int uniqtype;
+	// register: 5
+	register int i;
+	// address: 0xFFFFFFB8
+	auto unsigned char zharflag;
+	// register: 16
+	register int mMinDamage;
+	// register: 17
+	register int mMaxDamage;
 	{
 		{
-			int monstype;
+			// address: 0xFFFFFF80
+			auto int monstype;
 		}
 	}
 }
@@ -3331,14 +4353,18 @@ void PlaceUniqueMonst__Fiii(int uniqindex, int miniontype, int unpackfilesize) {
 
 // address: 0x80161BCC
 void PlaceUniques__Fv() {
-	int u;
-	int mt;
-	unsigned char done;
+	// register: 17
+	register int u;
+	// register: 5
+	register int mt;
+	// register: 16
+	register unsigned char done;
 	{
 		{
 			{
 				{
-					int monsttype;
+					// address: 0xFFFFFFE0
+					auto int monsttype;
 				}
 			}
 		}
@@ -3348,10 +4374,14 @@ void PlaceUniques__Fv() {
 
 // address: 0x80161D5C
 int PreSpawnSkeleton__Fv() {
-	int i;
-	int j;
-	int skeltypes;
-	int skel;
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 18
+	register int skeltypes;
+	// register: 16
+	register int skel;
 }
 
 
@@ -3367,9 +4397,12 @@ unsigned char IsGoat__Fi(int mt) {
 
 // address: 0x80161FDC
 void InitMissiles__Fv() {
-	int i;
-	int j;
-	int mx;
+	// register: 16
+	register int i;
+	// register: 4
+	register int j;
+	// register: 3
+	register int mx;
 }
 
 
@@ -3383,10 +4416,12 @@ void InitTownTriggers__Fv() {
 	{
 		{
 			{
-				int i;
+				// register: 3
+				register int i;
 				{
 					{
-						int i;
+						// register: 3
+						register int i;
 					}
 				}
 			}
@@ -3397,29 +4432,37 @@ void InitTownTriggers__Fv() {
 
 // address: 0x80162530
 void InitL1Triggers__Fv() {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
 }
 
 
 // address: 0x8016265C
 void InitL2Triggers__Fv() {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
 }
 
 
 // address: 0x80162824
 void InitL3Triggers__Fv() {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
 }
 
 
 // address: 0x801629B0
 void InitL4Triggers__Fv() {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
 }
 
 
@@ -3441,10 +4484,12 @@ void InitPWaterTriggers__Fv() {
 // address: 0x80162CDC
 void InitStores__Fv() {
 	{
-		int Loop;
+		// register: 6
+		register int Loop;
 		{
 			{
-				int i;
+				// register: 5
+				register int i;
 			}
 		}
 	}
@@ -3453,19 +4498,25 @@ void InitStores__Fv() {
 
 // address: 0x80162DD0
 void SetupTownStores__Fv() {
-	int i;
-	int l;
-	int OldMyPtr;
-	int OldSeed;
+	// register: 4
+	register int i;
+	// register: 16
+	register int l;
+	// register: 20
+	register int OldMyPtr;
+	// register: 19
+	register int OldSeed;
 	{
-		int Loop;
+		// register: 17
+		register int Loop;
 	}
 }
 
 
 // address: 0x80162FD4
 void DefragItems__FPUci(unsigned char *ilist, int num) {
-	int p;
+	// register: 3
+	register int p;
 	{
 	}
 }
@@ -3480,39 +4531,58 @@ void removellist__FPUcUc(unsigned char *ilist, unsigned char val) {
 
 // address: 0x80163054
 void DeltaLoadLevel__Fv() {
-	int i;
-	int ii;
-	struct DLevel *ThisLevel;
-	unsigned char litemlist[127];
-	int lnumitems;
+	// address: 0xFFFFFFA8
+	auto int i;
+	// register: 22
+	register int ii;
+	// address: 0xFFFFFFB0
+	// size: 0x1258
+	auto struct DLevel *ThisLevel;
+	// address: 0xFFFFFF28
+	// size: 0x7F
+	auto unsigned char litemlist[127];
+	// address: 0xFFFFFFB8
+	auto int lnumitems;
 	{
 		{
 			{
 				{
-					struct MonsterStruct *DestMptr;
-					struct DMonsterStr *SrcMptr;
+					// register: 16
+					// size: 0x68
+					register struct MonsterStruct *DestMptr;
+					// register: 17
+					// size: 0x8
+					register struct DMonsterStr *SrcMptr;
 					{
 						{
 							{
 								{
 									{
 										{
-											int ox;
-											int oy;
+											// register: 3
+											register int ox;
+											// register: 30
+											register int oy;
 											{
 												{
-													unsigned char done;
+													// register: 21
+													register unsigned char done;
 													{
-														int l;
+														// register: 18
+														register int l;
 														{
 															{
-																int j;
+																// register: 19
+																register int j;
 																{
-																	int yy;
+																	// register: 20
+																	register int yy;
 																	{
-																		int iz;
+																		// register: 16
+																		register int iz;
 																		{
-																			int xx;
+																			// register: 17
+																			register int xx;
 																		}
 																	}
 																}

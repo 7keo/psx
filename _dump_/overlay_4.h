@@ -40,7 +40,9 @@ void SetupWorkRam__Fv() {
 
 // address: 0x800B059C
 void SYSI_Init__Fv() {
-	struct RECT clrRect;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct RECT clrRect;
 }
 
 
@@ -57,7 +59,8 @@ void PAD_Open__Fv() {
 // address: 0x800B0760
 void GM_Open__Fv() {
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
@@ -70,23 +73,31 @@ void OVR_Open__Fv() {
 // address: 0x800B07A4
 void DEC_Open__Fv() {
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
 
 // address: 0x800B0A18
 char *GetVersionString__FPc(char *VersionString2) {
-	char VersionString[40];
+	// address: 0xFFFFFFC8
+	// size: 0x28
+	auto char VersionString[40];
 }
 
 
 // address: 0x800B0AEC
 char *GetWord__FPc(char *VStr) {
-	bool Found;
-	char MonStr[4];
-	int DayCount;
-	int Minutes;
+	// register: 18
+	register bool Found;
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char MonStr[4];
+	// register: 17
+	register int DayCount;
+	// register: 16
+	register int Minutes;
 	{
 	}
 }

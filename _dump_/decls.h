@@ -5367,18 +5367,23 @@ unsigned char GPUQ_InitModule__Fv() {
 
 // address: 0x800833F0
 void GPUQ_FlushQ__Fv() {
-	int f;
-	struct LOAD_IMAGE_ARGS *Img;
+	// register: 18
+	register int f;
+	// register: 16
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Img;
 	{
 		{
 			{
 				{
 					{
 						{
-							void *ImgMem;
+							// register: 17
+							register void *ImgMem;
 							{
 								{
-									unsigned char GalRet;
+									// register: 2
+									register unsigned char GalRet;
 								}
 							}
 						}
@@ -5392,25 +5397,32 @@ void GPUQ_FlushQ__Fv() {
 
 // address: 0x80083564
 void GPUQ_LoadImage__FP4RECTli(struct RECT *Rect, long ImgHandle, int Offset) {
-	struct LOAD_IMAGE_ARGS *Args;
+	// register: 4
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Args;
 }
 
 
 // address: 0x80083618
 void GPUQ_DiscardHandle__Fl(long hnd) {
-	int f;
+	// register: 6
+	register int f;
 }
 
 
 // address: 0x800836B8
 void GPUQ_LoadClutAddr__FiiiPv(int X, int Y, int Cols, void *Addr) {
-	struct LOAD_IMAGE_ARGS *Args;
+	// register: 3
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Args;
 }
 
 
 // address: 0x80083754
 void GPUQ_MoveImage__FP4RECTii(struct RECT *R, int x, int y) {
-	struct LOAD_IMAGE_ARGS *Args;
+	// register: 2
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Args;
 }
 
 
@@ -5420,7 +5432,8 @@ unsigned char PRIM_Open__FiiiP10SCREEN_ENVUl(int Prims, int OtSize, int Depth, s
 		{
 			{
 				{
-					int f;
+					// register: 16
+					register int f;
 				}
 			}
 		}
@@ -5435,8 +5448,12 @@ unsigned char InitPrimBuffer__FP11PRIM_BUFFERii(struct PRIM_BUFFER *Pr, int Prim
 
 // address: 0x800839EC
 void PRIM_Clip__FP4RECTi(struct RECT *R, int Depth) {
-	struct DR_MODE *DrArea;
-	struct RECT RealRect;
+	// register: 16
+	// size: 0xC
+	register struct DR_MODE *DrArea;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT RealRect;
 }
 
 
@@ -5447,13 +5464,17 @@ unsigned char PRIM_GetCurrentScreen__Fv() {
 
 // address: 0x80083B20
 void PRIM_FullScreen__Fi(int Depth) {
-	struct RECT R;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct RECT R;
 }
 
 
 // address: 0x80083B5C
 void PRIM_Flush__Fv() {
-	struct PRIM_BUFFER *Pb;
+	// register: 17
+	// size: 0x1C
+	register struct PRIM_BUFFER *Pb;
 	{
 		{
 		}
@@ -5489,42 +5510,54 @@ void SendDispEnv__Fv() {
 // address: 0x80083E24
 // size: 0x18
 struct POLY_F4 *PRIM_GetNextPolyF4__Fv() {
-	struct POLY_F4 *RetPage;
+	// register: 2
+	// size: 0x18
+	register struct POLY_F4 *RetPage;
 }
 
 
 // address: 0x80083E3C
 // size: 0x28
 struct POLY_FT4 *PRIM_GetNextPolyFt4__Fv() {
-	struct POLY_FT4 *RetPage;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *RetPage;
 }
 
 
 // address: 0x80083E54
 // size: 0x34
 struct POLY_GT4 *PRIM_GetNextPolyGt4__Fv() {
-	struct POLY_GT4 *RetPage;
+	// register: 2
+	// size: 0x34
+	register struct POLY_GT4 *RetPage;
 }
 
 
 // address: 0x80083E6C
 // size: 0x24
 struct POLY_G4 *PRIM_GetNextPolyG4__Fv() {
-	struct POLY_G4 *RetPage;
+	// register: 2
+	// size: 0x24
+	register struct POLY_G4 *RetPage;
 }
 
 
 // address: 0x80083E84
 // size: 0x14
 struct POLY_F3 *PRIM_GetNextPolyF3__Fv() {
-	struct POLY_F3 *RetPage;
+	// register: 2
+	// size: 0x14
+	register struct POLY_F3 *RetPage;
 }
 
 
 // address: 0x80083E9C
 // size: 0xC
 struct DR_MODE *PRIM_GetNextDrArea__Fv() {
-	struct DR_MODE *RetPage;
+	// register: 2
+	// size: 0xC
+	register struct DR_MODE *RetPage;
 }
 
 
@@ -5565,7 +5598,8 @@ unsigned long VID_GetTick__Fv() {
 
 // address: 0x80084104
 void VID_DispEnvSend() {
-	unsigned long OldGp;
+	// register: 16
+	register unsigned long OldGp;
 }
 
 
@@ -5632,7 +5666,8 @@ struct FileIO *SYSI_GetOverlayFs__Fv() {
 
 // address: 0x8008448C
 void SortOutFileSystem__Fv() {
-	char *SearchPath;
+	// register: 16
+	register char *SearchPath;
 }
 
 
@@ -5653,14 +5688,23 @@ void GaryLiddon__Fv() {
 
 // address: 0x8008463C
 void ReadPad__Fi(int NoDeb) {
-	struct CPad *DPad;
-	int New;
-	int cmem;
-	int p1mema;
-	int p1memb;
-	int p2mema;
-	int p2memb;
-	int diffm;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *DPad;
+	// register: 2
+	register int New;
+	// register: 4
+	register int cmem;
+	// register: 5
+	register int p1mema;
+	// register: 6
+	register int p1memb;
+	// register: 7
+	register int p2mema;
+	// register: 8
+	register int p2memb;
+	// register: 9
+	register int diffm;
 }
 
 
@@ -5676,17 +5720,24 @@ void DaveOwens__Fv() {
 
 // address: 0x800847D4
 void DaveCentreStuff__Fv() {
-	char TempStr[40];
+	// address: 0xFFFFFFC0
+	// size: 0x28
+	auto char TempStr[40];
 }
 
 
 // address: 0x8008491C
 void PlaceStoreGold2__Fil(int myplr, long v) {
-	int i;
-	int ii;
-	int xx;
-	int yy;
-	unsigned char done;
+	// register: 17
+	register int i;
+	// register: 20
+	register int ii;
+	// register: 22
+	register int xx;
+	// register: 19
+	register int yy;
+	// register: 4
+	register unsigned char done;
 	{
 		{
 			{
@@ -5700,13 +5751,15 @@ void PlaceStoreGold2__Fil(int myplr, long v) {
 
 // address: 0x80084B44
 void GivePlayerDosh__Fil(int PlayerNo, long cost) {
-	int i;
+	// register: 18
+	register int i;
 }
 
 
 // address: 0x80084CF8
 int CalcItemVal__FP10ItemStruct(struct ItemStruct *Item) {
-	int cost;
+	// register: 2
+	register int cost;
 }
 
 
@@ -5717,43 +5770,63 @@ void RemoveDupInvItem__Fii(int pnum, int iv) {
 
 // address: 0x80084F44
 long DetectDup__FP10ItemStructi(struct ItemStruct *Item, int PlayerNo) {
-	long Value;
-	struct ItemStruct *pi;
-	int i;
-	int InvItem;
-	long DupSell;
-	unsigned char Flag;
+	// register: 6
+	register long Value;
+	// register: 3
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 17
+	register int i;
+	// register: 18
+	register int InvItem;
+	// register: 21
+	register long DupSell;
+	// register: 19
+	register unsigned char Flag;
 }
 
 
 // address: 0x800851C0
 void WinterSales__Fi(int PlayerNo) {
-	int Value;
-	int i;
-	int InvItem;
-	struct ItemStruct *pi;
-	unsigned char Flag;
+	// register: 16
+	register int Value;
+	// register: 17
+	register int i;
+	// register: 18
+	register int InvItem;
+	// register: 19
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 21
+	register unsigned char Flag;
 }
 
 
 // address: 0x800853FC
 int SpecUn__FP10ItemStruct(struct ItemStruct *pi) {
-	int MrHappy;
+	// register: 5
+	register int MrHappy;
 }
 
 
 // address: 0x800854D0
 void EnableQuestItemsPleeeeeeeeeeeeeeeeeez__Fv() {
-	int Uid;
+	// register: 3
+	register int Uid;
 }
 
 
 // address: 0x80085518
 void KeefDaFeef__Fi(int PlayerNo) {
-	int i;
-	int InvItem;
-	struct ItemStruct *pi;
-	unsigned char Flag;
+	// register: 18
+	register int i;
+	// register: 20
+	register int InvItem;
+	// register: 16
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 19
+	register unsigned char Flag;
 }
 
 
@@ -5800,9 +5873,12 @@ void ___6FileIO(struct FileIO *this, int __in_chrg) {
 
 // address: 0x80085920
 long Read__6FileIOPCcUl(struct FileIO *this, char *Name, unsigned long RamId) {
-	int MemSize;
-	long MyHnd;
-	unsigned char *LoadAddr;
+	// register: 17
+	register int MemSize;
+	// register: 17
+	register long MyHnd;
+	// register: 18
+	register unsigned char *LoadAddr;
 }
 
 
@@ -5844,10 +5920,12 @@ void SetSearchPath__6FileIOPCc(struct FileIO *this, char *Path) {
 bool FindFile__6FileIOPCcPc(struct FileIO *this, char *Name, char *Buffa) {
 	{
 		{
-			bool Success;
+			// register: 19
+			register bool Success;
 			{
 				{
-					char *Path;
+					// register: 18
+					register char *Path;
 				}
 			}
 		}
@@ -5857,8 +5935,10 @@ bool FindFile__6FileIOPCcPc(struct FileIO *this, char *Name, char *Buffa) {
 
 // address: 0x80085F0C
 char *CopyPathItem__6FileIOPcPCc(struct FileIO *this, char *Dst, char *Src) {
-	char *Ptr;
-	int Len;
+	// register: 16
+	register char *Ptr;
+	// register: 17
+	register int Len;
 }
 
 
@@ -5899,37 +5979,47 @@ void ___4PCIO(struct PCIO *this, int __in_chrg) {
 
 // address: 0x80086174
 bool FileExists__4PCIOPCc(struct PCIO *this, char *Name) {
-	int FileHnd;
+	// register: 4
+	register int FileHnd;
 }
 
 
 // address: 0x800861B8
 bool LoReadFileAtAddr__4PCIOPCcPUci(struct PCIO *this, char *Name, unsigned char *Dest, int Len) {
-	int FileHnd;
+	// register: 16
+	register int FileHnd;
 }
 
 
 // address: 0x8008627C
 int GetFileLength__4PCIOPCc(struct PCIO *this, char *Name) {
-	int FileHnd;
-	int Len;
+	// register: 16
+	register int FileHnd;
+	// register: 17
+	register int Len;
 }
 
 
 // address: 0x80086334
 bool LoSave__4PCIOPCcPUci(struct PCIO *this, char *Name, unsigned char *Addr, int Len) {
-	int FileHnd;
+	// register: 16
+	register int FileHnd;
 }
 
 
 // address: 0x80086408
 bool LoStreamFile__4PCIOPCciPFPUciib_bii(struct PCIO *this, char *Name, int Slice, bool (*Func)(), int Offset, int Size) {
-	int FileHnd;
-	long hnd;
-	unsigned char *Dest;
-	int OrigSize;
+	// register: 19
+	register int FileHnd;
+	// register: 21
+	register long hnd;
+	// register: 18
+	register unsigned char *Dest;
+	// register: 22
+	register int OrigSize;
 	{
-		int SizeToRead;
+		// register: 16
+		register int SizeToRead;
 	}
 }
 
@@ -5947,14 +6037,18 @@ void *__nw__6SysObji(int Amount) {
 
 // address: 0x8008665C
 void *__nw__6SysObjiUl(int Amount, unsigned long RamID) {
-	long hnd;
-	void *RetAddr;
+	// register: 16
+	register long hnd;
+	// register: 17
+	register void *RetAddr;
 }
 
 
 // address: 0x800866D8
 void __dl__6SysObjPv(void *ptr) {
-	struct SysObj *This;
+	// register: 16
+	// size: 0x4
+	register struct SysObj *This;
 }
 
 
@@ -5971,37 +6065,47 @@ void ___5DatIO(struct DatIO *this, int __in_chrg) {
 
 // address: 0x800867D8
 bool FileExists__5DatIOPCc(struct DatIO *this, char *Name) {
-	int FileHnd;
+	// register: 4
+	register int FileHnd;
 }
 
 
 // address: 0x80086818
 bool LoReadFileAtAddr__5DatIOPCcPUci(struct DatIO *this, char *Name, unsigned char *Dest, int Len) {
-	int FileHnd;
+	// register: 16
+	register int FileHnd;
 }
 
 
 // address: 0x800868D8
 int GetFileLength__5DatIOPCc(struct DatIO *this, char *Name) {
-	int FileHnd;
-	int Len;
+	// register: 16
+	register int FileHnd;
+	// register: 17
+	register int Len;
 }
 
 
 // address: 0x8008698C
 bool LoSave__5DatIOPCcPUci(struct DatIO *this, char *Name, unsigned char *Addr, int Len) {
-	int FileHnd;
+	// register: 16
+	register int FileHnd;
 }
 
 
 // address: 0x80086A34
 bool LoStreamFile__5DatIOPCciPFPUciib_bii(struct DatIO *this, char *Name, int Slice, bool (*Func)(), int Offset, int Size) {
-	int FileHnd;
-	long hnd;
-	unsigned char *Dest;
-	int OrigSize;
+	// register: 19
+	register int FileHnd;
+	// register: 21
+	register long hnd;
+	// register: 18
+	register unsigned char *Dest;
+	// register: 22
+	register int OrigSize;
 	{
-		int SizeToRead;
+		// register: 16
+		register int SizeToRead;
 	}
 }
 
@@ -6034,99 +6138,146 @@ int GetFileLength__4CdIOPCc(struct CdIO *this, char *Name) {
 
 // address: 0x80086DC0
 bool LoSave__4CdIOPCcPUci(struct CdIO *this, char *Name, unsigned char *Addr, int Len) {
-	int FileHnd;
+	// register: 16
+	register int FileHnd;
 }
 
 
 // address: 0x80086E94
 bool CD_GetCdlFILE__FPCcP7CdlFILE(char *Name, struct CdlFILE *RetFile) {
-	char SearchBuffer[256];
+	// address: 0xFFFFFEF8
+	// size: 0x100
+	auto char SearchBuffer[256];
 }
 
 
 // address: 0x80086EE4
 bool LoStreamFile__4CdIOPCciPFPUciib_bii(struct CdIO *this, char *Name, int Slice, bool (*Func)(), int Offset, int Size) {
-	unsigned char *Dest;
-	int OrigSize;
-	unsigned long Pos;
-	struct STRHDR *sh;
-	int ah;
-	unsigned char Count;
-	int Lumpfile;
+	// address: 0xFFFFFFC8
+	auto unsigned char *Dest;
+	// address: 0xFFFFFFD0
+	auto int OrigSize;
+	// register: 19
+	register unsigned long Pos;
+	// register: 23
+	// size: 0x14
+	register struct STRHDR *sh;
+	// register: 16
+	register int ah;
+	// register: 22
+	register unsigned char Count;
+	// register: 30
+	register int Lumpfile;
 	{
-		int SizeToRead;
-		unsigned char *ptr;
+		// register: 17
+		register int SizeToRead;
+		// register: 20
+		register unsigned char *ptr;
 	}
 }
 
 
 // address: 0x8008710C
 bool LoAsyncStreamFile__4CdIOPCciPFPUciib_bii(struct CdIO *this, char *Name, int Slice, bool (*Func)(), int Offset, int Size) {
-	long hndText;
-	unsigned char *Dest;
-	int OrigSize;
+	// register: 19
+	register long hndText;
+	// register: 18
+	register unsigned char *Dest;
+	// register: 21
+	register int OrigSize;
 	{
-		int SizeToRead;
+		// register: 16
+		register int SizeToRead;
 	}
 }
 
 
 // address: 0x8008725C
 void BL_InitEAC__Fv() {
-	long gunk1;
-	long gunk2;
-	void *ptr;
+	// address: 0xFFFFFFF0
+	auto long gunk1;
+	// address: 0xFFFFFFF4
+	auto long gunk2;
+	// register: 16
+	register void *ptr;
 }
 
 
 // address: 0x80087354
 long BL_ReadFile__FPcUl(char *Name, unsigned long RamId) {
-	int MemSize;
-	char FileToLoad[50];
-	long MyHnd;
-	unsigned char *LoadAddr;
+	// register: 16
+	register int MemSize;
+	// address: 0xFFFFFFB8
+	// size: 0x32
+	auto char FileToLoad[50];
+	// register: 16
+	register long MyHnd;
+	// register: 17
+	register unsigned char *LoadAddr;
 }
 
 
 // address: 0x8008746C
 long BL_AsyncReadFile__FPcUl(char *Name, unsigned long RamId) {
-	int MemSize;
-	char FileToLoad[50];
-	long MyHnd;
-	unsigned char *LoadAddr;
-	int ah;
+	// register: 16
+	register int MemSize;
+	// address: 0xFFFFFFB0
+	// size: 0x32
+	auto char FileToLoad[50];
+	// register: 18
+	register long MyHnd;
+	// register: 19
+	register unsigned char *LoadAddr;
+	// register: 17
+	register int ah;
 }
 
 
 // address: 0x800875CC
 void BL_LoadDirectory__Fv() {
-	long BL_DirMHandle;
-	char *AsyncAddr;
-	unsigned char *BL_DirPtr;
-	unsigned long DirId;
-	unsigned long DirId2;
+	// register: 18
+	register long BL_DirMHandle;
+	// register: 16
+	register char *AsyncAddr;
+	// register: 16
+	register unsigned char *BL_DirPtr;
+	// register: 17
+	register unsigned long DirId;
+	// register: 2
+	register unsigned long DirId2;
 }
 
 
 // address: 0x800876F4
 void BL_LoadStreamDir__Fv() {
-	long BL_DirMHandle;
-	unsigned char *BL_DirPtr;
-	unsigned long DirId;
-	unsigned long DirId2;
-	enum LANG_TYPE Lang;
+	// register: 17
+	register long BL_DirMHandle;
+	// register: 16
+	register unsigned char *BL_DirPtr;
+	// register: 18
+	register unsigned long DirId;
+	// register: 2
+	register unsigned long DirId2;
+	// register: 3
+	// size: 0x4
+	register enum LANG_TYPE Lang;
 }
 
 
 // address: 0x80087984
 // size: 0x14
 struct STRHDR *BL_MakeFilePosTab__FPUcUl(unsigned char *BL_DirPtr, unsigned long NoStreamFiles) {
-	struct STREAM *DirPtr;
-	struct STRHDR *TFileTab;
+	// register: 17
+	// size: 0x14
+	register struct STREAM *DirPtr;
+	// register: 9
+	// size: 0x14
+	register struct STRHDR *TFileTab;
 	{
 		{
 			{
-				int j;
+				// register: 5
+				register int j;
 			}
 		}
 	}
@@ -6136,19 +6287,31 @@ struct STRHDR *BL_MakeFilePosTab__FPUcUl(unsigned char *BL_DirPtr, unsigned long
 // address: 0x80087A6C
 // size: 0x14
 struct STRHDR *BL_FindStreamFile__FPcc(char *Name, char LumpID) {
-	struct STRHDR *ptr;
-	unsigned long NoFiles;
-	int pos;
-	int c;
-	char fname[14];
-	int size;
+	// register: 17
+	// size: 0x14
+	register struct STRHDR *ptr;
+	// register: 21
+	register unsigned long NoFiles;
+	// register: 20
+	register int pos;
+	// register: 3
+	register int c;
+	// address: 0xFFFFFFC0
+	// size: 0xE
+	auto char fname[14];
+	// register: 19
+	register int size;
 	{
-		int i;
+		// register: 3
+		register int i;
 		{
-			int i;
+			// register: 3
+			register int i;
 			{
-				int s;
-				int i;
+				// register: 16
+				register int s;
+				// register: 3
+				register int i;
 				{
 					{
 					}
@@ -6166,14 +6329,19 @@ bool BL_FileExists__FPcc(char *Name, char LumpID) {
 
 // address: 0x80087C34
 int BL_FileLength__FPcc(char *Name, char LumpID) {
-	struct STRHDR *ptr;
+	// register: 2
+	// size: 0x14
+	register struct STRHDR *ptr;
 }
 
 
 // address: 0x80087CB4
 bool BL_LoadFileAtAddr__FPcPUcc(char *Name, unsigned char *Dest, char LumpID) {
-	struct STRHDR *sh;
-	int ah;
+	// register: 16
+	// size: 0x14
+	register struct STRHDR *sh;
+	// register: 16
+	register int ah;
 }
 
 
@@ -6189,29 +6357,39 @@ void BL_WaitForAsyncFinish__Fv() {
 
 // address: 0x80087E6C
 void BL_AsyncLoadCallBack__Fi(int ah) {
-	unsigned long OldGp;
+	// register: 16
+	register unsigned long OldGp;
 }
 
 
 // address: 0x80087ED0
 long BL_LoadFileAsync__FPcc(char *Name, char LumpID) {
-	struct STRHDR *sh;
-	int Size;
-	long MyHnd;
-	unsigned char *LoadAddr;
+	// register: 18
+	// size: 0x14
+	register struct STRHDR *sh;
+	// register: 16
+	register int Size;
+	// register: 16
+	register long MyHnd;
+	// register: 19
+	register unsigned char *LoadAddr;
 }
 
 
 // address: 0x80088084
 bool BL_AsyncLoadFileAtAddr__FPcPUcc(char *Name, unsigned char *Dest, char LumpID) {
-	struct STRHDR *sh;
+	// register: 16
+	// size: 0x14
+	register struct STRHDR *sh;
 }
 
 
 // address: 0x800881A0
 // size: 0x14
 struct STRHDR *BL_OpenStreamFile__FPcc(char *Name, char LumpID) {
-	struct STRHDR *sh;
+	// register: 2
+	// size: 0x14
+	register struct STRHDR *sh;
 }
 
 
@@ -6222,17 +6400,23 @@ bool BL_CloseStreamFile__FP6STRHDR(struct STRHDR *StreamHDR) {
 
 // address: 0x800881D4
 int LZNP_Decode__FPUcT0(unsigned char *in, unsigned char *out) {
-	int i;
-	int j;
-	unsigned int flags;
-	unsigned char *OriginalOut;
+	// register: 6
+	register int i;
+	// register: 3
+	register int j;
+	// register: 7
+	register unsigned int flags;
+	// register: 8
+	register unsigned char *OriginalOut;
 }
 
 
 // address: 0x800882A8
 void *Tmalloc__Fi(int MemSize) {
-	long MyHnd;
-	void *Addr;
+	// register: 16
+	register long MyHnd;
+	// register: 17
+	register void *Addr;
 }
 
 
@@ -6248,28 +6432,35 @@ void InitTmalloc__Fv() {
 
 // address: 0x80088474
 void strupr__FPc(char *Buffa) {
-	char *TempBuf;
-	char TempChar;
+	// register: 4
+	register char *TempBuf;
+	// register: 3
+	register char TempChar;
 }
 
 
 // address: 0x800884C8
 void PauseTask__FP4TASK(struct TASK *T) {
 	{
-		struct CTempPauseMessage Cpm;
+		// address: 0xFFFFFFE8
+		// size: 0xC
+		auto struct CTempPauseMessage Cpm;
 	}
 }
 
 
 // address: 0x80088518
 int GetPausePad__Fv() {
-	bool Done;
-	int PadVal;
+	// register: 18
+	register bool Done;
+	// register: 19
+	register int PadVal;
 	{
 		{
 			{
 				{
-					int f;
+					// register: 16
+					register int f;
 					{
 					}
 				}
@@ -6299,8 +6490,10 @@ void DoPause__14CPauseMessagesi(struct CPauseMessages *this, int nPadNum) {
 
 // address: 0x8008887C
 bool DoPausedMessage__14CPauseMessages(struct CPauseMessages *this) {
-	bool RetVal;
-	bool Done;
+	// register: 18
+	register bool RetVal;
+	// register: 17
+	register bool Done;
 	{
 	}
 }
@@ -6308,29 +6501,38 @@ bool DoPausedMessage__14CPauseMessages(struct CPauseMessages *this) {
 
 // address: 0x800889B4
 int DoQuitMessage__14CPauseMessages(struct CPauseMessages *this) {
-	int RetVal;
-	bool Done;
-	int Menu;
+	// register: 20
+	register int RetVal;
+	// register: 19
+	register bool Done;
+	// register: 17
+	register int Menu;
 	{
-		unsigned short PadVal;
+		// register: 16
+		register unsigned short PadVal;
 	}
 }
 
 
 // address: 0x80088AD4
 bool AreYouSureMessage__14CPauseMessages(struct CPauseMessages *this) {
-	bool RetVal;
-	bool Done;
-	int Menu;
+	// register: 20
+	register bool RetVal;
+	// register: 19
+	register bool Done;
+	// register: 17
+	register int Menu;
 	{
-		unsigned short PadVal;
+		// register: 16
+		register unsigned short PadVal;
 	}
 }
 
 
 // address: 0x80088BF4
 bool PA_SetPauseOk__Fb(bool NewPause) {
-	bool Ret;
+	// register: 2
+	register bool Ret;
 }
 
 
@@ -6341,11 +6543,14 @@ bool PA_GetPauseOk__Fv() {
 
 // address: 0x80088C10
 void MY_PausePrint__17CTempPauseMessageiiiP4RECT(struct CTempPauseMessage *this, int s, int Txt, int Menu, struct RECT *PRect) {
-	int y;
-	int otpos;
+	// register: 23
+	register int y;
+	// register: 30
+	register int otpos;
 	{
 		{
-			int len;
+			// register: 17
+			register int len;
 		}
 	}
 }
@@ -6358,10 +6563,15 @@ void InitPrintQuitMessage__17CTempPauseMessage(struct CTempPauseMessage *this) {
 
 // address: 0x80088E58
 void PrintQuitMessage__17CTempPauseMessagei(struct CTempPauseMessage *this, int Menu) {
-	struct RECT PRect;
-	int otpos;
-	int oldDotpos;
-	int oldTotpos;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct RECT PRect;
+	// register: 16
+	register int otpos;
+	// register: 22
+	register int oldDotpos;
+	// register: 21
+	register int oldTotpos;
 }
 
 
@@ -6377,10 +6587,15 @@ void InitPrintAreYouSure__17CTempPauseMessage(struct CTempPauseMessage *this) {
 
 // address: 0x80088FE0
 void PrintAreYouSure__17CTempPauseMessagei(struct CTempPauseMessage *this, int Menu) {
-	struct RECT PRect;
-	int otpos;
-	int oldDotpos;
-	int oldTotpos;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct RECT PRect;
+	// register: 16
+	register int otpos;
+	// register: 22
+	register int oldDotpos;
+	// register: 21
+	register int oldTotpos;
 }
 
 
@@ -6396,10 +6611,15 @@ void InitPrintPaused__17CTempPauseMessage(struct CTempPauseMessage *this) {
 
 // address: 0x80089168
 void PrintPaused__17CTempPauseMessage(struct CTempPauseMessage *this) {
-	struct RECT PRect;
-	int otpos;
-	int oldDotpos;
-	int oldTotpos;
+	// address: 0xFFFFFFE0
+	// size: 0x8
+	auto struct RECT PRect;
+	// register: 16
+	register int otpos;
+	// register: 19
+	register int oldDotpos;
+	// register: 16
+	register int oldTotpos;
 }
 
 
@@ -6488,17 +6708,23 @@ unsigned char CheckActive__4CPad_addr_800894D4(struct CPad *this) {
 
 // address: 0x800894E0
 unsigned long ReadPadStream__Fv() {
-	unsigned char *p0;
-	unsigned char *p1;
-	unsigned long rval;
+	// register: 19
+	register unsigned char *p0;
+	// register: 18
+	register unsigned char *p1;
+	// register: 16
+	register unsigned long rval;
 }
 
 
 // address: 0x800895F8
 void PAD_Handler__Fv() {
-	unsigned long JVal;
-	unsigned long v;
-	unsigned char fin;
+	// register: 20
+	register unsigned long JVal;
+	// register: 3
+	register unsigned long v;
+	// register: 16
+	register unsigned char fin;
 }
 
 
@@ -6520,7 +6746,8 @@ void BothNewVal__4CPadUsUs(struct CPad *this, unsigned short New, unsigned short
 
 // address: 0x800899AC
 unsigned short Trans__4CPadUs(struct CPad *this, unsigned short PadVal) {
-	unsigned short RetVal;
+	// register: 2
+	register unsigned short RetVal;
 }
 
 
@@ -6531,17 +6758,21 @@ void Flush__4CPad(struct CPad *this) {
 
 // address: 0x80089B24
 void InitClickBits__FPUs(unsigned short *CountArray) {
-	int f;
+	// register: 2
+	register int f;
 }
 
 
 // address: 0x80089B44
 unsigned short MakeClickBits__FiiiPUs(int Switch, int Closed, int Speed, unsigned short *CountArray) {
-	unsigned short Click;
-	unsigned short BitMask;
+	// register: 9
+	register unsigned short Click;
+	// register: 3
+	register unsigned short BitMask;
 	{
 		{
-			int ResetSpeed;
+			// register: 8
+			register int ResetSpeed;
 		}
 	}
 }
@@ -6581,10 +6812,13 @@ struct CPad *__4CPadi(struct CPad *this, int PhysStick) {
 // address: 0x80089C60
 void Set__7FontTab(struct FontTab *this) {
 	{
-		int Loop;
+		// register: 16
+		register int Loop;
 		{
-			int f;
-			int Loop;
+			// register: 16
+			register int f;
+			// register: 16
+			register int Loop;
 		}
 	}
 }
@@ -6592,7 +6826,8 @@ void Set__7FontTab(struct FontTab *this) {
 
 // address: 0x80089CFC
 void InitPrinty__Fv() {
-	int otpos;
+	// register: 16
+	register int otpos;
 }
 
 
@@ -6608,39 +6843,59 @@ int KanjiPrintChar__5CFontUsUsUsUcUcUc(struct CFont *this, unsigned short Cx, un
 
 // address: 0x80089EEC
 int PrintChar__5CFontUsUsUcUcUcUc(struct CFont *this, unsigned short Cx, unsigned short Cy, unsigned char C, int R, int G, int B) {
-	int Cw;
+	// register: 18
+	register int Cw;
 }
 
 
 // address: 0x8008A090
 int Print__5CFontiiPc8TXT_JUSTP4RECTUcUcUc(struct CFont *this, int X, int Y, char *Str, enum TXT_JUST Justify, struct RECT *TextWindow, int R, int G, int B) {
-	int Cx;
-	int Cy;
-	int WrapCount;
-	char *EndPtr;
-	char *SpacePtr;
-	int CharW;
-	int SpaceW;
-	int _WindowW;
-	int WindowW;
-	int WindowH;
-	int WindowX;
-	int WindowY;
-	struct RECT ClipRect;
-	unsigned short kan;
-	char *OrigStr;
+	// register: 20
+	register int Cx;
+	// register: 22
+	register int Cy;
+	// address: 0xFFFFFF70
+	auto int WrapCount;
+	// register: 17
+	register char *EndPtr;
+	// register: 21
+	register char *SpacePtr;
+	// register: 3
+	register int CharW;
+	// register: 16
+	register int SpaceW;
+	// address: 0xFFFFFF78
+	auto int _WindowW;
+	// register: 23
+	register int WindowW;
+	// address: 0xFFFFFF80
+	auto int WindowH;
+	// address: 0xFFFFFF88
+	auto int WindowX;
+	// address: 0xFFFFFF90
+	auto int WindowY;
+	// address: 0xFFFFFF50
+	// size: 0x8
+	auto struct RECT ClipRect;
+	// register: 2
+	register unsigned short kan;
+	// address: 0xFFFFFF98
+	auto char *OrigStr;
 	{
 		{
-			unsigned char c;
+			// register: 5
+			register unsigned char c;
 			{
 				{
 					{
 						{
-							char c;
+							// register: 16
+							register char c;
 							{
 								{
 									{
-										char c;
+										// register: 8
+										register char c;
 									}
 								}
 							}
@@ -6655,22 +6910,32 @@ int Print__5CFontiiPc8TXT_JUSTP4RECTUcUcUc(struct CFont *this, int X, int Y, cha
 
 // address: 0x8008A6C8
 int GetWrap__5CFontPcP4RECT(struct CFont *this, char *Str, struct RECT *TextWindow) {
-	int WrapCount;
-	char *EndPtr;
-	char *SpacePtr;
-	char *LastSpacePtr;
-	int CharW;
-	int SpaceW;
-	int WindowW;
-	int _WindowW;
+	// register: 22
+	register int WrapCount;
+	// register: 16
+	register char *EndPtr;
+	// register: 19
+	register char *SpacePtr;
+	// register: 23
+	register char *LastSpacePtr;
+	// register: 3
+	register int CharW;
+	// register: 17
+	register int SpaceW;
+	// register: 20
+	register int WindowW;
+	// register: 30
+	register int _WindowW;
 	{
 		{
-			unsigned char c;
+			// register: 5
+			register unsigned char c;
 			{
 				{
 					{
 						{
-							char c;
+							// register: 17
+							register char c;
 						}
 					}
 				}
@@ -6682,20 +6947,27 @@ int GetWrap__5CFontPcP4RECT(struct CFont *this, char *Str, struct RECT *TextWind
 
 // address: 0x8008A938
 int GetWrapWidth__5CFontPcP4RECT(struct CFont *this, char *Str, struct RECT *TextWindow) {
-	char *EndPtr;
-	char *SpacePtr;
-	int CharW;
-	int SpaceW;
-	int WindowW;
+	// register: 16
+	register char *EndPtr;
+	// register: 19
+	register char *SpacePtr;
+	// register: 3
+	register int CharW;
+	// register: 18
+	register int SpaceW;
+	// register: 20
+	register int WindowW;
 	{
-		unsigned char c;
+		// register: 5
+		register unsigned char c;
 	}
 }
 
 
 // address: 0x8008AAA4
 int GetStrWidth__5CFontPc(struct CFont *this, char *Str) {
-	int Width;
+	// register: 17
+	register int Width;
 }
 
 
@@ -6706,7 +6978,8 @@ void SetChar__5CFontiUs(struct CFont *this, int ch, unsigned short Frm) {
 
 // address: 0x8008ABA0
 int SetOTpos__5CFonti(struct CFont *this, int OT) {
-	int OldOT;
+	// register: 2
+	register int OldOT;
 }
 
 
@@ -6759,43 +7032,79 @@ unsigned char TrimCol__Fs(short col) {
 // address: 0x8008ADC8
 // size: 0x34
 struct POLY_GT4 *DialogPrint__Fiiiiiiiiii(int Frm, int X, int Y, int SW, int SH, int UW, int UH, int UOfs, int VOfs, int Trans) {
-	struct FRAME_HDR *Fr;
-	struct POLY_GT4 *GT4;
-	struct POLY_FT4 *FT4;
-	struct TP_LOAD_HDR *Tp;
-	int x0;
-	int x1;
-	int x2;
-	int x3;
-	int y0;
-	int y1;
-	int y2;
-	int y3;
-	int u0;
-	int u1;
-	int u2;
-	int u3;
-	int v0;
-	int v1;
-	int v2;
-	int v3;
-	int U;
-	int V;
-	int W;
-	int H;
+	// address: 0xFFFFFF78
+	// size: 0xC
+	auto struct FRAME_HDR *Fr;
+	// register: 17
+	// size: 0x34
+	register struct POLY_GT4 *GT4;
+	// register: 16
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
+	// address: 0xFFFFFF80
+	// size: 0x4
+	auto struct TP_LOAD_HDR *Tp;
+	// address: 0xFFFFFF88
+	auto int x0;
+	// address: 0xFFFFFF90
+	auto int x1;
+	// address: 0xFFFFFF98
+	auto int x2;
+	// address: 0xFFFFFFA0
+	auto int x3;
+	// address: 0xFFFFFFA8
+	auto int y0;
+	// address: 0xFFFFFFB0
+	auto int y1;
+	// address: 0xFFFFFFB8
+	auto int y2;
+	// address: 0xFFFFFFC0
+	auto int y3;
+	// register: 18
+	register int u0;
+	// register: 19
+	register int u1;
+	// register: 23
+	register int u2;
+	// register: 30
+	register int u3;
+	// register: 21
+	register int v0;
+	// register: 20
+	register int v1;
+	// register: 22
+	register int v2;
+	// address: 0xFFFFFFC8
+	auto int v3;
+	// register: 3
+	register int U;
+	// register: 7
+	register int V;
+	// register: 4
+	register int W;
+	// register: 5
+	register int H;
 	{
 		{
 			{
 				{
-					struct PAL *Pal;
+					// register: 3
+					// size: 0x8
+					register struct PAL *Pal;
 					{
 						{
 							{
-								struct PAL *Pal;
-								short G1;
-								short G2;
-								short G3;
-								short G4;
+								// register: 3
+								// size: 0x8
+								register struct PAL *Pal;
+								// register: 16
+								register short G1;
+								// register: 18
+								register short G2;
+								// register: 19
+								register short G3;
+								// register: 20
+								register short G4;
 								{
 									{
 									}
@@ -6813,33 +7122,47 @@ struct POLY_GT4 *DialogPrint__Fiiiiiiiiii(int Frm, int X, int Y, int SW, int SH,
 // address: 0x8008B748
 // size: 0x24
 struct POLY_G4 *GetDropShadowG4__FUcUcUcUcUcUcUcUcUcUcUcUc(unsigned char r0, unsigned char g0, unsigned char b0, unsigned char r1, int g1, int b1, int r2, int g2, int b2, int r3, int g3, int b3) {
-	struct POLY_G4 *G4;
+	// register: 2
+	// size: 0x24
+	register struct POLY_G4 *G4;
 }
 
 
 // address: 0x8008B880
 void DropShadows__Fiiii(int x, int y, int w, int h) {
-	struct POLY_G4 *G4;
-	unsigned char dbr;
-	unsigned char dbg;
-	unsigned char dbb;
+	// register: 2
+	// size: 0x24
+	register struct POLY_G4 *G4;
+	// register: 18
+	register unsigned char dbr;
+	// register: 17
+	register unsigned char dbg;
+	// register: 16
+	register unsigned char dbb;
 }
 
 
 // address: 0x8008BB24
 void InitDialog__Fv() {
 	{
-		int i;
+		// register: 16
+		register int i;
 		{
-			int y;
-			int i;
+			// register: 18
+			register int y;
+			// register: 16
+			register int i;
 			{
-				unsigned char bits;
+				// register: 16
+				register unsigned char bits;
 				{
-					int x;
+					// register: 17
+					register int x;
 					{
-						int i;
-						int y;
+						// register: 18
+						register int i;
+						// register: 18
+						register int y;
 					}
 				}
 			}
@@ -6850,33 +7173,52 @@ void InitDialog__Fv() {
 
 // address: 0x8008BC5C
 void GetSizes__6Dialog(struct Dialog *this) {
-	struct FRAME_HDR *Fr;
+	// register: 3
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
 }
 
 
 // address: 0x8008BEE0
 void Back__6Dialogiiii(struct Dialog *this, int DX, int DY, int DW, int DH) {
-	int X;
-	int Y;
-	int W;
-	int H;
-	int Bx;
-	int By;
-	int Xr;
-	int Yr;
-	int Xl;
-	int Yl;
-	struct POLY_FT4 *Ft4;
-	struct RECT ClipRect;
+	// register: 30
+	register int X;
+	// register: 23
+	register int Y;
+	// address: 0xFFFFFF78
+	auto int W;
+	// address: 0xFFFFFF80
+	auto int H;
+	// register: 18
+	register int Bx;
+	// register: 20
+	register int By;
+	// register: 19
+	register int Xr;
+	// register: 22
+	register int Yr;
+	// register: 17
+	register int Xl;
+	// register: 21
+	register int Yl;
+	// register: 4
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// address: 0xFFFFFF70
+	// size: 0x8
+	auto struct RECT ClipRect;
 	{
 		{
 			{
 				{
 					{
-						int c;
+						// register: 16
+						register int c;
 						{
-							int fw;
-							int fh;
+							// register: 2
+							register int fw;
+							// register: 3
+							register int fh;
 						}
 					}
 				}
@@ -6888,19 +7230,28 @@ void Back__6Dialogiiii(struct Dialog *this, int DX, int DY, int DW, int DH) {
 
 // address: 0x8008CFF8
 void Line__6Dialogiii(struct Dialog *this, int DX, int DY, int DW) {
-	int X;
-	int Y;
-	int W;
-	int Bx;
-	int Xr;
-	int Xl;
-	struct RECT ClipRect;
+	// register: 21
+	register int X;
+	// register: 22
+	register int Y;
+	// register: 23
+	register int W;
+	// register: 17
+	register int Bx;
+	// register: 16
+	register int Xr;
+	// register: 16
+	register int Xl;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT ClipRect;
 }
 
 
 // address: 0x8008D228
 int SetOTpos__6Dialogi(struct Dialog *this, int OT) {
-	int OldOT;
+	// register: 2
+	register int OldOT;
 }
 
 
@@ -6918,7 +7269,9 @@ struct FRAME_HDR *GetFr__7TextDati_addr_8008D258(struct TextDat *this, int FrNum
 
 // address: 0x8008D274
 void ATT_DoAttract__Fv() {
-	struct FE_CREATE CStruct;
+	// address: 0xFFFFFFD0
+	// size: 0x24
+	auto struct FE_CREATE CStruct;
 	{
 		{
 		}
@@ -6934,7 +7287,8 @@ void CustomPlayerInit__FR12PlayerStruct(struct PlayerStruct *P) {
 // address: 0x8008D344
 void CreatePlayersFromFeData__FR9FE_CREATE(struct FE_CREATE *CStruct) {
 	{
-		int Loop;
+		// register: 16
+		register int Loop;
 	}
 }
 
@@ -6952,9 +7306,11 @@ void CycleSelCols__Fv() {
 // address: 0x8008D614
 int FindTownCreature__7CBlocksi(struct CBlocks *this, int GameEqu) {
 	{
-		unsigned int f;
+		// register: 17
+		register unsigned int f;
 		{
-			int Creature;
+			// register: 2
+			register int Creature;
 		}
 	}
 }
@@ -6963,7 +7319,8 @@ int FindTownCreature__7CBlocksi(struct CBlocks *this, int GameEqu) {
 // address: 0x8008D688
 int FindCreature__7CBlocksi(struct CBlocks *this, int MgNum) {
 	{
-		unsigned int f;
+		// register: 3
+		register unsigned int f;
 	}
 }
 
@@ -6981,8 +7338,12 @@ void SetTownersGraphics__7CBlocks(struct CBlocks *this) {
 
 // address: 0x8008D898
 void SetMonsterGraphics__7CBlocksii(struct CBlocks *this, int Level, int List) {
-	struct MonstLevel *MLev;
-	struct MonstList *MList;
+	// register: 16
+	// size: 0x8
+	register struct MonstLevel *MLev;
+	// register: 16
+	// size: 0x10
+	register struct MonstList *MList;
 }
 
 
@@ -7030,10 +7391,13 @@ void Load__7CBlocksi(struct CBlocks *this, int Id) {
 
 // address: 0x8008DC1C
 void MakeRectTable__7CBlocks(struct CBlocks *this) {
-	unsigned char *MyBlocks;
-	int *BlockOffsets;
+	// register: 19
+	register unsigned char *MyBlocks;
+	// register: 18
+	register int *BlockOffsets;
 	{
-		int f;
+		// register: 16
+		register int f;
 	}
 }
 
@@ -7041,9 +7405,12 @@ void MakeRectTable__7CBlocks(struct CBlocks *this) {
 // address: 0x8008DD70
 void MakeGt4Table__7CBlocks(struct CBlocks *this) {
 	{
-		unsigned int f;
+		// register: 19
+		register unsigned int f;
 		{
-			struct POLY_GT4 ThisGt4;
+			// address: 0xFFFFFFB0
+			// size: 0x34
+			auto struct POLY_GT4 ThisGt4;
 		}
 	}
 }
@@ -7051,13 +7418,20 @@ void MakeGt4Table__7CBlocks(struct CBlocks *this) {
 
 // address: 0x8008DF54
 void MakeGt4__7CBlocksP8POLY_GT4P9FRAME_HDR(struct CBlocks *this, struct POLY_GT4 *GT4, struct FRAME_HDR *Fr) {
-	int H;
-	int Rotated;
-	int Tpage;
-	int zU;
-	int zV;
-	int zW;
-	int zH;
+	// register: 2
+	register int H;
+	// register: 3
+	register int Rotated;
+	// register: 9
+	register int Tpage;
+	// register: 7
+	register int zU;
+	// register: 8
+	register int zV;
+	// register: 4
+	register int zW;
+	// register: 5
+	register int zH;
 }
 
 
@@ -7073,8 +7447,10 @@ void SetRandOffset__7CBlocksi(struct CBlocks *this, int QuakeAmount) {
 
 // address: 0x8008E140
 void Print__7CBlocks(struct CBlocks *this) {
-	int MxInt;
-	int MyInt;
+	// register: 18
+	register int MxInt;
+	// register: 17
+	register int MyInt;
 }
 
 
@@ -7090,14 +7466,17 @@ void GetXY__7CBlocksPiT1(struct CBlocks *this, int *nx, int *ny) {
 
 // address: 0x8008E29C
 void InitColourCycling__7CBlocks(struct CBlocks *this) {
-	int CycleIndex;
+	// register: 16
+	register int CycleIndex;
 	{
-		int f;
+		// register: 19
+		register int f;
 		{
 			{
 				{
 					{
-						int f;
+						// register: 19
+						register int f;
 						{
 							{
 								{
@@ -7114,76 +7493,134 @@ void InitColourCycling__7CBlocks(struct CBlocks *this) {
 
 // address: 0x8008E3E8
 void GetGCol__7CBlocksiiPUcP7RGBData(struct CBlocks *this, int x, int y, unsigned char *Rgb, struct RGBData *Data) {
-	int rgb_itxr;
-	int rgb_itxg;
-	int rgb_itxb;
-	int rgb_leftr;
-	int rgb_leftg;
-	int rgb_leftb;
-	int rgb_rightr;
-	int rgb_rightg;
-	int rgb_rightb;
-	int rgb_cordr;
-	int rgb_cordg;
-	int rgb_cordb;
+	// register: 2
+	register int rgb_itxr;
+	// register: 2
+	register int rgb_itxg;
+	// register: 2
+	register int rgb_itxb;
+	// register: 7
+	register int rgb_leftr;
+	// register: 6
+	register int rgb_leftg;
+	// register: 5
+	register int rgb_leftb;
+	// register: 2
+	register int rgb_rightr;
+	// register: 2
+	register int rgb_rightg;
+	// register: 2
+	register int rgb_rightb;
+	// register: 4
+	register int rgb_cordr;
+	// register: 3
+	register int rgb_cordg;
+	// register: 2
+	register int rgb_cordb;
 }
 
 
 // address: 0x8008E528
 void PrintMap__7CBlocksii(struct CBlocks *this, int x, int y) {
-	int XPos;
-	int YPos;
-	int xx;
-	int BlankBlock;
-	unsigned char *MyBlocks;
-	int *BlockOffsets;
-	int XPix;
-	int YPix;
-	int nx;
-	int ny;
-	int CLeft;
-	int CRight;
-	int CTop;
-	int CBottom;
+	// address: 0xFFFFFF50
+	auto int XPos;
+	// address: 0xFFFFFF58
+	auto int YPos;
+	// address: 0xFFFFFF60
+	auto int xx;
+	// address: 0xFFFFFF68
+	auto int BlankBlock;
+	// address: 0xFFFFFF70
+	auto unsigned char *MyBlocks;
+	// address: 0xFFFFFF78
+	auto int *BlockOffsets;
+	// register: 20
+	register int XPix;
+	// register: 21
+	register int YPix;
+	// register: 19
+	register int nx;
+	// register: 16
+	register int ny;
+	// address: 0xFFFFFF80
+	auto int CLeft;
+	// address: 0xFFFFFF88
+	auto int CRight;
+	// address: 0xFFFFFF90
+	auto int CTop;
+	// address: 0xFFFFFF98
+	auto int CBottom;
 	{
-		int ThisY;
-		int ThisXPos;
-		int ThisYPos;
-		int Height;
+		// address: 0xFFFFFFA0
+		auto int ThisY;
+		// address: 0xFFFFFFA8
+		auto int ThisXPos;
+		// register: 21
+		register int ThisYPos;
+		// address: 0xFFFFFFB0
+		auto int Height;
 		{
-			struct CPart *Parts;
-			struct CBlock *MyBlock;
-			int BlockNum;
-			struct RGBData MyRgbData;
-			int bx;
-			int by;
+			// register: 22
+			// size: 0x8
+			register struct CPart *Parts;
+			// register: 18
+			// size: 0xC
+			register struct CBlock *MyBlock;
+			// register: 6
+			register int BlockNum;
+			// address: 0xFFFFFF08
+			// size: 0x28
+			auto struct RGBData MyRgbData;
+			// register: 16
+			register int bx;
+			// register: 17
+			register int by;
 			{
 				{
-					struct RECT *BlockR;
-					int clipx;
-					int clipy;
+					// register: 5
+					// size: 0x8
+					register struct RECT *BlockR;
+					// register: 4
+					register int clipx;
+					// register: 3
+					register int clipy;
 					{
 						{
-							int NumOfParts;
-							bool DoTrans;
-							int OtPos;
-							bool PFlag;
+							// address: 0xFFFFFFB8
+							auto int NumOfParts;
+							// register: 7
+							register bool DoTrans;
+							// register: 20
+							register int OtPos;
+							// address: 0xFFFFFFC0
+							auto bool PFlag;
 							{
 								{
 									{
 										{
-											int f;
+											// address: 0xFFFFFFC8
+											auto int f;
 											{
-												struct POLY_GT4 *DestGt4;
-												struct LittleGt4 *ThisGt4;
-												unsigned char Flags;
-												int W;
-												int H;
+												// address: 0xFFFFFF30
+												// size: 0x34
+												auto struct POLY_GT4 *DestGt4;
+												// register: 16
+												// size: 0x10
+												register struct LittleGt4 *ThisGt4;
+												// register: 3
+												register unsigned char Flags;
+												// register: 19
+												register int W;
+												// register: 16
+												register int H;
 												{
 													{
-														int r;
-														int g;
-														int b;
+														// register: 3
+														register int r;
+														// register: 4
+														register int g;
+														// register: 5
+														register int b;
 													}
 												}
 											}
@@ -7202,30 +7639,54 @@ void PrintMap__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x8008F098
 void IterateVisibleMap__7CBlocksiiPFP9CacheInfoP8map_infoii_ib(struct CBlocks *this, int x, int y, int (*Func)(), bool VisCheck) {
-	int XPos;
-	int YPos;
-	int xx;
-	bool Infra;
-	int MyXShifter;
-	int MyYShifter;
-	int Total;
-	bool DoVisCheck;
-	int XPix;
-	int YPix;
-	int CRight;
+	// address: 0xFFFFFF90
+	auto int XPos;
+	// address: 0xFFFFFF98
+	auto int YPos;
+	// address: 0xFFFFFFA0
+	auto int xx;
+	// register: 2
+	register bool Infra;
+	// address: 0xFFFFFFA8
+	auto int MyXShifter;
+	// address: 0xFFFFFFB0
+	auto int MyYShifter;
+	// register: 18
+	register int Total;
+	// address: 0xFFFFFFB8
+	auto bool DoVisCheck;
+	// register: 7
+	register int XPix;
+	// register: 5
+	register int YPix;
+	// address: 0xFFFFFFC0
+	auto int CRight;
 	{
-		int ThisXPos;
-		int ThisYPos;
-		int Height;
+		// register: 30
+		register int ThisXPos;
+		// register: 23
+		register int ThisYPos;
+		// address: 0xFFFFFFC8
+		auto int Height;
 		{
 			{
 				{
-					struct map_info *p0;
-					struct map_info *p1;
-					struct map_info *p2;
-					struct map_info *p3;
-					int myx;
-					int myy;
+					// register: 5
+					// size: 0x8
+					register struct map_info *p0;
+					// register: 19
+					// size: 0x8
+					register struct map_info *p1;
+					// register: 22
+					// size: 0x8
+					register struct map_info *p2;
+					// address: 0xFFFFFFD0
+					// size: 0x8
+					auto struct map_info *p3;
+					// register: 21
+					register int myx;
+					// register: 20
+					register int myy;
 				}
 			}
 		}
@@ -7235,20 +7696,27 @@ void IterateVisibleMap__7CBlocksiiPFP9CacheInfoP8map_infoii_ib(struct CBlocks *t
 
 // address: 0x8008F510
 int AddMonst__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *p0, int bx, int by) {
-	int nMonster;
-	int Index;
-	int bFlags;
+	// register: 2
+	register int nMonster;
+	// register: 8
+	register int Index;
+	// register: 9
+	register int bFlags;
 	{
 		{
-			struct MonsterStruct *MyMonst;
-			int mi;
+			// register: 3
+			// size: 0x68
+			register struct MonsterStruct *MyMonst;
+			// register: 2
+			register int mi;
 			{
 				{
 					{
 						{
 							{
 								{
-									int ThisIndex;
+									// register: 4
+									register int ThisIndex;
 								}
 							}
 						}
@@ -7262,96 +7730,171 @@ int AddMonst__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *
 
 // address: 0x8008F5F8
 void PrintMonsters__7CBlocksii(struct CBlocks *this, int x, int y) {
-	struct TextDat *CMonstGraphics;
-	int Total;
-	int Wx;
-	int Wy;
-	int Cx;
-	int Cy;
-	struct TextDat *GolemGraphics;
-	bool MyInfraFlag;
+	// address: 0xFFFFFEE8
+	// size: 0x70
+	auto struct TextDat *CMonstGraphics;
+	// address: 0xFFFFFEF0
+	auto int Total;
+	// address: 0xFFFFFEF8
+	auto int Wx;
+	// address: 0xFFFFFF00
+	auto int Wy;
+	// address: 0xFFFFFF08
+	auto int Cx;
+	// address: 0xFFFFFF10
+	auto int Cy;
+	// address: 0xFFFFFF18
+	// size: 0x70
+	auto struct TextDat *GolemGraphics;
+	// address: 0xFFFFFF68
+	auto bool MyInfraFlag;
 	{
-		int f;
+		// address: 0xFFFFFF20
+		auto int f;
 		{
-			int Index;
+			// address: 0xFFFFFF28
+			auto int Index;
 			{
 				{
-					struct MonsterStruct *MyMonst;
-					int Frame;
-					int Action;
-					int Dir;
-					int PhysFrame;
-					int Creature;
-					int ScrXOff;
-					int ScrYOff;
-					struct POLY_FT4 *Ft4;
-					struct POLY_FT4 *ShadFt4;
-					bool StartAnim;
-					int AddVal[4];
-					int bx;
-					int by;
-					int Sx;
-					int Sy;
-					int OtPos;
+					// register: 22
+					// size: 0x68
+					register struct MonsterStruct *MyMonst;
+					// register: 21
+					register int Frame;
+					// register: 20
+					register int Action;
+					// register: 16
+					register int Dir;
+					// register: 16
+					register int PhysFrame;
+					// register: 30
+					register int Creature;
+					// register: 16
+					register int ScrXOff;
+					// register: 17
+					register int ScrYOff;
+					// register: 5
+					// size: 0x28
+					register struct POLY_FT4 *Ft4;
+					// register: 16
+					// size: 0x28
+					register struct POLY_FT4 *ShadFt4;
+					// address: 0xFFFFFF30
+					auto bool StartAnim;
+					// address: 0x8011CBD0
+					// size: 0x10
+					static int AddVal[4];
+					// address: 0xFFFFFF38
+					auto int bx;
+					// register: 23
+					register int by;
+					// address: 0xFFFFFF48
+					auto int Sx;
+					// address: 0xFFFFFF50
+					auto int Sy;
+					// address: 0xFFFFFF58
+					auto int OtPos;
 					{
 						{
-							int blockr;
-							int blockg;
-							int blockb;
+							// register: 17
+							register int blockr;
+							// register: 18
+							register int blockg;
+							// register: 19
+							register int blockb;
 							{
 								{
-									int AVal;
+									// register: 6
+									register int AVal;
 									{
-										int DoCompress;
-										int f;
+										// address: 0xFFFFFF70
+										auto int DoCompress;
+										// address: 0xFFFFFF20
+										auto int f;
 										{
-											int MaxDecompress;
+											// address: 0xFFFFFF78
+											auto int MaxDecompress;
 											{
-												int f;
+												// address: 0xFFFFFF80
+												auto int f;
 												{
-													int Frame;
-													int Action;
-													int Dir;
-													int Creature;
-													int ScrXOff;
-													int ScrYOff;
-													struct RECT R;
-													int GType;
-													int Sx;
-													int Sy;
-													int Index;
-													int transfile;
-													int Mg;
+													// register: 20
+													register int Frame;
+													// address: 0xFFFFFF88
+													auto int Action;
+													// address: 0xFFFFFF90
+													auto int Dir;
+													// register: 19
+													register int Creature;
+													// address: 0xFFFFFF98
+													auto int ScrXOff;
+													// address: 0xFFFFFFA0
+													auto int ScrYOff;
+													// address: 0xFFFFFED8
+													// size: 0x8
+													auto struct RECT R;
+													// register: 6
+													register int GType;
+													// register: 17
+													register int Sx;
+													// register: 16
+													register int Sy;
+													// address: 0xFFFFFFA8
+													auto int Index;
+													// register: 5
+													register int transfile;
+													// address: 0xFFFFFFB0
+													auto int Mg;
 													{
 														{
-															struct MonsterStruct *MyMonst;
+															// register: 18
+															// size: 0x68
+															register struct MonsterStruct *MyMonst;
 															{
 																{
-																	int bx;
-																	int by;
-																	int mx;
-																	int my;
-																	bool PrintIt;
-																	bool Compressed;
+																	// register: 30
+																	register int bx;
+																	// register: 23
+																	register int by;
+																	// register: 21
+																	register int mx;
+																	// register: 22
+																	register int my;
+																	// register: 3
+																	register bool PrintIt;
+																	// register: 2
+																	register bool Compressed;
 																	{
-																		unsigned int g;
+																		// register: 4
+																		register unsigned int g;
 																		{
 																			{
-																				int OtPos;
-																				struct POLY_FT4 *Ft4;
-																				int blockr;
-																				int blockg;
-																				int blockb;
-																				struct POLY_FT4 *ShadFt4;
-																				int paloff;
-																				int Col;
+																				// register: 19
+																				register int OtPos;
+																				// register: 17
+																				// size: 0x28
+																				register struct POLY_FT4 *Ft4;
+																				// register: 6
+																				register int blockr;
+																				// register: 5
+																				register int blockg;
+																				// register: 2
+																				register int blockb;
+																				// register: 16
+																				// size: 0x28
+																				register struct POLY_FT4 *ShadFt4;
+																				// register: 4
+																				register int paloff;
+																				// register: 5
+																				register int Col;
 																				{
 																					{
 																						{
 																							{
 																								{
 																									{
-																										int SPal;
+																										// register: 5
+																										register int SPal;
 																										{
 																											{
 																												{
@@ -7388,11 +7931,15 @@ void PrintMonsters__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x8009009C
 int AddTowners__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *p0, int bx, int by) {
-	int nMonster;
+	// register: 3
+	register int nMonster;
 	{
 		{
-			struct MonsterStruct *MyMonst;
-			int mi;
+			// register: 4
+			// size: 0x68
+			register struct MonsterStruct *MyMonst;
+			// register: 3
+			register int mi;
 		}
 	}
 }
@@ -7400,30 +7947,53 @@ int AddTowners__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info
 
 // address: 0x800900F8
 void PrintTowners__7CBlocksii(struct CBlocks *this, int x, int y) {
-	int YPos;
-	int YVel;
-	int Total;
-	int Wx;
-	int Wy;
-	int Cx;
-	int Cy;
+	// address: 0x8011ACD8
+	static int YPos;
+	// address: 0x8011ACDC
+	static int YVel;
+	// address: 0xFFFFFFB0
+	auto int Total;
+	// address: 0xFFFFFFB8
+	auto int Wx;
+	// address: 0xFFFFFFC0
+	auto int Wy;
+	// address: 0xFFFFFFC8
+	auto int Cx;
+	// address: 0xFFFFFFD0
+	auto int Cy;
 	{
-		int f;
+		// register: 23
+		register int f;
 		{
-			int Creature;
-			int mi;
-			struct POLY_FT4 *Ft4;
-			struct TextDat *ThisData;
-			int PhysFrame;
-			int GameFrame;
-			int Dir;
-			int Sx;
-			int Sy;
-			int OtPos;
-			int Col;
+			// register: 30
+			register int Creature;
+			// register: 20
+			register int mi;
+			// address: 0xFFFFFFA8
+			// size: 0x28
+			auto struct POLY_FT4 *Ft4;
+			// register: 19
+			// size: 0x70
+			register struct TextDat *ThisData;
+			// register: 18
+			register int PhysFrame;
+			// register: 17
+			register int GameFrame;
+			// register: 18
+			register int Dir;
+			// register: 17
+			register int Sx;
+			// register: 16
+			register int Sy;
+			// register: 16
+			register int OtPos;
+			// register: 5
+			register int Col;
 			{
 				{
-					struct POLY_FT4 *ShadFt4;
+					// register: 16
+					// size: 0x28
+					register struct POLY_FT4 *ShadFt4;
 				}
 			}
 		}
@@ -7433,10 +8003,13 @@ void PrintTowners__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x800904B0
 int AddObject__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *p0, int bx, int by) {
-	int bObject;
+	// register: 6
+	register int bObject;
 	{
 		{
-			struct ObjectStruct *OStr;
+			// register: 3
+			// size: 0x2C
+			register struct ObjectStruct *OStr;
 		}
 	}
 }
@@ -7444,43 +8017,75 @@ int AddObject__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info 
 
 // address: 0x8009050C
 void PrintObjects__7CBlocksii(struct CBlocks *this, int x, int y) {
-	int Total;
-	int Wx;
-	int Wy;
-	int Cx;
-	int Cy;
+	// address: 0xFFFFFF78
+	auto int Total;
+	// address: 0xFFFFFF80
+	auto int Wx;
+	// address: 0xFFFFFF88
+	auto int Wy;
+	// address: 0xFFFFFF90
+	auto int Cx;
+	// address: 0xFFFFFF98
+	auto int Cy;
 	{
-		int z;
+		// address: 0xFFFFFFA0
+		auto int z;
 		{
 			{
-				int f;
+				// address: 0xFFFFFFA8
+				auto int f;
 				{
-					int Sx;
-					int Sy;
-					int LoadIndex;
-					struct ObjectStruct *OStr;
-					bool DoCreature;
-					struct POLY_FT4 *(*PFunc)();
-					int Index;
+					// register: 22
+					register int Sx;
+					// register: 20
+					register int Sy;
+					// register: 3
+					register int LoadIndex;
+					// register: 18
+					// size: 0x2C
+					register struct ObjectStruct *OStr;
+					// register: 2
+					register bool DoCreature;
+					// register: 23
+					// size: 0x28
+					register struct POLY_FT4 *(*PFunc)();
+					// address: 0xFFFFFFB0
+					auto int Index;
 					{
 						{
-							int AnimFrame;
-							int OtPos;
-							struct POLY_FT4 *Ft4;
-							int Creature;
-							int PhysFrame;
-							struct TextDat *ObjDat;
-							int bx;
-							int by;
-							int Col;
-							int blockr;
-							int blockg;
-							int blockb;
+							// register: 16
+							register int AnimFrame;
+							// register: 21
+							register int OtPos;
+							// register: 17
+							// size: 0x28
+							register struct POLY_FT4 *Ft4;
+							// register: 17
+							register int Creature;
+							// register: 16
+							register int PhysFrame;
+							// register: 19
+							// size: 0x70
+							register struct TextDat *ObjDat;
+							// address: 0xFFFFFFB8
+							auto int bx;
+							// address: 0xFFFFFFC0
+							auto int by;
+							// register: 5
+							register int Col;
+							// register: 3
+							register int blockr;
+							// register: 4
+							register int blockg;
+							// register: 2
+							register int blockb;
 							{
 								{
 									{
 										{
-											struct POLY_FT4 *ShadFt4;
+											// register: 16
+											// size: 0x28
+											register struct POLY_FT4 *ShadFt4;
 										}
 									}
 								}
@@ -7496,38 +8101,63 @@ void PrintObjects__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x80090968
 int AddDead__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *p0, int bx, int by) {
-	int bDead;
+	// register: 16
+	register int bDead;
 }
 
 
 // address: 0x800909F4
 void PrintDead__7CBlocksii(struct CBlocks *this, int x, int y) {
-	int Total;
-	int Wx;
-	int Wy;
-	int Cx;
-	int Cy;
+	// address: 0xFFFFFFA8
+	auto int Total;
+	// address: 0xFFFFFFB0
+	auto int Wx;
+	// address: 0xFFFFFFB8
+	auto int Wy;
+	// address: 0xFFFFFFC0
+	auto int Cx;
+	// address: 0xFFFFFFC8
+	auto int Cy;
 	{
-		int f;
+		// address: 0xFFFFFFD0
+		auto int f;
 		{
-			int bDead;
-			int dx;
-			int dy;
-			int Frame;
-			int Creature;
-			struct POLY_FT4 *Ft4;
-			int transfile;
-			int Sx;
-			int Sy;
-			int Mg;
-			struct CMonster *MyMonst;
+			// register: 3
+			register int bDead;
+			// register: 18
+			register int dx;
+			// register: 19
+			register int dy;
+			// register: 20
+			register int Frame;
+			// register: 21
+			register int Creature;
+			// register: 16
+			// size: 0x28
+			register struct POLY_FT4 *Ft4;
+			// register: 3
+			register int transfile;
+			// register: 17
+			register int Sx;
+			// register: 16
+			register int Sy;
+			// register: 5
+			register int Mg;
+			// register: 30
+			// size: 0x1C
+			register struct CMonster *MyMonst;
 			{
 				{
-					int bx;
-					int by;
-					int blockr;
-					int blockg;
-					int blockb;
+					// register: 2
+					register int bx;
+					// register: 6
+					register int by;
+					// register: 5
+					register int blockr;
+					// register: 4
+					register int blockg;
+					// register: 3
+					register int blockb;
 					{
 						{
 						}
@@ -7541,47 +8171,76 @@ void PrintDead__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x80090CB8
 int AddItem__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *p0, int bx, int by) {
-	int bItem;
+	// register: 6
+	register int bItem;
 }
 
 
 // address: 0x80090D14
 void PrintItems__7CBlocksii(struct CBlocks *this, int x, int y) {
-	int Total;
-	int Wx;
-	int Wy;
-	int Cx;
-	int Cy;
+	// address: 0xFFFFFF80
+	auto int Total;
+	// address: 0xFFFFFF88
+	auto int Wx;
+	// address: 0xFFFFFF90
+	auto int Wy;
+	// address: 0xFFFFFF98
+	auto int Cx;
+	// address: 0xFFFFFFA0
+	auto int Cy;
 	{
-		int z;
+		// address: 0xFFFFFFA8
+		auto int z;
 		{
-			bool DoAnim;
+			// address: 0xFFFFFFB0
+			auto bool DoAnim;
 			{
-				int f;
+				// address: 0xFFFFFFB8
+				auto int f;
 				{
-					int Sx;
-					int Sy;
-					struct ItemStruct *IStr;
-					int OtPos;
-					struct POLY_FT4 *Ft4;
-					int Index;
-					int bx;
-					int by;
-					int Col;
-					int blockr;
-					int blockg;
-					int blockb;
+					// register: 21
+					register int Sx;
+					// register: 20
+					register int Sy;
+					// register: 19
+					// size: 0x6C
+					register struct ItemStruct *IStr;
+					// register: 30
+					register int OtPos;
+					// register: 18
+					// size: 0x28
+					register struct POLY_FT4 *Ft4;
+					// address: 0xFFFFFFC0
+					auto int Index;
+					// address: 0xFFFFFFC8
+					auto int bx;
+					// address: 0xFFFFFFD0
+					auto int by;
+					// register: 5
+					register int Col;
+					// register: 5
+					register int blockr;
+					// register: 4
+					register int blockg;
+					// register: 3
+					register int blockb;
 					{
 						{
 							{
 								{
-									struct FRAME_HDR *Fr;
-									int W;
-									int H;
-									short height;
+									// register: 23
+									// size: 0xC
+									register struct FRAME_HDR *Fr;
+									// register: 17
+									register int W;
+									// register: 16
+									register int H;
+									// register: 4
+									register short height;
 									{
 										{
-											int it;
+											// register: 2
+											register int it;
 										}
 									}
 								}
@@ -7597,18 +8256,24 @@ void PrintItems__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x800912D4
 int AddMissile__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info *p0, int bx, int by) {
-	int bFlags;
+	// register: 2
+	register int bFlags;
 	{
 		{
 			{
 				{
-					int MissIndex;
+					// register: 6
+					register int MissIndex;
 					{
 						{
-							int dMiss;
-							int nMiss;
-							int MissIndex;
-							int Index;
+							// register: 5
+							register int dMiss;
+							// register: 8
+							register int nMiss;
+							// register: 2
+							register int MissIndex;
+							// register: 7
+							register int Index;
 						}
 					}
 				}
@@ -7620,18 +8285,30 @@ int AddMissile__FP9CacheInfoP8map_infoii(struct CacheInfo *Info, struct map_info
 
 // address: 0x800913EC
 void PrintMissiles__7CBlocksii(struct CBlocks *this, int x, int y) {
-	struct CachedInfoList *InfoList;
-	int Wx;
-	int Wy;
-	int Cx;
-	int Cy;
-	int Total;
+	// register: 23
+	// size: 0x8
+	register struct CachedInfoList *InfoList;
+	// address: 0xFFFFFFB8
+	auto int Wx;
+	// address: 0xFFFFFFC0
+	auto int Wy;
+	// address: 0xFFFFFFC8
+	auto int Cx;
+	// register: 30
+	register int Cy;
+	// address: 0xFFFFFFD0
+	auto int Total;
 	{
-		int f;
+		// register: 21
+		register int f;
 		{
-			int Sx;
-			int Sy;
-			struct MissileStruct *MissStr;
+			// register: 19
+			register int Sx;
+			// register: 16
+			register int Sy;
+			// register: 18
+			// size: 0x4C
+			register struct MissileStruct *MissStr;
 		}
 	}
 }
@@ -7654,9 +8331,12 @@ void SetScrollTarget__7CBlocksii(struct CBlocks *this, int x, int y) {
 
 // address: 0x800916D0
 void DoScroll__7CBlocks(struct CBlocks *this) {
-	int XDiff;
-	int YDiff;
-	int divnum;
+	// register: 12
+	register int XDiff;
+	// register: 8
+	register int YDiff;
+	// register: 5
+	register int divnum;
 }
 
 
@@ -7667,16 +8347,21 @@ void SetPlayerPosBlocks__7CBlocksiii(struct CBlocks *this, int PlayerNum, int bx
 
 // address: 0x8009185C
 void GetScrXY__7CBlocksR4RECTiiii(struct CBlocks *this, struct RECT *R, int x, int y, int sxoff, int syoff) {
-	int Sx;
-	int Sy;
+	// register: 16
+	register int Sx;
+	// register: 3
+	register int Sy;
 }
 
 
 // address: 0x80091930
 void ShadScaleSkew__7CBlocksP8POLY_FT4(struct POLY_FT4 *Ft4) {
-	int H;
-	int NewTop;
-	int W;
+	// register: 5
+	register int H;
+	// register: 3
+	register int NewTop;
+	// register: 4
+	register int W;
 }
 
 
@@ -7714,7 +8399,9 @@ int GetHighlightCol__FiPiUsUsUs(int Index, int *SelList, unsigned short P1Col, u
 // address: 0x80091B04
 // size: 0x28
 struct POLY_FT4 *PRIM_GetCopy__FP8POLY_FT4(struct POLY_FT4 *Prim) {
-	struct POLY_FT4 *RetPrim;
+	// address: 0xFFFFFFF0
+	// size: 0x28
+	auto struct POLY_FT4 *RetPrim;
 }
 
 
@@ -7725,10 +8412,13 @@ void PRIM_GetPrim__FPP8POLY_GT4(struct POLY_GT4 **Prim) {
 
 // address: 0x80091BBC
 void PRIM_CopyPrim__FP8POLY_FT4T0(struct POLY_FT4 *Dest, struct POLY_FT4 *Source) {
-	unsigned long *Dest32;
-	unsigned long *Source32;
+	// register: 4
+	register unsigned long *Dest32;
+	// register: 5
+	register unsigned long *Source32;
 	{
-		unsigned int f;
+		// register: 3
+		register unsigned int f;
 	}
 }
 
@@ -7765,7 +8455,8 @@ void DumpMonsters__7CBlocks(struct CBlocks *this) {
 
 // address: 0x80091CC0
 int GetOtPos__7CBlocksi(struct CBlocks *this, int LogicalY) {
-	int OtPos;
+	// register: 3
+	register int OtPos;
 }
 
 
@@ -7837,13 +8528,18 @@ void ReloadTP__7TextDat(struct TextDat *this) {
 void Use__7TextDatlbi(struct TextDat *this, long NewHndDat, bool DatLoaded, int size) {
 	{
 		{
-			char NameBuff[40];
+			// address: 0xFFFFFFB0
+			// size: 0x28
+			auto char NameBuff[40];
 			{
 				{
 					{
 						{
-							struct RECT R;
-							int DecompSize;
+							// address: 0xFFFFFFD8
+							// size: 0x8
+							auto struct RECT R;
+							// register: 17
+							register int DecompSize;
 						}
 					}
 				}
@@ -7855,17 +8551,25 @@ void Use__7TextDatlbi(struct TextDat *this, long NewHndDat, bool DatLoaded, int 
 
 // address: 0x80092170
 bool TpLoadCallBack__FPUciib(unsigned char *Mem, int ReadSoFar, int Size, bool LastChunk) {
-	int TpX;
-	int TpY;
-	struct RECT R;
-	int Dx;
-	int Dy;
+	// address: 0x8011C66C
+	static int TpX;
+	// address: 0x8011C670
+	static int TpY;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct RECT R;
+	// register: 2
+	register int Dx;
+	// register: 2
+	register int Dy;
 }
 
 
 // address: 0x80092218
 void StreamLoadTP__7TextDat(struct TextDat *this) {
-	char TheName[20];
+	// address: 0xFFFFFFE0
+	// size: 0x14
+	auto char TheName[20];
 }
 
 
@@ -7885,23 +8589,34 @@ void MakeBlockOffsetTab__7TextDat(struct TextDat *this) {
 
 // address: 0x800923B4
 long MakeOffsetTab__C9CBlockHdr(struct CBlockHdr *this) {
-	struct CBlock *MyBlock;
-	long hndRet;
-	int *Tab;
+	// register: 18
+	// size: 0xC
+	register struct CBlock *MyBlock;
+	// register: 21
+	register long hndRet;
+	// register: 19
+	register int *Tab;
 	{
-		unsigned int f;
+		// register: 16
+		register unsigned int f;
 	}
 }
 
 
 // address: 0x800924E0
 void SetUVTp__7TextDatP9FRAME_HDRP8POLY_FT4ii(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_FT4 *FT4, int XFlip, int YFlip) {
-	int Rotated;
-	int Tpage;
-	int U;
-	int V;
-	int W;
-	int H;
+	// register: 2
+	register int Rotated;
+	// register: 12
+	register int Tpage;
+	// register: 3
+	register int U;
+	// register: 9
+	register int V;
+	// register: 8
+	register int W;
+	// register: 10
+	register int H;
 }
 
 
@@ -7913,7 +8628,8 @@ bool IsCompressed__7TextDatiiii(struct TextDat *this, int Creature, int Action, 
 // address: 0x8009262C
 // size: 0x28
 struct POLY_FT4 *PrintMonster__7TextDatiiiiiii(struct TextDat *this, int Creature, int Action, int Dir, int Frame, int x, int y, int OtPos) {
-	int PhysFrame;
+	// register: 16
+	register int PhysFrame;
 }
 
 
@@ -7922,32 +8638,58 @@ struct POLY_FT4 *PrintMonster__7TextDatiiiiiii(struct TextDat *this, int Creatur
 struct POLY_FT4 *PrintMonsterA__7TextDatiiibi(struct TextDat *this, int Frm, int X, int Y, bool XFlip, int OtPos) {
 	{
 		{
-			struct POLY_FT4 *FT4;
-			struct FRAME_HDR *Fr;
-			int W;
-			int H;
+			// address: 0xFFFFFFC8
+			// size: 0x28
+			auto struct POLY_FT4 *FT4;
+			// register: 18
+			// size: 0xC
+			register struct FRAME_HDR *Fr;
+			// register: 3
+			register int W;
+			// register: 7
+			register int H;
 			{
 				{
-					unsigned char *Dest;
-					int DecompSize;
-					unsigned char *CompFrAddr;
-					struct DR_LOAD2 *DrPtr;
-					unsigned long NumOfPrims;
-					int VH;
-					int TpX;
-					int TpY;
-					int U;
-					int V;
-					int W;
-					int H;
-					int u0;
-					int u1;
-					int u2;
-					int u3;
+					// register: 16
+					register unsigned char *Dest;
+					// register: 2
+					register int DecompSize;
+					// register: 16
+					register unsigned char *CompFrAddr;
+					// register: 17
+					// size: 0x44
+					register struct DR_LOAD2 *DrPtr;
+					// register: 22
+					register unsigned long NumOfPrims;
+					// register: 3
+					register int VH;
+					// register: 5
+					register int TpX;
+					// register: 6
+					register int TpY;
+					// register: 5
+					register int U;
+					// register: 3
+					register int V;
+					// register: 2
+					register int W;
+					// register: 7
+					register int H;
+					// register: 4
+					register int u0;
+					// register: 5
+					register int u1;
+					// register: 6
+					register int u2;
+					// register: 8
+					register int u3;
 					{
-						unsigned int f;
+						// register: 19
+						register unsigned int f;
 						{
-							struct RECT mrect;
+							// address: 0xFFFFFFD0
+							// size: 0x8
+							auto struct RECT mrect;
 						}
 					}
 				}
@@ -7959,19 +8701,26 @@ struct POLY_FT4 *PrintMonsterA__7TextDatiiibi(struct TextDat *this, int Frm, int
 
 // address: 0x80092A80
 void PrepareFt4__7TextDatP8POLY_FT4iiiii(struct TextDat *this, struct POLY_FT4 *FT4, int Frm, int X, int Y, int XFlip, int YFlip) {
-	struct FRAME_HDR *Fr;
-	int W;
-	int H;
+	// register: 19
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
+	// register: 22
+	register int W;
+	// register: 21
+	register int H;
 	{
 		{
 			{
 				{
 					{
 						{
-							struct RECT R;
+							// address: 0xFFFFFFD0
+							// size: 0x8
+							auto struct RECT R;
 							{
 								{
-									unsigned char sw;
+									// register: 4
+									register unsigned char sw;
 								}
 							}
 						}
@@ -7985,40 +8734,63 @@ void PrepareFt4__7TextDatP8POLY_FT4iiiii(struct TextDat *this, struct POLY_FT4 *
 
 // address: 0x80092D14
 unsigned char *GetDecompBufffer__7TextDati(struct TextDat *this, int Size) {
-	long *DecArray;
-	int DecIndex;
-	long hnd;
-	unsigned char *RetAddr;
+	// register: 18
+	register long *DecArray;
+	// register: 19
+	register int DecIndex;
+	// register: 16
+	register long hnd;
+	// register: 20
+	register unsigned char *RetAddr;
 }
 
 
 // address: 0x80092E74
 void SetUVTpGT4__7TextDatP9FRAME_HDRP8POLY_GT4ii(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_GT4 *FT4, int XFlip, int YFlip) {
-	int Rotated;
-	int Tpage;
-	int U;
-	int V;
-	int W;
-	int H;
+	// register: 2
+	register int Rotated;
+	// register: 12
+	register int Tpage;
+	// register: 3
+	register int U;
+	// register: 9
+	register int V;
+	// register: 8
+	register int W;
+	// register: 10
+	register int H;
 }
 
 
 // address: 0x80092F74
 void PrepareGt4__7TextDatP8POLY_GT4iiiii(struct TextDat *this, struct POLY_GT4 *GT4, int Frm, int X, int Y, int XFlip, int YFlip) {
-	struct FRAME_HDR *Fr;
-	int W;
-	int H;
-	unsigned char sw;
-	struct PAL *Pal;
+	// register: 19
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
+	// register: 22
+	register int W;
+	// register: 20
+	register int H;
+	// register: 4
+	register unsigned char sw;
+	// register: 17
+	// size: 0x8
+	register struct PAL *Pal;
 	{
 		{
 			{
-				struct RECT R;
+				// address: 0xFFFFFFD0
+				// size: 0x8
+				auto struct RECT R;
 				{
 					{
-						int DecX;
-						int DecY;
-						struct RECT R;
+						// register: 2
+						register int DecX;
+						// register: 2
+						register int DecY;
+						// address: 0xFFFFFFD0
+						// size: 0x8
+						auto struct RECT R;
 					}
 				}
 			}
@@ -8029,30 +8801,48 @@ void PrepareGt4__7TextDatP8POLY_GT4iiiii(struct TextDat *this, struct POLY_GT4 *
 
 // address: 0x800931CC
 void SetUVTpGT3__7TextDatP9FRAME_HDRP8POLY_GT3(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_GT3 *GT3) {
-	int Rotated;
-	int Tpage;
-	int U;
-	int V;
-	int W;
-	int H;
+	// register: 2
+	register int Rotated;
+	// register: 10
+	register int Tpage;
+	// register: 4
+	register int U;
+	// register: 9
+	register int V;
+	// register: 3
+	register int W;
+	// register: 8
+	register int H;
 }
 
 
 // address: 0x80093250
 void PrepareGt3__7TextDatP8POLY_GT3iii(struct TextDat *this, struct POLY_GT3 *GT3, int Frm, int X, int Y) {
-	struct FRAME_HDR *Fr;
-	int W;
-	int H;
-	struct PAL *Pal;
+	// register: 19
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
+	// register: 22
+	register int W;
+	// register: 21
+	register int H;
+	// register: 16
+	// size: 0x8
+	register struct PAL *Pal;
 	{
 		{
 			{
-				struct RECT R;
+				// address: 0xFFFFFFD8
+				// size: 0x8
+				auto struct RECT R;
 				{
 					{
-						int DecX;
-						int DecY;
-						struct RECT R;
+						// register: 2
+						register int DecX;
+						// register: 2
+						register int DecY;
+						// address: 0xFFFFFFD8
+						// size: 0x8
+						auto struct RECT R;
 					}
 				}
 			}
@@ -8064,35 +8854,46 @@ void PrepareGt3__7TextDatP8POLY_GT3iii(struct TextDat *this, struct POLY_GT3 *GT
 // address: 0x80093418
 // size: 0x28
 struct POLY_FT4 *PrintFt4__7TextDatiiiiii(struct TextDat *this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
-	struct POLY_FT4 *FT4;
+	// address: 0xFFFFFFD8
+	// size: 0x28
+	auto struct POLY_FT4 *FT4;
 }
 
 
 // address: 0x8009356C
 // size: 0x34
 struct POLY_GT4 *PrintGt4__7TextDatiiiiii(struct TextDat *this, int Frm, int X, int Y, int XFlip, int OtPos, int YFlip) {
-	struct POLY_GT4 *GT4;
+	// address: 0xFFFFFFD8
+	// size: 0x34
+	auto struct POLY_GT4 *GT4;
 }
 
 
 // address: 0x800936C0
 void DecompFrame__7TextDatP9FRAME_HDR(struct TextDat *this, struct FRAME_HDR *Fr) {
-	unsigned char *CompFrAddr;
-	int DecompSize;
-	unsigned char *Dest;
+	// register: 18
+	register unsigned char *CompFrAddr;
+	// register: 20
+	register int DecompSize;
+	// register: 16
+	register unsigned char *Dest;
 }
 
 
 // address: 0x80093818
 void MakeCreatureOffsetTab__7TextDat(struct TextDat *this) {
-	int NumOfCreatures;
+	// register: 17
+	register int NumOfCreatures;
 	{
 		{
-			unsigned char *ThisAddr;
+			// register: 16
+			register unsigned char *ThisAddr;
 			{
-				unsigned int f;
+				// register: 17
+				register unsigned int f;
 				{
-					int f;
+					// register: 16
+					register int f;
 					{
 					}
 				}
@@ -8104,9 +8905,12 @@ void MakeCreatureOffsetTab__7TextDat(struct TextDat *this) {
 
 // address: 0x80093958
 void MakePalOffsetTab__7TextDat(struct TextDat *this) {
-	struct PAL *ThisPal;
+	// register: 5
+	// size: 0x8
+	register struct PAL *ThisPal;
 	{
-		unsigned int f;
+		// register: 6
+		register unsigned int f;
 	}
 }
 
@@ -8131,10 +8935,15 @@ void DumpHdr__7TextDat(struct TextDat *this) {
 struct TextDat *GM_UseTexData__Fi(int Id) {
 	{
 		{
-			struct TextDat *Dat2Use;
-			struct CTextFileInfo **Tab;
+			// register: 18
+			// size: 0x70
+			register struct TextDat *Dat2Use;
+			// register: 20
+			// size: 0x4
+			register struct CTextFileInfo **Tab;
 			{
-				int f;
+				// register: 17
+				register int f;
 			}
 		}
 	}
@@ -8153,11 +8962,15 @@ void GM_FinishedUsing__FP7TextDat(struct TextDat *Fin) {
 
 // address: 0x80093DD4
 void SetPal__7TextDatP9FRAME_HDRP8POLY_FT4(struct TextDat *this, struct FRAME_HDR *Fr, struct POLY_FT4 *FT4) {
-	struct PAL *Pal;
+	// register: 17
+	// size: 0x8
+	register struct PAL *Pal;
 	{
 		{
 			{
-				struct RECT R;
+				// address: 0xFFFFFFE8
+				// size: 0x8
+				auto struct RECT R;
 			}
 		}
 	}
@@ -8176,9 +8989,11 @@ bool IsDirAliased__7TextDatiii(struct TextDat *this, int Creature, int Action, i
 
 // address: 0x80093F44
 void DoDecompRequests__7TextDat(struct TextDat *this) {
-	long *DecArray;
+	// register: 17
+	register long *DecArray;
 	{
-		int f;
+		// register: 18
+		register int f;
 		{
 		}
 	}
@@ -8187,14 +9002,20 @@ void DoDecompRequests__7TextDat(struct TextDat *this) {
 
 // address: 0x80094068
 void FindDecompArea__7TextDatR4RECT(struct TextDat *this, struct RECT *R) {
-	int NumOfFrames;
-	int Widest;
-	int Tallest;
+	// register: 8
+	register int NumOfFrames;
+	// register: 4
+	register int Widest;
+	// register: 16
+	register int Tallest;
 	{
-		int f;
+		// register: 7
+		register int f;
 		{
-			int w;
-			int h;
+			// register: 5
+			register int w;
+			// register: 3
+			register int h;
 		}
 	}
 }
@@ -8213,22 +9034,29 @@ int GetSize__C15CCreatureAction(struct CCreatureAction *this) {
 
 // address: 0x800941B8
 int GetFrNum__C15CCreatureActionii(struct CCreatureAction *this, int Direction, int Frame) {
-	int LocFrame;
+	// register: 2
+	register int LocFrame;
 }
 
 
 // address: 0x800941E8
 void InitDirRemap__15CCreatureAction(struct CCreatureAction *this) {
-	bool Dir2Remap[8];
-	int f;
-	int RemapNum;
+	// address: 0xFFFFFFE0
+	// size: 0x20
+	auto bool Dir2Remap[8];
+	// register: 7
+	register int f;
+	// register: 11
+	register int RemapNum;
 	{
 		{
 			{
 				{
-					int OrigNum;
+					// register: 9
+					register int OrigNum;
 					{
-						int g;
+						// register: 6
+						register int g;
 					}
 				}
 			}
@@ -8245,30 +9073,41 @@ int GetFrNum__C12CCreatureHdriii(struct CCreatureHdr *this, int Action, int Dire
 // address: 0x800942EC
 // size: 0xE
 struct CCreatureAction *GetAction__C12CCreatureHdri(struct CCreatureHdr *this, int ActNum) {
-	struct CCreatureAction *CAct;
+	// register: 17
+	// size: 0xE
+	register struct CCreatureAction *CAct;
 	{
-		int f;
+		// register: 16
+		register int f;
 	}
 }
 
 
 // address: 0x8009437C
 void InitActionDirRemaps__12CCreatureHdr(struct CCreatureHdr *this) {
-	struct CCreatureAction *CAct;
+	// register: 17
+	// size: 0xE
+	register struct CCreatureAction *CAct;
 	{
-		int f;
+		// register: 16
+		register int f;
 	}
 }
 
 
 // address: 0x800943EC
 int GetSize__C12CCreatureHdr(struct CCreatureHdr *this) {
-	int Size;
-	struct CCreatureAction *CAct;
+	// register: 18
+	register int Size;
+	// register: 17
+	// size: 0xE
+	register struct CCreatureAction *CAct;
 	{
-		int f;
+		// register: 16
+		register int f;
 		{
-			int ThisSize;
+			// register: 2
+			register int ThisSize;
 		}
 	}
 }
@@ -8276,9 +9115,14 @@ int GetSize__C12CCreatureHdr(struct CCreatureHdr *this) {
 
 // address: 0x80094458
 void LoadDat__C13CTextFileInfoli(struct CTextFileInfo *this, long hnd, int size) {
-	char FName[13];
-	unsigned char *Dest;
-	struct FileIO *MyFileIO;
+	// address: 0xFFFFFFD8
+	// size: 0xD
+	auto char FName[13];
+	// register: 16
+	register unsigned char *Dest;
+	// register: 17
+	// size: 0x14
+	register struct FileIO *MyFileIO;
 }
 
 
@@ -8299,25 +9143,37 @@ void MakeFname__C13CTextFileInfoPcPCc(struct CTextFileInfo *this, char *Dest, ch
 
 // address: 0x80094654
 long GetFile__C13CTextFileInfoPcUl(struct CTextFileInfo *this, char *Ext, unsigned long RamId) {
-	char FName[13];
-	long hnd;
+	// address: 0xFFFFFFE0
+	// size: 0xD
+	auto char FName[13];
+	// register: 16
+	register long hnd;
 }
 
 
 // address: 0x800946F4
 bool HasFile__C13CTextFileInfoPc(struct CTextFileInfo *this, char *Ext) {
-	char FName[13];
-	struct FileIO *MyFileIO;
+	// address: 0xFFFFFFE0
+	// size: 0xD
+	auto char FName[13];
+	// register: 16
+	// size: 0x14
+	register struct FileIO *MyFileIO;
 }
 
 
 // address: 0x80094788
 void Un64__FPUcT0l(unsigned char *Src, unsigned char *Dest, long SizeBytes) {
-	unsigned char *EndDest;
-	unsigned long *BigDest;
-	unsigned long Code;
-	unsigned long Run;
-	unsigned long BigCode;
+	// register: 9
+	register unsigned char *EndDest;
+	// register: 7
+	register unsigned long *BigDest;
+	// register: 8
+	register unsigned long Code;
+	// register: 6
+	register unsigned long Run;
+	// register: 3
+	register unsigned long BigCode;
 }
 
 
@@ -8329,25 +9185,41 @@ struct CScreen *__7CScreen(struct CScreen *this) {
 
 // address: 0x80094890
 void Load__7CScreeniii(struct CScreen *this, int Id, int tpx, int tpy) {
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
+	// register: 8
+	register unsigned char r;
+	// register: 5
+	register unsigned char g;
+	// register: 6
+	register unsigned char b;
 	{
 		{
-			struct FRAME_HDR *Fr;
-			struct RECT R;
-			struct PAL *Pal;
-			unsigned short MyPal[256];
+			// register: 16
+			// size: 0xC
+			register struct FRAME_HDR *Fr;
+			// address: 0xFFFFFDE0
+			// size: 0x8
+			auto struct RECT R;
+			// register: 18
+			// size: 0x8
+			register struct PAL *Pal;
+			// address: 0xFFFFFDE8
+			// size: 0x200
+			auto unsigned short MyPal[256];
 			{
-				int i;
+				// register: 5
+				register int i;
 				{
-					int i;
+					// register: 16
+					register int i;
 					{
-						int nocols;
+						// register: 11
+						register int nocols;
 						{
-							int v;
+							// register: 10
+							register int v;
 							{
-								unsigned short c;
+								// register: 2
+								register unsigned short c;
 								{
 								}
 							}
@@ -8367,27 +9239,38 @@ void Unload__7CScreen(struct CScreen *this) {
 
 // address: 0x80094BC8
 void Display__7CScreeniiii(struct CScreen *this, int Id, int tpx, int tpy, int fadeval) {
-	struct POLY_FT4 *FT4;
+	// address: 0xFFFFFFD8
+	// size: 0x28
+	auto struct POLY_FT4 *FT4;
 }
 
 
 // address: 0x80094EA8
 void SetRect__5CPartR7TextDatR4RECT(struct CPart *this, struct TextDat *TDat, struct RECT *R) {
-	struct FRAME_HDR *Fr;
+	// register: 2
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
 }
 
 
 // address: 0x80094F24
 void GetBoundingBox__6CBlockR7TextDatR4RECT(struct CBlock *this, struct TextDat *TDat, struct RECT *R) {
-	int left;
-	int right;
-	int top;
-	int bottom;
+	// register: 18
+	register int left;
+	// register: 22
+	register int right;
+	// register: 17
+	register int top;
+	// register: 21
+	register int bottom;
 	{
 		{
-			struct RECT Pr;
+			// address: 0xFFFFFFC8
+			// size: 0x8
+			auto struct RECT Pr;
 			{
-				unsigned int f;
+				// register: 16
+				register unsigned int f;
 			}
 		}
 	}
@@ -8538,7 +9421,9 @@ void ClearOut__7Overlay(struct Overlay *this) {
 
 // address: 0x8009560C
 void Load__7Overlay(struct Overlay *this) {
-	char OverlayFile[256];
+	// address: 0xFFFFFEF8
+	// size: 0x100
+	auto char OverlayFile[256];
 }
 
 
@@ -8577,10 +9462,12 @@ void Lambo__Fv() {
 // address: 0x80095854
 // size: 0x90
 struct CPlayer *__7CPlayerbii(struct CPlayer *this, bool Town, int mPlayerNum, int NewNumOfPlayers) {
-	int SizeToAlloc;
+	// register: 4
+	register int SizeToAlloc;
 	{
 		{
-			long hnd;
+			// register: 16
+			register long hnd;
 		}
 	}
 }
@@ -8602,48 +9489,77 @@ void Load__7CPlayeri(struct CPlayer *this, int Id) {
 
 // address: 0x80095AA8
 void SetScrollTarget__7CPlayerR12PlayerStructR7CBlocks(struct CPlayer *this, struct PlayerStruct *Plr, struct CBlocks *Bg) {
-	int ScrX;
-	int ScrY;
-	int WorldX;
-	int WorldY;
-	int NWorldX;
-	int NWorldY;
-	int wtime;
-	bool ok;
+	// register: 18
+	register int ScrX;
+	// register: 16
+	register int ScrY;
+	// register: 16
+	register int WorldX;
+	// register: 6
+	register int WorldY;
+	// register: 19
+	register int NWorldX;
+	// register: 17
+	register int NWorldY;
+	// register: 2
+	register int wtime;
+	// register: 21
+	register bool ok;
 }
 
 
 // address: 0x80095E8C
 void Print__7CPlayerR12PlayerStructR7CBlocks(struct CPlayer *this, struct PlayerStruct *Plr, struct CBlocks *Bg) {
-	int ScrXOff;
-	int ScrYOff;
-	int Action;
-	int WorldX;
-	int WorldY;
-	struct POLY_FT4 *Ft4;
+	// register: 30
+	register int ScrXOff;
+	// register: 23
+	register int ScrYOff;
+	// register: 16
+	register int Action;
+	// register: 22
+	register int WorldX;
+	// register: 21
+	register int WorldY;
+	// address: 0xFFFFFFD0
+	// size: 0x28
+	auto struct POLY_FT4 *Ft4;
 	{
 		{
-			int Frame;
+			// register: 16
+			register int Frame;
 			{
 				{
-					int FrmNum;
-					struct RECT R;
-					struct POLY_FT4 *ShadFt4;
+					// register: 2
+					register int FrmNum;
+					// address: 0xFFFFFFC8
+					// size: 0x8
+					auto struct RECT R;
+					// register: 16
+					// size: 0x28
+					register struct POLY_FT4 *ShadFt4;
 					{
 						{
 							{
-								int Frame;
+								// register: 19
+								register int Frame;
 								{
 									{
 										{
 											{
-												struct RECT R;
-												int OtPos;
-												struct POLY_FT4 *ShadFt4;
+												// address: 0xFFFFFFC8
+												// size: 0x8
+												auto struct RECT R;
+												// register: 17
+												register int OtPos;
+												// register: 16
+												// size: 0x28
+												register struct POLY_FT4 *ShadFt4;
 												{
 													{
-														int zX;
-														int zY;
+														// register: 17
+														register int zX;
+														// register: 16
+														register int zY;
 													}
 												}
 											}
@@ -8662,7 +9578,8 @@ void Print__7CPlayerR12PlayerStructR7CBlocks(struct CPlayer *this, struct Player
 
 // address: 0x800963C4
 int FindAction__7CPlayerR12PlayerStruct(struct CPlayer *this, struct PlayerStruct *Plr) {
-	int RetVal;
+	// register: 2
+	register int RetVal;
 }
 
 
@@ -8691,7 +9608,9 @@ void LoadThis__7CPlayeri(struct CPlayer *this, int Id) {
 void NonBlockingLoadNewGFX__7CPlayeri(struct CPlayer *this, int Id) {
 	{
 		{
-			struct PlayerParam *Pp;
+			// register: 2
+			// size: 0x8
+			register struct PlayerParam *Pp;
 		}
 	}
 }
@@ -8699,10 +9618,17 @@ void NonBlockingLoadNewGFX__7CPlayeri(struct CPlayer *this, int Id) {
 
 // address: 0x800965B8
 void FilthyTask__FP4TASK(struct TASK *T) {
-	struct CPlayer *ThePlayer;
-	char FName[15];
-	int Id;
-	struct PlayerParam *Pp;
+	// register: 16
+	// size: 0x90
+	register struct CPlayer *ThePlayer;
+	// address: 0xFFFFFFE0
+	// size: 0xF
+	auto char FName[15];
+	// register: 17
+	register int Id;
+	// register: 3
+	// size: 0x8
+	register struct PlayerParam *Pp;
 }
 
 
@@ -8714,16 +9640,21 @@ void PRIM_GetPrim__FPP8POLY_FT4_addr_80096640(struct POLY_FT4 **Prim) {
 // address: 0x800966BC
 // size: 0x28
 struct POLY_FT4 *PRIM_GetCopy__FP8POLY_FT4_addr_800966BC(struct POLY_FT4 *Prim) {
-	struct POLY_FT4 *RetPrim;
+	// address: 0xFFFFFFF0
+	// size: 0x28
+	auto struct POLY_FT4 *RetPrim;
 }
 
 
 // address: 0x800966F8
 void PRIM_CopyPrim__FP8POLY_FT4T0_addr_800966F8(struct POLY_FT4 *Dest, struct POLY_FT4 *Source) {
-	unsigned long *Dest32;
-	unsigned long *Source32;
+	// register: 4
+	register unsigned long *Dest32;
+	// register: 5
+	register unsigned long *Source32;
 	{
-		unsigned int f;
+		// register: 3
+		register unsigned int f;
 	}
 }
 
@@ -8735,7 +9666,8 @@ int GetDatMaxSize__7CPlayer(struct CPlayer *this) {
 
 // address: 0x80096760
 int GetOtPos__7CBlocksi_addr_80096760(struct CBlocks *this, int LogicalY) {
-	int OtPos;
+	// register: 3
+	register int OtPos;
 }
 
 
@@ -8809,12 +9741,18 @@ void PROF_DrawEnd__Fv() {
 void PROF_Draw__FPUl(unsigned long *Ot) {
 	{
 		{
-			struct POLY_F4 *F4;
-			int XCent;
+			// register: 2
+			// size: 0x18
+			register struct POLY_F4 *F4;
+			// register: 22
+			register int XCent;
 			{
-				int f;
+				// register: 23
+				register int f;
 				{
-					struct POLY_F3 *F3;
+					// register: 2
+					// size: 0x14
+					register struct POLY_F3 *F3;
 				}
 			}
 		}
@@ -8860,12 +9798,14 @@ void PostLoadGame__Fv() {
 // address: 0x80097130
 void GoLoadGame__Fv() {
 	{
-		int p;
+		// register: 6
+		register int p;
 		{
 			{
 				{
 					{
-						int i;
+						// register: 4
+						register int i;
 					}
 				}
 			}
@@ -8876,7 +9816,8 @@ void GoLoadGame__Fv() {
 
 // address: 0x80097288
 void PostNewLevel__Fv() {
-	int palnum;
+	// register: 16
+	register int palnum;
 }
 
 
@@ -8887,7 +9828,8 @@ void GoNewLevel__Fv() {
 
 // address: 0x80097384
 void PostGoBackLevel__Fv() {
-	int palnum;
+	// register: 16
+	register int palnum;
 }
 
 
@@ -8898,7 +9840,8 @@ void GoForwardLevel__Fv() {
 
 // address: 0x80097484
 void PostGoForwardLevel__Fv() {
-	int palnum;
+	// register: 16
+	register int palnum;
 }
 
 
@@ -8930,15 +9873,25 @@ struct GPanel *__6GPaneli(struct GPanel *this, int Ofs) {
 
 // address: 0x80097674
 void DrawFlask__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
-	int HealthHeight;
-	int ManaHeight;
-	int HealthAnim;
-	int ManaAnim;
-	int BarY;
-	struct POLY_FT4 *Ft4;
-	int X;
-	int Y;
-	int xof;
+	// register: 18
+	register int HealthHeight;
+	// register: 20
+	register int ManaHeight;
+	// address: 0xFFFFFFC8
+	auto int HealthAnim;
+	// address: 0xFFFFFFD0
+	auto int ManaAnim;
+	// register: 22
+	register int BarY;
+	// register: 4
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 21
+	register int X;
+	// register: 19
+	register int Y;
+	// register: 16
+	register int xof;
 }
 
 
@@ -8949,15 +9902,24 @@ unsigned char SpdTrimCol__Fs(short col) {
 
 // address: 0x80097B20
 void DrawSpeedBar__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
-	int X;
-	int Y;
-	int Loop;
-	struct POLY_FT4 *Ft4;
-	int Bx;
-	int By;
+	// register: 18
+	register int X;
+	// register: 20
+	register int Y;
+	// register: 19
+	register int Loop;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 21
+	register int Bx;
+	// register: 22
+	register int By;
 	{
 		{
-			struct POLY_G4 *G4;
+			// register: 16
+			// size: 0x24
+			register struct POLY_G4 *G4;
 		}
 	}
 }
@@ -8965,12 +9927,20 @@ void DrawSpeedBar__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct P
 
 // address: 0x8009824C
 void DrawSpell__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
-	int X;
-	int Y;
-	int Anim;
-	struct POLY_FT4 *Ft4;
-	int SpellNo;
-	char YT[16];
+	// register: 21
+	register int X;
+	// register: 20
+	register int Y;
+	// register: 2
+	register int Anim;
+	// register: 17
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 4
+	register int SpellNo;
+	// address: 0xFFFFFFD0
+	// size: 0x10
+	auto char YT[16];
 }
 
 
@@ -8981,20 +9951,28 @@ void DrawMsgWindow__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct 
 
 // address: 0x80098438
 int DrawDurThingy__6GPaneliiP10ItemStructi(struct GPanel *this, int X, int Y, struct ItemStruct *Item, int ItemType) {
-	struct POLY_FT4 *Ft4;
-	unsigned char NewR;
-	unsigned char NewG;
-	unsigned char NewB;
+	// register: 6
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 7
+	register unsigned char NewR;
+	// register: 8
+	register unsigned char NewG;
+	// register: 4
+	register unsigned char NewB;
 	{
-		int Loop;
+		// register: 17
+		register int Loop;
 	}
 }
 
 
 // address: 0x80098704
 void DrawDurIcon__6GPanelP7PanelXYP12PlayerStruct(struct GPanel *this, struct PanelXY *XY, struct PlayerStruct *Plr) {
-	int X;
-	int Y;
+	// register: 5
+	register int X;
+	// register: 6
+	register int Y;
 }
 
 
@@ -9022,13 +10000,19 @@ struct FRAME_HDR *GetFr__7TextDati_addr_8009896C(struct TextDat *this, int FrNum
 
 // address: 0x80098988
 void PrintCDWaitTask__FP4TASK(struct TASK *T) {
-	struct TextDat *CDGfxData;
-	struct POLY_FT4 *Ft4;
+	// register: 20
+	// size: 0x70
+	register struct TextDat *CDGfxData;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
 	{
 		{
 			{
-				int cdx;
-				int cdy;
+				// register: 16
+				register int cdx;
+				// register: 17
+				register int cdy;
 			}
 		}
 	}
@@ -9055,7 +10039,8 @@ void STR_AllocBuffer__Fv() {
 	{
 		{
 			{
-				int i;
+				// register: 3
+				register int i;
 			}
 		}
 	}
@@ -9066,11 +10051,16 @@ void STR_AllocBuffer__Fv() {
 void STR_Init__Fv() {
 	{
 		{
-			long vm;
-			unsigned char *ptr;
-			struct TASK *T;
+			// register: 3
+			register long vm;
+			// register: 5
+			register unsigned char *ptr;
+			// register: 16
+			// size: 0x5C
+			register struct TASK *T;
 			{
-				int i;
+				// register: 4
+				register int i;
 			}
 		}
 	}
@@ -9080,19 +10070,29 @@ void STR_Init__Fv() {
 // address: 0x80098CA0
 // size: 0x84
 struct SFXHDR *STR_InitStream__Fc(char flag) {
-	struct SFXHDR *sfh;
+	// register: 16
+	// size: 0x84
+	register struct SFXHDR *sfh;
 }
 
 
 // address: 0x80098DC8
 // size: 0x84
 struct SFXHDR *STR_PlaySound__FUscic(unsigned short Name, char flag, int volume, char loop) {
-	struct SFXHDR *sfh;
-	char tstring[32];
-	char Prefix[2];
+	// register: 17
+	// size: 0x84
+	register struct SFXHDR *sfh;
+	// address: 0xFFFFFFB8
+	// size: 0x20
+	auto char tstring[32];
+	// address: 0xFFFFFFD8
+	// size: 0x2
+	auto char Prefix[2];
 	{
 		{
-			enum LANG_TYPE Lang;
+			// register: 3
+			// size: 0x4
+			register enum LANG_TYPE Lang;
 		}
 	}
 }
@@ -9100,7 +10100,9 @@ struct SFXHDR *STR_PlaySound__FUscic(unsigned short Name, char flag, int volume,
 
 // address: 0x80099010
 void STR_setvolume__FP6SFXHDR(struct SFXHDR *sfh) {
-	enum LANG_TYPE lang;
+	// register: 2
+	// size: 0x4
+	register enum LANG_TYPE lang;
 }
 
 
@@ -9111,14 +10113,16 @@ void STR_setpitch__FP6SFXHDR(struct SFXHDR *sfh) {
 
 // address: 0x80099128
 void STR_PlaySFX__FP6SFXHDR(struct SFXHDR *sfh) {
-	int offs;
+	// register: 5
+	register int offs;
 }
 
 
 // address: 0x80099234
 void STR_pauseall__Fv() {
 	{
-		int i;
+		// register: 18
+		register int i;
 	}
 }
 
@@ -9126,7 +10130,8 @@ void STR_pauseall__Fv() {
 // address: 0x800992A8
 void STR_resumeall__Fv() {
 	{
-		int i;
+		// register: 18
+		register int i;
 	}
 }
 
@@ -9148,33 +10153,54 @@ char STR_Command__FP6SFXHDR(struct SFXHDR *sfh) {
 
 // address: 0x80099664
 void STR_DMAControl__FP6SFXHDR(struct SFXHDR *sfh) {
-	unsigned char *ptr;
-	int DMA_off;
-	int sec;
+	// register: 17
+	register unsigned char *ptr;
+	// register: 20
+	register int DMA_off;
+	// register: 18
+	register int sec;
 }
 
 
 // address: 0x8009972C
 void STR_PlayStream__FP6SFXHDRPUci(struct SFXHDR *sfh, unsigned char *Src, int size) {
-	int sec_num;
-	unsigned char *dp;
-	int i;
-	int read;
-	int osize;
+	// register: 19
+	register int sec_num;
+	// register: 17
+	register unsigned char *dp;
+	// register: 3
+	register int i;
+	// register: 2
+	register int read;
+	// register: 5
+	register int osize;
 }
 
 
 // address: 0x800999AC
 void STR_AsyncWeeTASK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *A;
-	struct STRHDR *StreamHND;
-	struct SFXHDR *sfh;
-	char Done;
-	int frame;
-	int framediff;
-	int AsyncHND;
-	unsigned char *ptr;
-	char OrigName[14];
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	// register: 20
+	// size: 0x14
+	register struct STRHDR *StreamHND;
+	// register: 16
+	// size: 0x84
+	register struct SFXHDR *sfh;
+	// register: 17
+	register char Done;
+	// register: 19
+	register int frame;
+	// register: 18
+	register int framediff;
+	// register: 21
+	register int AsyncHND;
+	// register: 2
+	register unsigned char *ptr;
+	// address: 0xFFFFFFD0
+	// size: 0xE
+	auto char OrigName[14];
 	{
 		{
 			{
@@ -9186,16 +10212,30 @@ void STR_AsyncWeeTASK__FP4TASK(struct TASK *T) {
 
 // address: 0x80099C84
 void STR_AsyncTASK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *A;
-	struct STRHDR *StreamHND;
-	struct SFXHDR *sfh;
-	char Done;
-	int latency;
-	int frame;
-	int framediff;
-	int AsyncHND;
-	unsigned char *ptr;
-	char OrigName[14];
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	// register: 21
+	// size: 0x14
+	register struct STRHDR *StreamHND;
+	// register: 16
+	// size: 0x84
+	register struct SFXHDR *sfh;
+	// register: 17
+	register char Done;
+	// register: 20
+	register int latency;
+	// register: 19
+	register int frame;
+	// register: 18
+	register int framediff;
+	// register: 22
+	register int AsyncHND;
+	// register: 2
+	register unsigned char *ptr;
+	// address: 0xFFFFFFD0
+	// size: 0xE
+	auto char OrigName[14];
 	{
 		{
 			{
@@ -9207,7 +10247,8 @@ void STR_AsyncTASK__FP4TASK(struct TASK *T) {
 									{
 										{
 											{
-												unsigned long vol;
+												// register: 16
+												register unsigned long vol;
 											}
 										}
 									}
@@ -9224,11 +10265,17 @@ void STR_AsyncTASK__FP4TASK(struct TASK *T) {
 
 // address: 0x8009A06C
 void STR_StreamMainTask__FP6SFXHDRc(struct SFXHDR *sfh, char FileType) {
-	struct STRHDR *sh;
-	struct DEF_ARGS *A;
+	// register: 17
+	// size: 0x14
+	register struct STRHDR *sh;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
 	{
 		{
-			struct TASK *T2;
+			// register: 16
+			// size: 0x5C
+			register struct TASK *T2;
 		}
 	}
 }
@@ -9236,10 +10283,13 @@ void STR_StreamMainTask__FP6SFXHDRc(struct SFXHDR *sfh, char FileType) {
 
 // address: 0x8009A198
 void SND_Monitor__FP4TASK(struct TASK *T) {
-	char status[24];
+	// address: 0xFFFFFFD8
+	// size: 0x18
+	auto char status[24];
 	{
 		{
-			int i;
+			// register: 5
+			register int i;
 		}
 	}
 }
@@ -9253,9 +10303,12 @@ void SPU_OnceOnlyInit__Fv() {
 // address: 0x8009A25C
 void SPU_Init__Fv() {
 	{
-		struct SpuCommonAttr common_attr;
+		// address: 0xFFFFFFC8
+		// size: 0x28
+		auto struct SpuCommonAttr common_attr;
 		{
-			int i;
+			// register: 16
+			register int i;
 		}
 	}
 }
@@ -9263,9 +10316,13 @@ void SPU_Init__Fv() {
 
 // address: 0x8009A364
 int SND_FindChannel__Fv() {
-	char status[24];
-	int count;
-	int result;
+	// address: 0xFFFFFFE0
+	// size: 0x18
+	auto char status[24];
+	// register: 3
+	register int count;
+	// register: 16
+	register int result;
 }
 
 
@@ -9280,23 +10337,32 @@ void SND_ClearBank__Fv() {
 
 // address: 0x8009A440
 bool SndLoadCallBack__FPUciib(unsigned char *Mem, int ReadSoFar, int Size, bool LastChunk) {
-	int DestAddr;
+	// address: 0x8011C6A8
+	static int DestAddr;
 }
 
 
 // address: 0x8009A4B8
 void SND_LoadBank__Fi(int lvlnum) {
-	struct FileIO *MyFileIO;
-	char BankFile[16];
+	// register: 16
+	// size: 0x14
+	register struct FileIO *MyFileIO;
+	// address: 0xFFFFFFE0
+	// size: 0x10
+	auto char BankFile[16];
 }
 
 
 // address: 0x8009A5DC
 int SND_FindSFX__FUs(unsigned short Name) {
-	struct bank_entry *BankOffsets;
-	int RetVal;
+	// register: 17
+	// size: 0xC
+	register struct bank_entry *BankOffsets;
+	// register: 16
+	register int RetVal;
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
@@ -9309,7 +10375,8 @@ void SND_StopSnd__Fi(int voice) {
 // address: 0x8009A6EC
 bool SND_IsSfxPlaying__Fi(int SFXNo) {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -9317,25 +10384,34 @@ bool SND_IsSfxPlaying__Fi(int SFXNo) {
 // address: 0x8009A728
 int SND_RemapSnd__Fi(int SFXNo) {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
 
 // address: 0x8009A79C
 int SND_PlaySnd__FUsiii(unsigned short Name, int vol, int pan, int pitchadj) {
-	int RetVal;
+	// register: 21
+	register int RetVal;
 	{
 		{
-			int sfxnum;
+			// register: 18
+			register int sfxnum;
 			{
 				{
-					int voice;
+					// register: 19
+					register int voice;
 					{
 						{
-							struct bank_entry *BankOffsets;
-							int Offset;
-							struct SpuVoiceAttr voice_attr;
+							// register: 17
+							// size: 0xC
+							register struct bank_entry *BankOffsets;
+							// register: 6
+							register int Offset;
+							// address: 0xFFFFFF98
+							// size: 0x40
+							auto struct SpuVoiceAttr voice_attr;
 						}
 					}
 				}
@@ -9347,25 +10423,29 @@ int SND_PlaySnd__FUsiii(unsigned short Name, int vol, int pan, int pitchadj) {
 
 // address: 0x8009A9B4
 void AS_CallBack0__Fi(int ah) {
-	unsigned long OldGp;
+	// register: 16
+	register unsigned long OldGp;
 }
 
 
 // address: 0x8009AA20
 void AS_CallBack1__Fi(int ah) {
-	unsigned long OldGp;
+	// register: 16
+	register unsigned long OldGp;
 }
 
 
 // address: 0x8009AA8C
 void AS_WasLastBlock__FiP6STRHDRP6SFXHDR(int ah, struct STRHDR *sh, struct SFXHDR *sfh) {
-	unsigned char *ptr;
+	// register: 16
+	register unsigned char *ptr;
 }
 
 
 // address: 0x8009AB54
 int AS_OpenStream__FP6STRHDRP6SFXHDR(struct STRHDR *sh, struct SFXHDR *sfh) {
-	int ah;
+	// register: 16
+	register int ah;
 }
 
 
@@ -9391,11 +10471,17 @@ void SCR_Open__Fv() {
 
 // address: 0x8009ACBC
 void SCR_DumpClut__Fv() {
-	struct RECT R;
-	unsigned short ColVal;
-	unsigned short BlankPal[64];
+	// address: 0xFFFFFF70
+	// size: 0x8
+	auto struct RECT R;
+	// register: 4
+	register unsigned short ColVal;
+	// address: 0xFFFFFF78
+	// size: 0x80
+	auto unsigned short BlankPal[64];
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
@@ -9408,7 +10494,8 @@ unsigned short SCR_NeedHighlightPal__FUsUsi(unsigned short Clut, unsigned short 
 // address: 0x8009AD64
 void Init__13PalCollectionPC7InitPos(struct PalCollection *this, struct InitPos *IPos) {
 	{
-		int f;
+		// register: 19
+		register int f;
 	}
 }
 
@@ -9416,34 +10503,46 @@ void Init__13PalCollectionPC7InitPos(struct PalCollection *this, struct InitPos 
 // address: 0x8009ADF4
 // size: 0x18
 struct PalEntry *FindPal__13PalCollectionUsUsi(struct PalCollection *this, unsigned short SourceClut, unsigned short PixVal, int NumOfCols) {
-	struct PalEntry *RetPal;
+	// register: 16
+	// size: 0x18
+	register struct PalEntry *RetPal;
 }
 
 
 // address: 0x8009AED0
 // size: 0x18
 struct PalEntry *NewPal__13PalCollectionUsUsi(struct PalCollection *this, unsigned short SourceClut, unsigned short PixVal, int NumOfCols) {
-	struct PalEntry *RetPal;
+	// register: 16
+	// size: 0x18
+	register struct PalEntry *RetPal;
 }
 
 
 // address: 0x8009AF50
 void MakePal__8PalEntryUsUsi(struct PalEntry *this, unsigned short _SourceClut, unsigned short _PixVal, int _NumOfCols) {
-	struct RECT SourceRect;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT SourceRect;
 }
 
 
 // address: 0x8009AFF0
 unsigned short GetHighlightPal__13PalCollectionUsUsi(struct PalCollection *this, unsigned short SourceClut, unsigned short PixVal, int NumOfCols) {
-	struct PalEntry *RetPal;
+	// register: 16
+	// size: 0x18
+	register struct PalEntry *RetPal;
 }
 
 
 // address: 0x8009B038
 void UpdatePals__13PalCollection(struct PalCollection *this) {
-	struct PalEntry *ThisPal;
+	// register: 16
+	// size: 0x18
+	register struct PalEntry *ThisPal;
 	{
-		struct PalEntry *NextPal;
+		// register: 17
+		// size: 0x18
+		register struct PalEntry *NextPal;
 	}
 }
 
@@ -9461,14 +10560,17 @@ int GetNumOfObjs__t10Collection2Z8PalEntryi20(struct t10Collection2Z8PalEntryi20
 // address: 0x8009B0DC
 // size: 0x18
 struct PalEntry *GetObj__t10Collection2Z8PalEntryi20(struct t10Collection2Z8PalEntryi20 *this) {
-	struct PalEntry *RetObj;
+	// register: 16
+	// size: 0x18
+	register struct PalEntry *RetObj;
 }
 
 
 // address: 0x8009B118
 void Init__t10Collection2Z8PalEntryi20(struct t10Collection2Z8PalEntryi20 *this) {
 	{
-		int f;
+		// register: 18
+		register int f;
 	}
 }
 
@@ -9546,8 +10648,10 @@ void TonysGameTask__FP4TASK(struct TASK *T) {
 
 // address: 0x8009B3FC
 void SetAmbientLight__Fv() {
-	int x;
-	int y;
+	// register: 10
+	register int x;
+	// register: 6
+	register int y;
 }
 
 
@@ -9559,9 +10663,11 @@ void SetDemoPlayer__Fv() {
 // address: 0x8009B4EC
 void print_demo_task__FP4TASK(struct TASK *T) {
 	{
-		int demo_char;
+		// register: 16
+		register int demo_char;
 		{
-			int x;
+			// register: 3
+			register int x;
 		}
 	}
 }
@@ -9584,13 +10690,17 @@ void ClearTonyPoll__Fv() {
 
 // address: 0x8009B870
 void load_demo_pad_data__FUl(unsigned long demo_num) {
-	struct FileIO *Fs;
+	// register: 4
+	// size: 0x14
+	register struct FileIO *Fs;
 }
 
 
 // address: 0x8009B8D0
 void save_demo_pad_data__FUl(unsigned long demo_num) {
-	struct FileIO *Fs;
+	// register: 4
+	// size: 0x14
+	register struct FileIO *Fs;
 }
 
 
@@ -9636,13 +10746,17 @@ int GLUE_GetMonsterList__Fv() {
 
 // address: 0x8009BA24
 void GLUE_SuspendGame__Fv() {
-	struct TASK *T;
+	// register: 16
+	// size: 0x5C
+	register struct TASK *T;
 }
 
 
 // address: 0x8009BA78
 void GLUE_ResumeGame__Fv() {
-	struct TASK *T;
+	// register: 16
+	// size: 0x5C
+	register struct TASK *T;
 }
 
 
@@ -9668,13 +10782,16 @@ void GLUE_SetFinished__Fb(bool NewFinished) {
 
 // address: 0x8009BB1C
 void GLUE_StartBg__Fibi(int TextId, bool IsTown, int Level) {
-	struct DEF_ARGS *Args;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *Args;
 }
 
 
 // address: 0x8009BB84
 bool GLUE_SetShowGameScreenFlag__Fb(bool NewFlag) {
-	bool OldFlag;
+	// register: 2
+	register bool OldFlag;
 }
 
 
@@ -9685,13 +10802,15 @@ bool GLUE_GetShowGameScreenFlag__Fv() {
 
 // address: 0x8009BBA0
 bool GLUE_SetHomingScrollFlag__Fb(bool NewFlag) {
-	bool OldFlag;
+	// register: 2
+	register bool OldFlag;
 }
 
 
 // address: 0x8009BBB0
 bool GLUE_SetShowPanelFlag__Fb(bool NewFlag) {
-	bool OldFlag;
+	// register: 2
+	register bool OldFlag;
 }
 
 
@@ -9712,19 +10831,40 @@ void GLUE_DoQuake__Fii(int Time, int Amount) {
 
 // address: 0x8009BCB4
 void BgTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *Args;
-	bool IsTown;
-	int TextId;
-	int Level;
-	int ObjId;
-	int List;
-	struct PlayerStruct *plr1;
-	struct PlayerStruct *plr2;
-	struct CBlocks MyBlocks;
-	struct CPlayer MyPlayer;
-	struct CPlayer MyPlayer2;
-	struct GPanel P1Panel;
-	struct GPanel P2Panel;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *Args;
+	// register: 18
+	register bool IsTown;
+	// register: 20
+	register int TextId;
+	// register: 16
+	register int Level;
+	// register: 17
+	register int ObjId;
+	// register: 19
+	register int List;
+	// register: 21
+	// size: 0x19E8
+	register struct PlayerStruct *plr1;
+	// register: 22
+	// size: 0x19E8
+	register struct PlayerStruct *plr2;
+	// address: 0xFFFFFD78
+	// size: 0x108
+	auto struct CBlocks MyBlocks;
+	// address: 0xFFFFFE80
+	// size: 0x90
+	auto struct CPlayer MyPlayer;
+	// address: 0xFFFFFF10
+	// size: 0x90
+	auto struct CPlayer MyPlayer2;
+	// address: 0xFFFFFFA0
+	// size: 0x1C
+	auto struct GPanel P1Panel;
+	// address: 0xFFFFFFC0
+	// size: 0x1C
+	auto struct GPanel P2Panel;
 }
 
 
@@ -9732,7 +10872,8 @@ void BgTask__FP4TASK(struct TASK *T) {
 // size: 0xC
 struct PInf *FindPlayerChar__FPc(char *Id) {
 	{
-		int f;
+		// register: 17
+		register int f;
 	}
 }
 
@@ -9740,7 +10881,9 @@ struct PInf *FindPlayerChar__FPc(char *Id) {
 // address: 0x8009C1F8
 // size: 0xC
 struct PInf *FindPlayerChar__Fiii(int Char, int Wep, int Arm) {
-	char TxBuff[20];
+	// address: 0xFFFFFFE0
+	// size: 0x14
+	auto char TxBuff[20];
 }
 
 
@@ -9754,7 +10897,9 @@ struct PInf *FindPlayerChar__FP12PlayerStruct(struct PlayerStruct *P) {
 int FindPlayerChar__FP12PlayerStructb(struct PlayerStruct *P, bool InTown) {
 	{
 		{
-			struct PInf *Inf;
+			// register: 3
+			// size: 0xC
+			register struct PInf *Inf;
 		}
 	}
 }
@@ -9762,15 +10907,19 @@ int FindPlayerChar__FP12PlayerStructb(struct PlayerStruct *P, bool InTown) {
 
 // address: 0x8009C350
 void MakeSurePlayerDressedProperly__FR7CPlayerR12PlayerStructbT2(struct CPlayer *Player, struct PlayerStruct *Plr, bool InTown, bool Blocking) {
-	int Id;
+	// register: 16
+	register int Id;
 }
 
 
 // address: 0x8009C400
 // size: 0x10
 struct MonstList *GLUE_GetCurrentList__Fi(int Level) {
-	struct MonstLevel *MLev;
-	int List;
+	// register: 17
+	// size: 0x8
+	register struct MonstLevel *MLev;
+	// register: 16
+	register int List;
 }
 
 
@@ -9803,44 +10952,59 @@ void MoveToScrollTarget__7CBlocks(struct CBlocks *this) {
 
 // address: 0x8009C548
 void SetDemoKeys__FPi(int *buffer) {
-	struct KEY_ASSIGNS *ta;
+	// register: 16
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
 	{
-		int i;
+		// register: 4
+		register int i;
 	}
 }
 
 
 // address: 0x8009C620
 void RestoreDemoKeys__FPi(int *buffer) {
-	struct KEY_ASSIGNS *ta;
+	// register: 16
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
 
 // address: 0x8009C6B0
 char *get_action_str__Fii(int pval, int combo) {
-	struct KEY_ASSIGNS *ac;
+	// register: 4
+	// size: 0x10
+	register struct KEY_ASSIGNS *ac;
 	{
-		int i;
+		// register: 6
+		register int i;
 	}
 }
 
 
 // address: 0x8009C728
 int get_key_pad__Fi(int n) {
-	int i;
-	struct pad_assigns *pa;
+	// register: 3
+	register int i;
+	// register: 5
+	// size: 0xC
+	register struct pad_assigns *pa;
 }
 
 
 // address: 0x8009C760
 bool checkvalid__Fv() {
-	int start;
-	int end;
+	// register: 6
+	register int start;
+	// register: 5
+	register int end;
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
@@ -9858,32 +11022,42 @@ unsigned char Init_ctrl_pos__Fv() {
 // address: 0x8009C8D8
 int remove_padval__Fi(int p) {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
 
 // address: 0x8009C918
 int remove_comboval__Fib(int p, bool all) {
-	int n;
+	// register: 7
+	register int n;
 	{
-		int i;
+		// register: 6
+		register int i;
 	}
 }
 
 
 // address: 0x8009C960
 unsigned char set_buttons__Fii(int cline, int n) {
-	struct KEY_ASSIGNS *ta;
-	int cval;
-	int i;
-	int p;
+	// register: 16
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
+	// register: 3
+	register int cval;
+	// register: 4
+	register int i;
+	// register: 18
+	register int p;
 }
 
 
 // address: 0x8009CAD8
 void restore_controller_settings__F8CTRL_SET(enum CTRL_SET s) {
-	struct KEY_ASSIGNS *ta;
+	// register: 5
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
 	{
 		{
 			{
@@ -9897,33 +11071,50 @@ void restore_controller_settings__F8CTRL_SET(enum CTRL_SET s) {
 
 // address: 0x8009CB7C
 bool only_one_button__Fi(int p) {
-	int hand;
-	int count;
+	// register: 3
+	register int hand;
+	// register: 5
+	register int count;
 }
 
 
 // address: 0x8009CBA8
 unsigned char main_ctrl_setup__Fv() {
-	struct CPad *Pad;
-	int lv;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *Pad;
+	// register: 16
+	register int lv;
 }
 
 
 // address: 0x8009D084
 void PrintCtrlString__FiiUcic(int x, int y, unsigned char cjustflag, int str_num, int col) {
-	struct KEY_ASSIGNS *ta;
-	int i;
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-	int str;
-	int len;
+	// register: 17
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
+	// register: 2
+	register int i;
+	// address: 0xFFFFFFC8
+	auto unsigned char r;
+	// address: 0xFFFFFFD0
+	auto unsigned char g;
+	// register: 30
+	register unsigned char b;
+	// register: 18
+	register int str;
+	// register: 21
+	register int len;
 	{
 		{
-			int x1;
-			int x2;
-			int nlen;
-			int otpos;
+			// register: 16
+			register int x1;
+			// register: 23
+			register int x2;
+			// register: 4
+			register int nlen;
+			// register: 22
+			register int otpos;
 		}
 	}
 }
@@ -9931,17 +11122,24 @@ void PrintCtrlString__FiiUcic(int x, int y, unsigned char cjustflag, int str_num
 
 // address: 0x8009D5D8
 void DrawCtrlSetup__Fv() {
-	int i;
-	int pnum;
+	// register: 16
+	register int i;
+	// register: 2
+	register int pnum;
 	{
 		{
-			int otpos;
-			int oldDot;
-			int OldPrintOT;
+			// register: 16
+			register int otpos;
+			// register: 21
+			register int oldDot;
+			// register: 20
+			register int OldPrintOT;
 			{
 				{
-					int lena;
-					int len;
+					// register: 17
+					register int lena;
+					// register: 2
+					register int len;
 				}
 			}
 		}
@@ -10017,38 +11215,64 @@ int GetOverlayOtBase__7CBlocks_addr_8009DCA8() {
 
 // address: 0x8009DCB0
 void color_cycle__FP4TASK(struct TASK *T) {
-	struct RECT ClutR;
-	int cx;
-	int cy;
-	unsigned short ORIGPal[16];
-	unsigned short VRAMPal[16];
-	unsigned short CLUTPal[16];
-	int paloffset;
-	int y;
-	bool ch;
+	// address: 0xFFFFFF80
+	// size: 0x8
+	auto struct RECT ClutR;
+	// register: 2
+	register int cx;
+	// register: 2
+	register int cy;
+	// address: 0xFFFFFF88
+	// size: 0x20
+	auto unsigned short ORIGPal[16];
+	// address: 0xFFFFFFA8
+	// size: 0x20
+	auto unsigned short VRAMPal[16];
+	// address: 0xFFFFFFC8
+	// size: 0x20
+	auto unsigned short CLUTPal[16];
+	// register: 17
+	register int paloffset;
+	// register: 9
+	register int y;
+	// register: 16
+	register bool ch;
 	{
 		{
-			unsigned short col1;
-			unsigned char r;
-			unsigned char g;
-			unsigned char b;
+			// register: 8
+			register unsigned short col1;
+			// register: 5
+			register unsigned char r;
+			// register: 4
+			register unsigned char g;
+			// register: 6
+			register unsigned char b;
 			{
 				{
 					{
 						{
 							{
 								{
-									int i;
+									// register: 10
+									register int i;
 									{
-										unsigned short col1;
-										unsigned short col2;
-										unsigned char sb;
-										unsigned char sg;
-										unsigned char dr;
-										unsigned char dg;
-										unsigned char db;
+										// register: 11
+										register unsigned short col1;
+										// register: 3
+										register unsigned short col2;
+										// register: 14
+										register unsigned char sb;
+										// register: 13
+										register unsigned char sg;
+										// register: 8
+										register unsigned char dr;
+										// register: 7
+										register unsigned char dg;
+										// register: 5
+										register unsigned char db;
 										{
-											int i;
+											// register: 5
+											register int i;
 										}
 									}
 								}
@@ -10064,17 +11288,26 @@ void color_cycle__FP4TASK(struct TASK *T) {
 
 // address: 0x8009E070
 void penta_cycle_task__FP4TASK(struct TASK *T) {
-	struct RECT ClutR;
-	int cx;
-	int cy;
-	int RVal;
+	// address: 0xFFFFFFC8
+	// size: 0x8
+	auto struct RECT ClutR;
+	// register: 2
+	register int cx;
+	// register: 3
+	register int cy;
+	// register: 16
+	register int RVal;
 	{
 		{
 			{
-				unsigned short Pal[16];
-				int Col;
+				// address: 0xFFFFFFD0
+				// size: 0x20
+				auto unsigned short Pal[16];
+				// register: 3
+				register int Col;
 				{
-					int f;
+					// register: 4
+					register int f;
 				}
 			}
 		}
@@ -10084,13 +11317,20 @@ void penta_cycle_task__FP4TASK(struct TASK *T) {
 
 // address: 0x8009E1F0
 void DrawFlameLogo__Fv() {
-	struct POLY_FT4 *FT4;
-	int diff;
-	int x;
-	int *frm;
-	int *xp;
+	// register: 8
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
+	// register: 16
+	register int diff;
+	// register: 6
+	register int x;
+	// register: 18
+	register int *frm;
+	// register: 17
+	register int *xp;
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 
@@ -10112,33 +11352,51 @@ void DaveL__Fv() {
 
 // address: 0x8009E424
 void DoReflection__FP8POLY_FT4iii(struct POLY_FT4 *Ft4, int R, int G, int B) {
-	unsigned char zV0;
-	unsigned char zV2;
-	unsigned char zH;
-	unsigned char dH;
-	unsigned char zV;
-	unsigned char *s;
-	unsigned char *d;
-	unsigned char *Ft4m;
-	short zX0;
-	short zX1;
-	int count;
-	int n;
-	int xoffset;
-	int yoffset;
-	short zY;
+	// register: 4
+	register unsigned char zV0;
+	// register: 5
+	register unsigned char zV2;
+	// register: 5
+	register unsigned char zH;
+	// register: 20
+	register unsigned char dH;
+	// register: 17
+	register unsigned char zV;
+	// register: 3
+	register unsigned char *s;
+	// register: 4
+	register unsigned char *d;
+	// register: 18
+	register unsigned char *Ft4m;
+	// register: 23
+	register short zX0;
+	// register: 30
+	register short zX1;
+	// address: 0x8011B100
+	static int count;
+	// register: 22
+	register int n;
+	// register: 16
+	register int xoffset;
+	// register: 6
+	register int yoffset;
+	// register: 19
+	register short zY;
 }
 
 
 // address: 0x8009E764
 void mteleportfx__Fv() {
-	int plr;
-	int br;
+	// register: 20
+	register int plr;
+	// register: 16
+	register int br;
 	{
 		{
 			{
 				{
-					int OtPos;
+					// register: 17
+					register int OtPos;
 				}
 			}
 		}
@@ -10148,114 +11406,186 @@ void mteleportfx__Fv() {
 
 // address: 0x8009EA78
 void invistimer__Fv() {
-	int plr;
+	// register: 7
+	register int plr;
 }
 
 
 // address: 0x8009EB50
 void setUVparams__FP8POLY_FT4P9FRAME_HDR(struct POLY_FT4 *Ft4, struct FRAME_HDR *Fr) {
-	int zU;
-	int zV;
-	int zW;
-	int zH;
+	// register: 5
+	register int zU;
+	// register: 9
+	register int zV;
+	// register: 8
+	register int zW;
+	// register: 7
+	register int zH;
 }
 
 
 // address: 0x8009EBE0
 void drawparticle__Fiiiiii(int x, int y, int scale, int anim, int colour, int OtPos) {
-	struct TextDat *Dat;
-	struct POLY_FT4 *Ft4;
-	struct FRAME_HDR *Fr;
-	unsigned char SpR;
-	unsigned char SpG;
-	unsigned char SpB;
-	int w;
-	int h;
-	int f;
+	// register: 23
+	// size: 0x70
+	register struct TextDat *Dat;
+	// address: 0xFFFFFFC8
+	// size: 0x28
+	auto struct POLY_FT4 *Ft4;
+	// address: 0xFFFFFFD0
+	// size: 0xC
+	auto struct FRAME_HDR *Fr;
+	// register: 16
+	register unsigned char SpR;
+	// register: 17
+	register unsigned char SpG;
+	// register: 18
+	register unsigned char SpB;
+	// register: 20
+	register int w;
+	// register: 19
+	register int h;
+	// register: 30
+	register int f;
 }
 
 
 // address: 0x8009EDD8
 void drawpolyF4__Fiiiiii(int x, int y, int w, int h, int colour, int OtPos) {
-	struct POLY_F4 *F4;
-	unsigned char SpR;
-	unsigned char SpG;
-	unsigned char SpB;
+	// address: 0xFFFFFFD0
+	// size: 0x18
+	auto struct POLY_F4 *F4;
+	// register: 21
+	register unsigned char SpR;
+	// register: 23
+	register unsigned char SpG;
+	// register: 18
+	register unsigned char SpB;
 }
 
 
 // address: 0x8009EF0C
 void drawpolyG4__Fiiiiiiii(int x, int y, int w, int h1, int h2, int colour0, int colour1, int OtPos) {
-	struct POLY_G4 *G4;
-	unsigned char SpR0;
-	unsigned char SpG0;
-	unsigned char SpB0;
-	unsigned char SpR1;
-	unsigned char SpG1;
-	unsigned char SpB1;
+	// address: 0xFFFFFFC0
+	// size: 0x24
+	auto struct POLY_G4 *G4;
+	// register: 30
+	register unsigned char SpR0;
+	// register: 23
+	register unsigned char SpG0;
+	// register: 18
+	register unsigned char SpB0;
+	// address: 0xFFFFFFC8
+	auto unsigned char SpR1;
+	// address: 0xFFFFFFD0
+	auto unsigned char SpG1;
+	// register: 22
+	register unsigned char SpB1;
 }
 
 
 // address: 0x8009F0DC
 void particlejump__Fii(int ScrX, int ScrY) {
-	int n;
-	int partactive;
+	// register: 23
+	register int n;
+	// register: 30
+	register int partactive;
 }
 
 
 // address: 0x8009F2AC
 void doparticlejump__Fv() {
-	int ScrX;
-	int ScrY;
-	int ScrXOff;
-	int ScrYOff;
-	int WorldX;
-	int WorldY;
-	struct CBlocks *gblocks;
+	// register: 17
+	register int ScrX;
+	// register: 5
+	register int ScrY;
+	// register: 19
+	register int ScrXOff;
+	// register: 20
+	register int ScrYOff;
+	// address: 0xFFFFFFD8
+	auto int WorldX;
+	// address: 0xFFFFFFDC
+	auto int WorldY;
+	// register: 21
+	// size: 0x108
+	register struct CBlocks *gblocks;
 }
 
 
 // address: 0x8009F440
 void StartPartJump__Fiiiii(int mi, int height, int scale, int colour, int OtPos) {
-	int n;
+	// register: 17
+	register int n;
 }
 
 
 // address: 0x8009F594
 void MonstPartJump__Fi(int m) {
-	int ScrYOff;
-	int WorldX;
-	int WorldY;
-	struct CBlocks *gblocks;
+	// register: 17
+	register int ScrYOff;
+	// address: 0xFFFFFFE0
+	auto int WorldX;
+	// address: 0xFFFFFFE4
+	auto int WorldY;
+	// register: 18
+	// size: 0x108
+	register struct CBlocks *gblocks;
 }
 
 
 // address: 0x8009F6B4
 void doparticlechain__Fiiiiiiiiiiii(int sx, int sy, int dx, int dy, int count, int scale, int scaledec, int semitrans, int randomize, int colour, int OtPos, int source) {
-	struct TextDat *Dat;
-	struct POLY_FT4 *Ft4;
-	unsigned char SpR;
-	unsigned char SpG;
-	unsigned char SpB;
-	int x;
-	int y;
-	int br;
-	int w;
-	int h;
-	int f;
-	int c;
-	int t;
-	int rand;
-	int xoffs;
-	int yoffs;
-	int xf;
-	int yf;
-	int dxf;
-	int dyf;
-	int dxabs;
-	int dyabs;
-	int divisor;
-	int *partexecnum;
+	// address: 0xFFFFFF90
+	// size: 0x70
+	auto struct TextDat *Dat;
+	// register: 5
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 8
+	register unsigned char SpR;
+	// register: 23
+	register unsigned char SpG;
+	// register: 21
+	register unsigned char SpB;
+	// register: 16
+	register int x;
+	// register: 17
+	register int y;
+	// register: 3
+	register int br;
+	// register: 20
+	register int w;
+	// register: 18
+	register int h;
+	// register: 19
+	register int f;
+	// register: 22
+	register int c;
+	// address: 0xFFFFFF98
+	auto int t;
+	// register: 2
+	register int rand;
+	// register: 3
+	register int xoffs;
+	// register: 2
+	register int yoffs;
+	// address: 0xFFFFFFA0
+	auto int xf;
+	// address: 0xFFFFFFA8
+	auto int yf;
+	// address: 0xFFFFFFB0
+	auto int dxf;
+	// address: 0xFFFFFFB8
+	auto int dyf;
+	// register: 5
+	register int dxabs;
+	// register: 4
+	register int dyabs;
+	// register: 4
+	register int divisor;
+	// register: 8
+	register int *partexecnum;
 }
 
 
@@ -10266,29 +11596,50 @@ void ParticleMissile__FP13MissileStructiiii(struct MissileStruct *Ms, int ScrX, 
 
 // address: 0x8009FAC0
 void Teleportfx__Fiiiiiiii(int scrnx, int scrny, int width, int height, int scale, int colmask, int numpart, int OtPos) {
-	struct TextDat *Dat;
-	struct POLY_FT4 *Ft4;
-	unsigned char SpR;
-	unsigned char SpG;
-	unsigned char SpB;
-	int w;
-	int h;
-	int x;
-	int y;
-	int f;
-	int n;
-	int randu;
-	int randl;
-	unsigned char Rmask;
-	unsigned char Gmask;
-	unsigned char Bmask;
-	int rand[64];
+	// address: 0xFFFFFF98
+	// size: 0x70
+	auto struct TextDat *Dat;
+	// address: 0xFFFFFF70
+	// size: 0x28
+	auto struct POLY_FT4 *Ft4;
+	// register: 22
+	register unsigned char SpR;
+	// register: 23
+	register unsigned char SpG;
+	// register: 17
+	register unsigned char SpB;
+	// register: 20
+	register int w;
+	// register: 16
+	register int h;
+	// register: 18
+	register int x;
+	// register: 19
+	register int y;
+	// register: 30
+	register int f;
+	// address: 0xFFFFFFA0
+	auto int n;
+	// register: 17
+	register int randu;
+	// register: 21
+	register int randl;
+	// address: 0xFFFFFFA8
+	auto unsigned char Rmask;
+	// address: 0xFFFFFFB0
+	auto unsigned char Gmask;
+	// address: 0xFFFFFFB8
+	auto unsigned char Bmask;
+	// address: 0xFFFFFE70
+	// size: 0x100
+	auto int rand[64];
 }
 
 
 // address: 0x8009FDC0
 void ResurrectFX__Fiiii(int x, int height, int scale, int OtPos) {
-	int t;
+	// register: 18
+	register int t;
 }
 
 
@@ -10299,15 +11650,20 @@ void ParticleExp__FP13MissileStructiiii(struct MissileStruct *Ms, int ScrX, int 
 
 // address: 0x800A0080
 void GetPlrPos__11SPELLFX_DATP12PlayerStruct(struct SPELLFX_DAT *this, struct PlayerStruct *ptrplr) {
-	struct RECT R;
-	int ScrXOff;
-	int ScrYOff;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT R;
+	// register: 3
+	register int ScrXOff;
+	// register: 3
+	register int ScrYOff;
 }
 
 
 // address: 0x800A01A4
 void healFX__Fv() {
-	int plr;
+	// register: 17
+	register int plr;
 	{
 		{
 			{
@@ -10351,11 +11707,18 @@ void PhaseEnd__Fi(int plr) {
 
 // address: 0x800A0498
 void ApocInit__11SPELLFX_DATP12PlayerStruct(struct SPELLFX_DAT *this, struct PlayerStruct *ptrplr) {
-	struct RECT R;
-	struct CBlocks *TheBlocks;
-	int ScrXOff;
-	int ScrYOff;
-	int OtPos;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct RECT R;
+	// register: 22
+	// size: 0x108
+	register struct CBlocks *TheBlocks;
+	// register: 21
+	register int ScrXOff;
+	// register: 20
+	register int ScrYOff;
+	// register: 17
+	register int OtPos;
 }
 
 
@@ -10397,7 +11760,8 @@ int GetLastOtPos__C7CPlayer(struct CPlayer *this) {
 
 // address: 0x800A0984
 int GetOtPos__7CBlocksi_addr_800A0984(struct CBlocks *this, int LogicalY) {
-	int OtPos;
+	// register: 3
+	register int OtPos;
 }
 
 
@@ -10414,7 +11778,9 @@ void SetQSpell__Fiii(int pnum, int Spell, int type) {
 
 // address: 0x800A09FC
 void release_spell__Fi(int pnum) {
-	struct SpellTarget *spl;
+	// register: 2
+	// size: 0x48
+	register struct SpellTarget *spl;
 }
 
 
@@ -10425,19 +11791,22 @@ void select_belt_item__Fi(int pnum) {
 
 // address: 0x800A0A68
 unsigned char any_belt_items__Fv() {
-	int i;
+	// register: 4
+	register int i;
 }
 
 
 // address: 0x800A0AD0
 void get_last_inv__Fv() {
-	int i;
+	// register: 4
+	register int i;
 }
 
 
 // address: 0x800A0BFC
 void get_next_inv__Fv() {
-	int i;
+	// register: 4
+	register int i;
 }
 
 
@@ -10470,9 +11839,13 @@ void pad_func_select__Fi(int pnum) {
 void SetFindMonsterXY__FP12PlayerStructi(struct PlayerStruct *p, int i) {
 	{
 		{
-			struct MonsterStruct *m;
+			// register: 3
+			// size: 0x68
+			register struct MonsterStruct *m;
 			{
-				struct TownerStruct *t;
+				// register: 2
+				// size: 0xC4
+				register struct TownerStruct *t;
 			}
 		}
 	}
@@ -10481,28 +11854,41 @@ void SetFindMonsterXY__FP12PlayerStructi(struct PlayerStruct *p, int i) {
 
 // address: 0x800A0EEC
 void pad_func_Attack__Fi(int pnum) {
-	struct PlayerStruct *player;
-	int x;
-	int y;
+	// register: 18
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 16
+	register int x;
+	// register: 17
+	register int y;
 	{
 		{
 			{
 				{
-					int fx;
-					int fy;
+					// register: 16
+					register int fx;
+					// register: 17
+					register int fy;
 					{
 						{
 							{
-								int fx;
-								int fy;
-								struct PlayerStruct *plr2;
+								// register: 17
+								register int fx;
+								// register: 20
+								register int fy;
+								// register: 23
+								// size: 0x19E8
+								register struct PlayerStruct *plr2;
 								{
-									int oco;
+									// register: 3
+									register int oco;
 									{
 										{
 											{
-												int fx;
-												int fy;
+												// register: 16
+												register int fx;
+												// register: 17
+												register int fy;
 											}
 										}
 									}
@@ -10519,18 +11905,26 @@ void pad_func_Attack__Fi(int pnum) {
 
 // address: 0x800A13A0
 void pad_func_Action__Fi(int pnum) {
-	struct PlayerStruct *player;
-	int x;
-	int y;
-	struct DEF_ARGS *args;
+	// register: 20
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 21
+	register int x;
+	// register: 22
+	register int y;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
 	{
 		{
 			{
 				{
 					{
 						{
-							int ox;
-							int oy;
+							// register: 17
+							register int ox;
+							// register: 18
+							register int oy;
 						}
 					}
 				}
@@ -10557,16 +11951,25 @@ bool TargetingSpell__Fi(int sp) {
 
 // address: 0x800A181C
 void pad_func_Cast_Spell__Fi(int pnum) {
-	struct PlayerStruct *player;
-	int sp;
-	struct CBlocks *gblocks;
-	int omp;
-	unsigned char DoTarget;
+	// register: 18
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 19
+	register int sp;
+	// register: 16
+	// size: 0x108
+	register struct CBlocks *gblocks;
+	// register: 21
+	register int omp;
+	// register: 20
+	register unsigned char DoTarget;
 	{
 		{
 			{
 				{
-					struct SpellTarget *spl;
+					// register: 5
+					// size: 0x48
+					register struct SpellTarget *spl;
 				}
 			}
 		}
@@ -10578,7 +11981,9 @@ void pad_func_Cast_Spell__Fi(int pnum) {
 void pad_func_Use_Item__Fi(int pnum) {
 	{
 		{
-			struct PlayerStruct *player;
+			// register: 18
+			// size: 0x19E8
+			register struct PlayerStruct *player;
 		}
 	}
 }
@@ -10621,19 +12026,29 @@ void pad_func_AutoMap__Fi(int pnum) {
 
 // address: 0x800A2618
 void pad_func_Quick_Spell__Fi(int pnum) {
-	struct PlayerStruct *player;
-	int sp;
-	char spt;
-	int qps;
-	int qst;
+	// register: 17
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 21
+	register int sp;
+	// register: 19
+	register char spt;
+	// register: 18
+	register int qps;
+	// register: 20
+	register int qst;
 }
 
 
 // address: 0x800A278C
 void check_inv__FiPci(int pnum, char *ilist, int entries) {
-	int i;
-	int ii;
-	struct PlayerStruct *player;
+	// register: 17
+	register int i;
+	// register: 2
+	register int ii;
+	// register: 20
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 	{
 	}
 }
@@ -10651,42 +12066,69 @@ void pad_func_Quick_Use_Mana__Fi(int pnum) {
 
 // address: 0x800A2A5C
 bool sort_gold__Fi(int pnum) {
-	struct found_objects *fo;
-	bool ngold;
+	// register: 17
+	// size: 0x3
+	register struct found_objects *fo;
+	// register: 19
+	register bool ngold;
 	{
-		int i;
+		// register: 18
+		register int i;
 	}
 }
 
 
 // address: 0x800A2B64
 void DrawObjSelector__FiP12PlayerStruct(int pnum, struct PlayerStruct *player) {
-	char str[128];
-	struct CPad *Pad;
-	int cp;
-	int list_size;
-	int maxlen;
-	struct found_objects *fo;
-	int R;
-	int G;
-	int B;
-	int i;
-	int nwrap;
-	int add_wrap;
-	int nx;
-	int ny;
-	int nw;
-	int nh;
-	int ypos;
+	// address: 0xFFFFFF20
+	// size: 0x80
+	auto char str[128];
+	// register: 16
+	// size: 0xEC
+	register struct CPad *Pad;
+	// register: 16
+	register int cp;
+	// register: 18
+	register int list_size;
+	// register: 22
+	register int maxlen;
+	// address: 0xFFFFFFA0
+	// size: 0x3
+	auto struct found_objects *fo;
+	// register: 8
+	register int R;
+	// register: 3
+	register int G;
+	// register: 2
+	register int B;
+	// register: 20
+	register int i;
+	// register: 3
+	register int nwrap;
+	// register: 16
+	register int add_wrap;
+	// address: 0xFFFFFFB8
+	auto int nx;
+	// address: 0xFFFFFFC0
+	auto int ny;
+	// register: 22
+	register int nw;
+	// register: 16
+	register int nh;
+	// register: 21
+	register int ypos;
 	{
 		{
-			int fx;
-			int fy;
+			// register: 16
+			register int fx;
+			// register: 17
+			register int fy;
 			{
 				{
 					{
 						{
-							int len;
+							// register: 18
+							register int len;
 						}
 					}
 				}
@@ -10703,19 +12145,32 @@ bool SelectorActive__Fv() {
 
 // address: 0x800A3378
 void DrawObjTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *args;
-	int pnum;
-	bool op;
-	bool oamap;
-	struct PlayerStruct *player;
-	int oseldata;
-	int omp;
-	bool opan;
-	int opause;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 18
+	register int pnum;
+	// register: 22
+	register bool op;
+	// register: 30
+	register bool oamap;
+	// register: 21
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 19
+	register int oseldata;
+	// register: 20
+	register int omp;
+	// register: 16
+	register bool opan;
+	// register: 23
+	register int opause;
 	{
 		{
-			int x;
-			int y;
+			// register: 16
+			register int x;
+			// register: 17
+			register int y;
 		}
 	}
 }
@@ -10725,7 +12180,9 @@ void DrawObjTask__FP4TASK(struct TASK *T) {
 void add_area_find_object__Fiii(int index, int x, int y) {
 	{
 		{
-			struct found_objects *fo;
+			// register: 2
+			// size: 0x3
+			register struct found_objects *fo;
 		}
 	}
 }
@@ -10733,15 +12190,23 @@ void add_area_find_object__Fiii(int index, int x, int y) {
 
 // address: 0x800A3724
 unsigned char CheckRangeObject__Fiii(int x, int y, int distance) {
-	char co;
-	struct map_info *dm;
-	int nitem;
-	int nmonster;
-	int nobject;
-	bool ok;
+	// register: 4
+	register char co;
+	// register: 6
+	// size: 0x8
+	register struct map_info *dm;
+	// register: 17
+	register int nitem;
+	// register: 16
+	register int nmonster;
+	// register: 19
+	register int nobject;
+	// register: 20
+	register bool ok;
 	{
 		{
-			int vis_flag;
+			// register: 4
+			register int vis_flag;
 		}
 	}
 }
@@ -10749,31 +12214,48 @@ unsigned char CheckRangeObject__Fiii(int x, int y, int distance) {
 
 // address: 0x800A3A9C
 unsigned char CheckArea__FiiiUci(int xx, int yy, int range, unsigned char allflag, int pnum) {
-	struct PlayerStruct *player;
-	struct SpellTarget *spl;
-	bool is_myplr;
-	int i;
-	int dir;
-	int cm;
-	int ci;
-	int x;
-	int y;
+	// address: 0xFFFFFFB8
+	// size: 0x19E8
+	auto struct PlayerStruct *player;
+	// address: 0xFFFFFFC0
+	// size: 0x48
+	auto struct SpellTarget *spl;
+	// address: 0xFFFFFFC8
+	auto bool is_myplr;
+	// register: 21
+	register int i;
+	// register: 17
+	register int dir;
+	// register: 23
+	register int cm;
+	// register: 4
+	register int ci;
+	// register: 20
+	register int x;
+	// register: 19
+	register int y;
 	{
 		{
-			int dx;
-			int dy;
+			// register: 18
+			register int dx;
+			// register: 17
+			register int dy;
 			{
 				{
 					{
 						{
-							struct MonsterStruct *Monst;
+							// register: 16
+							// size: 0x68
+							register struct MonsterStruct *Monst;
 							{
 								{
 									{
-										int j;
+										// register: 22
+										register int j;
 										{
 											{
-												int k;
+												// register: 18
+												register int k;
 												{
 													{
 														{
@@ -10783,9 +12265,13 @@ unsigned char CheckArea__FiiiUci(int xx, int yy, int range, unsigned char allfla
 																		{
 																			{
 																				{
-																					struct MonsterStruct *Monst;
+																					// register: 16
+																					// size: 0x68
+																					register struct MonsterStruct *Monst;
 																					{
-																						struct TownerStruct *Twn;
+																						// register: 16
+																						// size: 0xC4
+																						register struct TownerStruct *Twn;
 																					}
 																				}
 																			}
@@ -10814,9 +12300,12 @@ unsigned char CheckArea__FiiiUci(int xx, int yy, int range, unsigned char allfla
 void PlacePlayer__FiiiUc(int pnum, int x, int y, unsigned char do_current) {
 	{
 		{
-			bool done;
-			int nx;
-			int ny;
+			// register: 30
+			register bool done;
+			// register: 17
+			register int nx;
+			// register: 16
+			register int ny;
 			{
 			}
 		}
@@ -10882,20 +12371,23 @@ unsigned short GetCur__C4CPad_addr_800A435C(struct CPad *this) {
 
 // address: 0x800A4384
 void DEC_AddAsDecRequestor__FP7TextDat(struct TextDat *Td) {
-	int TdIndex;
+	// register: 16
+	register int TdIndex;
 }
 
 
 // address: 0x800A4400
 void DEC_RemoveAsDecRequestor__FP7TextDat(struct TextDat *Td) {
-	int TdIndex;
+	// register: 16
+	register int TdIndex;
 }
 
 
 // address: 0x800A4458
 void DEC_DoDecompRequests__Fv() {
 	{
-		int f;
+		// register: 17
+		register int f;
 	}
 }
 
@@ -10903,7 +12395,8 @@ void DEC_DoDecompRequests__Fv() {
 // address: 0x800A44B4
 int FindThisTd__FP7TextDat(struct TextDat *Td) {
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
@@ -10911,7 +12404,8 @@ int FindThisTd__FP7TextDat(struct TextDat *Td) {
 // address: 0x800A44EC
 int FindEmptyIndex__Fv() {
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
@@ -10919,7 +12413,8 @@ int FindEmptyIndex__Fv() {
 // address: 0x800A4524
 void MY_TSK_Sleep__Fi(int time) {
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 
@@ -10929,7 +12424,8 @@ void UPDATEPROGRESS__Fi(int inc) {
 	{
 		{
 			{
-				int i;
+				// register: 16
+				register int i;
 			}
 		}
 	}
@@ -10943,33 +12439,51 @@ bool IsGameLoading__Fv() {
 
 // address: 0x800A4654
 void DrawCutScreen__Fi(int lev) {
-	unsigned char barr;
-	unsigned char barg;
-	unsigned short prog;
-	struct Dialog LBack;
-	int tx;
-	struct POLY_G4 *G4;
-	int BarOt;
-	int oldDot;
-	int oldTot;
+	// register: 30
+	register unsigned char barr;
+	// register: 22
+	register unsigned char barg;
+	// register: 21
+	register unsigned short prog;
+	// address: 0xFFFFFFA8
+	// size: 0x10
+	auto struct Dialog LBack;
+	// register: 16
+	register int tx;
+	// address: 0xFFFFFFB8
+	// size: 0x24
+	auto struct POLY_G4 *G4;
+	// register: 19
+	register int BarOt;
+	// address: 0xFFFFFFC0
+	auto int oldDot;
+	// address: 0xFFFFFFC8
+	auto int oldTot;
 }
 
 
 // address: 0x800A4A90
 void PutUpCutScreenTSK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *Args;
-	int lev;
-	int tpx;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *Args;
+	// register: 18
+	register int lev;
+	// register: 17
+	register int tpx;
 }
 
 
 // address: 0x800A4B58
 void PutUpCutScreen__Fi(int lev) {
-	struct DEF_ARGS *A;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
 	{
 		{
 			{
-				int f;
+				// register: 16
+				register int f;
 			}
 		}
 	}
@@ -11067,7 +12581,8 @@ void DealWithCard__Fi(int side) {
 
 // address: 0x800A5498
 void CardUpdateTask__FP4TASK(struct TASK *T) {
-	int toggle;
+	// register: 16
+	register int toggle;
 }
 
 
@@ -11083,7 +12598,8 @@ void MemcardOFF__Fv() {
 
 // address: 0x800A5590
 void CheckSavedOptions__Fv() {
-	int option_file;
+	// register: 2
+	register int option_file;
 }
 
 
@@ -11111,7 +12627,8 @@ void ActivateMemcard__Fii(int card1, int card2) {
 void ActivateCharacterMemcard__Fii(int card1, int card2) {
 	{
 		{
-			int fileno;
+			// register: 5
+			register int fileno;
 			{
 				{
 				}
@@ -11123,17 +12640,30 @@ void ActivateCharacterMemcard__Fii(int card1, int card2) {
 
 // address: 0x800A5888
 void ShowCardActionText__Fv() {
-	struct Dialog SBack;
-	struct RECT um;
-	int X;
-	int Y;
-	int W;
-	int H;
-	int otpos;
-	int oldBot;
-	int oldTot;
-	int lines;
-	int yprintpos;
+	// address: 0xFFFFFFB0
+	// size: 0x10
+	auto struct Dialog SBack;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT um;
+	// register: 3
+	register int X;
+	// register: 17
+	register int Y;
+	// register: 18
+	register int W;
+	// register: 20
+	register int H;
+	// register: 16
+	register int otpos;
+	// address: 0xFFFFFFC8
+	auto int oldBot;
+	// register: 23
+	register int oldTot;
+	// register: 19
+	register int lines;
+	// register: 16
+	register int yprintpos;
 	{
 		{
 			{
@@ -11148,10 +12678,12 @@ int CountdownLoad__Fi(int Counter) {
 	{
 		{
 			{
-				int readstate;
+				// register: 3
+				register int readstate;
 				{
 					{
-						int readstate;
+						// register: 3
+						register int readstate;
 						{
 						}
 					}
@@ -11164,45 +12696,66 @@ int CountdownLoad__Fi(int Counter) {
 
 // address: 0x800A5D7C
 int CountdownSave__Fi(int Counter) {
-	int cardstate[2];
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto int cardstate[2];
 }
 
 
 // address: 0x800A5E5C
 void ShowLoadingBox__Fi(int Text) {
-	struct Dialog SBack;
-	struct RECT um;
-	bool addwaitmsg;
-	int W;
-	int H;
-	int X;
-	int Y;
-	int otpos;
-	int oldBot;
-	int oldTot;
-	int lines;
-	int topline;
-	int yprintpos;
+	// address: 0xFFFFFFB0
+	// size: 0x10
+	auto struct Dialog SBack;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT um;
+	// register: 21
+	register bool addwaitmsg;
+	// register: 19
+	register int W;
+	// register: 20
+	register int H;
+	// register: 3
+	register int X;
+	// register: 18
+	register int Y;
+	// register: 16
+	register int otpos;
+	// address: 0xFFFFFFC8
+	auto int oldBot;
+	// register: 30
+	register int oldTot;
+	// register: 3
+	register int lines;
+	// register: 18
+	register int topline;
+	// register: 20
+	register int yprintpos;
 }
 
 
 // address: 0x800A60E8
 void KillItemDead__Fiii(int pnum, int InvPos, int Idx) {
-	int ii;
-	int iv;
+	// register: 9
+	register int ii;
+	// register: 9
+	register int iv;
 }
 
 
 // address: 0x800A672C
 void ClearLoadCharItems__Fv() {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x800A67B4
 void PantsDelay__Fv() {
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 
@@ -11245,33 +12798,58 @@ void PrintSelectBack__FUs(unsigned short Str) {
 
 // address: 0x800A6960
 void DrawDialogBox__FiiP4RECTiiii(int e, int f, struct RECT *DRect, int X, int Y, int W, int H) {
-	struct Dialog DBack;
+	// address: 0xFFFFFFD0
+	// size: 0x10
+	auto struct Dialog DBack;
 }
 
 
 // address: 0x800A6A44
 void DrawSpinner__FiiUcUcUciiibiT8T8Uc(int x, int y, unsigned char SpinR, unsigned char SpinG, int SpinB, int spinradius, int spinbright, int angle, bool Sparkle, int OtPos, bool cross, bool iso, int SinStep) {
-	struct POLY_FT4 *FT4;
-	struct POLY_GT4 *GT4;
-	struct TextDat *ThisDat;
-	unsigned char rand;
-	int f;
-	unsigned short bright;
-	unsigned short r;
-	unsigned short g;
-	unsigned short b;
-	unsigned short r2;
-	unsigned short g2;
-	unsigned short b2;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int x3;
-	int y3;
-	int radius;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
+	// register: 4
+	// size: 0x34
+	register struct POLY_GT4 *GT4;
+	// address: 0xFFFFFF88
+	// size: 0x70
+	auto struct TextDat *ThisDat;
+	// register: 16
+	register unsigned char rand;
+	// register: 5
+	register int f;
+	// register: 4
+	register unsigned short bright;
+	// address: 0xFFFFFF90
+	auto unsigned short r;
+	// address: 0xFFFFFF98
+	auto unsigned short g;
+	// address: 0xFFFFFFA0
+	auto unsigned short b;
+	// address: 0xFFFFFFA8
+	auto unsigned short r2;
+	// address: 0xFFFFFFB0
+	auto unsigned short g2;
+	// address: 0xFFFFFFB8
+	auto unsigned short b2;
+	// register: 22
+	register int x1;
+	// register: 20
+	register int y1;
+	// register: 16
+	register int x2;
+	// register: 17
+	register int y2;
+	// register: 19
+	register int x3;
+	// register: 18
+	register int y3;
+	// register: 23
+	register int radius;
 	{
-		int i;
+		// address: 0xFFFFFFC0
+		auto int i;
 	}
 }
 
@@ -11293,41 +12871,68 @@ void DrawLeftRight__Fv() {
 
 // address: 0x800A723C
 void PrintMono__Fi(int ypos) {
-	char *String;
-	int len;
+	// register: 17
+	register char *String;
+	// register: 7
+	register int len;
 }
 
 
 // address: 0x800A72F4
 void DrawMenu__Fi(int MenuNo) {
-	struct OMENULIST *mptr;
-	struct OMENUITEM *iptr;
-	int sh;
-	struct POLY_G4 *G4;
-	int yoff;
-	int len;
-	int depth;
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-	int mx;
-	int my;
-	int BARFRAC;
-	int mptrx;
-	int mptry;
+	// address: 0xFFFFFF68
+	// size: 0x8
+	auto struct OMENULIST *mptr;
+	// address: 0xFFFFFF70
+	// size: 0x18
+	auto struct OMENUITEM *iptr;
+	// address: 0xFFFFFF78
+	auto int sh;
+	// address: 0xFFFFFF50
+	// size: 0x24
+	auto struct POLY_G4 *G4;
+	// address: 0xFFFFFF80
+	auto int yoff;
+	// register: 19
+	register int len;
+	// address: 0xFFFFFF88
+	auto int depth;
+	// address: 0xFFFFFF90
+	auto unsigned char r;
+	// address: 0xFFFFFF98
+	auto unsigned char g;
+	// address: 0xFFFFFFA0
+	auto unsigned char b;
+	// address: 0xFFFFFFA8
+	auto int mx;
+	// address: 0xFFFFFFB0
+	auto int my;
+	// address: 0xFFFFFFB8
+	auto int BARFRAC;
+	// register: 7
+	register int mptrx;
+	// register: 6
+	register int mptry;
 	{
-		int i;
+		// address: 0xFFFFFFC0
+		auto int i;
 		{
 			{
 				{
-					int sxp;
-					int syp;
-					unsigned char barg;
-					unsigned char barr;
+					// register: 20
+					register int sxp;
+					// register: 16
+					register int syp;
+					// register: 18
+					register unsigned char barg;
+					// register: 23
+					register unsigned char barr;
 					{
 						{
-							int cx;
-							int cy;
+							// register: 18
+							register int cx;
+							// register: 20
+							register int cy;
 						}
 					}
 				}
@@ -11339,26 +12944,40 @@ void DrawMenu__Fi(int MenuNo) {
 
 // address: 0x800A8314
 int who_pressed__Fi(int pval) {
-	struct CPad *Pad;
-	struct CPad *Pad1;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *Pad;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *Pad1;
 }
 
 
 // address: 0x800A839C
 void CharacterLoadPad__Fv() {
-	struct CPad *P;
-	struct OMENUITEM *iptr;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 19
+	// size: 0x18
+	register struct OMENUITEM *iptr;
 }
 
 
 // address: 0x800A88F0
 void MemcardPad__Fv() {
-	struct CPad *P;
-	int move;
-	struct OMENUITEM *iptr;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 16
+	register int move;
+	// register: 18
+	// size: 0x18
+	register struct OMENUITEM *iptr;
 	{
 		{
-			int lcs;
+			// register: 5
+			register int lcs;
 		}
 	}
 }
@@ -11371,19 +12990,27 @@ void SwitchMONO__Fv() {
 
 // address: 0x800A9260
 void SoundPad__Fv() {
-	struct CPad *P;
-	int move;
-	struct OMENUITEM *iptr;
-	int lcs;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 16
+	register int move;
+	// register: 18
+	// size: 0x18
+	register struct OMENUITEM *iptr;
+	// register: 5
+	register int lcs;
 	{
 		{
 			{
-				int l;
+				// register: 3
+				register int l;
 				{
 					{
 						{
 							{
-								int llen;
+								// register: 16
+								register int llen;
 							}
 						}
 					}
@@ -11396,10 +13023,16 @@ void SoundPad__Fv() {
 
 // address: 0x800A9C68
 void CentrePad__Fv() {
-	struct CPad *P;
-	struct OMENUITEM *iptr;
-	int osx;
-	int osy;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 19
+	// size: 0x18
+	register struct OMENUITEM *iptr;
+	// register: 17
+	register int osx;
+	// register: 18
+	register int osy;
 }
 
 
@@ -11416,12 +13049,18 @@ void SetLoadedVolumes__Fv() {
 // address: 0x800AA0B8
 void GetVolumes__Fv() {
 	{
-		int i;
+		// register: 6
+		register int i;
 		{
-			struct OMENULIST *mptr;
-			struct OMENUITEM *iptr;
+			// register: 5
+			// size: 0x8
+			register struct OMENULIST *mptr;
+			// register: 3
+			// size: 0x18
+			register struct OMENUITEM *iptr;
 			{
-				int s;
+				// register: 4
+				register int s;
 			}
 		}
 	}
@@ -11430,20 +13069,26 @@ void GetVolumes__Fv() {
 
 // address: 0x800AA154
 void AlterSpeedMenu__F9GM_SPEEDS(enum GM_SPEEDS gs) {
-	struct OMENUITEM *it;
+	// register: 3
+	// size: 0x18
+	register struct OMENUITEM *it;
 }
 
 
 // address: 0x800AA1A8
 void GameSpeedPad__Fv() {
-	int cp;
-	bool exit_flag;
+	// register: 16
+	register int cp;
+	// register: 17
+	register bool exit_flag;
 }
 
 
 // address: 0x800AA2D0
 void DrawOptions__FP4TASK(struct TASK *T) {
-	struct CPad *P;
+	// register: 18
+	// size: 0xEC
+	register struct CPad *P;
 }
 
 
@@ -11454,30 +13099,44 @@ void ToggleOptions__Fv() {
 
 // address: 0x800AAB74
 void FormatPad__Fv() {
-	struct CPad *P;
-	int sn;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 4
+	register int sn;
 }
 
 
 // address: 0x800AAE7C
 void SaveOverwritePad__Fv() {
-	struct CPad *P;
-	int sn;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 4
+	register int sn;
 }
 
 
 // address: 0x800AB0B8
 void CharCardSelectMemcardPad__Fv() {
-	struct OMENUITEM *iptr;
-	struct CPad *P;
+	// register: 18
+	// size: 0x18
+	register struct OMENUITEM *iptr;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
 }
 
 
 // address: 0x800AB300
 void LAMBO_MovePad__FP4CPad(struct CPad *P) {
-	struct OMENUITEM *iptr;
-	int move;
-	int lcs;
+	// register: 18
+	// size: 0x18
+	register struct OMENUITEM *iptr;
+	// register: 17
+	register int move;
+	// register: 5
+	register int lcs;
 }
 
 
@@ -11555,43 +13214,57 @@ void SetBirdFrig__Fb(bool f) {
 
 // address: 0x800AB6E4
 unsigned char BirdDistanceOK__Fiiii(int WorldXa, int WorldYa, int WorldXb, int WorldYb) {
-	int wx;
-	int wy;
+	// register: 16
+	register int wx;
+	// register: 3
+	register int wy;
 }
 
 
 // address: 0x800AB73C
 void AlterBirdPos__FP10BIRDSTRUCTUc(struct BIRDSTRUCT *b, unsigned char rnd) {
-	int offsx;
-	int offsy;
+	// register: 18
+	register int offsx;
+	// register: 19
+	register int offsy;
 }
 
 
 // address: 0x800AB894
 void BirdWorld__FP10BIRDSTRUCTii(struct BIRDSTRUCT *b, int wx, int wy) {
-	int x;
-	int y;
+	// register: 7
+	register int x;
+	// register: 3
+	register int y;
 }
 
 
 // address: 0x800AB910
 bool CheckDist__Fii(int x, int y) {
-	int x1;
-	int y1;
+	// register: 16
+	register int x1;
+	// register: 16
+	register int y1;
 	{
-		int i;
+		// register: 19
+		register int i;
 	}
 }
 
 
 // address: 0x800AB9F8
 int BirdScared__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	int scared;
-	int p;
-	int i;
+	// register: 17
+	register int scared;
+	// register: 4
+	register int p;
+	// register: 4
+	register int i;
 	{
 		{
-			struct PlayerStruct *player;
+			// register: 5
+			// size: 0x19E8
+			register struct PlayerStruct *player;
 		}
 	}
 }
@@ -11600,19 +13273,25 @@ int BirdScared__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 // address: 0x800ABB24
 int GetPerch__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 	{
-		int n;
+		// register: 3
+		register int n;
 	}
 }
 
 
 // address: 0x800ABB78
 void BIRD_StartHop__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	int nd;
-	int x;
-	int y;
+	// register: 20
+	register int nd;
+	// register: 19
+	register int x;
+	// register: 18
+	register int y;
 	{
 		{
-			struct Perch *p;
+			// register: 17
+			// size: 0x2
+			register struct Perch *p;
 		}
 	}
 }
@@ -11640,16 +13319,23 @@ void BIRD_DoScatter__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 
 // address: 0x800ABFE0
 void CheckDirOk__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	int x;
-	int y;
-	int ofx;
-	int ofy;
-	bool posok;
+	// register: 17
+	register int x;
+	// register: 16
+	register int y;
+	// register: 21
+	register int ofx;
+	// register: 20
+	register int ofy;
+	// register: 22
+	register bool posok;
 	{
-		int d;
+		// register: 23
+		register int d;
 		{
 			{
-				int i;
+				// register: 18
+				register int i;
 			}
 		}
 	}
@@ -11663,11 +13349,14 @@ void BIRD_StartScatter__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 
 // address: 0x800AC190
 void BIRD_StartFly__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	struct BIRDSTRUCT *leader;
+	// register: 17
+	// size: 0x18
+	register struct BIRDSTRUCT *leader;
 	{
 		{
 			{
-				int i;
+				// register: 17
+				register int i;
 			}
 		}
 	}
@@ -11676,15 +13365,18 @@ void BIRD_StartFly__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 
 // address: 0x800AC21C
 void BIRD_DoFly__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	int pnum;
+	// register: 20
+	register int pnum;
 	{
 		{
 			{
 				{
 					{
 						{
-							int x;
-							int y;
+							// register: 17
+							register int x;
+							// register: 18
+							register int y;
 						}
 					}
 				}
@@ -11706,20 +13398,27 @@ void BIRD_DoLanding__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 
 // address: 0x800AC58C
 void PlaceFlock__FP10BIRDSTRUCT(struct BIRDSTRUCT *leader) {
-	struct BIRDSTRUCT *b;
+	// register: 17
+	// size: 0x18
+	register struct BIRDSTRUCT *b;
 	{
-		int i;
+		// register: 18
+		register int i;
 	}
 }
 
 
 // address: 0x800AC674
 void ProcessFlock__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	struct BIRDSTRUCT *leader;
+	// register: 5
+	// size: 0x18
+	register struct BIRDSTRUCT *leader;
 	{
 		{
-			int x;
-			int y;
+			// register: 17
+			register int x;
+			// register: 18
+			register int y;
 		}
 	}
 }
@@ -11727,43 +13426,59 @@ void ProcessFlock__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
 
 // address: 0x800AC764
 void InitBird__Fv() {
-	struct BIRDSTRUCT *b;
+	// register: 17
+	// size: 0x18
+	register struct BIRDSTRUCT *b;
 	{
-		int i;
+		// register: 19
+		register int i;
 	}
 }
 
 
 // address: 0x800AC838
 void ProcessBird__Fv() {
-	struct BIRDSTRUCT *b;
+	// register: 16
+	// size: 0x18
+	register struct BIRDSTRUCT *b;
 	{
-		int i;
+		// register: 18
+		register int i;
 	}
 }
 
 
 // address: 0x800AC97C
 int GetBirdFrame__FP10BIRDSTRUCT(struct BIRDSTRUCT *b) {
-	int banim;
+	// register: 3
+	register int banim;
 }
 
 
 // address: 0x800ACA14
 void bscale__FP8POLY_FT4i(struct POLY_FT4 *Ft4, int height) {
-	int x;
-	int y;
+	// register: 17
+	register int x;
+	// register: 4
+	register int y;
 }
 
 
 // address: 0x800ACB44
 void doshadow__FP10BIRDSTRUCTii(struct BIRDSTRUCT *b, int x, int y) {
-	struct CBlocks *gb;
-	struct POLY_FT4 *Ft4;
-	struct TextDat *Dat;
+	// register: 4
+	// size: 0x108
+	register struct CBlocks *gb;
+	// address: 0xFFFFFFE0
+	// size: 0x28
+	auto struct POLY_FT4 *Ft4;
+	// register: 20
+	// size: 0x70
+	register struct TextDat *Dat;
 	{
 		{
-			int ot;
+			// register: 16
+			register int ot;
 		}
 	}
 }
@@ -11771,23 +13486,39 @@ void doshadow__FP10BIRDSTRUCTii(struct BIRDSTRUCT *b, int x, int y) {
 
 // address: 0x800ACC6C
 void DrawLBird__Fv() {
-	struct BIRDSTRUCT *ThisBird;
-	struct POLY_FT4 *Ft4;
-	struct CBlocks *gblock;
-	int ScrXOff;
-	int ScrYOff;
-	int x;
-	int y;
-	struct RECT R;
-	struct TextDat *Dat;
+	// register: 20
+	// size: 0x18
+	register struct BIRDSTRUCT *ThisBird;
+	// address: 0xFFFFFFC8
+	// size: 0x28
+	auto struct POLY_FT4 *Ft4;
+	// register: 30
+	// size: 0x108
+	register struct CBlocks *gblock;
+	// register: 2
+	register int ScrXOff;
+	// register: 2
+	register int ScrYOff;
+	// register: 19
+	register int x;
+	// register: 18
+	register int y;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT R;
+	// address: 0xFFFFFFD0
+	// size: 0x70
+	auto struct TextDat *Dat;
 	{
 		{
 			{
-				int i;
+				// register: 22
+				register int i;
 				{
 					{
 						{
-							int ot;
+							// register: 16
+							register int ot;
 						}
 					}
 				}
@@ -11804,14 +13535,18 @@ void PRIM_GetPrim__FPP8POLY_FT4_addr_800ACEA0(struct POLY_FT4 **Prim) {
 
 // address: 0x800ACF1C
 int GetOtPos__7CBlocksi_addr_800ACF1C(struct CBlocks *this, int LogicalY) {
-	int OtPos;
+	// register: 3
+	register int OtPos;
 }
 
 
 // address: 0x800ACF58
 short PlayFMV__FPcii(char *str, int w, int h) {
-	short RetVal;
-	enum OVER_TYPE CurrentOver;
+	// register: 17
+	register short RetVal;
+	// register: 21
+	// size: 0x4
+	register enum OVER_TYPE CurrentOver;
 }
 
 
@@ -11838,7 +13573,9 @@ int GetTpX__FUs_addr_800AD20C(unsigned short tpage) {
 
 // address: 0x800AD218
 void LoadKanjiFont__FPc(char *name) {
-	struct FileIO *Fs;
+	// register: 17
+	// size: 0x14
+	register struct FileIO *Fs;
 }
 
 
@@ -11849,26 +13586,38 @@ void FreeKanji__Fv() {
 
 // address: 0x800AD2D0
 void ClearKanjiCount__Fv() {
-	struct vbuffS *kl;
-	int i;
+	// register: 4
+	// size: 0x4
+	register struct vbuffS *kl;
+	// register: 3
+	register int i;
 }
 
 
 // address: 0x800AD308
 void ClearKanjiBuffer__Fv() {
-	struct vbuffS *kl;
-	int i;
+	// register: 4
+	// size: 0x4
+	register struct vbuffS *kl;
+	// register: 3
+	register int i;
 }
 
 
 // address: 0x800AD34C
 void KANJI_SetCache__F10KANJI_FRMS(enum KANJI_FRMS ct) {
-	struct CBlocks *BgBlocks;
+	// register: 17
+	// size: 0x108
+	register struct CBlocks *BgBlocks;
 	{
 		{
-			struct TextDat *Dat;
+			// register: 16
+			// size: 0x70
+			register struct TextDat *Dat;
 			{
-				struct TextDat *Dat;
+				// register: 16
+				// size: 0x70
+				register struct TextDat *Dat;
 				{
 					{
 					}
@@ -11886,7 +13635,8 @@ void LoadKanji__F10LANG_DB_NO(enum LANG_DB_NO NewLangDbNo) {
 
 // address: 0x800AD708
 bool SetKanjiLoaded__Fb(bool loaded) {
-	bool iret;
+	// register: 2
+	register bool iret;
 }
 
 
@@ -11897,23 +13647,34 @@ bool IsKanjiLoaded__Fv() {
 
 // address: 0x800AD724
 void KanjiSetTSK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *args;
-	enum LANG_DB_NO NewLangDbNo;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 16
+	// size: 0x4
+	register enum LANG_DB_NO NewLangDbNo;
 }
 
 
 // address: 0x800AD77C
 void KANJI_SetDb__F10LANG_DB_NO(enum LANG_DB_NO NewLangDbNo) {
-	struct TASK *T;
-	struct DEF_ARGS *args;
+	// register: 16
+	// size: 0x5C
+	register struct TASK *T;
+	// register: 3
+	// size: 0x10
+	register struct DEF_ARGS *args;
 }
 
 
 // address: 0x800AD7F4
 int inmem__Fs(short k) {
-	struct vbuffS *kl;
+	// register: 16
+	// size: 0x4
+	register struct vbuffS *kl;
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
@@ -11926,10 +13687,12 @@ unsigned short getb__FUs(unsigned short n) {
 // address: 0x800AD88C
 void ShadeBuff__FPUcii(unsigned char *b, int col, int border) {
 	{
-		int y;
+		// register: 7
+		register int y;
 		{
 			{
-				int x;
+				// register: 3
+				register int x;
 			}
 		}
 	}
@@ -11938,13 +13701,17 @@ void ShadeBuff__FPUcii(unsigned char *b, int col, int border) {
 
 // address: 0x800ADA34
 void Crunch__FPUcT0(unsigned char *s, unsigned char *db) {
-	int c;
-	unsigned short *d;
+	// register: 2
+	register int c;
+	// register: 8
+	register unsigned short *d;
 	{
-		int y;
+		// register: 9
+		register int y;
 		{
 			{
-				int x;
+				// register: 7
+				register int x;
 			}
 		}
 	}
@@ -11953,20 +13720,29 @@ void Crunch__FPUcT0(unsigned char *s, unsigned char *db) {
 
 // address: 0x800ADAA8
 void _get_font__FPUcUsT0(unsigned char *d, unsigned short num, unsigned char *abuff) {
-	unsigned char *bp;
-	long i;
-	char bcy;
-	char shift;
+	// register: 16
+	register unsigned char *bp;
+	// register: 4
+	register long i;
+	// register: 18
+	register char bcy;
+	// register: 3
+	register char shift;
 }
 
 
 // address: 0x800ADB68
 int getfreekan__Fv() {
-	unsigned char max;
-	int n;
-	struct vbuffS *kl;
+	// register: 17
+	register unsigned char max;
+	// register: 18
+	register int n;
+	// register: 16
+	// size: 0x4
+	register struct vbuffS *kl;
 	{
-		int i;
+		// register: 4
+		register int i;
 	}
 }
 
@@ -11980,19 +13756,38 @@ enum KANJI_FRMS GetKanjiCacheFrm__Fv() {
 // address: 0x800ADC2C
 // size: 0x28
 struct POLY_FT4 *GetKanjiFrm__FUs(unsigned short kan) {
-	struct POLY_FT4 *ft4;
-	int im;
-	struct RECT r;
-	unsigned char deBuff[144];
-	unsigned char dekbuff[144];
-	struct vbuffS *kl;
-	struct TextDat *Dat;
-	int TpX;
-	int TpY;
-	unsigned char *kbuff;
-	unsigned char *kanjbuff;
-	int U;
-	int V;
+	// address: 0xFFFFFFE0
+	// size: 0x28
+	auto struct POLY_FT4 *ft4;
+	// register: 17
+	register int im;
+	// address: 0xFFFFFEB8
+	// size: 0x8
+	auto struct RECT r;
+	// address: 0xFFFFFEC0
+	// size: 0x90
+	auto unsigned char deBuff[144];
+	// address: 0xFFFFFF50
+	// size: 0x90
+	auto unsigned char dekbuff[144];
+	// register: 3
+	// size: 0x4
+	register struct vbuffS *kl;
+	// register: 16
+	// size: 0x70
+	register struct TextDat *Dat;
+	// register: 17
+	register int TpX;
+	// register: 16
+	register int TpY;
+	// register: 16
+	register unsigned char *kbuff;
+	// register: 18
+	register unsigned char *kanjbuff;
+	// register: 3
+	register int U;
+	// register: 4
+	register int V;
 }
 
 
@@ -12025,7 +13820,8 @@ void writeblock__FP5block(struct block *theblock) {
 			{
 				{
 					{
-						int i;
+						// register: 18
+						register int i;
 					}
 				}
 			}
@@ -12036,27 +13832,43 @@ void writeblock__FP5block(struct block *theblock) {
 
 // address: 0x800AE084
 int PAK_DoPak__FPUcPCUci(unsigned char *Dest, unsigned char *buffer, int insize) {
-	long begin;
-	long end;
-	long bestlength;
-	int offset;
-	int bestoffset;
-	unsigned char *theptr;
-	unsigned char *ptr1;
-	unsigned char *ptr2;
-	unsigned char *ptr3;
-	struct block theblock;
-	int inpos;
+	// register: 3
+	register long begin;
+	// register: 19
+	register long end;
+	// register: 17
+	register long bestlength;
+	// register: 20
+	register int offset;
+	// register: 23
+	register int bestoffset;
+	// register: 22
+	register unsigned char *theptr;
+	// register: 18
+	register unsigned char *ptr1;
+	// register: 5
+	register unsigned char *ptr2;
+	// register: 4
+	register unsigned char *ptr3;
+	// address: 0xFFFFFDB0
+	// size: 0x214
+	auto struct block theblock;
+	// register: 21
+	register int inpos;
 }
 
 
 // address: 0x800AE2C4
 int PAK_DoUnpak__FPUcPCUc(unsigned char *Dest, unsigned char *Source) {
-	int outsize;
+	// register: 19
+	register int outsize;
 	{
-		unsigned char *From;
-		int size;
-		int ch;
+		// register: 5
+		register unsigned char *From;
+		// register: 17
+		register int size;
+		// register: 3
+		register int ch;
 	}
 }
 
@@ -12073,15 +13885,20 @@ void RemoveHelp__Fv() {
 
 // address: 0x800AE3A0
 void HelpPad__Fv() {
-	struct CPad *Pad;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *Pad;
 }
 
 
 // address: 0x800AE648
 int GetControlKey__FiPb(int str, bool *iscombo) {
-	struct KEY_ASSIGNS *ta;
+	// register: 6
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
 	{
-		int i;
+		// register: 7
+		register int i;
 	}
 }
 
@@ -12093,14 +13910,18 @@ void InitHelp__Fv() {
 
 // address: 0x800AE73C
 int DrawHelpLine__FiiPccccP10HelpStruct(int x, int y, char *txt, char R, int G, int B, struct HelpStruct *hp) {
-	int eln;
+	// register: 2
+	register int eln;
 	{
 		{
-			int key;
-			bool combo;
+			// register: 16
+			register int key;
+			// address: 0xFFFFFFD8
+			auto bool combo;
 			{
 				{
-					int nkey;
+					// register: 2
+					register int nkey;
 				}
 			}
 		}
@@ -12110,17 +13931,23 @@ int DrawHelpLine__FiiPccccP10HelpStruct(int x, int y, char *txt, char R, int G, 
 
 // address: 0x800AE950
 void DisplayHelp__Fv() {
-	struct HelpStruct *hp;
-	int y;
+	// register: 23
+	// size: 0xC
+	register struct HelpStruct *hp;
+	// register: 22
+	register int y;
 	{
-		int i;
+		// address: 0xFFFFFFB8
+		auto int i;
 		{
-			char *txt;
+			// register: 16
+			register char *txt;
 			{
 				{
 					{
 						{
-							int nlen;
+							// register: 30
+							register int nlen;
 						}
 					}
 				}
@@ -12132,10 +13959,15 @@ void DisplayHelp__Fv() {
 
 // address: 0x800AECD0
 void DrawHelp__Fv() {
-	struct Dialog txtBack;
-	int otpos;
-	int oldDot;
-	int OldPrintOT;
+	// address: 0x80121C78
+	// size: 0x10
+	static struct Dialog txtBack;
+	// register: 16
+	register int otpos;
+	// register: 19
+	register int oldDot;
+	// register: 20
+	register int OldPrintOT;
 }
 
 
@@ -12203,39 +14035,52 @@ void DisplayMonsterTypes__Fv() {
 // address: 0x800AF0F0
 bool IsAutoTarget__Fi(int Spell) {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
 
 // address: 0x800AF128
 int GetXOff__Fii(int wx, int wy) {
-	int xo;
+	// register: 2
+	register int xo;
 }
 
 
 // address: 0x800AF170
 int GetYOff__Fii(int wx, int wy) {
-	int yo;
+	// register: 2
+	register int yo;
 }
 
 
 // address: 0x800AF1BC
 void GetScrXY__FPiT0(int *wx, int *wy) {
-	struct CBlocks *gblocks;
-	struct RECT R;
-	int plx;
-	int ply;
-	int xo;
-	int x;
-	int y;
+	// register: 19
+	// size: 0x108
+	register struct CBlocks *gblocks;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct RECT R;
+	// register: 16
+	register int plx;
+	// register: 17
+	register int ply;
+	// register: 18
+	register int xo;
+	// register: 16
+	register int x;
+	// register: 17
+	register int y;
 }
 
 
 // address: 0x800AF28C
 void ClearTrails__11SpellTarget(struct SpellTarget *this) {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
@@ -12248,7 +14093,8 @@ void Init__11SpellTargeti(struct SpellTarget *this, int plrn) {
 				{
 					{
 						{
-							int SplLvl;
+							// register: 2
+							register int SplLvl;
 						}
 					}
 				}
@@ -12265,16 +14111,24 @@ void Remove__11SpellTarget(struct SpellTarget *this) {
 
 // address: 0x800AF57C
 void DrawArrow__11SpellTargetii(struct SpellTarget *this, int x1, int y1) {
-	int bright;
-	char r;
-	char g;
-	char b;
-	int otpos;
+	// register: 23
+	register int bright;
+	// register: 21
+	register char r;
+	// register: 19
+	register char g;
+	// register: 20
+	register char b;
+	// register: 30
+	register int otpos;
 	{
-		int ni;
+		// register: 5
+		register int ni;
 		{
-			int i;
-			int ni;
+			// register: 17
+			register int i;
+			// register: 5
+			register int ni;
 		}
 	}
 }
@@ -12282,25 +14136,41 @@ void DrawArrow__11SpellTargetii(struct SpellTarget *this, int x1, int y1) {
 
 // address: 0x800AF7F8
 void Show__11SpellTarget(struct SpellTarget *this) {
-	int x;
-	int y;
-	struct CPad *Pad;
-	int otx;
-	int oty;
-	int cp;
-	int plx;
-	int ply;
-	struct MonsterStruct *Monst;
-	int ops;
+	// address: 0xFFFFFFD8
+	auto int x;
+	// address: 0xFFFFFFDC
+	auto int y;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *Pad;
+	// register: 20
+	register int otx;
+	// register: 21
+	register int oty;
+	// register: 16
+	register int cp;
+	// register: 18
+	register int plx;
+	// register: 16
+	register int ply;
+	// register: 19
+	// size: 0x68
+	register struct MonsterStruct *Monst;
+	// register: 20
+	register int ops;
 	{
 		{
-			int vis_flag;
-			int inthatx;
-			int inthaty;
+			// register: 2
+			register int vis_flag;
+			// register: 4
+			register int inthatx;
+			// register: 5
+			register int inthaty;
 			{
 				{
 					{
-						int d;
+						// register: 2
+						register int d;
 					}
 				}
 			}
@@ -12327,32 +14197,56 @@ struct SpellTarget *GetSpellTarget__Fi(int pnum) {
 
 // address: 0x800AFEB0
 void ArrowTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *args;
-	int pnum;
-	int times;
-	int bright;
-	enum TARGET targ;
-	struct RECT R;
-	int angle;
-	int r;
-	int g;
-	int b;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 21
+	register int pnum;
+	// address: 0xFFFFFFA8
+	auto int times;
+	// address: 0xFFFFFFB0
+	auto int bright;
+	// register: 23
+	// size: 0x4
+	register enum TARGET targ;
+	// address: 0xFFFFFF98
+	// size: 0x8
+	auto struct RECT R;
+	// register: 22
+	register int angle;
+	// address: 0xFFFFFFB8
+	auto int r;
+	// address: 0xFFFFFFC0
+	auto int g;
+	// register: 30
+	register int b;
 	{
 		{
 			{
-				int plx;
-				int ply;
-				int otpos;
+				// address: 0xFFFFFFA0
+				auto int plx;
+				// address: 0xFFFFFFA4
+				auto int ply;
+				// register: 19
+				register int otpos;
 				{
 					{
 						{
-							struct PlayerStruct *ptrplr;
+							// register: 3
+							// size: 0x19E8
+							register struct PlayerStruct *ptrplr;
 							{
-								struct MonsterStruct *Monst;
+								// register: 2
+								// size: 0x68
+								register struct MonsterStruct *Monst;
 								{
-									struct MissileStruct *Miss;
-									int pxo;
-									int pyo;
+									// register: 16
+									// size: 0x4C
+									register struct MissileStruct *Miss;
+									// register: 2
+									register int pxo;
+									// register: 2
+									register int pyo;
 								}
 							}
 						}
@@ -12366,8 +14260,12 @@ void ArrowTask__FP4TASK(struct TASK *T) {
 
 // address: 0x800B0260
 void SPL_Arrow__F6TARGETiii(enum TARGET t, int pnum, int times, int size) {
-	struct DEF_ARGS *args;
-	struct TASK *T;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 2
+	// size: 0x5C
+	register struct TASK *T;
 }
 
 
@@ -12393,43 +14291,82 @@ unsigned char TrimCol__Fs_addr_8003017C(short col) {
 
 // address: 0x800301B4
 void DrawSpellCel__FllUclUcc(long xp, long yp, unsigned char Trans, long nCel, int w, int sel) {
-	struct TextDat *ThisDat;
-	struct FRAME_HDR *Fr;
-	struct POLY_FT4 *Ft4;
-	struct POLY_GT4 *GT4;
-	struct TP_LOAD_HDR *Tp;
-	int SpellW;
-	int SpellH;
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-	int x0;
-	int x1;
-	int x2;
-	int x3;
-	int y0;
-	int y1;
-	int y2;
-	int y3;
-	int u0;
-	int u1;
-	int u2;
-	int u3;
-	int v0;
-	int v1;
-	int v2;
-	int v3;
-	int otpos;
+	// address: 0xFFFFFF78
+	// size: 0x70
+	auto struct TextDat *ThisDat;
+	// register: 17
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
+	// register: 6
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 19
+	// size: 0x34
+	register struct POLY_GT4 *GT4;
+	// address: 0xFFFFFF80
+	// size: 0x4
+	auto struct TP_LOAD_HDR *Tp;
+	// register: 19
+	register int SpellW;
+	// register: 16
+	register int SpellH;
+	// register: 18
+	register unsigned char r;
+	// address: 0xFFFFFF88
+	auto unsigned char g;
+	// address: 0xFFFFFF90
+	auto unsigned char b;
+	// register: 13
+	register int x0;
+	// register: 12
+	register int x1;
+	// register: 16
+	register int x2;
+	// register: 15
+	register int x3;
+	// register: 24
+	register int y0;
+	// register: 11
+	register int y1;
+	// register: 9
+	register int y2;
+	// register: 14
+	register int y3;
+	// register: 4
+	register int u0;
+	// register: 5
+	register int u1;
+	// register: 10
+	register int u2;
+	// register: 8
+	register int u3;
+	// register: 6
+	register int v0;
+	// register: 7
+	register int v1;
+	// register: 3
+	register int v2;
+	// register: 2
+	register int v3;
+	// address: 0xFFFFFF98
+	auto int otpos;
 	{
 		{
 			{
 				{
-					int X;
-					int Y;
-					int SW;
-					int SH;
-					struct PAL *Pal;
-					int st;
+					// register: 22
+					register int X;
+					// register: 23
+					register int Y;
+					// register: 21
+					register int SW;
+					// register: 20
+					register int SH;
+					// register: 3
+					// size: 0x8
+					register struct PAL *Pal;
+					// address: 0xFFFFFFD0
+					auto int st;
 					{
 						{
 						}
@@ -12448,60 +14385,93 @@ void SetSpellTrans__Fc(char t) {
 
 // address: 0x80030D44
 void DrawSpellBookTSK__FP4TASK(struct TASK *T) {
-	int CountDown;
-	int i;
+	// register: 17
+	register int CountDown;
+	// register: 16
+	register int i;
 	{
-		int omp;
+		// register: 16
+		register int omp;
 	}
 }
 
 
 // address: 0x80030ED4
 void DrawSpeedSpellTSK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *args;
-	int pnum;
-	bool alive;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 17
+	register int pnum;
+	// register: 19
+	register bool alive;
 	{
-		int old_opts;
+		// register: 18
+		register int old_opts;
 	}
 }
 
 
 // address: 0x80031004
 void ToggleSpell__Fi(int pnum) {
-	struct DEF_ARGS *args;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
 }
 
 
 // address: 0x800310B8
 void DrawSpellList__Fv() {
-	int x;
-	int y;
-	int i;
-	int j;
-	int t;
-	unsigned long mask;
-	unsigned long spl;
-	int s;
-	int c;
-	int v;
-	int NoSpells;
-	unsigned char trans;
-	struct PlayerStruct *player;
-	struct CPad *P;
-	int lx;
-	int ly;
-	int NoYSpells;
-	int NoXSpells;
-	int PLEFT;
-	int PRIGHT;
+	// register: 18
+	register int x;
+	// register: 20
+	register int y;
+	// register: 22
+	register int i;
+	// register: 19
+	register int j;
+	// register: 4
+	register int t;
+	// address: 0xFFFFFFA0
+	auto unsigned long mask;
+	// address: 0xFFFFFFA8
+	auto unsigned long spl;
+	// register: 5
+	register int s;
+	// register: 17
+	register int c;
+	// register: 23
+	register int v;
+	// address: 0xFFFFFFB0
+	auto int NoSpells;
+	// register: 6
+	register unsigned char trans;
+	// register: 21
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 18
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 21
+	register int lx;
+	// register: 22
+	register int ly;
+	// register: 16
+	register int NoYSpells;
+	// register: 17
+	register int NoXSpells;
+	// register: 19
+	register int PLEFT;
+	// register: 20
+	register int PRIGHT;
 	{
 		{
 			{
 				{
 					{
 						{
-							bool Flag;
+							// register: 4
+							register bool Flag;
 						}
 					}
 				}
@@ -12533,7 +14503,8 @@ void InitPanelStr__Fv() {
 
 // address: 0x80031F70
 void InitControlPan__Fv() {
-	int i;
+	// register: 3
+	register int i;
 }
 
 
@@ -12549,10 +14520,15 @@ void DoAutoMap__Fv() {
 
 // address: 0x80032228
 void CheckPanelInfo__Fv() {
-	int (*_pSpell)[1];
-	int c;
-	int s;
-	int v;
+	// register: 17
+	// size: 0x4
+	register int (*_pSpell)[1];
+	// register: 16
+	register int c;
+	// register: 5
+	register int s;
+	// register: 16
+	register int v;
 	{
 		{
 			{
@@ -12583,35 +14559,50 @@ void CheckPanelInfo__Fv() {
 // address: 0x80032948
 void FreeControlPan__Fv() {
 	{
-		void *p__p;
+		// register: 4
+		register void *p__p;
 		{
-			void *p__p;
+			// register: 4
+			register void *p__p;
 			{
-				void *p__p;
+				// register: 4
+				register void *p__p;
 				{
-					void *p__p;
+					// register: 4
+					register void *p__p;
 					{
-						void *p__p;
+						// register: 4
+						register void *p__p;
 						{
-							void *p__p;
+							// register: 4
+							register void *p__p;
 							{
-								void *p__p;
+								// register: 4
+								register void *p__p;
 								{
-									void *p__p;
+									// register: 4
+									register void *p__p;
 									{
-										void *p__p;
+										// register: 4
+										register void *p__p;
 										{
-											void *p__p;
+											// register: 4
+											register void *p__p;
 											{
-												void *p__p;
+												// register: 4
+												register void *p__p;
 												{
-													void *p__p;
+													// register: 4
+													register void *p__p;
 													{
-														void *p__p;
+														// register: 4
+														register void *p__p;
 														{
-															void *p__p;
+															// register: 4
+															register void *p__p;
 															{
-																void *p__p;
+																// register: 4
+																register void *p__p;
 															}
 														}
 													}
@@ -12632,30 +14623,42 @@ void FreeControlPan__Fv() {
 
 // address: 0x80032A58
 int CPrintString__FiPci(int No, char *pszStr, int Just) {
-	enum TXT_JUST Justify;
-	unsigned char R;
-	unsigned char G;
-	unsigned char B;
+	// register: 6
+	// size: 0x4
+	register enum TXT_JUST Justify;
+	// register: 8
+	register unsigned char R;
+	// register: 5
+	register unsigned char G;
+	// register: 3
+	register unsigned char B;
 }
 
 
 // address: 0x80032B74
 void PrintInfo__Fv() {
-	int NoOfLines;
-	int nOffset1;
-	int nlines;
-	int PageOffset;
+	// register: 18
+	register int NoOfLines;
+	// register: 20
+	register int nOffset1;
+	// register: 19
+	register int nlines;
+	// register: 22
+	register int PageOffset;
 	{
 		{
 			{
-				int i;
+				// register: 17
+				register int i;
 				{
 					{
 						{
 							{
-								int i;
+								// register: 17
+								register int i;
 								{
-									int i;
+									// register: 16
+									register int i;
 								}
 							}
 						}
@@ -12669,14 +14672,16 @@ void PrintInfo__Fv() {
 
 // address: 0x80032FA4
 void DrawInfoBox__FP4RECT(struct RECT *InfoRect) {
-	int pnum;
+	// register: 16
+	register int pnum;
 	{
 		{
 			{
 				{
 					{
 						{
-							int nGold;
+							// register: 17
+							register int nGold;
 							{
 								{
 									{
@@ -12706,62 +14711,99 @@ void DrawInfoBox__FP4RECT(struct RECT *InfoRect) {
 
 // address: 0x800336D8
 void MY_PlrStringXY__Fv() {
-	struct CSDATA *ptr;
-	char r;
-	char g;
-	char b;
-	int x;
-	int y;
-	int w;
-	int len;
-	struct RECT Angle;
+	// register: 22
+	// size: 0x28
+	register struct CSDATA *ptr;
+	// address: 0xFFFFFFB8
+	auto char r;
+	// address: 0xFFFFFFC0
+	auto char g;
+	// address: 0xFFFFFFC8
+	auto char b;
+	// register: 23
+	register int x;
+	// register: 30
+	register int y;
+	// address: 0xFFFFFFD0
+	auto int w;
+	// register: 21
+	register int len;
+	// address: 0xFFFFFFB0
+	// size: 0x8
+	auto struct RECT Angle;
 }
 
 
 // address: 0x80033DE8
 void ADD_PlrStringXY__FPCcc(char *pszStr, char col) {
-	struct CSDATA *ptr;
+	// register: 16
+	// size: 0x28
+	register struct CSDATA *ptr;
 }
 
 
 // address: 0x80033E90
 void DrawPlus__Fii(int n, int pnum) {
-	struct TextDat *ThisDat;
-	struct POLY_FT4 *Ft4;
-	int otpos;
-	int x;
-	int y;
+	// register: 17
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 4
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 18
+	register int otpos;
+	// register: 3
+	register int x;
+	// register: 7
+	register int y;
 }
 
 
 // address: 0x80034028
 void ChrCheckValidButton__Fi(int move) {
-	int pc;
-	int count;
+	// register: 2
+	register int pc;
+	// register: 3
+	register int count;
 	{
-		int i;
+		// register: 6
+		register int i;
 	}
 }
 
 
 // address: 0x80034334
 void DrawArrows__Fv() {
-	struct TextDat *ThisDat;
-	struct POLY_FT4 *Ft4;
-	unsigned char flip;
-	int x;
-	int otpos;
+	// register: 18
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 10
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 16
+	register unsigned char flip;
+	// register: 17
+	register int x;
+	// register: 19
+	register int otpos;
 }
 
 
 // address: 0x80034434
 void BuildChr__Fv() {
-	char c;
-	char chrstr[64];
-	long mind;
-	long maxd;
-	int hper;
-	int ac;
+	// register: 17
+	register char c;
+	// address: 0xFFFFFFB0
+	// size: 0x40
+	auto char chrstr[64];
+	// register: 18
+	register long mind;
+	// register: 16
+	register long maxd;
+	// register: 16
+	register int hper;
+	// register: 16
+	register int ac;
 	{
 		{
 		}
@@ -12771,13 +14813,20 @@ void BuildChr__Fv() {
 
 // address: 0x80035698
 void DrawChr__Fv() {
-	char chrstr[64];
-	int pc;
-	struct CPad *P;
+	// address: 0xFFFFFFB0
+	// size: 0x40
+	auto char chrstr[64];
+	// register: 2
+	register int pc;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P;
 	{
 		{
-			int llus;
-			int move;
+			// register: 18
+			register int llus;
+			// register: 16
+			register int move;
 		}
 	}
 }
@@ -12785,7 +14834,8 @@ void DrawChr__Fv() {
 
 // address: 0x80035B48
 void DrawChrTSK__FP4TASK(struct TASK *T) {
-	int omp;
+	// register: 16
+	register int omp;
 }
 
 
@@ -12796,7 +14846,8 @@ void DrawLevelUpIcon__Fi(int pnum) {
 
 // address: 0x80035CEC
 void CheckChrBtns__Fv() {
-	int pc;
+	// register: 16
+	register int pc;
 }
 
 
@@ -12807,57 +14858,89 @@ int DrawDurIcon4Item__FPC10ItemStructii(struct ItemStruct *pItem, int x, int c) 
 
 // address: 0x800360F8
 void RedBack__Fv() {
-	struct TextDat *ThisDat;
-	struct POLY_FT4 *FT4;
+	// register: 16
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 7
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
 }
 
 
 // address: 0x800361F0
 void PrintSBookStr__FiiiPCcUcUc(int x, int y, int cspel, char *pszStr, int bright, int Staff) {
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
+	// register: 4
+	register unsigned char r;
+	// register: 3
+	register unsigned char g;
+	// register: 5
+	register unsigned char b;
 }
 
 
 // address: 0x80036478
 char GetSBookTrans__FiUc(int ii, unsigned char townok) {
-	char st;
+	// register: 16
+	register char st;
 }
 
 
 // address: 0x800366D8
 void DrawSpellBook__Fb(bool DrawBg) {
-	int i;
-	int ii;
-	int x;
-	int y;
-	int mind;
-	int maxd;
-	int sx;
-	int sy;
-	unsigned long tspls;
-	char st;
-	char c;
-	int v;
-	unsigned char bright;
-	char Num[4];
-	int bw;
-	struct CPad *P;
-	int lsbooktab;
-	int lcur_spel;
+	// register: 19
+	register int i;
+	// register: 18
+	register int ii;
+	// register: 18
+	register int x;
+	// register: 21
+	register int y;
+	// address: 0xFFFFFFC0
+	auto int mind;
+	// address: 0xFFFFFFC4
+	auto int maxd;
+	// register: 30
+	register int sx;
+	// register: 23
+	register int sy;
+	// address: 0xFFFFFFC8
+	auto unsigned long tspls;
+	// register: 20
+	register char st;
+	// register: 17
+	register char c;
+	// register: 17
+	register int v;
+	// register: 22
+	register unsigned char bright;
+	// address: 0xFFFFFFB8
+	// size: 0x4
+	auto char Num[4];
+	// register: 22
+	register int bw;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 18
+	register int lsbooktab;
+	// register: 19
+	register int lcur_spel;
 }
 
 
 // address: 0x80037280
 void CheckSBook__Fv() {
-	unsigned long tspls;
-	char st;
-	int cspel;
+	// register: 6
+	register unsigned long tspls;
+	// register: 7
+	register char st;
+	// register: 8
+	register int cspel;
 	{
 		{
 			{
-				bool splok;
+				// register: 2
+				register bool splok;
 			}
 		}
 	}
@@ -12979,16 +15062,21 @@ void InitLevelCursor__Fv() {
 
 // address: 0x80037884
 void CheckTown__Fv() {
-	int ocursmx;
-	int ocursmy;
+	// register: 11
+	register int ocursmx;
+	// register: 10
+	register int ocursmy;
 	{
-		int i;
+		// register: 9
+		register int i;
 		{
-			int mx;
+			// register: 3
+			register int mx;
 			{
 				{
 					{
-						int dir;
+						// register: 8
+						register int dir;
 					}
 				}
 			}
@@ -12999,16 +15087,21 @@ void CheckTown__Fv() {
 
 // address: 0x80037B18
 void CheckRportal__Fv() {
-	int ocursmx;
-	int ocursmy;
+	// register: 11
+	register int ocursmx;
+	// register: 10
+	register int ocursmy;
 	{
-		int i;
+		// register: 9
+		register int i;
 		{
-			int mx;
+			// register: 3
+			register int mx;
 			{
 				{
 					{
-						int dir;
+						// register: 8
+						register int dir;
 					}
 				}
 			}
@@ -13024,10 +15117,15 @@ void CheckCursMove__Fv() {
 
 // address: 0x80037D88
 void InitDead__Fv() {
-	int nd;
-	int i;
-	int mi;
-	int mtypes[190];
+	// register: 6
+	register int nd;
+	// register: 7
+	register int i;
+	// register: 2
+	register int mi;
+	// address: 0xFFFFFCF8
+	// size: 0x2F8
+	auto int mtypes[190];
 }
 
 
@@ -13049,31 +15147,39 @@ void start_game__FUi(unsigned int uMsg) {
 // address: 0x800380D4
 void free_game__Fv() {
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 
 
 // address: 0x80038148
 void LittleStart__FUcUc(unsigned char bNewGame, unsigned char bSinglePlayer) {
-	unsigned char fExitProgram;
-	unsigned int uMsg;
+	// address: 0xFFFFFFF0
+	auto unsigned char fExitProgram;
+	// register: 4
+	register unsigned int uMsg;
 }
 
 
 // address: 0x8003820C
 unsigned char StartGame__FUcUc(unsigned char bNewGame, unsigned char bSinglePlayer) {
 	{
-		unsigned char fExitProgram;
-		unsigned int uMsg;
+		// address: 0xFFFFFFE0
+		auto unsigned char fExitProgram;
+		// register: 16
+		register unsigned int uMsg;
 	}
 }
 
 
 // address: 0x8003840C
 void run_game_loop__FUi(unsigned int uMsg) {
-	unsigned long (*saveProc)();
-	struct MSG msg;
+	// register: 18
+	register unsigned long (*saveProc)();
+	// address: 0xFFFFFFD0
+	// size: 0x1C
+	auto struct MSG msg;
 }
 
 
@@ -13094,13 +15200,16 @@ unsigned long GM_Game__FUlUilUl(unsigned long hWnd, unsigned int uMsg, long wPar
 
 // address: 0x80038930
 void LoadLvlGFX__Fv() {
-	char *LoadFile;
+	// register: 16
+	register char *LoadFile;
 }
 
 
 // address: 0x800389E8
 void LoadMegaTiles__FPCc(char *LoadFile) {
-	struct FileIO *MyIo;
+	// register: 16
+	// size: 0x14
+	register struct FileIO *MyIo;
 }
 
 
@@ -13111,43 +15220,58 @@ void LoadAllGFX__Fv() {
 
 // address: 0x80038A98
 void CreateLevel__Fi(int lvldir) {
-	long hnd;
+	// address: 0xFFFFFFF0
+	auto long hnd;
 }
 
 
 // address: 0x80038B90
 void LoCreateLevel__FPv() {
-	int lvldir;
+	// register: 5
+	register int lvldir;
 }
 
 
 // address: 0x80038CF4
 void ClearOutDungeonMap__Fv() {
-	bool istown;
-	unsigned short val;
+	// register: 17
+	register bool istown;
+	// register: 16
+	register unsigned short val;
 	{
-		int x;
+		// register: 6
+		register int x;
 		{
 			{
-				int y;
+				// register: 4
+				register int y;
 				{
-					int y;
-					int x;
+					// register: 7
+					register int y;
+					// register: 6
+					register int x;
 					{
 						{
-							int x;
+							// register: 4
+							register int x;
 							{
-								int y;
-								int x;
+								// register: 5
+								register int y;
+								// register: 6
+								register int x;
 								{
 									{
-										int x;
+										// register: 4
+										register int x;
 										{
-											int y;
-											int x;
+											// register: 5
+											register int y;
+											// register: 6
+											register int x;
 											{
 												{
-													int x;
+													// register: 4
+													register int x;
 												}
 											}
 										}
@@ -13175,13 +15299,17 @@ void AllSolid__Fii(int x, int y) {
 
 // address: 0x80038FD4
 void FillCrapBits__Fv() {
-	struct QuestStruct *qs;
+	// register: 18
+	// size: 0x14
+	register struct QuestStruct *qs;
 	{
 		{
 			{
 				{
-					int x;
-					int y;
+					// register: 16
+					register int x;
+					// register: 17
+					register int y;
 				}
 			}
 		}
@@ -13201,11 +15329,14 @@ void Lrestoreplrpos__Fv() {
 
 // address: 0x80039270
 void LoadGameLevel__FUci(unsigned char firstflag, int lvldir) {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 4
+	register int j;
 	{
 		{
-			unsigned char visited;
+			// register: 6
+			register unsigned char visited;
 		}
 	}
 }
@@ -13224,9 +15355,12 @@ enum GM_SPEEDS GetSpeed__Fv() {
 
 // address: 0x80039BC8
 void game_logic__Fv() {
-	int Frames;
-	int ThisTick;
-	int SinceLast;
+	// register: 17
+	register int Frames;
+	// register: 18
+	register int ThisTick;
+	// register: 16
+	register int SinceLast;
 }
 
 
@@ -13278,14 +15412,16 @@ void DoMemCardFromInGame__Fv() {
 // address: 0x80039F88
 int GetActiveTowner__Fi(int t) {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
 
 // address: 0x80039FDC
 void SetTownerGPtrs__FPUcPPUc(unsigned char *pData, unsigned char **pAnim) {
-	int i;
+	// register: 2
+	register int i;
 }
 
 
@@ -13301,9 +15437,11 @@ void InitTownerInfo__FilUciiici(int i, long w, unsigned char sel, int t, int x, 
 
 // address: 0x8003A1A4
 void InitQstSnds__Fi(int i) {
-	int j;
+	// register: 4
+	register int j;
 	{
-		int quest;
+		// register: 7
+		register int quest;
 	}
 }
 
@@ -13311,7 +15449,8 @@ void InitQstSnds__Fi(int i) {
 // address: 0x8003A264
 void InitSmith__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13319,7 +15458,8 @@ void InitSmith__Fv() {
 // address: 0x8003A394
 void InitBarOwner__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13327,7 +15467,8 @@ void InitBarOwner__Fv() {
 // address: 0x8003A4CC
 void InitTownDead__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13335,7 +15476,8 @@ void InitTownDead__Fv() {
 // address: 0x8003A600
 void InitWitch__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13343,7 +15485,8 @@ void InitWitch__Fv() {
 // address: 0x8003A734
 void InitBarmaid__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13351,7 +15494,8 @@ void InitBarmaid__Fv() {
 // address: 0x8003A868
 void InitBoy__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13359,7 +15503,8 @@ void InitBoy__Fv() {
 // address: 0x8003A9A4
 void InitHealer__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13367,7 +15512,8 @@ void InitHealer__Fv() {
 // address: 0x8003AAD8
 void InitTeller__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
@@ -13375,19 +15521,26 @@ void InitTeller__Fv() {
 // address: 0x8003AC0C
 void InitDrunk__Fv() {
 	{
-		int i;
+		// register: 5
+		register int i;
 	}
 }
 
 
 // address: 0x8003AD40
 void InitCows__Fv() {
-	int i;
-	int x;
-	int y;
-	int d;
-	int x2;
-	int y2;
+	// register: 20
+	register int i;
+	// register: 17
+	register int x;
+	// register: 19
+	register int y;
+	// register: 18
+	register int d;
+	// register: 17
+	register int x2;
+	// register: 2
+	register int y2;
 }
 
 
@@ -13398,7 +15551,8 @@ void InitTowners__Fv() {
 
 // address: 0x8003B064
 void FreeTownerGFX__Fv() {
-	int i;
+	// register: 17
+	register int i;
 	{
 		{
 			{
@@ -13407,7 +15561,8 @@ void FreeTownerGFX__Fv() {
 						{
 							{
 								{
-									void *p__p;
+									// register: 4
+									register void *p__p;
 								}
 							}
 						}
@@ -13421,27 +15576,33 @@ void FreeTownerGFX__Fv() {
 
 // address: 0x8003B108
 void TownCtrlMsg__Fi(int i) {
-	int p;
-	int dx;
-	int dy;
+	// register: 2
+	register int p;
+	// register: 16
+	register int dx;
+	// register: 2
+	register int dy;
 }
 
 
 // address: 0x8003B1F0
 void TownBlackSmith__Fv() {
-	int tidx;
+	// register: 16
+	register int tidx;
 }
 
 
 // address: 0x8003B27C
 void TownBarOwner__Fv() {
-	int tidx;
+	// register: 16
+	register int tidx;
 }
 
 
 // address: 0x8003B318
 void TownDead__Fv() {
-	int tidx;
+	// register: 16
+	register int tidx;
 }
 
 
@@ -13505,8 +15666,11 @@ struct ItemStruct *PlrHasItem__FiiRi(int pnum, int item, int *i) {
 
 // address: 0x8003B83C
 void CowSFX__Fi(int pnum) {
-	int snSFX[3][3];
-	int snLastCowSFX;
+	// address: 0x801112CC
+	// size: 0x24
+	static int snSFX[3][3];
+	// address: 0x8011B818
+	static int snLastCowSFX;
 }
 
 
@@ -13517,10 +15681,15 @@ void TownerTalk__Fii(int first, int t) {
 
 // address: 0x8003B998
 void TalkToTowner__Fii(int p, int t) {
-	int i;
-	int dx;
-	int dy;
-	struct ItemStruct *Item;
+	// address: 0xFFFFFFE0
+	auto int i;
+	// register: 16
+	register int dx;
+	// register: 2
+	register int dy;
+	// register: 17
+	// size: 0x6C
+	register struct ItemStruct *Item;
 	{
 		{
 			{
@@ -13569,14 +15738,16 @@ void stream_update__Fv() {
 // address: 0x8003D160
 void sfx_stop__Fv() {
 	{
-		unsigned long d;
+		// register: 2
+		register unsigned long d;
 	}
 }
 
 
 // address: 0x8003D17C
 void InitMonsterSND__Fi(int monst) {
-	int mtype;
+	// register: 4
+	register int mtype;
 }
 
 
@@ -13587,35 +15758,52 @@ void FreeMonsterSnd__Fv() {
 
 // address: 0x8003D1DC
 unsigned char calc_snd_position__FiiPlT2(int x, int y, long *plVolume, long *plPan) {
-	char Temp[64];
-	long volume;
-	long pan;
-	int scrx;
-	int scry;
-	struct CBlocks *gblocks;
-	struct RECT R;
-	long vol;
+	// address: 0xFFFFFFA0
+	// size: 0x40
+	auto char Temp[64];
+	// register: 4294967295
+	register long volume;
+	// register: 6
+	register long pan;
+	// register: 5
+	register int scrx;
+	// register: 4
+	register int scry;
+	// register: 2
+	// size: 0x108
+	register struct CBlocks *gblocks;
+	// address: 0xFFFFFFE0
+	// size: 0x8
+	auto struct RECT R;
+	// register: 3
+	register long vol;
 }
 
 
 // address: 0x8003D3C4
 void PlaySFX_priv__FP4TSFXUcii(struct TSFX *pSFX, unsigned char loc, int x, int y) {
-	long lPan;
-	long lVolume;
+	// address: 0xFFFFFFEC
+	auto long lPan;
+	// address: 0xFFFFFFE8
+	auto long lVolume;
 }
 
 
 // address: 0x8003D528
 void PlayEffect__Fii(int i, int mode) {
-	int mi;
-	long lPan;
-	long lVolume;
+	// register: 3
+	register int mi;
+	// address: 0xFFFFFFEC
+	auto long lPan;
+	// address: 0xFFFFFFE8
+	auto long lVolume;
 }
 
 
 // address: 0x8003D670
 int RndSFX__Fi(int psfx) {
-	int nRand;
+	// register: 4
+	register int nRand;
 }
 
 
@@ -13631,9 +15819,12 @@ void PlaySfxLoc__Fiii(int psfx, int x, int y) {
 
 // address: 0x8003D830
 void sound_stop__Fv() {
-	int mi;
-	int mode;
-	int nr;
+	// register: 18
+	register int mi;
+	// register: 17
+	register int mode;
+	// register: 16
+	register int nr;
 	{
 		{
 			{
@@ -13663,7 +15854,8 @@ void priv_sound_init__FUc(unsigned char bLoadMask) {
 
 // address: 0x8003D940
 void sound_init__Fv() {
-	unsigned char bLoadMask;
+	// register: 4
+	register unsigned char bLoadMask;
 }
 
 
@@ -13674,9 +15866,12 @@ void stream_fade__Fv() {
 
 // address: 0x8003DA28
 int GetDirection__Fiiii(int x1, int y1, int x2, int y2) {
-	int mx;
-	int my;
-	int md;
+	// register: 6
+	register int mx;
+	// register: 7
+	register int my;
+	// register: 3
+	register int md;
 }
 
 
@@ -13722,21 +15917,25 @@ void Enter__9CCritSect(struct CCritSect *this) {
 
 // address: 0x8003DC44
 void InitDiabloMsg__Fc(char e) {
-	int i;
+	// register: 3
+	register int i;
 }
 
 
 // address: 0x8003DCD8
 void ClrDiabloMsg__Fv() {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
 
 // address: 0x8003DD04
 void DrawDiabloMsg__Fv() {
-	struct RECT MsgBox;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT MsgBox;
 }
 
 
@@ -13747,14 +15946,16 @@ void interface_msg_pump__Fv() {
 
 // address: 0x8003DE40
 void ShowProgress__FUi(unsigned int uMsg) {
-	unsigned long (*saveProc)();
+	// register: 17
+	register unsigned long (*saveProc)();
 }
 
 
 // address: 0x8003E214
 void InitAllItemsUseable__Fv() {
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
@@ -13771,13 +15972,18 @@ unsigned char ItemPlace__Fii(int xp, int yp) {
 
 // address: 0x8003E2F0
 void AddInitItems__Fv() {
-	int j;
+	// register: 22
+	register int j;
 	{
-		int i;
+		// register: 20
+		register int i;
 		{
-			int ii;
-			int xx;
-			int yy;
+			// register: 19
+			register int ii;
+			// register: 18
+			register int xx;
+			// register: 17
+			register int yy;
 		}
 	}
 }
@@ -13785,49 +15991,85 @@ void AddInitItems__Fv() {
 
 // address: 0x8003E4F8
 void InitItems__Fb(bool re_init) {
-	int i;
+	// register: 5
+	register int i;
 }
 
 
 // address: 0x8003E6B0
 void CalcPlrItemVals__FiUc(int p, unsigned char Loadgfx) {
-	int mind;
-	int maxd;
-	int tac;
-	int g;
-	int i;
-	int mi;
-	int bdam;
-	int btohit;
-	int bac;
-	int sadd;
-	int madd;
-	int dadd;
-	int vadd;
-	int fr;
-	int lr;
-	int mr;
-	int dmod;
-	int ghit;
-	int lrad;
-	int ihp;
-	int imana;
-	int spllvladd;
-	int enac;
-	int fmin;
-	int fmax;
-	int lmin;
-	int lmax;
-	long iflgs;
-	unsigned long spl;
-	unsigned long t;
-	struct PlayerStruct *ptrplr;
+	// register: 11
+	register int mind;
+	// register: 10
+	register int maxd;
+	// register: 15
+	register int tac;
+	// register: 5
+	register int g;
+	// address: 0xFFFFFFD0
+	auto int i;
+	// register: 2
+	register int mi;
+	// register: 24
+	register int bdam;
+	// register: 25
+	register int btohit;
+	// address: 0xFFFFFF60
+	auto int bac;
+	// address: 0xFFFFFF68
+	auto int sadd;
+	// register: 19
+	register int madd;
+	// address: 0xFFFFFF70
+	auto int dadd;
+	// register: 18
+	register int vadd;
+	// register: 23
+	register int fr;
+	// register: 30
+	register int lr;
+	// register: 22
+	register int mr;
+	// register: 13
+	register int dmod;
+	// register: 14
+	register int ghit;
+	// register: 17
+	register int lrad;
+	// address: 0xFFFFFF78
+	auto int ihp;
+	// address: 0xFFFFFF80
+	auto int imana;
+	// address: 0xFFFFFF88
+	auto int spllvladd;
+	// address: 0xFFFFFF90
+	auto int enac;
+	// address: 0xFFFFFF98
+	auto int fmin;
+	// address: 0xFFFFFFA0
+	auto int fmax;
+	// address: 0xFFFFFFA8
+	auto int lmin;
+	// address: 0xFFFFFFB0
+	auto int lmax;
+	// address: 0xFFFFFFB8
+	auto long iflgs;
+	// register: 20
+	register unsigned long spl;
+	// register: 6
+	register unsigned long t;
+	// register: 16
+	// size: 0x19E8
+	register struct PlayerStruct *ptrplr;
 	{
 		{
-			struct ItemStruct *itm;
+			// register: 5
+			// size: 0x6C
+			register struct ItemStruct *itm;
 			{
 				{
-					int tmpac;
+					// register: 3
+					register int tmpac;
 				}
 			}
 		}
@@ -13837,8 +16079,10 @@ void CalcPlrItemVals__FiUc(int p, unsigned char Loadgfx) {
 
 // address: 0x8003F130
 void CalcPlrScrolls__Fi(int p) {
-	int i;
-	unsigned long t;
+	// register: 11
+	register int i;
+	// register: 8
+	register unsigned long t;
 }
 
 
@@ -13846,7 +16090,8 @@ void CalcPlrScrolls__Fi(int p) {
 void CalcPlrStaff__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 	{
 		{
-			unsigned long t;
+			// register: 4
+			register unsigned long t;
 		}
 	}
 }
@@ -13854,13 +16099,21 @@ void CalcPlrStaff__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x8003F57C
 void CalcSelfItems__Fi(int pnum) {
-	int i;
-	struct PlayerStruct *p;
-	unsigned char sf;
-	unsigned char changeflag;
-	int sa;
-	int ma;
-	int da;
+	// register: 6
+	register int i;
+	// register: 7
+	// size: 0x19E8
+	register struct PlayerStruct *p;
+	// register: 5
+	register unsigned char sf;
+	// register: 11
+	register unsigned char changeflag;
+	// register: 10
+	register int sa;
+	// register: 9
+	register int ma;
+	// register: 8
+	register int da;
 }
 
 
@@ -13876,16 +16129,23 @@ void SetItemMinStats__FPC12PlayerStructP10ItemStruct(struct PlayerStruct *p, str
 
 // address: 0x8003F754
 void CalcPlrItemMin__Fi(int pnum) {
-	int i;
-	struct ItemStruct *pi;
-	struct PlayerStruct *p;
+	// register: 16
+	register int i;
+	// register: 17
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 19
+	// size: 0x19E8
+	register struct PlayerStruct *p;
 }
 
 
 // address: 0x8003F834
 void CalcPlrBookVals__Fi(int p) {
-	int i;
-	int slvl;
+	// register: 18
+	register int i;
+	// register: 6
+	register int slvl;
 }
 
 
@@ -13896,7 +16156,9 @@ void CalcPlrInv__FiUc(int p, unsigned char Loadgfx) {
 
 // address: 0x8003FBC8
 void SetPlrHandItem__FP10ItemStructi(struct ItemStruct *h, int idata) {
-	struct ItemDataStruct *pAllItem;
+	// register: 17
+	// size: 0x20
+	register struct ItemDataStruct *pAllItem;
 }
 
 
@@ -13907,10 +16169,14 @@ void GetPlrHandSeed__FP10ItemStruct(struct ItemStruct *h) {
 
 // address: 0x8003FD0C
 void GetGoldSeed__FiP10ItemStruct(int pnum, struct ItemStruct *h) {
-	int i;
-	int ii;
-	int s;
-	unsigned char doneflag;
+	// register: 4
+	register int i;
+	// register: 2
+	register int ii;
+	// register: 7
+	register int s;
+	// register: 17
+	register unsigned char doneflag;
 }
 
 
@@ -13926,40 +16192,55 @@ void SetPlrHandGoldCurs__FP10ItemStruct(struct ItemStruct *h) {
 
 // address: 0x8003FEAC
 void CreatePlrItems__Fi(int p) {
-	int i;
-	struct ItemStruct *pi;
+	// register: 3
+	register int i;
+	// register: 2
+	// size: 0x6C
+	register struct ItemStruct *pi;
 }
 
 
 // address: 0x8004040C
 unsigned char ItemSpaceOk__Fii(int i, int j) {
-	int oi;
+	// register: 3
+	register int oi;
 }
 
 
 // address: 0x8004068C
 unsigned char GetItemSpace__Fiic(int x, int y, char inum) {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	int rs;
-	unsigned char savail;
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 5
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 4
+	register int rs;
+	// register: 16
+	register unsigned char savail;
 }
 
 
 // address: 0x800408A4
 void GetSuperItemSpace__Fiic(int x, int y, char inum) {
-	int xx;
-	int yy;
+	// register: 16
+	register int xx;
+	// register: 20
+	register int yy;
 	{
-		int l;
+		// register: 18
+		register int l;
 		{
 			{
-				int j;
+				// register: 21
+				register int j;
 				{
 					{
-						int i;
+						// register: 17
+						register int i;
 					}
 				}
 			}
@@ -13971,13 +16252,16 @@ void GetSuperItemSpace__Fiic(int x, int y, char inum) {
 // address: 0x800409FC
 void GetSuperItemLoc__FiiRiT2(int x, int y, int *xx, int *yy) {
 	{
-		int l;
+		// register: 17
+		register int l;
 		{
 			{
-				int j;
+				// register: 18
+				register int j;
 				{
 					{
-						int i;
+						// register: 16
+						register int i;
 					}
 				}
 			}
@@ -13988,40 +16272,59 @@ void GetSuperItemLoc__FiiRiT2(int x, int y, int *xx, int *yy) {
 
 // address: 0x80040AC4
 void CalcItemValue__Fi(int i) {
-	int v;
+	// register: 4
+	register int v;
 }
 
 
 // address: 0x80040B7C
 void GetBookSpell__Fii(int i, int lvl) {
-	int rv;
-	int s;
-	int bs;
+	// register: 5
+	register int rv;
+	// register: 3
+	register int s;
+	// register: 16
+	register int bs;
 }
 
 
 // address: 0x80040DDC
 void GetStaffPower__FiiiUc(int i, int lvl, int bs, unsigned char onlygood) {
-	int l[256];
-	int nl;
-	int j;
-	int preidx;
-	char istr[128];
-	unsigned char addok;
+	// address: 0xFFFFFB68
+	// size: 0x400
+	auto int l[256];
+	// register: 4
+	register int nl;
+	// register: 6
+	register int j;
+	// register: 17
+	register int preidx;
+	// address: 0xFFFFFF68
+	// size: 0x80
+	auto char istr[128];
+	// register: 2
+	register unsigned char addok;
 }
 
 
 // address: 0x80040FC4
 void GetStaffSpell__FiiUc(int i, int lvl, unsigned char onlygood) {
-	int rv;
-	int s;
-	int l;
-	int bs;
-	int maxc;
-	int minc;
+	// register: 5
+	register int rv;
+	// register: 3
+	register int s;
+	// register: 16
+	register int l;
+	// register: 19
+	register int bs;
+	// register: 4
+	register int maxc;
+	// register: 17
+	register int minc;
 	{
 		{
-			int v;
+			// register: 8
+			register int v;
 		}
 	}
 }
@@ -14029,7 +16332,8 @@ void GetStaffSpell__FiiUc(int i, int lvl, unsigned char onlygood) {
 
 // address: 0x8004129C
 void GetItemAttrs__Fiii(int i, int idata, int lvl) {
-	int rndv;
+	// register: 20
+	register int rndv;
 }
 
 
@@ -14045,22 +16349,35 @@ int PLVal__Fiiiii(int pv, int p1, int p2, int minv, int maxv) {
 
 // address: 0x800418B4
 void SaveItemPower__Fiiiiiii(int i, int power, int param1, int param2, int minval, int maxval, int multval) {
-	int r;
-	int r2;
+	// register: 19
+	register int r;
+	// register: 17
+	register int r2;
 }
 
 
 // address: 0x80042FE4
 void GetItemPower__FiiilUc(int i, int minlvl, int maxlvl, long flgs, int onlygood) {
-	int pre;
-	int post;
-	int l[256];
-	int nl;
-	int j;
-	int preidx;
-	int sufidx;
-	char istr[128];
-	unsigned char goe;
+	// register: 16
+	register int pre;
+	// register: 23
+	register int post;
+	// address: 0xFFFFFB48
+	// size: 0x400
+	auto int l[256];
+	// register: 4
+	register int nl;
+	// register: 7
+	register int j;
+	// register: 20
+	register int preidx;
+	// register: 30
+	register int sufidx;
+	// address: 0xFFFFFF48
+	// size: 0x80
+	auto char istr[128];
+	// register: 21
+	register unsigned char goe;
 }
 
 
@@ -14071,64 +16388,92 @@ void GetItemBonus__FiiiiUc(int i, int idata, int minlvl, int maxlvl, int onlygoo
 
 // address: 0x80043530
 void SetupItem__Fi(int i) {
-	int it;
+	// register: 2
+	register int it;
 }
 
 
 // address: 0x80043660
 int RndItem__Fi(int m) {
-	int ril[512];
-	int ri;
-	int i;
+	// address: 0xFFFFF7F8
+	// size: 0x800
+	auto int ril[512];
+	// register: 4
+	register int ri;
+	// register: 8
+	register int i;
 }
 
 
 // address: 0x80043894
 int RndUItem__Fi(int m) {
-	int ril[512];
-	int ri;
-	int i;
-	unsigned char okflag;
+	// address: 0xFFFFF7F8
+	// size: 0x800
+	auto int ril[512];
+	// register: 8
+	register int ri;
+	// register: 9
+	register int i;
+	// register: 5
+	register unsigned char okflag;
 }
 
 
 // address: 0x80043ADC
 int RndAllItems__Fv() {
-	int ril[512];
-	int ri;
-	int i;
+	// address: 0xFFFFF7F8
+	// size: 0x800
+	auto int ril[512];
+	// register: 4
+	register int ri;
+	// register: 7
+	register int i;
 }
 
 
 // address: 0x80043C40
 int RndTypeItems__Fii(int itype, int imid) {
-	int ril[512];
-	int ri;
-	int i;
-	unsigned char okflag;
+	// address: 0xFFFFF7F8
+	// size: 0x800
+	auto int ril[512];
+	// register: 4
+	register int ri;
+	// register: 8
+	register int i;
+	// register: 7
+	register unsigned char okflag;
 }
 
 
 // address: 0x80043DB0
 int CheckUnique__FiiiUc(int i, int lvl, int uper, unsigned char recreate) {
-	int j;
-	int idata;
-	unsigned char uok[128];
-	int numu;
+	// register: 4
+	register int j;
+	// register: 2
+	register int idata;
+	// address: 0xFFFFFF68
+	// size: 0x80
+	auto unsigned char uok[128];
+	// register: 16
+	register int numu;
 }
 
 
 // address: 0x80043F54
 void GetUniqueItem__Fii(int i, int _uid) {
-	long uid;
-	long OUid;
+	// register: 17
+	register long uid;
+	// register: 22
+	register long OUid;
 }
 
 
 // address: 0x800442B4
 void SpawnUnique__Fiii(int uid, int x, int y) {
-	int ii;
-	int itype;
+	// register: 17
+	register int ii;
+	// register: 7
+	register int itype;
 }
 
 
@@ -14139,50 +16484,64 @@ void ItemRndDur__Fi(int ii) {
 
 // address: 0x80044490
 void SetupAllItems__FiiiiiUcUcUc(int ii, int idx, int _iseed, int lvl, int uper, int onlygood, int recreate, int pregen) {
-	int iblvl;
-	int uid;
-	int iseed;
+	// register: 16
+	register int iblvl;
+	// register: 5
+	register int uid;
+	// register: 20
+	register int iseed;
 }
 
 
 // address: 0x800447C8
 void SpawnItem__FiiiUc(int m, int x, int y, unsigned char sendmsg) {
-	int ii;
-	int idx;
-	unsigned char onlygood;
+	// register: 19
+	register int ii;
+	// register: 17
+	register int idx;
+	// register: 21
+	register unsigned char onlygood;
 }
 
 
 // address: 0x80044A20
 void CreateItem__Fiii(int uid, int x, int y) {
-	int ii;
-	int idx;
+	// register: 17
+	register int ii;
+	// register: 7
+	register int idx;
 }
 
 
 // address: 0x80044BD8
 void CreateRndItem__FiiUcUcUc(int x, int y, unsigned char onlygood, unsigned char sendmsg, int delta) {
-	int ii;
-	int idx;
+	// register: 17
+	register int ii;
+	// register: 18
+	register int idx;
 }
 
 
 // address: 0x80044D20
 void SetupAllUseful__Fiii(int ii, int iseed, int lvl) {
-	int idx;
+	// register: 16
+	register int idx;
 }
 
 
 // address: 0x80044E04
 void CreateRndUseful__FiiiUc(int pnum, int x, int y, unsigned char sendmsg) {
-	int ii;
+	// register: 17
+	register int ii;
 }
 
 
 // address: 0x80044EC4
 void CreateTypeItem__FiiUciiUcUc(int x, int y, unsigned char onlygood, int itype, int imisc, int sendmsg, int delta) {
-	int ii;
-	int idx;
+	// register: 17
+	register int ii;
+	// register: 18
+	register int idx;
 }
 
 
@@ -14193,12 +16552,16 @@ void RecreateEar__FiUsiUciiiiii(int ii, unsigned short ic, int iseed, unsigned c
 
 // address: 0x80045208
 void SpawnQuestItem__Fiiiii(int itemid, int x, int y, int randarea, int selflag) {
-	int i;
-	int j;
-	unsigned char failed;
+	// register: 18
+	register int i;
+	// register: 16
+	register int j;
+	// register: 3
+	register unsigned char failed;
 	{
 		{
-			int tries;
+			// register: 21
+			register int tries;
 		}
 	}
 }
@@ -14206,17 +16569,23 @@ void SpawnQuestItem__Fiiiii(int itemid, int x, int y, int randarea, int selflag)
 
 // address: 0x80045454
 void SpawnRock__Fv() {
-	int i;
-	int ii;
-	int ostand;
-	int xx;
-	unsigned char done;
+	// register: 3
+	register int i;
+	// register: 17
+	register int ii;
+	// register: 5
+	register int ostand;
+	// register: 5
+	register int xx;
+	// register: 4
+	register unsigned char done;
 }
 
 
 // address: 0x80045600
 void RespawnItem__FiUc(int i, unsigned char FlipFlag) {
-	int it;
+	// register: 7
+	register int it;
 }
 
 
@@ -14227,21 +16596,29 @@ void DeleteItem__Fii(int ii, int i) {
 
 // address: 0x8004580C
 void ItemDoppel__Fv() {
-	int idoppelx;
-	struct ItemStruct *i;
+	// register: 4
+	register int idoppelx;
+	// register: 3
+	// size: 0x6C
+	register struct ItemStruct *i;
 }
 
 
 // address: 0x800458CC
 void ProcessItems__Fv() {
-	int i;
-	int ii;
-	int numitemslist;
-	int count;
+	// register: 19
+	register int i;
+	// register: 5
+	register int ii;
+	// register: 20
+	register int numitemslist;
+	// register: 4
+	register int count;
 	{
 		{
 			{
-				int j;
+				// register: 3
+				register int j;
 				{
 					{
 						{
@@ -14250,7 +16627,8 @@ void ProcessItems__Fv() {
 									{
 										{
 											{
-												int it;
+												// register: 2
+												register int it;
 											}
 										}
 									}
@@ -14275,7 +16653,8 @@ void GetItemStr__Fi(int i) {
 	{
 		{
 			{
-				int nGold;
+				// register: 17
+				register int nGold;
 			}
 		}
 	}
@@ -14284,22 +16663,32 @@ void GetItemStr__Fi(int i) {
 
 // address: 0x80045D20
 void CheckIdentify__Fii(int pnum, int cii) {
-	struct ItemStruct *pi;
-	struct PlayerStruct *p;
+	// register: 3
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 2
+	// size: 0x19E8
+	register struct PlayerStruct *p;
 }
 
 
 // address: 0x80045E1C
 void RepairItem__FP10ItemStructi(struct ItemStruct *i, int lvl) {
-	int d;
-	int rep;
+	// register: 5
+	register int d;
+	// register: 17
+	register int rep;
 }
 
 
 // address: 0x80045F0C
 void DoRepair__Fii(int pnum, int cii) {
-	struct PlayerStruct *p;
-	struct ItemStruct *pi;
+	// register: 18
+	// size: 0x19E8
+	register struct PlayerStruct *p;
+	// register: 4
+	// size: 0x6C
+	register struct ItemStruct *pi;
 }
 
 
@@ -14310,11 +16699,16 @@ void RechargeItem__FP10ItemStructi(struct ItemStruct *i, int r) {
 
 // address: 0x80046038
 void DoRecharge__Fii(int pnum, int cii) {
-	struct PlayerStruct *p;
-	struct ItemStruct *pi;
+	// register: 18
+	// size: 0x19E8
+	register struct PlayerStruct *p;
+	// register: 16
+	// size: 0x6C
+	register struct ItemStruct *pi;
 	{
 		{
-			int r;
+			// register: 4
+			register int r;
 		}
 	}
 }
@@ -14322,14 +16716,17 @@ void DoRecharge__Fii(int pnum, int cii) {
 
 // address: 0x8004615C
 void PrintItemOil__Fc(char IDidx) {
-	int StrVal;
+	// register: 3
+	register int StrVal;
 }
 
 
 // address: 0x80046258
 void PrintItemPower__FcPC10ItemStruct(char plidx, struct ItemStruct *x) {
-	int v;
-	char *tstr;
+	// register: 16
+	register int v;
+	// register: 17
+	register char *tstr;
 }
 
 
@@ -14344,14 +16741,17 @@ void PrintItemDetails__FPC10ItemStruct(struct ItemStruct *x) {
 		{
 			{
 				{
-					char tsrt[40];
+					// address: 0xFFFFFFC0
+					// size: 0x28
+					auto char tsrt[40];
 					{
 						{
 							{
 								{
 									{
 										{
-											char *tstr;
+											// register: 2
+											register char *tstr;
 										}
 									}
 								}
@@ -14371,7 +16771,9 @@ void PrintItemDur__FPC10ItemStruct(struct ItemStruct *x) {
 		{
 			{
 				{
-					char tsrt[40];
+					// address: 0xFFFFFFC0
+					// size: 0x28
+					auto char tsrt[40];
 				}
 			}
 		}
@@ -14381,11 +16783,15 @@ void PrintItemDur__FPC10ItemStruct(struct ItemStruct *x) {
 
 // address: 0x80047464
 void CastScroll__Fii(int pnum, int Spell) {
-	struct PlayerStruct *ptrplr;
+	// register: 17
+	// size: 0x19E8
+	register struct PlayerStruct *ptrplr;
 	{
 		{
-			int dx;
-			int dy;
+			// register: 6
+			register int dx;
+			// register: 7
+			register int dy;
 		}
 	}
 }
@@ -14393,49 +16799,65 @@ void CastScroll__Fii(int pnum, int Spell) {
 
 // address: 0x800476F0
 void UseItem__Fiii(int p, int Mid, int spl) {
-	long l;
-	unsigned long t;
-	struct PlayerStruct *ptrplr;
+	// register: 16
+	register long l;
+	// register: 4
+	register unsigned long t;
+	// register: 17
+	// size: 0x19E8
+	register struct PlayerStruct *ptrplr;
 }
 
 
 // address: 0x80047D04
 unsigned char StoreStatOk__FP10ItemStruct(struct ItemStruct *h) {
-	unsigned char sf;
+	// register: 5
+	register unsigned char sf;
 }
 
 
 // address: 0x80047D98
 unsigned char PremiumItemOk__Fi(int i) {
-	unsigned char rv;
+	// register: 3
+	register unsigned char rv;
 }
 
 
 // address: 0x80047E14
 int RndPremiumItem__Fii(int minlvl, int maxlvl) {
-	int ril[512];
-	int ri;
-	int i;
+	// address: 0xFFFFF7E0
+	// size: 0x800
+	auto int ril[512];
+	// register: 19
+	register int ri;
+	// register: 17
+	register int i;
 }
 
 
 // address: 0x80047F18
 void SpawnOnePremium__Fii(int i, int plvl) {
-	int itype;
-	int maxval;
-	struct ItemStruct holditem;
+	// register: 16
+	register int itype;
+	// register: 20
+	register int maxval;
+	// address: 0xFFFFFF78
+	// size: 0x6C
+	auto struct ItemStruct holditem;
 }
 
 
 // address: 0x8004820C
 void SpawnPremium__Fi(int lvl) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x800485AC
 void WitchBookLevel__Fi(int ii) {
-	int slvl;
+	// register: 6
+	register int slvl;
 }
 
 
@@ -14446,88 +16868,122 @@ void SpawnStoreGold__Fv() {
 
 // address: 0x80048858
 void RecalcStoreStats__Fv() {
-	int i;
+	// register: 17
+	register int i;
 }
 
 
 // address: 0x80048B3C
 int ItemNoFlippy__Fv() {
-	int r;
+	// register: 2
+	register int r;
 }
 
 
 // address: 0x80048BA0
 void CreateSpellBook__FiiiUcUc(int x, int y, int ispell, unsigned char sendmsg, int delta) {
-	int ii;
-	int idx;
-	unsigned char done;
+	// register: 17
+	register int ii;
+	// register: 22
+	register int idx;
+	// register: 19
+	register unsigned char done;
 }
 
 
 // address: 0x80048D30
 void CreateMagicArmor__FiiiiUcUc(int x, int y, int imisc, int icurs, int sendmsg, int delta) {
-	int ii;
-	int idx;
-	unsigned char done;
+	// register: 17
+	register int ii;
+	// register: 16
+	register int idx;
+	// register: 18
+	register unsigned char done;
 }
 
 
 // address: 0x80048EAC
 void CreateMagicWeapon__FiiiiUcUc(int x, int y, int imisc, int icurs, int sendmsg, int delta) {
-	int ii;
-	int idx;
-	unsigned char done;
+	// register: 17
+	register int ii;
+	// register: 16
+	register int idx;
+	// register: 18
+	register unsigned char done;
 }
 
 
 // address: 0x80049028
 void DrawUniqueInfo__Fv() {
-	int u;
+	// register: 3
+	register int u;
 }
 
 
 // address: 0x80049198
 char *MakeItemStr__FP10ItemStructUsUs(struct ItemStruct *ItemPtr, unsigned short ItemNo, unsigned short MaxLen) {
-	int PreIdx;
-	int SufIdx;
-	char PreStr[64];
-	char ItemStr[64];
-	char SufStr[64];
-	char ltstr[64];
+	// register: 3
+	register int PreIdx;
+	// register: 17
+	register int SufIdx;
+	// address: 0xFFFFFEE8
+	// size: 0x40
+	auto char PreStr[64];
+	// address: 0xFFFFFF28
+	// size: 0x40
+	auto char ItemStr[64];
+	// address: 0xFFFFFF68
+	// size: 0x40
+	auto char SufStr[64];
+	// address: 0xFFFFFFA8
+	// size: 0x40
+	auto char ltstr[64];
 }
 
 
 // address: 0x80049608
 unsigned char SmithItemOk__Fi(int i) {
-	unsigned char rv;
+	// register: 3
+	register unsigned char rv;
 }
 
 
 // address: 0x8004966C
 int RndSmithItem__Fi(int lvl) {
-	int ril[512];
-	int ri;
-	int i;
+	// address: 0xFFFFF7E0
+	// size: 0x800
+	auto int ril[512];
+	// register: 19
+	register int ri;
+	// register: 18
+	register int i;
 }
 
 
 // address: 0x80049774
 unsigned char WitchItemOk__Fi(int i) {
-	unsigned char rv;
+	// register: 5
+	register unsigned char rv;
 }
 
 
 // address: 0x80049804
 int RndWitchItem__Fi(int lvl) {
-	int ril[512];
-	int ri;
-	int i;
-	int pi;
+	// address: 0xFFFFF7E0
+	// size: 0x800
+	auto int ril[512];
+	// register: 19
+	register int ri;
+	// register: 16
+	register int i;
+	// register: 20
+	register int pi;
 	{
 		{
 			{
 				{
-					int is;
+					// register: 4
+					register int is;
 				}
 			}
 		}
@@ -14537,43 +16993,58 @@ int RndWitchItem__Fi(int lvl) {
 
 // address: 0x800499B0
 void BubbleSwapItem__FP10ItemStructT0(struct ItemStruct *a, struct ItemStruct *b) {
-	struct ItemStruct h;
+	// address: 0xFFFFFF90
+	// size: 0x6C
+	auto struct ItemStruct h;
 }
 
 
 // address: 0x80049AB8
 void SortWitch__Fv() {
-	int j;
-	int k;
-	unsigned char sorted;
+	// register: 4
+	register int j;
+	// register: 17
+	register int k;
+	// register: 5
+	register unsigned char sorted;
 }
 
 
 // address: 0x80049C48
 int RndBoyItem__Fi(int lvl) {
-	int ril[512];
-	int ri;
-	int i;
+	// address: 0xFFFFF7E0
+	// size: 0x800
+	auto int ril[512];
+	// register: 19
+	register int ri;
+	// register: 17
+	register int i;
 }
 
 
 // address: 0x80049D64
 unsigned char HealerItemOk__Fi(int i) {
-	unsigned char rv;
+	// register: 6
+	register unsigned char rv;
 }
 
 
 // address: 0x80049F18
 int RndHealerItem__Fi(int lvl) {
-	int ril[512];
-	int ri;
-	int i;
+	// address: 0xFFFFF7E0
+	// size: 0x800
+	auto int ril[512];
+	// register: 19
+	register int ri;
+	// register: 17
+	register int i;
 }
 
 
 // address: 0x8004A014
 void RecreatePremiumItem__Fiiii(int ii, int idx, int plvl, int iseed) {
-	int itype;
+	// register: 17
+	register int itype;
 }
 
 
@@ -14581,8 +17052,10 @@ void RecreatePremiumItem__Fiiii(int ii, int idx, int plvl, int iseed) {
 void RecreateWitchItem__Fiiii(int ii, int idx, int lvl, int iseed) {
 	{
 		{
-			int itype;
-			int iblvl;
+			// register: 19
+			register int itype;
+			// register: 17
+			register int iblvl;
 		}
 	}
 }
@@ -14604,7 +17077,8 @@ void RecreateHealerItem__Fiiii(int ii, int idx, int lvl, int iseed) {
 
 // address: 0x8004A3DC
 void RecreateBoyItem__Fiiii(int ii, int idx, int lvl, int iseed) {
-	int itype;
+	// register: 17
+	register int itype;
 }
 
 
@@ -14615,75 +17089,108 @@ void RecreateTownItem__FiiUsii(int ii, int idx, unsigned short icreateinfo, int 
 
 // address: 0x8004A540
 void SpawnSmith__Fi(int lvl) {
-	int i;
-	int nsi;
-	struct ItemStruct holditem;
+	// register: 16
+	register int i;
+	// register: 19
+	register int nsi;
+	// address: 0xFFFFFF68
+	// size: 0x6C
+	auto struct ItemStruct holditem;
 }
 
 
 // address: 0x8004A86C
 void SpawnWitch__Fi(int lvl) {
-	int itype;
-	int iblvl;
-	int i;
-	int nsi;
-	struct ItemStruct holditem;
+	// register: 17
+	register int itype;
+	// register: 16
+	register int iblvl;
+	// register: 18
+	register int i;
+	// register: 21
+	register int nsi;
+	// address: 0xFFFFFF68
+	// size: 0x6C
+	auto struct ItemStruct holditem;
 }
 
 
 // address: 0x8004AE5C
 void SpawnHealer__Fi(int lvl) {
-	int i;
-	int nsi;
-	int srnd;
-	struct ItemStruct holditem;
+	// register: 4
+	register int i;
+	// register: 17
+	register int nsi;
+	// register: 16
+	register int srnd;
+	// address: 0xFFFFFF70
+	// size: 0x6C
+	auto struct ItemStruct holditem;
 }
 
 
 // address: 0x8004B3FC
 void SpawnBoy__Fi(int lvl) {
-	int itype;
-	struct ItemStruct holditem;
+	// register: 16
+	register int itype;
+	// address: 0xFFFFFF78
+	// size: 0x6C
+	auto struct ItemStruct holditem;
 }
 
 
 // address: 0x8004B700
 void SortSmith__Fv() {
-	int j;
-	int k;
-	unsigned char sorted;
+	// register: 4
+	register int j;
+	// register: 17
+	register int k;
+	// register: 5
+	register unsigned char sorted;
 }
 
 
 // address: 0x8004B884
 void SortHealer__Fv() {
-	int j;
-	int k;
-	unsigned char sorted;
+	// register: 4
+	register int j;
+	// register: 17
+	register int k;
+	// register: 5
+	register unsigned char sorted;
 }
 
 
 // address: 0x8004BA14
 void RecreateItem__FiiUsiii(int ii, int idx, unsigned short icreateinfo, int iseed, int ivalue, int PlrCreate) {
-	int OldFePlayerNo;
-	int uper;
-	unsigned char onlygood;
-	unsigned char uavail;
-	unsigned char pregen;
+	// register: 21
+	register int OldFePlayerNo;
+	// register: 3
+	register int uper;
+	// register: 9
+	register unsigned char onlygood;
+	// register: 10
+	register unsigned char uavail;
+	// register: 11
+	register unsigned char pregen;
 }
 
 
 // address: 0x8004BC68
 int veclen2__Fii(int ix, int iy) {
-	int t;
+	// register: 4
+	register int t;
 }
 
 
 // address: 0x8004BCD0
 void set_light_bands__Fv() {
-	int v;
-	int y;
-	unsigned char *l;
+	// register: 3
+	register int v;
+	// register: 5
+	register int y;
+	// register: 4
+	register unsigned char *l;
 }
 
 
@@ -14699,74 +17206,127 @@ void SetWeirdFX__Fv() {
 
 // address: 0x8004BE20
 void DoLighting__Fiiii(int nXPos, int nYPos, int nRadius, int Lnum) {
-	int xoff;
-	int yoff;
-	int x;
-	int y;
-	int v;
-	int colour_mask;
-	int shift_mask;
-	int shake;
-	int light_x;
-	int light_y;
-	int block_x;
-	int block_y;
-	int dist_y;
-	int max_x;
-	int mult;
-	int mult_st;
-	int radius_block;
-	int scr_x;
-	int scr_y;
-	int temp_x;
-	int temp_y;
-	int weirdy;
-	int cont;
+	// register: 9
+	register int xoff;
+	// register: 10
+	register int yoff;
+	// register: 20
+	register int x;
+	// register: 30
+	register int y;
+	// register: 3
+	register int v;
+	// register: 22
+	register int colour_mask;
+	// register: 17
+	register int shift_mask;
+	// register: 12
+	register int shake;
+	// address: 0xFFFFFFA8
+	auto int light_x;
+	// address: 0xFFFFFFB0
+	auto int light_y;
+	// address: 0xFFFFFFB8
+	auto int block_x;
+	// register: 9
+	register int block_y;
+	// register: 23
+	register int dist_y;
+	// register: 11
+	register int max_x;
+	// register: 5
+	register int mult;
+	// register: 7
+	register int mult_st;
+	// register: 21
+	register int radius_block;
+	// register: 7
+	register int scr_x;
+	// register: 8
+	register int scr_y;
+	// register: 6
+	register int temp_x;
+	// register: 5
+	register int temp_y;
+	// register: 18
+	register int weirdy;
+	// register: 11
+	register int cont;
 }
 
 
 // address: 0x8004CAF4
 void DoUnLight__Fv() {
-	int x;
-	int y;
-	int max_x;
-	int max_y;
-	int nXPos;
-	int nYPos;
-	unsigned char *r;
-	unsigned char *g;
-	unsigned char *b;
-	int radius_block_x;
-	int radius_block_y;
+	// register: 9
+	register int x;
+	// register: 3
+	register int y;
+	// register: 16
+	register int max_x;
+	// register: 15
+	register int max_y;
+	// register: 13
+	register int nXPos;
+	// register: 14
+	register int nYPos;
+	// register: 7
+	register unsigned char *r;
+	// register: 6
+	register unsigned char *g;
+	// register: 5
+	register unsigned char *b;
+	// register: 24
+	register int radius_block_x;
+	// register: 25
+	register int radius_block_y;
 }
 
 
 // address: 0x8004CD38
 void DoUnVision__Fiiii(int nXPos, int nYPos, int nRadius, int num) {
-	int i;
-	int j;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int vis_flag;
+	// register: 9
+	register int i;
+	// register: 3
+	register int j;
+	// register: 3
+	register int x1;
+	// register: 12
+	register int y1;
+	// register: 4
+	register int x2;
+	// register: 5
+	register int y2;
+	// register: 7
+	register int vis_flag;
 }
 
 
 // address: 0x8004CE40
 void DoVision__FiiiUcUc(int nXPos, int nYPos, int nRadius, unsigned char doautomap, int visible) {
-	int nCrawlX;
-	int nCrawlY;
-	int nLineLen;
-	int nBlockerFlag;
-	int j;
-	int k;
-	int v;
-	int x1adj;
-	int x2adj;
-	int y1adj;
-	int y2adj;
-	int vis_flag;
+	// register: 18
+	register int nCrawlX;
+	// register: 19
+	register int nCrawlY;
+	// address: 0xFFFFFFA0
+	auto int nLineLen;
+	// register: 6
+	register int nBlockerFlag;
+	// address: 0xFFFFFFA8
+	auto int j;
+	// register: 30
+	register int k;
+	// register: 3
+	register int v;
+	// register: 21
+	register int x1adj;
+	// register: 23
+	register int x2adj;
+	// register: 20
+	register int y1adj;
+	// register: 22
+	register int y2adj;
+	// address: 0xFFFFFFB0
+	auto int vis_flag;
 }
 
 
@@ -14792,14 +17352,18 @@ void InitLightMax__Fv() {
 
 // address: 0x8004D2A4
 void InitLighting__Fv() {
-	int i;
+	// register: 2
+	register int i;
 }
 
 
 // address: 0x8004D2E8
 int AddLight__Fiii(int x, int y, int r) {
-	int lid;
-	struct LightListStruct2 *ll;
+	// register: 7
+	register int lid;
+	// register: 2
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
 
@@ -14815,7 +17379,9 @@ void ChangeLightRadius__Fii(int i, int r) {
 
 // address: 0x8004D384
 void ChangeLightXY__Fiii(int i, int x, int y) {
-	struct LightListStruct2 *ll;
+	// register: 3
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
 
@@ -14826,28 +17392,39 @@ void light_fix__Fi(int i) {
 
 // address: 0x8004D3B8
 void ChangeLightOff__Fiii(int i, int x, int y) {
-	struct LightListStruct2 *ll;
+	// register: 2
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
 
 // address: 0x8004D3E0
 void ChangeLight__Fiiii(int i, int x, int y, int r) {
-	struct LightListStruct2 *ll;
+	// register: 2
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
 
 // address: 0x8004D40C
 void ChangeLightColour__Fii(int i, int c) {
-	struct LightListStruct2 *ll;
+	// register: 4
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
 
 // address: 0x8004D434
 void ProcessLightList__Fv() {
-	int i;
-	int j;
-	unsigned char temp;
-	struct LightListStruct2 *ll;
+	// register: 7
+	register int i;
+	// register: 16
+	register int j;
+	// register: 4
+	register unsigned char temp;
+	// register: 3
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
 
@@ -14858,16 +17435,20 @@ void SavePreLighting__Fv() {
 
 // address: 0x8004D554
 void InitVision__Fv() {
-	int i;
+	// register: 4
+	register int i;
 }
 
 
 // address: 0x8004D5A8
 int AddVision__FiiiUc(int x, int y, int r, unsigned char mine) {
-	int vid;
+	// register: 8
+	register int vid;
 	{
 		{
-			struct LightListStruct *vl;
+			// register: 2
+			// size: 0xE
+			register struct LightListStruct *vl;
 		}
 	}
 }
@@ -14875,22 +17456,30 @@ int AddVision__FiiiUc(int x, int y, int r, unsigned char mine) {
 
 // address: 0x8004D61C
 void ChangeVisionRadius__Fii(int id, int r) {
-	int i;
+	// register: 8
+	register int i;
 }
 
 
 // address: 0x8004D6D0
 void ChangeVisionXY__Fiii(int id, int x, int y) {
-	int i;
-	struct LightListStruct *vl;
+	// register: 9
+	register int i;
+	// register: 8
+	// size: 0xE
+	register struct LightListStruct *vl;
 }
 
 
 // address: 0x8004D754
 void ProcessVisionList__Fv() {
-	int i;
-	unsigned char delflag;
-	struct LightListStruct *vl;
+	// register: 17
+	register int i;
+	// register: 4
+	register unsigned char delflag;
+	// register: 18
+	// size: 0xE
+	register struct LightListStruct *vl;
 }
 
 
@@ -14906,15 +17495,26 @@ void InitQuestText__Fv() {
 
 // address: 0x8004D970
 void CalcTextSpeed__FPCc(char *Name) {
-	char *ptr;
-	char SpeechName[16];
-	unsigned long SfxFrames;
-	unsigned long TextHeight;
+	// register: 17
+	register char *ptr;
+	// address: 0xFFFFFFD0
+	// size: 0x10
+	auto char SpeechName[16];
+	// register: 16
+	register unsigned long SfxFrames;
+	// register: 3
+	register unsigned long TextHeight;
 	{
 		{
-			enum LANG_TYPE Lang;
-			char Prefix[2];
-			struct RECT Window;
+			// register: 3
+			// size: 0x4
+			register enum LANG_TYPE Lang;
+			// address: 0xFFFFFFE0
+			// size: 0x2
+			auto char Prefix[2];
+			// address: 0xFFFFFFE8
+			// size: 0x8
+			auto struct RECT Window;
 		}
 	}
 }
@@ -14922,17 +17522,21 @@ void CalcTextSpeed__FPCc(char *Name) {
 
 // address: 0x8004DB2C
 void FadeMusicTSK__FP4TASK(struct TASK *T) {
-	long MusicVolume;
+	// register: 16
+	register long MusicVolume;
 }
 
 
 // address: 0x8004DC78
 void InitQTextMsg__Fi(int m) {
 	{
-		int i;
+		// register: 16
+		register int i;
 		{
 			{
-				struct DEF_ARGS *args;
+				// register: 3
+				// size: 0x10
+				register struct DEF_ARGS *args;
 			}
 		}
 	}
@@ -14945,9 +17549,14 @@ void DrawQTextBack__Fv() {
 		{
 			{
 				{
-					char BookName[80];
-					struct RECT ClipRect;
-					int oldot;
+					// address: 0xFFFFFF98
+					// size: 0x50
+					auto char BookName[80];
+					// address: 0xFFFFFFE8
+					// size: 0x8
+					auto struct RECT ClipRect;
+					// register: 17
+					register int oldot;
 				}
 			}
 		}
@@ -14957,49 +17566,75 @@ void DrawQTextBack__Fv() {
 
 // address: 0x8004E068
 void DrawQTextTSK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *args;
-	int pnum;
-	char Name[14];
-	char stextflagsave;
+	// register: 16
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 17
+	register int pnum;
+	// address: 0xFFFFFFE0
+	// size: 0xE
+	auto char Name[14];
+	// register: 18
+	register char stextflagsave;
 }
 
 
 // address: 0x8004E350
 int KANJI_strlen__FPc(char *str) {
-	int l;
+	// register: 5
+	register int l;
 }
 
 
 // address: 0x8004E390
 void DrawQText__Fv() {
-	char *p;
-	char *pnl;
-	char *SpacePtr;
-	int ty;
-	int l;
-	unsigned char doneflag;
-	struct RECT ClipRect;
-	unsigned long currTime;
-	int LetterCount;
-	int KanjiCount;
-	char *t;
-	int textot;
-	int OldDOt;
-	int OldOt;
-	int TextYSize;
+	// register: 17
+	register char *p;
+	// register: 30
+	register char *pnl;
+	// register: 21
+	register char *SpacePtr;
+	// register: 22
+	register int ty;
+	// register: 18
+	register int l;
+	// register: 23
+	register unsigned char doneflag;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT ClipRect;
+	// register: 4
+	register unsigned long currTime;
+	// register: 19
+	register int LetterCount;
+	// register: 20
+	register int KanjiCount;
+	// register: 16
+	register char *t;
+	// register: 16
+	register int textot;
+	// register: 16
+	register int OldDOt;
+	// address: 0xFFFFFFC8
+	auto int OldOt;
+	// register: 3
+	register int TextYSize;
 	{
 		{
 			{
 				{
 					{
-						int diff;
+						// register: 3
+						register int diff;
 						{
 							{
-								int diff;
+								// register: 3
+								register int diff;
 								{
 									{
 										{
-											int diff;
+											// register: 3
+											register int diff;
 										}
 									}
 								}
@@ -15071,26 +17706,40 @@ void delta_init__Fv() {
 
 // address: 0x8004EAF4
 void delta_kill_monster__FiUcUcUc(int mi, unsigned char x, unsigned char y, unsigned char bLevel) {
-	struct DMonsterStr *p;
-	struct DLevel *Dl;
+	// register: 5
+	// size: 0x8
+	register struct DMonsterStr *p;
+	// register: 2
+	// size: 0x1258
+	register struct DLevel *Dl;
 }
 
 
 // address: 0x8004EB90
 void delta_monster_hp__FilUc(int mi, long hp, unsigned char bLevel) {
-	struct DMonsterStr *p;
-	struct DLevel *Dl;
+	// register: 3
+	// size: 0x8
+	register struct DMonsterStr *p;
+	// register: 4
+	// size: 0x1258
+	register struct DLevel *Dl;
 }
 
 
 // address: 0x8004EC0C
 void delta_leave_sync__FUc(unsigned char bLevel) {
-	struct DLevel *Dl;
+	// register: 20
+	// size: 0x1258
+	register struct DLevel *Dl;
 	{
-		int i;
+		// register: 19
+		register int i;
 		{
-			int ii;
-			struct DMonsterStr *pD;
+			// register: 4
+			register int ii;
+			// register: 16
+			// size: 0x8
+			register struct DMonsterStr *pD;
 		}
 	}
 }
@@ -15098,24 +17747,38 @@ void delta_leave_sync__FUc(unsigned char bLevel) {
 
 // address: 0x8004EF38
 void delta_sync_object__FiUcUc(int oi, unsigned char bCmd, unsigned char bLevel) {
-	struct DLevel *Dl;
-	struct DObjectStr *p;
+	// register: 2
+	// size: 0x1258
+	register struct DLevel *Dl;
+	// register: 2
+	// size: 0x1
+	register struct DObjectStr *p;
 }
 
 
 // address: 0x8004EF98
 unsigned char delta_get_item__FPC9TCmdGItemUc(struct TCmdGItem *pI, unsigned char bLevel) {
-	struct DLevel *Dl;
-	struct TCmdPItem *pD;
-	int i;
+	// register: 4
+	// size: 0x1258
+	register struct DLevel *Dl;
+	// register: 24
+	// size: 0x18
+	register struct TCmdPItem *pD;
+	// register: 7
+	register int i;
 }
 
 
 // address: 0x8004F164
 void delta_put_item__FPC9TCmdPItemiiUc(struct TCmdPItem *pI, int x, int y, unsigned char bLevel) {
-	struct DLevel *Dl;
-	struct TCmdPItem *pD;
-	int i;
+	// register: 9
+	// size: 0x1258
+	register struct DLevel *Dl;
+	// register: 7
+	// size: 0x18
+	register struct TCmdPItem *pD;
+	// register: 8
+	register int i;
 }
 
 
@@ -15131,10 +17794,17 @@ unsigned char delta_quest_inited__Fi(int i) {
 
 // address: 0x8004F338
 void DeltaAddItem__Fi(int ii) {
-	struct TCmdPItem *pD;
-	struct TCmdPItem *OpD;
-	struct DLevel *Dl;
-	int i;
+	// register: 7
+	// size: 0x18
+	register struct TCmdPItem *pD;
+	// register: 10
+	// size: 0x18
+	register struct TCmdPItem *OpD;
+	// register: 4
+	// size: 0x1258
+	register struct DLevel *Dl;
+	// register: 8
+	register int i;
 }
 
 
@@ -15145,123 +17815,161 @@ int DeltaExportData__FPc(char *Dst) {
 
 // address: 0x8004F58C
 int DeltaImportData__FPc(char *Src) {
-	int osize;
+	// register: 16
+	register int osize;
 }
 
 
 // address: 0x8004F5D4
 void DeltaSaveLevel__Fv() {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
 
 // address: 0x8004F6D0
 void NetSendCmd__FUcUc(unsigned char bHiPri, unsigned char bCmd) {
-	struct TCmd cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x1
+	auto struct TCmd cmd;
 }
 
 
 // address: 0x8004F6F8
 void NetSendCmdGolem__FUcUcUcUclUc(unsigned char mx, unsigned char my, unsigned char dir, unsigned char menemy, long hp, int cl) {
-	struct TCmdGolem cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct TCmdGolem cmd;
 }
 
 
 // address: 0x8004F744
 void NetSendCmdLoc__FUcUcUcUc(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y) {
-	struct TCmdLoc cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x3
+	auto struct TCmdLoc cmd;
 }
 
 
 // address: 0x8004F774
 void NetSendCmdLocParam1__FUcUcUcUcUs(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y, int wParam1) {
-	struct TCmdLocParam1 cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x6
+	auto struct TCmdLocParam1 cmd;
 }
 
 
 // address: 0x8004F7AC
 void NetSendCmdLocParam2__FUcUcUcUcUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y, int wParam1, int wParam2) {
-	struct TCmdLocParam2 cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct TCmdLocParam2 cmd;
 }
 
 
 // address: 0x8004F7EC
 void NetSendCmdLocParam3__FUcUcUcUcUsUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y, int wParam1, int wParam2, int wParam3) {
-	struct TCmdLocParam3 cmd;
+	// address: 0xFFFFFFE8
+	// size: 0xA
+	auto struct TCmdLocParam3 cmd;
 }
 
 
 // address: 0x8004F834
 void NetSendCmdParam1__FUcUcUs(unsigned char bHiPri, unsigned char bCmd, unsigned short wParam1) {
-	struct TCmdParam1 cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto struct TCmdParam1 cmd;
 }
 
 
 // address: 0x8004F860
 void NetSendCmdParam2__FUcUcUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned short wParam1, unsigned short wParam2) {
-	struct TCmdParam2 cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x6
+	auto struct TCmdParam2 cmd;
 }
 
 
 // address: 0x8004F890
 void NetSendCmdParam3__FUcUcUsUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned short wParam1, unsigned short wParam2, int wParam3) {
-	struct TCmdParam3 cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct TCmdParam3 cmd;
 }
 
 
 // address: 0x8004F8C8
 void NetSendCmdQuest__FUcUc(unsigned char bHiPri, unsigned char q) {
-	struct TCmdQuest cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x5
+	auto struct TCmdQuest cmd;
 }
 
 
 // address: 0x8004F93C
 void NetSendCmdGItem__FUcUcUcUcUc(unsigned char bHiPri, unsigned char bCmd, unsigned char mast, unsigned char pnum, int ii) {
-	struct TCmdGItem cmd;
+	// address: 0xFFFFFFD8
+	// size: 0x20
+	auto struct TCmdGItem cmd;
 }
 
 
 // address: 0x8004FA84
 void NetSendCmdGItem2__FUcUcUcUcPC9TCmdGItem(unsigned char usonly, unsigned char bCmd, unsigned char mast, unsigned char pnum, struct TCmdGItem *p) {
-	struct TCmdGItem cmd;
+	// address: 0xFFFFFFD8
+	// size: 0x20
+	auto struct TCmdGItem cmd;
 }
 
 
 // address: 0x8004FB08
 unsigned char NetSendCmdReq2__FUcUcUcPC9TCmdGItem(unsigned char bCmd, unsigned char mast, unsigned char pnum, struct TCmdGItem *p) {
-	struct TCmdGItem cmd;
+	// address: 0xFFFFFFE0
+	// size: 0x20
+	auto struct TCmdGItem cmd;
 }
 
 
 // address: 0x8004FB68
 void NetSendCmdExtra__FPC9TCmdGItem(struct TCmdGItem *p) {
-	struct TCmdGItem cmd;
+	// address: 0xFFFFFFD8
+	// size: 0x20
+	auto struct TCmdGItem cmd;
 }
 
 
 // address: 0x8004FBD8
 void NetSendCmdPItem__FUcUcUcUc(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y) {
-	struct TCmdPItem cmd;
+	// address: 0xFFFFFFE0
+	// size: 0x18
+	auto struct TCmdPItem cmd;
 }
 
 
 // address: 0x8004FCF4
 void NetSendCmdChItem__FUcUc(unsigned char bHiPri, unsigned char bLoc) {
-	struct TCmdChItem cmd;
+	// address: 0xFFFFFFE8
+	// size: 0x10
+	auto struct TCmdChItem cmd;
 }
 
 
 // address: 0x8004FD98
 void NetSendCmdDelItem__FUcUc(unsigned char bHiPri, unsigned char bLoc) {
-	struct TCmdDelItem cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x2
+	auto struct TCmdDelItem cmd;
 }
 
 
 // address: 0x8004FDC8
 void NetSendCmdDItem__FUci(unsigned char bHiPri, int ii) {
-	struct TCmdPItem cmd;
+	// address: 0xFFFFFFE0
+	// size: 0x18
+	auto struct TCmdPItem cmd;
 }
 
 
@@ -15272,7 +17980,9 @@ unsigned char i_own_level__Fi(int nReqLevel) {
 
 // address: 0x8004FEF8
 void NetSendCmdDamage__FUcUcUl(unsigned char bHiPri, unsigned char bPlr, unsigned long dwDam) {
-	struct TCmdDamage cmd;
+	// address: 0xFFFFFFF0
+	// size: 0x8
+	auto struct TCmdDamage cmd;
 }
 
 
@@ -15325,7 +18035,8 @@ void On_GOTOGETITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 void On_REQUESTGITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 	{
 		{
-			int ii;
+			// register: 18
+			register int ii;
 		}
 	}
 }
@@ -15333,8 +18044,11 @@ void On_REQUESTGITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x800502F0
 void On_GETITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct TCmdGItem *p;
-	int nIndex;
+	// register: 17
+	// size: 0x20
+	register struct TCmdGItem *p;
+	// register: 21
+	register int nIndex;
 	{
 		{
 			{
@@ -15345,7 +18059,8 @@ void On_GETITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 								{
 									{
 										{
-											int hitem;
+											// register: 5
+											register int hitem;
 										}
 									}
 								}
@@ -15375,7 +18090,9 @@ void On_REQUESTAGITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x80050680
 void On_AGETITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct TCmdGItem *p;
+	// register: 17
+	// size: 0x20
+	register struct TCmdGItem *p;
 	{
 		{
 			{
@@ -15386,7 +18103,8 @@ void On_AGETITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 								{
 									{
 										{
-											int hitem;
+											// register: 5
+											register int hitem;
 										}
 									}
 								}
@@ -15407,19 +18125,23 @@ void On_ITEMEXTRA__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x80050898
 void On_PUTITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	int ii;
+	// register: 3
+	register int ii;
 }
 
 
 // address: 0x80050978
 void On_SYNCPUTITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	int ii;
+	// register: 3
+	register int ii;
 }
 
 
 // address: 0x80050A7C
 void On_RESPAWNITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct TCmdPItem *p;
+	// register: 16
+	// size: 0x18
+	register struct TCmdPItem *p;
 }
 
 
@@ -15445,13 +18167,17 @@ void On_TSPELLXY__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x80050EC0
 void On_OPOBJXY__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct TCmdLocParam1 *p;
+	// register: 17
+	// size: 0x6
+	register struct TCmdLocParam1 *p;
 }
 
 
 // address: 0x80050FA0
 void On_DISARMXY__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct TCmdLocParam1 *p;
+	// register: 17
+	// size: 0x6
+	register struct TCmdLocParam1 *p;
 }
 
 
@@ -15462,9 +18188,13 @@ void On_OPOBJT__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x800510CC
 void On_ATTACKID__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct TCmdParam1 *p;
-	int dx;
-	int dy;
+	// register: 19
+	// size: 0x4
+	register struct TCmdParam1 *p;
+	// register: 16
+	register int dx;
+	// register: 2
+	register int dy;
 }
 
 
@@ -15541,11 +18271,14 @@ void On_AWAKEGOLEM__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 	{
 		{
 			{
-				unsigned char addok;
+				// register: 7
+				register unsigned char addok;
 				{
-					int i;
+					// register: 5
+					register int i;
 					{
-						int mi;
+						// register: 2
+						register int mi;
 					}
 				}
 			}
@@ -15574,7 +18307,9 @@ void On_PLRDEAD__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x80051B78
 void On_PLRDAMAGE__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
-	struct PlayerStruct *player;
+	// register: 6
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
@@ -15681,9 +18416,11 @@ void On_ENDSHIELD__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 	{
 		{
 			{
-				int i;
+				// register: 17
+				register int i;
 				{
-					int mi;
+					// register: 16
+					register int mi;
 				}
 			}
 		}
@@ -15693,7 +18430,8 @@ void On_ENDSHIELD__FPC4TCmdi(struct TCmd *pCmd, int pnum) {
 
 // address: 0x80052468
 unsigned long ParseCmd__FiPC4TCmd(int pnum, struct TCmd *pCmd) {
-	unsigned char sbLastCmd;
+	// address: 0x8011C82C
+	static unsigned char sbLastCmd;
 }
 
 
@@ -15786,26 +18524,34 @@ int InitLevelType__Fi(int l) {
 
 // address: 0x80052C1C
 void SetupLocalCoords__Fv() {
-	int x;
-	int y;
+	// register: 4
+	register int x;
+	// register: 5
+	register int y;
 }
 
 
 // address: 0x80052D7C
 void InitNewSeed__Fl(long newseed) {
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 
 
 // address: 0x80052DF0
 unsigned char NetInit__FUcPUc(unsigned char bSinglePlayer, unsigned char *pfExitProgram) {
-	char szPlayerDescript[128];
-	long time;
+	// address: 0xFFFFFF50
+	// size: 0x80
+	auto char szPlayerDescript[128];
+	// register: 2
+	register long time;
 	{
 		{
-			struct _uiheroinfo heroinfo;
+			// address: 0xFFFFFFD0
+			// size: 0x28
+			auto struct _uiheroinfo heroinfo;
 			{
 				{
 				}
@@ -15847,14 +18593,20 @@ void PostObjObjAddSwitch__Fiiii(int ot, int ox, int oy, int oi) {
 
 // address: 0x80053524
 void InitObjectGFX__Fv() {
-	unsigned char fileload[56];
-	int i;
-	int t;
+	// address: 0xFFFFFF88
+	// size: 0x38
+	auto unsigned char fileload[56];
+	// register: 3
+	register int i;
+	// register: 5
+	register int t;
 	{
 		{
 			{
 				{
-					char filestr[32];
+					// address: 0xFFFFFFC0
+					// size: 0x20
+					auto char filestr[32];
 				}
 			}
 		}
@@ -15869,15 +18621,19 @@ void FreeObjectGFX__Fv() {
 
 // address: 0x8005374C
 void DeleteObject__Fii(int oi, int i) {
-	int ox;
-	int oy;
+	// register: 5
+	register int ox;
+	// register: 3
+	register int oy;
 }
 
 
 // address: 0x800537F0
 void SetupObject__Fiiii(int i, int x, int y, int ot) {
-	int ai;
-	int j;
+	// register: 4
+	register int ai;
+	// register: 3
+	register int j;
 }
 
 
@@ -15893,39 +18649,56 @@ void SetBookMsg__Fii(int i, int msg) {
 
 // address: 0x80053AF8
 void AddObject__Fiii(int ot, int ox, int oy) {
-	int oi;
+	// register: 16
+	register int oi;
 }
 
 
 // address: 0x80053C08
 void PostAddObject__Fiii(int ot, int ox, int oy) {
-	int oi;
+	// register: 16
+	register int oi;
 }
 
 
 // address: 0x80054070
 void Obj_Light__Fii(int i, int lr) {
-	int ox;
-	int oy;
-	int dx;
-	int dy;
-	int p;
-	int tr;
-	unsigned char turnon;
+	// register: 22
+	register int ox;
+	// register: 23
+	register int oy;
+	// register: 16
+	register int dx;
+	// register: 2
+	register int dy;
+	// register: 19
+	register int p;
+	// register: 21
+	register int tr;
+	// register: 20
+	register unsigned char turnon;
 }
 
 
 // address: 0x80054290
 void Obj_Circle__Fi(int i) {
-	int px;
-	int py;
-	int ox;
-	int oy;
-	int v1;
-	int v2;
-	bool done;
+	// register: 2
+	register int px;
+	// register: 3
+	register int py;
+	// register: 20
+	register int ox;
+	// register: 19
+	register int oy;
+	// register: 22
+	register int v1;
+	// register: 23
+	register int v2;
+	// address: 0xFFFFFFD0
+	auto bool done;
 	{
-		int pnum;
+		// register: 17
+		register int pnum;
 		{
 			{
 				{
@@ -15947,27 +18720,40 @@ void Obj_StopAnim__Fi(int i) {
 
 // address: 0x80054638
 void DrawExpl__Fiiiiiccc(int sx, int sy, int f, int ot, int scale, int rtint, int gtint, int btint) {
-	struct POLY_FT4 *Ft4;
-	int PhysFrame;
-	struct TextDat *ObjDat;
-	int temp;
-	int bright;
-	int W;
-	int H;
+	// register: 4
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 30
+	register int PhysFrame;
+	// register: 20
+	// size: 0x70
+	register struct TextDat *ObjDat;
+	// register: 5
+	register int temp;
+	// register: 17
+	register int bright;
+	// register: 2
+	register int W;
+	// register: 2
+	register int H;
 }
 
 
 // address: 0x80054930
 void DrawObjExpl__FP12ObjectStructiii(struct ObjectStruct *obj, int ScrX, int ScrY, int ot) {
-	int f;
+	// register: 6
+	register int f;
 }
 
 
 // address: 0x800549A0
 void Obj_Door__Fi(int i) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 18
+	register int dx;
+	// register: 19
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
@@ -15978,47 +18764,67 @@ void Obj_Sarc__Fi(int i) {
 
 // address: 0x80054B5C
 void ActivateTrapLine__Fii(int ttype, int tid) {
-	int i;
-	int oi;
+	// register: 17
+	register int i;
+	// register: 2
+	register int oi;
 }
 
 
 // address: 0x80054C6C
 void Obj_FlameTrap__Fi(int i) {
-	int xp;
-	int yp;
-	int j;
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 19
+	register int j;
 }
 
 
 // address: 0x80054F50
 void Obj_Trap__Fi(int i) {
-	int oti;
-	unsigned char otrig;
-	int sx;
-	int sy;
-	int dx;
-	int dy;
-	int x;
-	int y;
-	int ax;
+	// register: 19
+	register int oti;
+	// register: 5
+	register unsigned char otrig;
+	// address: 0xFFFFFFC0
+	auto int sx;
+	// address: 0xFFFFFFC8
+	auto int sy;
+	// register: 20
+	register int dx;
+	// register: 21
+	register int dy;
+	// register: 16
+	register int x;
+	// register: 17
+	register int y;
+	// register: 22
+	register int ax;
 }
 
 
 // address: 0x80055294
 void Obj_BCrossDamage__Fi(int i) {
-	int resist;
-	int damage[4];
+	// register: 3
+	register int resist;
+	// address: 0xFFFFFFD0
+	// size: 0x10
+	auto int damage[4];
 	{
-		int pnum;
+		// register: 21
+		register int pnum;
 	}
 }
 
 
 // address: 0x800554DC
 void ProcessObjects__Fv() {
-	int i;
-	int oi;
+	// register: 17
+	register int i;
+	// register: 16
+	register int oi;
 }
 
 
@@ -16029,11 +18835,16 @@ void ObjSetMicro__Fiii(int dx, int dy, int pn) {
 
 // address: 0x800558C4
 void ObjSetMini__Fiii(int x, int y, int v) {
-	long v2;
-	long v3;
-	long v4;
-	int xx;
-	int yy;
+	// register: 16
+	register long v2;
+	// register: 17
+	register long v3;
+	// register: 19
+	register long v4;
+	// register: 22
+	register int xx;
+	// register: 21
+	register int yy;
 }
 
 
@@ -16049,142 +18860,194 @@ void ObjL2Special__Fiiii(int x1, int y1, int x2, int y2) {
 
 // address: 0x800559BC
 void DoorSet__Fiii(int oi, int dx, int dy) {
-	int pn;
+	// register: 18
+	register int pn;
 }
 
 
 // address: 0x80055C20
 void RedoPlayerVision__Fv() {
-	int p;
+	// register: 17
+	register int p;
 }
 
 
 // address: 0x80055CC4
 void OperateL1RDoor__FiiUc(int pnum, int oi, unsigned char sendflag) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 19
+	register int dx;
+	// register: 20
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
 // address: 0x80056024
 void OperateL1LDoor__FiiUc(int pnum, int oi, unsigned char sendflag) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 20
+	register int dx;
+	// register: 19
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
 // address: 0x800563BC
 void OperateL2RDoor__FiiUc(int pnum, int oi, unsigned char sendflag) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 18
+	register int dx;
+	// register: 19
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
 // address: 0x80056728
 void OperateL2LDoor__FiiUc(int pnum, int oi, unsigned char sendflag) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 18
+	register int dx;
+	// register: 19
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
 // address: 0x80056A94
 void OperateL3RDoor__FiiUc(int pnum, int oi, unsigned char sendflag) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 18
+	register int dx;
+	// register: 19
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
 // address: 0x80056D70
 void OperateL3LDoor__FiiUc(int pnum, int oi, unsigned char sendflag) {
-	int dx;
-	int dy;
-	unsigned char dok;
+	// register: 18
+	register int dx;
+	// register: 19
+	register int dy;
+	// register: 16
+	register unsigned char dok;
 }
 
 
 // address: 0x8005704C
 void MonstCheckDoors__Fi(int m) {
-	int i;
-	int oi;
-	int dpx;
-	int dpy;
-	int mx;
-	int my;
+	// register: 20
+	register int i;
+	// register: 16
+	register int oi;
+	// register: 19
+	register int dpx;
+	// register: 18
+	register int dpy;
+	// register: 21
+	register int mx;
+	// register: 23
+	register int my;
 }
 
 
 // address: 0x80057520
 void PostAddL1Objs__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int pn;
+	// register: 17
+	register int i;
+	// register: 18
+	register int j;
+	// register: 16
+	register int pn;
 }
 
 
 // address: 0x80057628
 void PostAddL2Objs__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int pn;
+	// register: 17
+	register int i;
+	// register: 18
+	register int j;
+	// register: 16
+	register int pn;
 }
 
 
 // address: 0x80057724
 void ObjChangeMap__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
+	// register: 20
+	register int i;
+	// register: 18
+	register int j;
 }
 
 
 // address: 0x800578DC
 void DRLG_MRectTrans__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 5
+	register int j;
 }
 
 
 // address: 0x80057978
 void ObjChangeMapResync__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
+	// register: 20
+	register int i;
+	// register: 18
+	register int j;
 }
 
 
 // address: 0x80057AF0
 void OperateL1Door__FiiUc(int pnum, int i, unsigned char sendflag) {
-	int dpx;
-	int dpy;
+	// register: 16
+	register int dpx;
+	// register: 20
+	register int dpy;
 }
 
 
 // address: 0x80057C4C
 void OperateLever__Fii(int pnum, int i) {
-	unsigned char mapflag;
-	int j;
-	int oi;
-	int ot;
+	// register: 6
+	register unsigned char mapflag;
+	// register: 5
+	register int j;
+	// register: 2
+	register int oi;
+	// register: 2
+	register int ot;
 }
 
 
 // address: 0x80057E30
 void OperateBook__Fii(int pnum, int i) {
-	int v1;
-	int v2;
-	int j;
-	int oi;
-	int ot;
-	int itm;
+	// register: 21
+	register int v1;
+	// register: 19
+	register int v2;
+	// register: 16
+	register int j;
+	// register: 3
+	register int oi;
+	// register: 3
+	register int ot;
+	// register: 16
+	register int itm;
 	{
 		{
-			unsigned char found;
+			// register: 6
+			register unsigned char found;
 			{
 				{
-					unsigned char dowarp;
+					// register: 5
+					register unsigned char dowarp;
 					{
 						{
 						}
@@ -16198,38 +19061,50 @@ void OperateBook__Fii(int pnum, int i) {
 
 // address: 0x800584FC
 void OperateBookLever__Fii(int pnum, int i) {
-	int x;
-	int y;
-	int tren;
+	// register: 19
+	register int x;
+	// register: 18
+	register int y;
+	// register: 16
+	register int tren;
 }
 
 
 // address: 0x80058994
 void OperateSChambBk__Fii(int pnum, int i) {
-	int textdef;
-	int j;
+	// register: 18
+	register int textdef;
+	// register: 16
+	register int j;
 }
 
 
 // address: 0x80058BD0
 void OperateChest__FiiUc(int pnum, int i, unsigned char sendmsg) {
-	int j;
-	int mdir;
-	int mtype;
+	// register: 17
+	register int j;
+	// register: 8
+	register int mdir;
+	// register: 21
+	register int mtype;
 }
 
 
 // address: 0x80058F90
 void OperateMushPatch__Fii(int pnum, int i) {
-	int x;
-	int y;
+	// address: 0xFFFFFFE8
+	auto int x;
+	// address: 0xFFFFFFEC
+	auto int y;
 }
 
 
 // address: 0x800591A4
 void OperateInnSignChest__Fii(int pnum, int i) {
-	int x;
-	int y;
+	// address: 0xFFFFFFE8
+	auto int x;
+	// address: 0xFFFFFFEC
+	auto int y;
 }
 
 
@@ -16240,8 +19115,10 @@ void OperateSlainHero__FiiUc(int pnum, int i, unsigned char sendmsg) {
 
 // address: 0x800595CC
 void OperateTrapLvr__Fi(int i) {
-	int j;
-	int oi;
+	// register: 5
+	register int j;
+	// register: 3
+	register int oi;
 }
 
 
@@ -16252,45 +19129,59 @@ void OperateSarc__FiiUc(int pnum, int i, unsigned char sendmsg) {
 
 // address: 0x80059954
 void OperateL2Door__FiiUc(int pnum, int i, unsigned char sendflag) {
-	int dpx;
-	int dpy;
+	// register: 16
+	register int dpx;
+	// register: 20
+	register int dpy;
 }
 
 
 // address: 0x80059AB0
 void OperateL3Door__FiiUc(int pnum, int i, unsigned char sendflag) {
-	int dpx;
-	int dpy;
+	// register: 16
+	register int dpx;
+	// register: 20
+	register int dpy;
 }
 
 
 // address: 0x80059C0C
 void LoadMapObjs__FPUcii(unsigned char *pMap, int startx, int starty) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *lm;
-	long mapoff;
+	// register: 16
+	register int i;
+	// register: 18
+	register int j;
+	// register: 19
+	register int rw;
+	// register: 20
+	register int rh;
+	// register: 17
+	register unsigned char *lm;
+	// register: 2
+	register long mapoff;
 }
 
 
 // address: 0x80059D14
 void OperatePedistal__Fii(int pnum, int i) {
-	int jstn;
-	bool JustOperated;
+	// address: 0xFFFFFFE0
+	auto int jstn;
+	// register: 19
+	register bool JustOperated;
 	{
 		{
 			{
 				{
 					{
 						{
-							unsigned char *setp;
+							// register: 16
+							register unsigned char *setp;
 							{
 								{
 									{
 										{
-											unsigned char *setp;
+											// register: 17
+											register unsigned char *setp;
 											{
 											}
 										}
@@ -16308,38 +19199,56 @@ void OperatePedistal__Fii(int pnum, int i) {
 
 // address: 0x8005A258
 void TryDisarm__Fii(int pnum, int i) {
-	int j;
-	int oi;
-	int oti;
-	int trapdisper;
-	unsigned char checkflag;
+	// register: 6
+	register int j;
+	// register: 3
+	register int oi;
+	// register: 2
+	register int oti;
+	// register: 16
+	register int trapdisper;
+	// register: 2
+	register unsigned char checkflag;
 }
 
 
 // address: 0x8005A408
 int ItemMiscIdIdx__Fi(int imiscid) {
-	int i;
+	// register: 5
+	register int i;
 }
 
 
 // address: 0x8005A478
 void OperateShrine__Fiii(int pnum, int i, int sType) {
-	int r;
-	int xx;
-	int yy;
-	int sc;
-	int v1;
-	int v2;
-	int v3;
-	int v4;
-	unsigned long lv;
-	unsigned long t;
-	unsigned char done;
+	// register: 18
+	register int r;
+	// register: 4
+	register int xx;
+	// register: 5
+	register int yy;
+	// register: 6
+	register int sc;
+	// register: 17
+	register int v1;
+	// register: 21
+	register int v2;
+	// register: 22
+	register int v3;
+	// register: 20
+	register int v4;
+	// register: 16
+	register unsigned long lv;
+	// register: 6
+	register unsigned long t;
+	// register: 21
+	register unsigned char done;
 	{
 		{
 			{
 				{
-					int mypnum;
+					// register: 3
+					register int mypnum;
 				}
 			}
 		}
@@ -16364,14 +19273,17 @@ void OperateDecap__FiiUc(int pnum, int i, unsigned char sendmsg) {
 
 // address: 0x8005CCC8
 void OperateArmorStand__FiiUc(int pnum, int i, unsigned char sendmsg) {
-	int uniqueRnd;
+	// register: 6
+	register int uniqueRnd;
 }
 
 
 // address: 0x8005CE34
 int FindValidShrine__Fi(int i) {
-	int rv;
-	unsigned char done;
+	// register: 4
+	register int rv;
+	// register: 16
+	register unsigned char done;
 }
 
 
@@ -16387,16 +19299,22 @@ void OperateCauldron__Fiii(int pnum, int i, int sType) {
 
 // address: 0x8005D06C
 unsigned char OperateFountains__Fii(int pnum, int i) {
-	int ii;
-	unsigned char rv;
+	// register: 21
+	register int ii;
+	// register: 19
+	register unsigned char rv;
 	{
 		{
 			{
 				{
-					int rndVal;
-					int statVal;
-					int saveRnd;
-					int status;
+					// register: 16
+					register int rndVal;
+					// register: 19
+					register int statVal;
+					// register: 20
+					register int saveRnd;
+					// register: 22
+					register int status;
 				}
 			}
 		}
@@ -16406,7 +19324,8 @@ unsigned char OperateFountains__Fii(int pnum, int i) {
 
 // address: 0x8005D610
 void OperateWeaponRack__FiiUc(int pnum, int i, unsigned char sendmsg) {
-	int weaponType;
+	// register: 17
+	register int weaponType;
 }
 
 
@@ -16417,32 +19336,38 @@ void OperateStoryBook__Fii(int pnum, int i) {
 
 // address: 0x8005D8AC
 void OperateLazStand__Fii(int pnum, int i) {
-	int x;
-	int y;
+	// address: 0xFFFFFFF0
+	auto int x;
+	// address: 0xFFFFFFF4
+	auto int y;
 }
 
 
 // address: 0x8005DA30
 void OperateObject__FiiUc(int pnum, int i, unsigned char TeleFlag) {
-	unsigned char senditemmsg;
+	// register: 3
+	register unsigned char senditemmsg;
 }
 
 
 // address: 0x8005DE68
 void SyncOpL1Door__Fiii(int pnum, int cmd, int i) {
-	unsigned char opok;
+	// register: 4
+	register unsigned char opok;
 }
 
 
 // address: 0x8005DF7C
 void SyncOpL2Door__Fiii(int pnum, int cmd, int i) {
-	unsigned char opok;
+	// register: 4
+	register unsigned char opok;
 }
 
 
 // address: 0x8005E090
 void SyncOpL3Door__Fiii(int pnum, int cmd, int i) {
-	unsigned char opok;
+	// register: 4
+	register unsigned char opok;
 }
 
 
@@ -16453,26 +19378,36 @@ void SyncOpObject__Fiii(int pnum, int cmd, int i) {
 
 // address: 0x8005E3B4
 void BreakCrux__Fii(int pnum, int i) {
-	int j;
-	int ot;
-	int oi;
-	unsigned char mapflag;
+	// register: 5
+	register int j;
+	// register: 3
+	register int ot;
+	// register: 2
+	register int oi;
+	// register: 6
+	register unsigned char mapflag;
 }
 
 
 // address: 0x8005E5E8
 void BreakBarrel__FiiiUcUc(int pnum, int i, int dam, unsigned char forcebreak, int sendmsg) {
-	int x;
-	int y;
-	int oi;
+	// register: 16
+	register int x;
+	// register: 17
+	register int y;
+	// register: 5
+	register int oi;
 }
 
 
 // address: 0x8005EB40
 void BreakObject__Fii(int pnum, int oi) {
-	int objdam;
-	int mind;
-	int maxd;
+	// register: 6
+	register int objdam;
+	// register: 17
+	register int mind;
+	// register: 4
+	register int maxd;
 }
 
 
@@ -16483,17 +19418,23 @@ void SyncBreakObj__Fii(int pnum, int oi) {
 
 // address: 0x8005ED20
 void SyncL1Doors__Fi(int i) {
-	int dx;
-	int dy;
+	// register: 16
+	register int dx;
+	// register: 17
+	register int dy;
 }
 
 
 // address: 0x8005EE38
 void SyncCrux__Fi(int i) {
-	int j;
-	int ot;
-	int oi;
-	unsigned char mapflag;
+	// register: 6
+	register int j;
+	// register: 3
+	register int ot;
+	// register: 2
+	register int oi;
+	// register: 7
+	register unsigned char mapflag;
 }
 
 
@@ -16504,7 +19445,8 @@ void SyncLever__Fi(int i) {
 
 // address: 0x8005EFF4
 void SyncQSTLever__Fi(int i) {
-	int tren;
+	// register: 16
+	register int tren;
 }
 
 
@@ -16515,23 +19457,30 @@ void SyncPedistal__Fi(int i) {
 
 // address: 0x8005F0F4
 void SyncL2Doors__Fi(int i) {
-	int dx;
-	int dy;
+	// register: 7
+	register int dx;
+	// register: 5
+	register int dy;
 }
 
 
 // address: 0x8005F25C
 void SyncL3Doors__Fi(int i) {
-	int dx;
-	int dy;
+	// register: 7
+	register int dx;
+	// register: 5
+	register int dy;
 }
 
 
 // address: 0x8005F388
 void SyncObjectAnim__Fi(int o) {
-	int ai;
-	int ot;
-	int j;
+	// register: 5
+	register int ai;
+	// register: 3
+	register int ot;
+	// register: 3
+	register int j;
 }
 
 
@@ -16547,17 +19496,24 @@ void AddLamp__Fiii(int x, int y, int r) {
 
 // address: 0x8005F9C4
 void RestoreObjectLight__Fv() {
-	int i;
-	int oi;
-	int ox;
-	int oy;
-	struct MonsterStruct *Monst;
+	// register: 17
+	register int i;
+	// register: 2
+	register int oi;
+	// register: 4
+	register int ox;
+	// register: 5
+	register int oy;
+	// register: 3
+	// size: 0x68
+	register struct MonsterStruct *Monst;
 }
 
 
 // address: 0x8005FB90
 int GetOtPos__7CBlocksi_addr_8005FB90(struct CBlocks *this, int LogicalY) {
-	int OtPos;
+	// register: 3
+	register int OtPos;
 }
 
 
@@ -16624,47 +19580,61 @@ void ClearPlrPVars__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x8005FE54
 void SetPlrAnims__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int gn;
-	int pc;
+	// register: 3
+	register int gn;
+	// register: 5
+	register int pc;
 }
 
 
 // address: 0x80060090
 void CreatePlayer__FP12PlayerStructc(struct PlayerStruct *ptrplr, char c) {
-	int i;
-	char vc;
+	// register: 2
+	register int i;
+	// register: 3
+	register char vc;
 }
 
 
 // address: 0x80060498
 int CalcStatDiff__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int c;
-	int d;
+	// register: 6
+	register int c;
+	// register: 3
+	register int d;
 }
 
 
 // address: 0x80060500
 void NextPlrLevel__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	long l;
+	// register: 5
+	register long l;
 }
 
 
 // address: 0x8006067C
 void AddPlrExperience__FP12PlayerStructil(struct PlayerStruct *ptrplr, int lvl, long exp) {
-	int omp;
-	unsigned long v;
-	long e;
+	// register: 19
+	register int omp;
+	// register: 2
+	register unsigned long v;
+	// register: 5
+	register long e;
 	{
 		{
-			long lLevel;
-			long lMax;
+			// register: 4
+			register long lLevel;
+			// register: 3
+			register long lMax;
 			{
 				{
-					int l;
+					// register: 17
+					register int l;
 					{
 						{
 							{
-								int i;
+								// register: 16
+								register int i;
 							}
 						}
 					}
@@ -16677,9 +19647,11 @@ void AddPlrExperience__FP12PlayerStructil(struct PlayerStruct *ptrplr, int lvl, 
 
 // address: 0x800608A0
 void AddPlrMonstExper__Filc(int lvl, long exp, char pmask) {
-	int totplrs;
+	// register: 3
+	register int totplrs;
 	{
-		int i;
+		// register: 4
+		register int i;
 		{
 			{
 			}
@@ -16713,15 +19685,19 @@ unsigned char SolidLoc__Fii(int x, int y) {
 
 // address: 0x80060C6C
 void PlrClrTrans__Fii(int x, int y) {
-	int i;
-	int j;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
 }
 
 
 // address: 0x80060CE4
 void PlrDoTrans__Fii(int x, int y) {
-	int i;
-	int j;
+	// register: 16
+	register int i;
+	// register: 18
+	register int j;
 }
 
 
@@ -16752,8 +19728,10 @@ void PM_ChangeOffset__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80060F64
 void StartAttack__FP12PlayerStructi(struct PlayerStruct *ptrplr, int d) {
-	int co;
-	unsigned char closeattack;
+	// register: 17
+	register int co;
+	// register: 18
+	register unsigned char closeattack;
 }
 
 
@@ -16779,22 +19757,28 @@ void StartPlrHit__FP12PlayerStructiUc(struct PlayerStruct *ptrplr, int dam, unsi
 
 // address: 0x80061448
 void RespawnDeadItem__FP10ItemStructii(struct ItemStruct *itm, int x, int y) {
-	int ii;
+	// register: 8
+	register int ii;
 }
 
 
 // address: 0x800615DC
 void PlrDeadItem__FP12PlayerStructP10ItemStructii(struct PlayerStruct *ptrplr, struct ItemStruct *itm, int xx, int yy) {
-	int x;
-	int y;
+	// register: 19
+	register int x;
+	// register: 20
+	register int y;
 	{
-		int l;
+		// register: 17
+		register int l;
 		{
 			{
-				int j;
+				// register: 18
+				register int j;
 				{
 					{
-						int i;
+						// register: 16
+						register int i;
 					}
 				}
 			}
@@ -16810,15 +19794,22 @@ void StartPlayerDropItems__FP12PlayerStructi(struct PlayerStruct *ptrplr, int Ea
 
 // address: 0x8006180C
 void TryDropPlayerItems__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	unsigned char diablolevel;
+	// register: 16
+	register unsigned char diablolevel;
 	{
 		{
-			struct PlayerStruct *p;
-			struct ItemStruct *pi;
-			int i;
+			// register: 20
+			// size: 0x19E8
+			register struct PlayerStruct *p;
+			// register: 17
+			// size: 0x6C
+			register struct ItemStruct *pi;
+			// register: 16
+			register int i;
 			{
 				{
-					int pdd;
+					// register: 2
+					register int pdd;
 				}
 			}
 		}
@@ -16828,22 +19819,29 @@ void TryDropPlayerItems__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80061948
 void StartPlayerKill__FP12PlayerStructi(struct PlayerStruct *ptrplr, int earflag) {
-	struct ItemStruct ear;
-	struct PlayerStruct *p;
+	// address: 0xFFFFFF78
+	// size: 0x6C
+	auto struct ItemStruct ear;
+	// register: 18
+	// size: 0x19E8
+	register struct PlayerStruct *p;
 }
 
 
 // address: 0x80061B44
 void DropHalfPlayersGold__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	long hGold;
-	int i;
+	// register: 21
+	register long hGold;
+	// register: 20
+	register int i;
 	{
 		{
 			{
 				{
 					{
 						{
-							int newgold;
+							// register: 16
+							register int newgold;
 						}
 					}
 				}
@@ -16855,8 +19853,10 @@ void DropHalfPlayersGold__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80061C54
 void StartPlrKill__FP12PlayerStructi(struct PlayerStruct *ptrplr, int earflag) {
-	int i;
-	int mx;
+	// register: 5
+	register int i;
+	// register: 4
+	register int mx;
 }
 
 
@@ -16867,8 +19867,10 @@ void SyncPlrKill__FP12PlayerStructi(struct PlayerStruct *ptrplr, int earflag) {
 
 // address: 0x80061DD0
 void RemovePlrMissiles__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int i;
-	int mx;
+	// register: 17
+	register int i;
+	// register: 16
+	register int mx;
 	{
 		{
 		}
@@ -16883,13 +19885,16 @@ void InitLevelChange__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80062198
 void CheckPlrDead__Fi(int pnum) {
-	struct PlayerStruct *ptrplr;
+	// register: 4
+	// size: 0x19E8
+	register struct PlayerStruct *ptrplr;
 }
 
 
 // address: 0x800621EC
 void StartNewLvl__FP12PlayerStructii(struct PlayerStruct *ptrplr, int fom, int lvl) {
-	bool oldpause;
+	// register: 20
+	register bool oldpause;
 }
 
 
@@ -16900,7 +19905,8 @@ void RestartTownLvl__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80062448
 void StartWarpLvl__FP12PlayerStructi(struct PlayerStruct *ptrplr, int pidx) {
-	bool oldpause;
+	// register: 19
+	register bool oldpause;
 }
 
 
@@ -16911,15 +19917,19 @@ int PM_DoStand__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80062568
 unsigned char ChkPlrOffsets__Fiiii(int wx1, int wy1, int wx2, int wy2) {
-	int x;
-	int y;
+	// register: 17
+	register int x;
+	// register: 16
+	register int y;
 }
 
 
 // address: 0x80062618
 int PM_DoWalk__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int owx;
-	int owy;
+	// register: 17
+	register int owx;
+	// register: 18
+	register int owy;
 }
 
 
@@ -16930,56 +19940,86 @@ unsigned char WeaponDur__FP12PlayerStructi(struct PlayerStruct *ptrplr, int durr
 
 // address: 0x800629EC
 unsigned char PlrHitMonst__FP12PlayerStructi(struct PlayerStruct *ptrplr, int m) {
-	int hit;
-	int hper;
-	int mind;
-	int maxd;
-	int ddp;
-	long dam;
-	long skdam;
-	int phanditype;
-	int tmac;
-	unsigned char rv;
-	unsigned char ret;
+	// register: 18
+	register int hit;
+	// register: 16
+	register int hper;
+	// register: 16
+	register int mind;
+	// register: 4
+	register int maxd;
+	// register: 16
+	register int ddp;
+	// register: 18
+	register long dam;
+	// register: 20
+	register long skdam;
+	// register: 4
+	register int phanditype;
+	// register: 3
+	register int tmac;
+	// register: 21
+	register unsigned char rv;
+	// address: 0xFFFFFFD8
+	auto unsigned char ret;
 }
 
 
 // address: 0x80063048
 unsigned char PlrHitPlr__FP12PlayerStructc(struct PlayerStruct *ptrplr, char p) {
-	int hit;
-	int hper;
-	int mind;
-	int maxd;
-	int ddp;
-	long dam;
-	long skdam;
-	int tac;
-	int blk;
-	int blkper;
-	unsigned char rv;
+	// register: 20
+	register int hit;
+	// register: 16
+	register int hper;
+	// register: 16
+	register int mind;
+	// register: 4
+	register int maxd;
+	// register: 16
+	register int ddp;
+	// register: 17
+	register long dam;
+	// register: 4
+	register long skdam;
+	// register: 4
+	register int tac;
+	// register: 7
+	register int blk;
+	// register: 3
+	register int blkper;
+	// register: 21
+	register unsigned char rv;
 }
 
 
 // address: 0x800633F0
 unsigned char PlrHitObj__FP12PlayerStructii(struct PlayerStruct *ptrplr, int mx, int my) {
-	int oi;
+	// register: 5
+	register int oi;
 }
 
 
 // address: 0x80063470
 int PM_DoAttack__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int dx;
-	int dy;
-	int m;
-	char p;
-	unsigned char didhit;
-	int frame;
+	// register: 17
+	register int dx;
+	// register: 18
+	register int dy;
+	// register: 5
+	register int m;
+	// register: 2
+	register char p;
+	// register: 19
+	register unsigned char didhit;
+	// register: 4
+	register int frame;
 }
 
 
 // address: 0x80063804
 int PM_DoRangeAttack__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int mistype;
+	// register: 8
+	register int mistype;
 }
 
 
@@ -16995,15 +20035,29 @@ int PM_DoBlock__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80063A74
 void do_spell_anim__FiiiP12PlayerStruct(int aframe, int spell, int clss, struct PlayerStruct *ptrplr) {
-	struct CPlayer *test;
-	int OtPos;
-	int ScrX;
-	int ScrY;
-	struct TextDat *missdat;
-	struct TextDat *objdat;
-	struct POLY_FT4 *FT4a;
-	struct POLY_FT4 *FT4b;
-	int frame;
+	// register: 16
+	// size: 0x90
+	register struct CPlayer *test;
+	// register: 22
+	register int OtPos;
+	// register: 21
+	register int ScrX;
+	// register: 20
+	register int ScrY;
+	// register: 19
+	// size: 0x70
+	register struct TextDat *missdat;
+	// register: 17
+	// size: 0x70
+	register struct TextDat *objdat;
+	// address: 0xFFFFFFD0
+	// size: 0x28
+	auto struct POLY_FT4 *FT4a;
+	// address: 0xFFFFFFD4
+	// size: 0x28
+	auto struct POLY_FT4 *FT4b;
+	// register: 16
+	register int frame;
 }
 
 
@@ -17014,21 +20068,28 @@ int PM_DoSpell__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80064320
 void ArmorDur__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	struct PlayerStruct *p;
-	int a;
-	struct ItemStruct *pi;
+	// register: 18
+	// size: 0x19E8
+	register struct PlayerStruct *p;
+	// register: 5
+	register int a;
+	// register: 17
+	// size: 0x6C
+	register struct ItemStruct *pi;
 }
 
 
 // address: 0x80064428
 int PM_DoGotHit__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int rv;
+	// register: 17
+	register int rv;
 }
 
 
 // address: 0x800644B8
 int PM_DoDeath__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int pnum;
+	// register: 17
+	register int pnum;
 	{
 		{
 			{
@@ -17037,10 +20098,14 @@ int PM_DoDeath__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 						{
 							{
 								{
-									int vid;
-									struct LightListStruct *vl;
+									// register: 5
+									register int vid;
+									// register: 2
+									// size: 0xE
+									register struct LightListStruct *vl;
 									{
-										int i;
+										// register: 4
+										register int i;
 									}
 								}
 							}
@@ -17060,9 +20125,12 @@ int PM_DoNewLvl__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x800646A8
 void CheckNewPath__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int i;
-	int d;
-	int oi;
+	// register: 17
+	register int i;
+	// register: 17
+	register int d;
+	// register: 16
+	register int oi;
 }
 
 
@@ -17073,11 +20141,16 @@ unsigned char PlrDeathModeOK__Fi(int p) {
 
 // address: 0x80064BD0
 void ValidatePlayer__Fv() {
-	int i;
-	int gt;
-	int pc;
-	unsigned long msk;
-	unsigned long b;
+	// register: 5
+	register int i;
+	// register: 8
+	register int gt;
+	// register: 2
+	register int pc;
+	// register: 10
+	register unsigned long msk;
+	// register: 14
+	register unsigned long b;
 }
 
 
@@ -17088,12 +20161,17 @@ void CheckCheatStats__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80065168
 void ProcessPlayers__Fv() {
-	int raflag;
-	int pnum;
-	int tplayer;
+	// register: 16
+	register int raflag;
+	// register: 18
+	register int pnum;
+	// register: 21
+	register int tplayer;
 	{
 		{
-			struct PlayerStruct *ptrplr;
+			// register: 17
+			// size: 0x19E8
+			register struct PlayerStruct *ptrplr;
 		}
 	}
 }
@@ -17106,10 +20184,15 @@ void ClrPlrPath__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80065474
 unsigned char PosOkPlayer__FP12PlayerStructii(struct PlayerStruct *ptrplr, int px, int py) {
-	int mi;
-	int p;
-	char bv;
-	struct map_info *dm;
+	// register: 2
+	register int mi;
+	// register: 16
+	register int p;
+	// register: 2
+	register char bv;
+	// register: 19
+	// size: 0x8
+	register struct map_info *dm;
 }
 
 
@@ -17120,16 +20203,24 @@ void MakePlrPath__FP12PlayerStructiiUc(struct PlayerStruct *ptrplr, int xx, int 
 
 // address: 0x80065654
 void CheckPlrSpell__Fv() {
-	int sd;
-	struct SpellTarget *spl;
-	unsigned char addflag;
-	struct PlayerStruct *player;
-	int rspell;
+	// register: 16
+	register int sd;
+	// register: 18
+	// size: 0x48
+	register struct SpellTarget *spl;
+	// register: 16
+	register unsigned char addflag;
+	// register: 17
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 3
+	register int rspell;
 	{
 		{
 			{
 				{
-					int SplLvl;
+					// register: 2
+					register int SplLvl;
 				}
 			}
 		}
@@ -17139,7 +20230,8 @@ void CheckPlrSpell__Fv() {
 
 // address: 0x80065AB4
 void SyncInitPlrPos__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
@@ -17150,37 +20242,53 @@ void SyncInitPlr__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80065BCC
 void CheckStats__Fi(int p) {
-	int c;
-	int i;
-	struct PlayerStruct *player;
+	// register: 4
+	register int c;
+	// register: 6
+	register int i;
+	// register: 5
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
 // address: 0x80065DA0
 void ModifyPlrStr__Fii(int p, int l) {
-	struct PlayerStruct *player;
-	int ms;
+	// register: 6
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 3
+	register int ms;
 }
 
 
 // address: 0x80065EBC
 void ModifyPlrMag__Fii(int p, int l) {
-	struct PlayerStruct *player;
-	int ms;
+	// register: 6
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 3
+	register int ms;
 }
 
 
 // address: 0x80065FA8
 void ModifyPlrDex__Fii(int p, int l) {
-	struct PlayerStruct *player;
-	int ms;
+	// register: 16
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 3
+	register int ms;
 }
 
 
 // address: 0x8006608C
 void ModifyPlrVit__Fii(int p, int l) {
-	struct PlayerStruct *player;
-	int ms;
+	// register: 6
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 3
+	register int ms;
 }
 
 
@@ -17191,25 +20299,33 @@ void SetPlayerHitPoints__FP12PlayerStructi(struct PlayerStruct *ptrplr, int newh
 
 // address: 0x800661AC
 void SetPlrStr__Fii(int p, int v) {
-	struct PlayerStruct *player;
+	// register: 16
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
 // address: 0x80066288
 void SetPlrMag__Fii(int p, int v) {
-	struct PlayerStruct *player;
+	// register: 6
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
 // address: 0x800662F8
 void SetPlrDex__Fii(int p, int v) {
-	struct PlayerStruct *player;
+	// register: 16
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
 // address: 0x800663D4
 void SetPlrVit__Fii(int p, int v) {
-	struct PlayerStruct *player;
+	// register: 3
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
@@ -17220,7 +20336,9 @@ void InitDungMsgs__FP12PlayerStruct(struct PlayerStruct *ptrplr) {
 
 // address: 0x80066448
 void PlayDungMsgs__Fv() {
-	struct PlayerStruct *player;
+	// register: 4
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
@@ -17497,23 +20615,32 @@ int GetLastScrX__C7CPlayer(struct CPlayer *this) {
 
 // address: 0x800674B4
 void CheckRPortalOK__FPiT0(int *rx, int *ry) {
-	int nx;
-	int ny;
+	// register: 6
+	register int nx;
+	// register: 3
+	register int ny;
 }
 
 
 // address: 0x800674F4
 void CheckQuests__Fv() {
-	int i;
-	int rportx;
-	int rporty;
-	int omp;
+	// register: 20
+	register int i;
+	// address: 0xFFFFFFD8
+	auto int rportx;
+	// address: 0xFFFFFFDC
+	auto int rporty;
+	// register: 21
+	register int omp;
 	{
 		{
 			{
-				int pl;
+				// register: 17
+				register int pl;
 				{
-					struct PlayerStruct *player;
+					// register: 4
+					// size: 0x19E8
+					register struct PlayerStruct *player;
 				}
 			}
 		}
@@ -17524,13 +20651,18 @@ void CheckQuests__Fv() {
 // address: 0x800679CC
 unsigned char ForceQuests__Fv() {
 	{
-		int i;
+		// register: 6
+		register int i;
 		{
-			int ql;
-			int qx;
-			int qy;
+			// register: 16
+			register int ql;
+			// register: 18
+			register int qx;
+			// register: 17
+			register int qy;
 			{
-				int j;
+				// register: 4
+				register int j;
 			}
 		}
 	}
@@ -17554,8 +20686,10 @@ void CheckQuestKill__FiUc(int m, unsigned char sendmsg) {
 								{
 									{
 										{
-											int i;
-											int j;
+											// register: 16
+											register int i;
+											// register: 17
+											register int j;
 										}
 									}
 								}
@@ -17581,19 +20715,25 @@ void GetReturnLvlPos__Fv() {
 
 // address: 0x80068330
 void ResyncQuests__Fv() {
-	int i;
-	int tren;
+	// register: 16
+	register int i;
+	// register: 16
+	register int tren;
 }
 
 
 // address: 0x8006881C
 void PrintQLString__FiiUcPcc(int x, int y, unsigned char cjustflag, char *str, int col) {
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
+	// register: 10
+	register unsigned char r;
+	// register: 9
+	register unsigned char g;
+	// register: 8
+	register unsigned char b;
 	{
 		{
-			int len;
+			// register: 17
+			register int len;
 		}
 	}
 }
@@ -17601,10 +20741,14 @@ void PrintQLString__FiiUcPcc(int x, int y, unsigned char cjustflag, char *str, i
 
 // address: 0x80068A70
 void DrawQuestLog__Fv() {
-	int i;
-	int l;
-	int q;
-	int totlines;
+	// register: 16
+	register int i;
+	// register: 17
+	register int l;
+	// register: 2
+	register int q;
+	// register: 18
+	register int totlines;
 }
 
 
@@ -17615,7 +20759,8 @@ void DrawQuestLogTSK__FP4TASK(struct TASK *T) {
 
 // address: 0x80068D40
 void StartQuestlog__Fv() {
-	int i;
+	// register: 5
+	register int i;
 }
 
 
@@ -17636,7 +20781,8 @@ void RemoveQLog__Fv() {
 
 // address: 0x80069078
 void QuestlogEnter__Fv() {
-	int q;
+	// register: 16
+	register int q;
 }
 
 
@@ -17713,34 +20859,50 @@ void DrawSTextBack__Fv() {
 
 // address: 0x8006961C
 void DrawStoreArrows__Fv() {
-	struct TextDat *PanelGfx;
-	struct POLY_FT4 *Ft4;
-	int OtPos;
-	int Flagy;
+	// register: 16
+	// size: 0x70
+	register struct TextDat *PanelGfx;
+	// register: 6
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 17
+	register int OtPos;
+	// register: 5
+	register int Flagy;
 }
 
 
 // address: 0x8006979C
 void PrintSString__FiiUcPcci(int x, int y, unsigned char cjustflag, char *str, int col, int val) {
-	int yy;
-	char valstr[32];
-	int SpinnerY;
-	unsigned char R;
-	unsigned char G;
-	unsigned char B;
-	unsigned char DaveFix;
+	// register: 16
+	register int yy;
+	// address: 0xFFFFFFA8
+	// size: 0x20
+	auto char valstr[32];
+	// register: 30
+	register int SpinnerY;
+	// register: 19
+	register unsigned char R;
+	// register: 18
+	register unsigned char G;
+	// register: 17
+	register unsigned char B;
+	// address: 0x8011BAA8
+	static unsigned char DaveFix;
 }
 
 
 // address: 0x80069C44
 void DrawSLine__Fi(int y) {
-	int yy;
+	// register: 16
+	register int yy;
 }
 
 
 // address: 0x80069CD8
 void ClearSText__Fii(int s, int e) {
-	int i;
+	// register: 4
+	register int i;
 }
 
 
@@ -17766,18 +20928,26 @@ void AddSText__FiiUcPccUc(int x, int y, unsigned char j, char *str, int clr, int
 
 // address: 0x80069ECC
 void PrintStoreItem__FPC10ItemStructic(struct ItemStruct *x, int l, char iclr) {
-	char sstr[128];
-	int li;
+	// address: 0xFFFFFF58
+	// size: 0x80
+	auto char sstr[128];
+	// register: 22
+	register int li;
 }
 
 
 // address: 0x8006A408
 unsigned char StoreAutoPlace__Fv() {
-	int i;
-	int w;
-	int h;
-	int idx;
-	unsigned char done;
+	// register: 16
+	register int i;
+	// register: 18
+	register int w;
+	// register: 19
+	register int h;
+	// register: 5
+	register int idx;
+	// register: 4
+	register unsigned char done;
 }
 
 
@@ -17788,9 +20958,12 @@ void S_StartSmith__Fv() {
 
 // address: 0x8006ABD8
 void S_ScrollSBuy__Fi(int idx) {
-	int l;
-	int ls;
-	char iclr;
+	// register: 17
+	register int l;
+	// register: 20
+	register int ls;
+	// register: 16
+	register char iclr;
 }
 
 
@@ -17801,14 +20974,18 @@ void S_StartSBuy__Fv() {
 
 // address: 0x8006AFB0
 void S_ScrollSPBuy__Fi(int idx) {
-	int l;
-	char iclr;
-	int boughtitems;
+	// register: 19
+	register int l;
+	// register: 18
+	register char iclr;
+	// register: 4
+	register int boughtitems;
 	{
 		{
 			{
 				{
-					char *StrPtr;
+					// register: 16
+					register char *StrPtr;
 				}
 			}
 		}
@@ -17818,7 +20995,8 @@ void S_ScrollSPBuy__Fi(int idx) {
 
 // address: 0x8006B210
 unsigned char S_StartSPBuy__Fv() {
-	int i;
+	// register: 17
+	register int i;
 }
 
 
@@ -17829,16 +21007,22 @@ unsigned char SmithSellOk__Fi(int i) {
 
 // address: 0x8006B4B8
 void S_ScrollSSell__Fi(int idx) {
-	int l;
-	int ls;
-	int v;
-	char iclr;
-	int Jumpy;
+	// register: 20
+	register int l;
+	// register: 23
+	register int ls;
+	// register: 19
+	register int v;
+	// register: 16
+	register char iclr;
+	// register: 30
+	register int Jumpy;
 	{
 		{
 			{
 				{
-					char *StrPtr;
+					// register: 18
+					register char *StrPtr;
 				}
 			}
 		}
@@ -17848,8 +21032,10 @@ void S_ScrollSSell__Fi(int idx) {
 
 // address: 0x8006B70C
 void S_StartSSell__Fv() {
-	int i;
-	unsigned char sellok;
+	// register: 16
+	register int i;
+	// register: 18
+	register unsigned char sellok;
 }
 
 
@@ -17860,14 +21046,17 @@ unsigned char SmithRepairOk__Fi(int i) {
 
 // address: 0x8006BBEC
 void AddStoreHoldRepair__FP10ItemStructi(struct ItemStruct *itm, int i) {
-	int v;
+	// register: 4
+	register int v;
 }
 
 
 // address: 0x8006BDD4
 void S_StartSRepair__Fv() {
-	int i;
-	unsigned char repairok;
+	// register: 16
+	register int i;
+	// register: 18
+	register unsigned char repairok;
 }
 
 
@@ -17883,15 +21072,20 @@ int CheckWitchItem__Fi(int idx) {
 
 // address: 0x8006C4D0
 void S_ScrollWBuy__Fi(int idx) {
-	int l;
-	int ls;
-	char iclr;
-	int Jumpy;
+	// register: 18
+	register int l;
+	// register: 21
+	register int ls;
+	// register: 16
+	register char iclr;
+	// register: 22
+	register int Jumpy;
 	{
 		{
 			{
 				{
-					char *StrPtr;
+					// register: 17
+					register char *StrPtr;
 				}
 			}
 		}
@@ -17901,27 +21095,34 @@ void S_ScrollWBuy__Fi(int idx) {
 
 // address: 0x8006C714
 void S_StartWBuy__Fv() {
-	int i;
+	// register: 17
+	register int i;
 }
 
 
 // address: 0x8006CA68
 unsigned char WitchSellOk__Fi(int i) {
-	unsigned char rv;
-	struct ItemStruct *pI;
+	// register: 5
+	register unsigned char rv;
+	// register: 4
+	// size: 0x6C
+	register struct ItemStruct *pI;
 }
 
 
 // address: 0x8006CBB4
 void S_StartWSell__Fv() {
-	int i;
-	unsigned char sellok;
+	// register: 16
+	register int i;
+	// register: 19
+	register unsigned char sellok;
 }
 
 
 // address: 0x8006D22C
 unsigned char WitchRechargeOk__Fi(int i) {
-	unsigned char rv;
+	// register: 5
+	register unsigned char rv;
 }
 
 
@@ -17932,8 +21133,10 @@ void AddStoreHoldRecharge__FG10ItemStructi(struct ItemStruct itm, int i) {
 
 // address: 0x8006D440
 void S_StartWRecharge__Fv() {
-	int i;
-	unsigned char rechargeok;
+	// register: 16
+	register int i;
+	// register: 18
+	register unsigned char rechargeok;
 }
 
 
@@ -17954,9 +21157,12 @@ void S_StartNoItems__Fv() {
 
 // address: 0x8006D9EC
 void S_StartConfirm__Fv() {
-	char iclr;
-	unsigned char idprint;
-	char *StrPtr;
+	// register: 16
+	register char iclr;
+	// register: 3
+	register unsigned char idprint;
+	// register: 17
+	register char *StrPtr;
 }
 
 
@@ -17967,8 +21173,10 @@ void S_StartBoy__Fv() {
 
 // address: 0x8006DEFC
 void S_StartBBoy__Fv() {
-	int iclr;
-	char *StrPtr;
+	// register: 16
+	register int iclr;
+	// register: 17
+	register char *StrPtr;
 }
 
 
@@ -17979,12 +21187,14 @@ void S_StartHealer__Fv() {
 
 // address: 0x8006E304
 void S_ScrollHBuy__Fi(int idx) {
-	int l;
+	// register: 19
+	register int l;
 	{
 		{
 			{
 				{
-					char *StrPtr;
+					// register: 17
+					register char *StrPtr;
 				}
 			}
 		}
@@ -18014,25 +21224,34 @@ void AddStoreHoldId__FG10ItemStructi(struct ItemStruct itm, int i) {
 
 // address: 0x8006E824
 void S_StartSIdentify__Fv() {
-	int i;
-	unsigned char idok;
+	// register: 16
+	register int i;
+	// register: 19
+	register unsigned char idok;
 }
 
 
 // address: 0x8006F2C4
 void S_StartIdShow__Fv() {
-	char iclr;
-	char *StrPtr;
+	// register: 17
+	register char iclr;
+	// register: 16
+	register char *StrPtr;
 }
 
 
 // address: 0x8006F49C
 void S_StartTalk__Fv() {
-	int i;
-	int tq;
-	int sn;
-	int la;
-	int gl;
+	// register: 18
+	register int i;
+	// register: 5
+	register int tq;
+	// register: 17
+	register int sn;
+	// register: 22
+	register int la;
+	// register: 20
+	register int gl;
 }
 
 
@@ -18053,7 +21272,8 @@ void S_StartDrunk__Fv() {
 
 // address: 0x8006F96C
 void StartStore__Fc(char s) {
-	int i;
+	// register: 3
+	register int i;
 }
 
 
@@ -18074,8 +21294,10 @@ void DrawSTextTSK__FP4TASK(struct TASK *T) {
 
 // address: 0x8006FEAC
 void DoThatDrawSText__Fv() {
-	int i;
-	int YOfs;
+	// register: 17
+	register int i;
+	// register: 18
+	register int YOfs;
 }
 
 
@@ -18111,59 +21333,80 @@ void SetSpdbarGoldCurs__Fii(int pnum, int i) {
 
 // address: 0x80070748
 void TakePlrsMoney__Fl(long cost) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x80070B94
 void SmithBuyItem__Fv() {
-	int idx;
+	// register: 9
+	register int idx;
 }
 
 
 // address: 0x80070E14
 void S_SBuyEnter__Fv() {
-	int idx;
-	int i;
-	unsigned char done;
+	// register: 9
+	register int idx;
+	// register: 16
+	register int i;
+	// register: 3
+	register unsigned char done;
 }
 
 
 // address: 0x80071078
 void SmithBuyPItem__Fv() {
-	int idx;
-	int i;
-	int xx;
+	// register: 6
+	register int idx;
+	// register: 5
+	register int i;
+	// register: 4
+	register int xx;
 }
 
 
 // address: 0x8007123C
 void S_SPBuyEnter__Fv() {
-	int idx;
-	int i;
-	unsigned char done;
+	// register: 9
+	register int idx;
+	// register: 16
+	register int i;
+	// register: 3
+	register unsigned char done;
 	{
-		int xx;
+		// register: 4
+		register int xx;
 	}
 }
 
 
 // address: 0x800714A8
 unsigned char StoreGoldFit__Fi(int idx) {
-	int sz;
-	int numsqrs;
-	int i;
-	long cost;
+	// register: 18
+	register int sz;
+	// register: 16
+	register int numsqrs;
+	// register: 4
+	register int i;
+	// register: 17
+	register long cost;
 }
 
 
 // address: 0x80071760
 void PlaceStoreGold__Fl(long v) {
-	int i;
-	int ii;
-	int xx;
-	int yy;
-	unsigned char done;
+	// register: 16
+	register int i;
+	// register: 18
+	register int ii;
+	// register: 19
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 5
+	register unsigned char done;
 	{
 		{
 			{
@@ -18177,28 +21420,35 @@ void PlaceStoreGold__Fl(long v) {
 
 // address: 0x80071A00
 void StoreSellItem__Fv() {
-	int idx;
-	int i;
-	long cost;
+	// register: 16
+	register int idx;
+	// register: 16
+	register int i;
+	// register: 17
+	register long cost;
 }
 
 
 // address: 0x80071D44
 void S_SSellEnter__Fv() {
-	int idx;
+	// register: 8
+	register int idx;
 }
 
 
 // address: 0x80071E54
 void SmithRepairItem__Fv() {
-	int i;
-	int idx;
+	// register: 4
+	register int i;
+	// register: 4
+	register int idx;
 }
 
 
 // address: 0x800720C8
 void S_SRepairEnter__Fv() {
-	int idx;
+	// register: 8
+	register int idx;
 }
 
 
@@ -18209,34 +21459,42 @@ void S_WitchEnter__Fv() {
 
 // address: 0x8007230C
 void WitchBuyItem__Fv() {
-	int idx;
+	// register: 16
+	register int idx;
 }
 
 
 // address: 0x80072590
 void S_WBuyEnter__Fv() {
-	int idx;
-	int i;
-	unsigned char done;
+	// register: 8
+	register int idx;
+	// register: 16
+	register int i;
+	// register: 3
+	register unsigned char done;
 }
 
 
 // address: 0x80072818
 void S_WSellEnter__Fv() {
-	int idx;
+	// register: 8
+	register int idx;
 }
 
 
 // address: 0x80072958
 void WitchRechargeItem__Fv() {
-	int i;
-	int idx;
+	// register: 2
+	register int i;
+	// register: 4
+	register int idx;
 }
 
 
 // address: 0x80072AD4
 void S_WRechargeEnter__Fv() {
-	int idx;
+	// register: 8
+	register int idx;
 }
 
 
@@ -18252,21 +21510,26 @@ void BoyBuyItem__Fv() {
 
 // address: 0x80072E70
 void HealerBuyItem__Fv() {
-	int idx;
+	// register: 16
+	register int idx;
 }
 
 
 // address: 0x8007319C
 void S_BBuyEnter__Fv() {
-	int i;
-	unsigned char done;
+	// register: 16
+	register int i;
+	// register: 3
+	register unsigned char done;
 }
 
 
 // address: 0x800733B0
 void StoryIdItem__Fv() {
-	int i;
-	int idx;
+	// register: 4
+	register int i;
+	// register: 2
+	register int idx;
 }
 
 
@@ -18282,9 +21545,12 @@ void S_HealerEnter__Fv() {
 
 // address: 0x800738B4
 void S_HBuyEnter__Fv() {
-	int idx;
-	int i;
-	unsigned char done;
+	// register: 9
+	register int idx;
+	// register: 16
+	register int i;
+	// register: 3
+	register unsigned char done;
 }
 
 
@@ -18295,16 +21561,21 @@ void S_StoryEnter__Fv() {
 
 // address: 0x80073B84
 void S_SIDEnter__Fv() {
-	int idx;
+	// register: 8
+	register int idx;
 }
 
 
 // address: 0x80073D08
 void S_TalkEnter__Fv() {
-	int i;
-	int tq;
-	int sn;
-	int la;
+	// register: 16
+	register int i;
+	// register: 5
+	register int tq;
+	// register: 18
+	register int sn;
+	// register: 21
+	register int la;
 	{
 		{
 			{
@@ -18338,7 +21609,9 @@ void STextEnter__Fv() {
 
 // address: 0x80074228
 void CheckStoreBtn__Fv() {
-	struct CPad *Pad;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *Pad;
 }
 
 
@@ -18395,23 +21668,34 @@ void T_DrawView__Fii(int StartX, int StartY) {
 
 // address: 0x80074628
 void T_FillSector__FPUcT0iiiib(unsigned char *P3Tiles, unsigned char *pSector, int xi, int yi, int w, int h, bool AddSec) {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long ii;
+	// register: 17
+	register int i;
+	// register: 22
+	register int j;
+	// register: 20
+	register int xx;
+	// address: 0xFFFFFFB8
+	auto int yy;
+	// register: 6
+	register long v1;
+	// register: 18
+	register long v2;
+	// register: 19
+	register long v3;
+	// register: 21
+	register long v4;
+	// address: 0xFFFFFFC0
+	auto long ii;
 	{
 		{
-			unsigned short *Map;
+			// register: 9
+			register unsigned short *Map;
 			{
 				{
 					{
 						{
-							long Dave;
+							// register: 2
+							register long Dave;
 						}
 					}
 				}
@@ -18423,10 +21707,14 @@ void T_FillSector__FPUcT0iiiib(unsigned char *P3Tiles, unsigned char *pSector, i
 
 // address: 0x8007486C
 void T_FillTile__FPUciii(unsigned char *P3Tiles, int xx, int yy, int t) {
-	long v1;
-	long v2;
-	long v3;
-	long v4;
+	// register: 6
+	register long v1;
+	// register: 6
+	register long v2;
+	// register: 6
+	register long v3;
+	// register: 6
+	register long v4;
 }
 
 
@@ -18437,14 +21725,19 @@ void TownFixupBodges__Fv() {
 
 // address: 0x800749BC
 void T_Pass3__Fv() {
-	unsigned char *pSector;
-	int xx;
-	int yy;
+	// register: 19
+	register unsigned char *pSector;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
 	{
-		int y;
+		// register: 5
+		register int y;
 		{
 			{
-				int x;
+				// register: 4
+				register int x;
 				{
 					{
 						{
@@ -18462,10 +21755,12 @@ void T_Pass3__Fv() {
 // address: 0x80074D48
 void CreateTown__Fi(int entry) {
 	{
-		int y;
+		// register: 5
+		register int y;
 		{
 			{
-				int x;
+				// register: 4
+				register int x;
 			}
 		}
 	}
@@ -18474,20 +21769,29 @@ void CreateTown__Fi(int entry) {
 
 // address: 0x80074E9C
 unsigned char *GRL_LoadFileInMemSig__FPCcPUl(char *Name, unsigned long *Len) {
-	struct FileIO *MyIo;
-	char SmallName[20];
-	unsigned char *Dest;
-	int FileLen;
+	// register: 18
+	// size: 0x14
+	register struct FileIO *MyIo;
+	// address: 0xFFFFFFD8
+	// size: 0x14
+	auto char SmallName[20];
+	// register: 16
+	register unsigned char *Dest;
+	// register: 16
+	register int FileLen;
 }
 
 
 // address: 0x80074F80
 void GRL_StripDir__FPcPCc(char *Dest, char *Src) {
-	char *BSlash;
-	char *FSlash;
+	// register: 17
+	register char *BSlash;
+	// register: 3
+	register char *FSlash;
 	{
 		{
-			char *Last;
+			// register: 5
+			register char *Last;
 		}
 	}
 }
@@ -18505,13 +21809,16 @@ bool FindLevTrig__Fiii(int x, int y, int l) {
 
 // address: 0x800750F8
 void ScanMap__FPsi(short *list, int l) {
-	int NoTrigs;
+	// register: 19
+	register int NoTrigs;
 	{
 		{
-			int y;
+			// register: 18
+			register int y;
 			{
 				{
-					int x;
+					// register: 16
+					register int x;
 				}
 			}
 		}
@@ -18521,30 +21828,41 @@ void ScanMap__FPsi(short *list, int l) {
 
 // address: 0x80075200
 int FindBlock__Fii(int x, int y) {
-	struct BLOCK *ptr;
+	// register: 6
+	// size: 0x4
+	register struct BLOCK *ptr;
 }
 
 
 // address: 0x8007529C
 void ChangeBlock__Fiii(int x, int y, int bl) {
-	struct BLOCK *ptr;
-	short *list;
+	// register: 17
+	// size: 0x4
+	register struct BLOCK *ptr;
+	// register: 18
+	register short *list;
 	{
-		int b;
+		// register: 4
+		register int b;
 	}
 }
 
 
 // address: 0x800753E0
 void ScanBlocks__FPs(short *list) {
-	struct BLOCK *ptr;
+	// register: 19
+	// size: 0x4
+	register struct BLOCK *ptr;
 	{
-		int bl;
+		// register: 20
+		register int bl;
 		{
-			int y;
+			// register: 18
+			register int y;
 			{
 				{
-					int x;
+					// register: 17
+					register int x;
 				}
 			}
 		}
@@ -18569,41 +21887,56 @@ unsigned char ForceTownTrig__Fv() {
 
 // address: 0x80075888
 unsigned char ForceL1Trig__Fv() {
-	int j;
+	// register: 3
+	register int j;
 }
 
 
 // address: 0x80075A48
 unsigned char ForceL2Trig__Fv() {
-	int j;
-	int dx;
-	int dy;
+	// register: 17
+	register int j;
+	// register: 16
+	register int dx;
+	// register: 3
+	register int dy;
 }
 
 
 // address: 0x80075D48
 unsigned char ForceL3Trig__Fv() {
-	int j;
-	int dx;
-	int dy;
+	// register: 17
+	register int j;
+	// register: 16
+	register int dx;
+	// register: 2
+	register int dy;
 }
 
 
 // address: 0x80076054
 unsigned char ForceL4Trig__Fv() {
-	int j;
-	int dx;
-	int dy;
+	// register: 17
+	register int j;
+	// register: 16
+	register int dx;
+	// register: 2
+	register int dy;
 }
 
 
 // address: 0x80076390
 void Freeupstairs__Fv() {
-	int j;
-	int tx;
-	int ty;
-	int xx;
-	int yy;
+	// register: 8
+	register int j;
+	// register: 9
+	register int tx;
+	// register: 10
+	register int ty;
+	// register: 4
+	register int xx;
+	// register: 5
+	register int yy;
 }
 
 
@@ -18624,15 +21957,19 @@ unsigned char ForcePWaterTrig__Fv() {
 
 // address: 0x800765E4
 void CheckTrigForce__Fv() {
-	int ocursmx;
-	int ocursmy;
+	// register: 19
+	register int ocursmx;
+	// register: 18
+	register int ocursmy;
 	{
 		{
 			{
-				int i;
+				// register: 17
+				register int i;
 				{
 					{
-						int i;
+						// register: 16
+						register int i;
 					}
 				}
 			}
@@ -18648,7 +21985,8 @@ void FadeGameOut__Fv() {
 
 // address: 0x80076994
 bool IsTrigger__Fii(int x, int y) {
-	int i;
+	// register: 6
+	register int i;
 }
 
 
@@ -18659,19 +21997,26 @@ bool CheckTrigLevel__Fi(int level) {
 
 // address: 0x80076AC8
 void CheckTriggers__Fi(int pnum) {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
 	{
-		int i;
+		// register: 30
+		register int i;
 		{
 			{
 				{
 					{
 						{
-							unsigned char abortflag;
-							int dx;
-							int dy;
-							char m;
+							// register: 16
+							register unsigned char abortflag;
+							// register: 18
+							register int dx;
+							// register: 17
+							register int dy;
+							// register: 19
+							register char m;
 						}
 					}
 				}
@@ -18683,16 +22028,21 @@ void CheckTriggers__Fi(int pnum) {
 
 // address: 0x80077054
 int GetManaAmount__Fii(int id, int sn) {
-	int i;
-	int sl;
-	int ma;
-	int adj;
+	// register: 3
+	register int i;
+	// register: 8
+	register int sl;
+	// register: 6
+	register int ma;
+	// register: 7
+	register int adj;
 }
 
 
 // address: 0x80077308
 void UseMana__Fii(int id, int sn) {
-	int ma;
+	// register: 2
+	register int ma;
 }
 
 
@@ -18703,21 +22053,27 @@ unsigned char CheckSpell__FiicUc(int id, int sn, char st, unsigned char manaonly
 
 // address: 0x80077538
 void CastSpell__Fiiiiiiii(int id, int spl, int sx, int sy, int dx, int dy, int caster, int spllvl) {
-	int i;
-	int dir;
+	// register: 17
+	register int i;
+	// register: 21
+	register int dir;
 }
 
 
 // address: 0x80077850
 void DoResurrect__Fii(int pnum, int rid) {
-	struct PlayerStruct *ptrplr;
+	// register: 16
+	// size: 0x19E8
+	register struct PlayerStruct *ptrplr;
 }
 
 
 // address: 0x80077AB8
 void DoHealOther__Fii(int pnum, int rid) {
-	int i;
-	long l;
+	// register: 16
+	register int i;
+	// register: 17
+	register long l;
 }
 
 
@@ -18729,7 +22085,8 @@ void snd_update__FUc(unsigned char bStopAll) {
 // address: 0x80077D1C
 void snd_stop_snd__FP4TSnd(struct TSnd *pSnd) {
 	{
-		int v;
+		// register: 16
+		register int v;
 	}
 }
 
@@ -18741,7 +22098,8 @@ void snd_play_snd__FP4TSFXll(struct TSFX *pSnd, long lVolume, long lPan) {
 
 // address: 0x80077DA0
 void snd_play_msnd__FUsll(unsigned short pszName, long lVolume, long lPan) {
-	int padj;
+	// register: 18
+	register int padj;
 }
 
 
@@ -18764,7 +22122,8 @@ void music_fade__Fv() {
 void music_start__Fi(int nTrack) {
 	{
 		{
-			int MusicVolume;
+			// register: 3
+			register int MusicVolume;
 		}
 	}
 }
@@ -18787,13 +22146,21 @@ void HappyMan__Fi(int n) {
 
 // address: 0x80077FFC
 void flyabout__7GamePad(struct GamePad *this) {
-	int cp;
-	int owx;
-	int owy;
-	int wx;
-	int wy;
-	struct CBlocks *gblocks;
-	int step;
+	// register: 16
+	register int cp;
+	// register: 20
+	register int owx;
+	// register: 21
+	register int owy;
+	// register: 17
+	register int wx;
+	// register: 18
+	register int wy;
+	// register: 23
+	// size: 0x108
+	register struct CBlocks *gblocks;
+	// register: 4
+	register int step;
 }
 
 
@@ -18804,15 +22171,20 @@ void CloseInvChr__Fv() {
 
 // address: 0x80078440
 void WorldToOffset__Fiii(int pnum, int WorldX, int WorldY) {
-	int x;
-	int y;
-	struct PlayerStruct *player;
+	// register: 8
+	register int x;
+	// register: 7
+	register int y;
+	// register: 3
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
 
 // address: 0x800784C0
 char pad_UpIsUpRight__Fic(int pval, char other) {
-	int walk_dir;
+	// register: 3
+	register int walk_dir;
 }
 
 
@@ -18839,14 +22211,17 @@ void SetComboDownButton__7GamePadiPFi_v(struct GamePad *this, int pad_val, void 
 
 // address: 0x800786C0
 void SetAllButtons__7GamePadP11KEY_ASSIGNS(struct GamePad *this, struct KEY_ASSIGNS *actions) {
-	int i;
+	// register: 18
+	register int i;
 }
 
 
 // address: 0x80078928
 void GetAllButtons__7GamePadP11KEY_ASSIGNS(struct GamePad *this, struct KEY_ASSIGNS *actions) {
-	int i;
-	int oc;
+	// register: 19
+	register int i;
+	// register: 20
+	register int oc;
 }
 
 
@@ -18864,7 +22239,8 @@ void SetUpAction__7GamePadPFi_vT1(struct GamePad *this, void (*func)(), void (*u
 
 // address: 0x80078B78
 void RunFunc__7GamePadi(struct GamePad *this, int pad) {
-	int i;
+	// register: 2
+	register int i;
 }
 
 
@@ -18883,16 +22259,21 @@ void ButtonDown__7GamePadi(struct GamePad *this, int button) {
 
 // address: 0x8007907C
 void TestButtons__7GamePad(struct GamePad *this) {
-	int hand;
-	int joydown;
+	// register: 16
+	register int hand;
+	// register: 18
+	register int joydown;
 }
 
 
 // address: 0x80079188
 bool CheckCentre__7GamePadi(struct GamePad *this, int dir) {
-	int wx;
-	int wy;
-	int ret;
+	// register: 3
+	register int wx;
+	// register: 4
+	register int wy;
+	// register: 6
+	register int ret;
 }
 
 
@@ -18913,12 +22294,16 @@ int CheckSide__7GamePadi(struct GamePad *this, int dir) {
 
 // address: 0x800793F8
 bool newDirOk__7GamePadi(struct GamePad *this, int dir) {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
 	{
 		{
-			int wx;
-			int wy;
+			// register: 6
+			register int wx;
+			// register: 7
+			register int wy;
 		}
 	}
 }
@@ -18926,19 +22311,32 @@ bool newDirOk__7GamePadi(struct GamePad *this, int dir) {
 
 // address: 0x800794A8
 int CheckDiagBodge__7GamePadi(struct GamePad *this, int dir) {
-	int x;
-	int y;
-	int lnd;
-	int rnd;
-	int wx;
-	int wy;
-	char *poffset_x;
-	char *poffset_y;
-	bool pl;
-	bool pr;
-	bool pf;
-	bool pll;
-	bool prr;
+	// address: 0xFFFFFF90
+	auto int x;
+	// address: 0xFFFFFF98
+	auto int y;
+	// register: 30
+	register int lnd;
+	// register: 23
+	register int rnd;
+	// address: 0xFFFFFFA0
+	auto int wx;
+	// address: 0xFFFFFFA8
+	auto int wy;
+	// register: 19
+	register char *poffset_x;
+	// register: 20
+	register char *poffset_y;
+	// register: 22
+	register bool pl;
+	// register: 21
+	register bool pr;
+	// address: 0xFFFFFFB0
+	auto bool pf;
+	// address: 0xFFFFFFB8
+	auto bool pll;
+	// address: 0xFFFFFFC0
+	auto bool prr;
 	{
 		{
 			{
@@ -18952,15 +22350,24 @@ int CheckDiagBodge__7GamePadi(struct GamePad *this, int dir) {
 
 // address: 0x8007979C
 int CheckIsoBodge__7GamePadi(struct GamePad *this, int dir) {
-	int x;
-	int y;
-	int newdir;
-	int wx;
-	int wy;
-	int lnd;
-	int rnd;
-	char *poffset_x;
-	char *poffset_y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
+	// register: 17
+	register int newdir;
+	// register: 21
+	register int wx;
+	// register: 22
+	register int wy;
+	// address: 0xFFFFFFB0
+	auto int lnd;
+	// address: 0xFFFFFFB8
+	auto int rnd;
+	// register: 18
+	register char *poffset_x;
+	// register: 19
+	register char *poffset_y;
 	{
 		{
 		}
@@ -18970,13 +22377,19 @@ int CheckIsoBodge__7GamePadi(struct GamePad *this, int dir) {
 
 // address: 0x80079B08
 int CheckBodge__7GamePadi(struct GamePad *this, int dir) {
-	int fx;
-	int fy;
-	struct map_info *dm;
+	// register: 5
+	register int fx;
+	// register: 6
+	register int fy;
+	// register: 4
+	// size: 0x8
+	register struct map_info *dm;
 	{
 		{
-			int wx;
-			int wy;
+			// register: 5
+			register int wx;
+			// register: 6
+			register int wy;
 		}
 	}
 }
@@ -18984,10 +22397,15 @@ int CheckBodge__7GamePadi(struct GamePad *this, int dir) {
 
 // address: 0x80079C68
 void walk__7GamePadi(struct GamePad *this, int cmd) {
-	int xv;
-	int yv;
-	int dir;
-	struct PlayerStruct *plr2;
+	// register: 18
+	register int xv;
+	// register: 19
+	register int yv;
+	// register: 17
+	register int dir;
+	// register: 3
+	// size: 0x19E8
+	register struct PlayerStruct *plr2;
 	{
 		{
 		}
@@ -18997,13 +22415,17 @@ void walk__7GamePadi(struct GamePad *this, int cmd) {
 
 // address: 0x80079FB0
 void check_around_player__7GamePad(struct GamePad *this) {
-	int x;
-	int y;
+	// register: 19
+	register int x;
+	// register: 18
+	register int y;
 	{
 		{
 			{
 				{
-					struct ItemStruct *pi;
+					// register: 16
+					// size: 0x6C
+					register struct ItemStruct *pi;
 				}
 			}
 		}
@@ -19013,18 +22435,25 @@ void check_around_player__7GamePad(struct GamePad *this) {
 
 // address: 0x8007A2EC
 void show_combos__7GamePad(struct GamePad *this) {
-	int y;
-	struct RECT crect;
-	enum TXT_JUST J;
+	// register: 21
+	register int y;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct RECT crect;
+	// register: 22
+	// size: 0x4
+	register enum TXT_JUST J;
 	{
-		int i;
+		// register: 20
+		register int i;
 	}
 }
 
 
 // address: 0x8007A578
 void Handle__7GamePad(struct GamePad *this) {
-	int cp;
+	// register: 18
+	register int cp;
 	{
 		{
 			{
@@ -19033,13 +22462,16 @@ void Handle__7GamePad(struct GamePad *this) {
 						{
 							{
 								{
-									int abut;
+									// register: 2
+									register int abut;
 									{
 										{
-											int owait;
+											// register: 16
+											register int owait;
 											{
 												{
-													int dir;
+													// register: 5
+													register int dir;
 													{
 														{
 														}
@@ -19061,8 +22493,10 @@ void Handle__7GamePad(struct GamePad *this) {
 
 // address: 0x8007AC34
 void GamePadTask__FP4TASK(struct TASK *T) {
-	int omp;
-	int oms;
+	// register: 17
+	register int omp;
+	// register: 18
+	register int oms;
 }
 
 
@@ -19074,8 +22508,12 @@ struct GamePad *GetGamePad__Fi(int pnum) {
 
 // address: 0x8007AD4C
 void PostGamePad__Fiiii(int val, int var1, int var2, int var3) {
-	struct GamePad *GP1;
-	struct GamePad *GP2;
+	// register: 3
+	// size: 0xD4
+	register struct GamePad *GP1;
+	// register: 8
+	// size: 0xD4
+	register struct GamePad *GP2;
 }
 
 
@@ -19091,14 +22529,19 @@ void InitGamePadVars__Fv() {
 
 // address: 0x8007B00C
 int SetWalkStyle__Fii(int pnum, int style) {
-	int ret;
-	struct KEY_ASSIGNS *ta;
+	// register: 17
+	register int ret;
+	// register: 17
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
 }
 
 
 // address: 0x8007B07C
 char GetPadStyle__Fi(int pnum) {
-	struct GamePad *GPad;
+	// register: 2
+	// size: 0xD4
+	register struct GamePad *GPad;
 }
 
 
@@ -19159,7 +22602,8 @@ void GRL_InitGwin__Fv() {
 
 // address: 0x8007B21C
 unsigned long (*GRL_SetWindowProc__FPFUlUilUl_Ul(unsigned long (*NewProc)()))() {
-	unsigned long (*OldProc)();
+	// register: 2
+	register unsigned long (*OldProc)();
 }
 
 
@@ -19190,10 +22634,15 @@ enum LANG_TYPE LANG_GetLang__Fv() {
 void LANG_SetDb__F10LANG_DB_NO(enum LANG_DB_NO NewLangDbNo) {
 	{
 		{
-			char FileNameBuffer[40];
-			struct FileIO *FIO;
+			// address: 0xFFFFFFC0
+			// size: 0x28
+			auto char FileNameBuffer[40];
+			// register: 17
+			// size: 0x14
+			register struct FileIO *FIO;
 			{
-				int f;
+				// register: 4
+				register int f;
 			}
 		}
 	}
@@ -19214,10 +22663,15 @@ void LANG_ReloadMainTXT__Fv() {
 void LANG_SetLang__F9LANG_TYPE(enum LANG_TYPE NewLanguageType) {
 	{
 		{
-			char FileNameBuffer[40];
-			struct FileIO *FIO;
+			// address: 0xFFFFFFC0
+			// size: 0x28
+			auto char FileNameBuffer[40];
+			// register: 16
+			// size: 0x14
+			register struct FileIO *FIO;
 			{
-				int f;
+				// register: 4
+				register int f;
 			}
 		}
 	}
@@ -19240,7 +22694,8 @@ int CalcNumOfStrings__FPPc(char **TPtr) {
 
 // address: 0x8007B764
 void GetLangFileName__F9LANG_TYPEPc(enum LANG_TYPE NewLanguageType, char *Dest) {
-	char *Ext;
+	// register: 17
+	register char *Ext;
 }
 
 
@@ -19251,45 +22706,75 @@ char *GetLangFileNameExt__F9LANG_TYPE(enum LANG_TYPE NewLanguageType) {
 
 // address: 0x8007B8C4
 void DoPortalFX__FP8POLY_FT4iiii(struct POLY_FT4 *Ft4, int R, int G, int B, int OtPos) {
-	unsigned char zU;
-	unsigned char *s;
-	unsigned char *d;
-	unsigned char *Ft4m;
-	short zX0;
-	short zX1;
-	short zY;
-	int n;
-	int xoffset[56];
+	// register: 16
+	register unsigned char zU;
+	// register: 3
+	register unsigned char *s;
+	// register: 4
+	register unsigned char *d;
+	// register: 18
+	register unsigned char *Ft4m;
+	// register: 21
+	register short zX0;
+	// register: 22
+	register short zX1;
+	// register: 17
+	register short zY;
+	// register: 19
+	register int n;
+	// address: 0x800E38E4
+	// size: 0xE0
+	static int xoffset[56];
 }
 
 
 // address: 0x8007BC34
 // size: 0x28
 struct POLY_FT4 *TempPrintMissile__FiiiiiiiiccUcUcUcc(int ScrX, int ScrY, int OtPos, int spell, int aframe, int direction, int anim, int sfx, int xflip, int yflip, int red, int grn, int blu, int semi) {
-	struct POLY_FT4 *FT4;
-	struct TextDat *missdat;
-	int frame;
-	int tv1;
-	int dw;
-	int dh;
+	// address: 0xFFFFFF90
+	// size: 0x28
+	auto struct POLY_FT4 *FT4;
+	// register: 17
+	// size: 0x70
+	register struct TextDat *missdat;
+	// register: 16
+	register int frame;
+	// register: 5
+	register int tv1;
+	// register: 2
+	register int dw;
+	// register: 3
+	register int dh;
 }
 
 
 // address: 0x8007C01C
 void FuncTOWN__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	int anim;
-	struct POLY_FT4 *FT4;
-	struct TextDat *missdat;
-	int frame;
+	// register: 18
+	register int anim;
+	// address: 0xFFFFFFD8
+	// size: 0x28
+	auto struct POLY_FT4 *FT4;
+	// register: 17
+	// size: 0x70
+	register struct TextDat *missdat;
+	// register: 16
+	register int frame;
 }
 
 
 // address: 0x8007C1BC
 void FuncRPORTAL__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	int anim;
-	struct POLY_FT4 *FT4;
-	struct TextDat *missdat;
-	int frame;
+	// register: 16
+	register int anim;
+	// address: 0xFFFFFFD8
+	// size: 0x28
+	auto struct POLY_FT4 *FT4;
+	// register: 18
+	// size: 0x70
+	register struct TextDat *missdat;
+	// register: 17
+	register int frame;
 }
 
 
@@ -19297,7 +22782,8 @@ void FuncRPORTAL__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int S
 void FuncFIREBOLT__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
 	{
 		{
-			int frame;
+			// register: 3
+			register int frame;
 		}
 	}
 }
@@ -19307,7 +22793,8 @@ void FuncFIREBOLT__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int 
 void FuncHBOLT__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
 	{
 		{
-			int frame;
+			// register: 3
+			register int frame;
 		}
 	}
 }
@@ -19325,13 +22812,15 @@ void FuncGUARDIAN__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int 
 
 // address: 0x8007C5C4
 void FuncFIREWALL__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	int frame;
+	// register: 3
+	register int frame;
 }
 
 
 // address: 0x8007C65C
 void FuncFIREMOVE__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	int frame;
+	// register: 3
+	register int frame;
 }
 
 
@@ -19342,9 +22831,12 @@ void FuncFLAME__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int Scr
 
 // address: 0x8007C760
 void FuncARROW__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	char xflip;
-	char yflip;
-	int frame;
+	// register: 12
+	register char xflip;
+	// register: 11
+	register char yflip;
+	// register: 3
+	register int frame;
 }
 
 
@@ -19352,10 +22844,14 @@ void FuncARROW__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int Scr
 void FuncFARROW__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
 	{
 		{
-			char xflip;
-			char yflip;
-			int frame;
-			int nframe;
+			// register: 11
+			register char xflip;
+			// register: 10
+			register char yflip;
+			// register: 3
+			register int frame;
+			// register: 8
+			register int nframe;
 		}
 	}
 }
@@ -19365,10 +22861,14 @@ void FuncFARROW__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int Sc
 void FuncLARROW__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
 	{
 		{
-			char xflip;
-			char yflip;
-			int frame;
-			int nframe;
+			// register: 11
+			register char xflip;
+			// register: 10
+			register char yflip;
+			// register: 3
+			register int frame;
+			// register: 8
+			register int nframe;
 		}
 	}
 }
@@ -19376,26 +22876,36 @@ void FuncLARROW__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int Sc
 
 // address: 0x8007C9F8
 void FuncMAGMABALL__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	char xflip;
-	char yflip;
-	int frame;
+	// register: 9
+	register char xflip;
+	// register: 10
+	register char yflip;
+	// register: 8
+	register int frame;
 }
 
 
 // address: 0x8007CA94
 void FuncBONESPIRIT__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	char xflip;
-	char yflip;
-	int frame;
-	int sfx;
+	// register: 22
+	register char xflip;
+	// register: 23
+	register char yflip;
+	// register: 16
+	register int frame;
+	// register: 21
+	register int sfx;
 }
 
 
 // address: 0x8007CBB8
 void FuncACID__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	char xflip;
-	char yflip;
-	int frame;
+	// register: 10
+	register char xflip;
+	// register: 9
+	register char yflip;
+	// register: 8
+	register int frame;
 }
 
 
@@ -19411,19 +22921,28 @@ void FuncACIDPUD__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int S
 
 // address: 0x8007CD30
 void FuncFLARE__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	unsigned char red;
-	unsigned char grn;
-	unsigned char blu;
-	struct POLY_FT4 *FT4;
+	// register: 18
+	register unsigned char red;
+	// register: 19
+	register unsigned char grn;
+	// register: 21
+	register unsigned char blu;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
 }
 
 
 // address: 0x8007CEBC
 void FuncFLAREXP__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	unsigned char red;
-	unsigned char grn;
-	unsigned char blu;
-	unsigned long bright;
+	// register: 20
+	register unsigned char red;
+	// register: 21
+	register unsigned char grn;
+	// register: 18
+	register unsigned char blu;
+	// register: 2
+	register unsigned long bright;
 }
 
 
@@ -19441,8 +22960,10 @@ void FuncBOOM__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY
 void FuncELEMENT__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
 	{
 		{
-			char xflip;
-			int frame;
+			// register: 9
+			register char xflip;
+			// register: 3
+			register int frame;
 		}
 	}
 }
@@ -19460,13 +22981,21 @@ void FuncRHINO__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int Scr
 
 // address: 0x8007D24C
 void FuncFLASH__FP13MissileStructiii(struct MissileStruct *Ms, int ScrX, int ScrY, int OtPos) {
-	int size;
+	// register: 3
+	register int size;
 	{
 		{
-			int xoffset[8][3];
-			int id;
-			struct CPlayer *test;
-			struct PlayerStruct *player;
+			// address: 0x80118CF4
+			// size: 0x60
+			static int xoffset[8][3];
+			// register: 17
+			register int id;
+			// register: 18
+			// size: 0x90
+			register struct CPlayer *test;
+			// register: 16
+			// size: 0x19E8
+			register struct PlayerStruct *player;
 		}
 	}
 }
@@ -19527,47 +23056,61 @@ struct FRAME_HDR *GetFr__7TextDati_addr_8007D5DC(struct TextDat *this, int FrNum
 // address: 0x8007D5F8
 void ML_Init__Fv() {
 	{
-		int f;
+		// register: 3
+		register int f;
 	}
 }
 
 
 // address: 0x8007D630
 int ML_GetList__Fi(int Level) {
-	int RetVal;
+	// register: 2
+	register int RetVal;
 }
 
 
 // address: 0x8007D6B0
 int ML_SetRandomList__Fi(int Level) {
-	int NumOfLists;
+	// register: 4
+	register int NumOfLists;
 }
 
 
 // address: 0x8007D748
 int ML_SetList__Fii(int Level, int List) {
-	int NumOfLists;
+	// register: 2
+	register int NumOfLists;
 }
 
 
 // address: 0x8007D7F8
 int ML_GetPresetMonsters__FiPiUl(int currlevel, int *typelist, unsigned long QuestsNeededMask) {
-	struct MonstList *Mlist;
-	int NumOfMonsters;
-	int ThisList;
-	int Index[10];
+	// register: 10
+	// size: 0x10
+	register struct MonstList *Mlist;
+	// register: 18
+	register int NumOfMonsters;
+	// register: 16
+	register int ThisList;
+	// address: 0xFFFFFFC0
+	// size: 0x28
+	auto int Index[10];
 	{
-		unsigned int f;
+		// register: 9
+		register unsigned int f;
 		{
 			{
 				{
 					{
-						int i;
+						// register: 7
+						register int i;
 						{
 							{
 								{
-									int minl;
-									int maxl;
+									// register: 4
+									register int minl;
+									// register: 2
+									register int maxl;
 								}
 							}
 						}
@@ -19582,16 +23125,24 @@ int ML_GetPresetMonsters__FiPiUl(int currlevel, int *typelist, unsigned long Que
 // address: 0x8007D9E8
 // size: 0x28
 struct POLY_FT4 *DefaultObjPrint__FP12ObjectStructiiP7TextDatiii(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos, int XOffSet, int YOffSet) {
-	int AnimFrame;
-	struct POLY_FT4 *Ft4;
-	int LoadIndex;
-	int Creature;
+	// register: 16
+	register int AnimFrame;
+	// register: 17
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 2
+	register int LoadIndex;
+	// register: 17
+	register int Creature;
 	{
 		{
-			int PhysFrame;
+			// register: 16
+			register int PhysFrame;
 			{
 				{
-					struct POLY_FT4 *ShadFt4;
+					// register: 16
+					// size: 0x28
+					register struct POLY_FT4 *ShadFt4;
 				}
 			}
 		}
@@ -19602,7 +23153,9 @@ struct POLY_FT4 *DefaultObjPrint__FP12ObjectStructiiP7TextDatiii(struct ObjectSt
 // address: 0x8007DB7C
 // size: 0x28
 struct POLY_FT4 *LightObjPrint__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	struct POLY_FT4 *Ft4;
+	// register: 19
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
 	{
 		{
 			{
@@ -19617,10 +23170,15 @@ struct POLY_FT4 *LightObjPrint__FP12ObjectStructiiP7TextDati(struct ObjectStruct
 // address: 0x8007DC40
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_SARC__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	struct POLY_FT4 *Ft4;
-	int AnimFrame;
-	int LoadIndex;
-	int Creature;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 2
+	register int AnimFrame;
+	// register: 3
+	register int LoadIndex;
+	// register: 5
+	register int Creature;
 }
 
 
@@ -19629,7 +23187,8 @@ void ResetFlames__Fv() {
 	{
 		{
 			{
-				int i;
+				// register: 17
+				register int i;
 			}
 		}
 	}
@@ -19638,16 +23197,27 @@ void ResetFlames__Fv() {
 
 // address: 0x8007DDD0
 void PrintOBJ_FIRE__Fiii(int ScrX, int ScrY, int OtPos) {
-	struct POLY_FT4 *Ft4a;
-	struct TextDat *ThisDat;
-	int diff;
-	struct CINDER *C;
+	// register: 2
+	// size: 0x28
+	register struct POLY_FT4 *Ft4a;
+	// address: 0xFFFFFFD0
+	// size: 0x70
+	auto struct TextDat *ThisDat;
+	// register: 30
+	register int diff;
+	// register: 22
+	// size: 0x6
+	register struct CINDER *C;
 	{
-		int i;
+		// register: 23
+		register int i;
 		{
-			unsigned short fx;
-			unsigned short fy;
-			unsigned short fyi;
+			// register: 21
+			register unsigned short fx;
+			// register: 19
+			register unsigned short fy;
+			// register: 18
+			register unsigned short fyi;
 		}
 	}
 }
@@ -19656,15 +23226,27 @@ void PrintOBJ_FIRE__Fiii(int ScrX, int ScrY, int OtPos) {
 // address: 0x8007DF88
 // size: 0x28
 struct POLY_FT4 *DoorObjPrint__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int AnimFrame;
-	struct POLY_FT4 *Ft4;
-	struct TextDat *ThisDat;
-	struct DoorOff *DrOff;
-	int LoadIndex;
-	int Creature;
-	int OpenClosed;
-	int Dir;
-	int Type;
+	// register: 9
+	register int AnimFrame;
+	// register: 16
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 21
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 16
+	// size: 0x4
+	register struct DoorOff *DrOff;
+	// register: 2
+	register int LoadIndex;
+	// register: 5
+	register int Creature;
+	// register: 6
+	register int OpenClosed;
+	// register: 8
+	register int Dir;
+	// register: 16
+	register int Type;
 }
 
 
@@ -19681,7 +23263,9 @@ struct POLY_FT4 *PrintOBJ_L1LIGHT__FP12ObjectStructiiP7TextDati(struct ObjectStr
 
 // address: 0x8007E304
 void PrintTorchStick__Fiiii(int x, int y, int f, int OtPos) {
-	struct TextDat *ThisDat;
+	// register: 16
+	// size: 0x70
+	register struct TextDat *ThisDat;
 }
 
 
@@ -19712,14 +23296,20 @@ struct POLY_FT4 *PrintOBJ_TORCHR2__FP12ObjectStructiiP7TextDati(struct ObjectStr
 // address: 0x8007E5B8
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_BARRELEX__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int AnimFrame;
-	struct POLY_FT4 *Ft4;
+	// register: 16
+	register int AnimFrame;
+	// register: 17
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
 	{
 		{
-			int PhysFrame;
+			// register: 16
+			register int PhysFrame;
 			{
 				{
-					struct POLY_FT4 *ShadFt4;
+					// register: 16
+					// size: 0x28
+					register struct POLY_FT4 *ShadFt4;
 				}
 			}
 		}
@@ -19730,14 +23320,16 @@ struct POLY_FT4 *PrintOBJ_BARRELEX__FP12ObjectStructiiP7TextDati(struct ObjectSt
 // address: 0x8007E710
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_SHRINEL__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int AnimFrame;
+	// register: 3
+	register int AnimFrame;
 }
 
 
 // address: 0x8007E7E8
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_SHRINER__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int AnimFrame;
+	// register: 3
+	register int AnimFrame;
 }
 
 
@@ -19750,15 +23342,24 @@ struct POLY_FT4 *PrintOBJ_BOOKCANDLE__FP12ObjectStructiiP7TextDati(struct Object
 // address: 0x8007E8E4
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_MCIRCLE1__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int AnimFrame;
-	struct POLY_FT4 *Ft4;
-	int ot;
-	int LoadIndex;
-	int Creature;
-	int PhysFrame;
+	// register: 19
+	register int AnimFrame;
+	// register: 17
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 18
+	register int ot;
+	// register: 2
+	register int LoadIndex;
+	// register: 5
+	register int Creature;
+	// register: 20
+	register int PhysFrame;
 	{
 		{
-			struct POLY_FT4 *ShadFt4;
+			// register: 16
+			// size: 0x28
+			register struct POLY_FT4 *ShadFt4;
 		}
 	}
 }
@@ -19767,14 +23368,22 @@ struct POLY_FT4 *PrintOBJ_MCIRCLE1__FP12ObjectStructiiP7TextDati(struct ObjectSt
 // address: 0x8007EA80
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_STORYBOOK__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int AnimFrame;
-	struct POLY_FT4 *Ft4;
-	int LoadIndex;
-	int Creature;
-	int PhysFrame;
+	// register: 16
+	register int AnimFrame;
+	// register: 17
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 2
+	register int LoadIndex;
+	// register: 17
+	register int Creature;
+	// register: 16
+	register int PhysFrame;
 	{
 		{
-			struct POLY_FT4 *ShadFt4;
+			// register: 16
+			// size: 0x28
+			register struct POLY_FT4 *ShadFt4;
 		}
 	}
 }
@@ -19801,30 +23410,38 @@ struct POLY_FT4 *PrintOBJ_CANDLE2__FP12ObjectStructiiP7TextDati(struct ObjectStr
 // address: 0x8007EC74
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_STAND__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	int ot;
+	// register: 2
+	register int ot;
 }
 
 
 // address: 0x8007ECB0
 // size: 0x28
 struct POLY_FT4 *PrintOBJ_SKFIRE__FP12ObjectStructiiP7TextDati(struct ObjectStruct *OStr, int ScrX, int ScrY, struct TextDat *ObjDat, int OtPos) {
-	struct POLY_FT4 *FT4;
+	// register: 16
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
 }
 
 
 // address: 0x8007ED14
 // size: 0x28
 struct POLY_FT4 *PRIM_GetCopy__FP8POLY_FT4_addr_8007ED14(struct POLY_FT4 *Prim) {
-	struct POLY_FT4 *RetPrim;
+	// address: 0xFFFFFFF0
+	// size: 0x28
+	auto struct POLY_FT4 *RetPrim;
 }
 
 
 // address: 0x8007ED50
 void PRIM_CopyPrim__FP8POLY_FT4T0_addr_8007ED50(struct POLY_FT4 *Dest, struct POLY_FT4 *Source) {
-	unsigned long *Dest32;
-	unsigned long *Source32;
+	// register: 4
+	register unsigned long *Dest32;
+	// register: 5
+	register unsigned long *Source32;
 	{
-		unsigned int f;
+		// register: 3
+		register unsigned int f;
 	}
 }
 
@@ -19868,7 +23485,8 @@ void ResetPal__Fv() {
 
 // address: 0x8007EE7C
 void SetFadeLevel__Fi(int fadeval) {
-	int nval;
+	// register: 3
+	register int nval;
 }
 
 
@@ -19879,8 +23497,10 @@ bool GetFadeState__Fv() {
 
 // address: 0x8007EEB8
 void SetPolyXY__FP8POLY_GT4PUc(struct POLY_GT4 *gt4, unsigned char *coords) {
-	unsigned char bright1;
-	unsigned char bright2;
+	// register: 6
+	register unsigned char bright1;
+	// register: 3
+	register unsigned char bright2;
 }
 
 
@@ -19891,20 +23511,27 @@ void SmearScreen__Fv() {
 
 // address: 0x8007EFDC
 void DrawFadedScreen__Fv() {
-	struct TextDat *ThisDat;
-	struct POLY_GT4 *GT4a;
+	// register: 16
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 2
+	// size: 0x34
+	register struct POLY_GT4 *GT4a;
 }
 
 
 // address: 0x8007F064
 void BlackPalette__Fv() {
-	struct POLY_FT4 *FT4;
+	// register: 7
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
 }
 
 
 // address: 0x8007F160
 void PaletteFadeInTask__FP4TASK(struct TASK *T) {
-	int i;
+	// register: 16
+	register int i;
 	{
 	}
 }
@@ -19917,7 +23544,8 @@ bool PaletteFadeIn__Fi(int fr) {
 
 // address: 0x8007F248
 void PaletteFadeOutTask__FP4TASK(struct TASK *T) {
-	int i;
+	// register: 16
+	register int i;
 	{
 	}
 }
@@ -19940,15 +23568,21 @@ void M_CheckEFlag__Fi(int i) {
 
 // address: 0x8007F35C
 void M_ClearSquares__Fi(int i) {
-	int mx;
-	int my;
-	int mt;
-	int mt2;
+	// register: 7
+	register int mx;
+	// register: 10
+	register int my;
+	// register: 11
+	register int mt;
+	// register: 4
+	register int mt2;
 	{
-		int y;
+		// register: 6
+		register int y;
 		{
 			{
-				int x;
+				// register: 5
+				register int x;
 			}
 		}
 	}
@@ -19962,37 +23596,57 @@ unsigned char IsSkel__Fi(int mt) {
 
 // address: 0x8007F4FC
 void NewMonsterAnim__FiR10AnimStructii(int i, struct AnimStruct *anim, int md, int AnimType) {
-	struct MonsterStruct *Monst;
+	// register: 2
+	// size: 0x68
+	register struct MonsterStruct *Monst;
 }
 
 
 // address: 0x8007F550
 unsigned char M_Talker__Fi(int i) {
-	unsigned char _mAi;
+	// register: 4
+	register unsigned char _mAi;
 }
 
 
 // address: 0x8007F5B8
 void M_Enemy__Fi(int i) {
-	struct MonsterStruct *Monst;
-	int closest;
-	int _mx;
-	int _my;
-	int _menemy;
-	struct PlayerStruct *plr1;
-	struct PlayerStruct *plr2;
+	// register: 18
+	// size: 0x68
+	register struct MonsterStruct *Monst;
+	// register: 5
+	register int closest;
+	// register: 19
+	register int _mx;
+	// register: 20
+	register int _my;
+	// register: 16
+	register int _menemy;
+	// register: 21
+	// size: 0x19E8
+	register struct PlayerStruct *plr1;
+	// register: 23
+	// size: 0x19E8
+	register struct PlayerStruct *plr2;
 	{
 		{
 			{
 				{
-					struct PlayerStruct *enemy;
-					int y;
+					// register: 2
+					// size: 0x19E8
+					register struct PlayerStruct *enemy;
+					// register: 17
+					register int y;
 					{
 						{
-							int x1;
-							int y1;
-							int x2;
-							int y2;
+							// register: 17
+							register int x1;
+							// register: 19
+							register int y1;
+							// register: 16
+							register int x2;
+							// register: 3
+							register int y2;
 						}
 					}
 				}
@@ -20009,11 +23663,16 @@ void ClearMVars__Fi(int i) {
 
 // address: 0x8007F84C
 void InitMonster__Fiiiii(int i, int rd, int mtype, int x, int y) {
-	struct CMonster *monst;
-	struct MonsterStruct *pmonster;
+	// register: 17
+	// size: 0x1C
+	register struct CMonster *monst;
+	// register: 16
+	// size: 0x68
+	register struct MonsterStruct *pmonster;
 	{
 		{
-			int slvl;
+			// register: 6
+			register int slvl;
 		}
 	}
 }
@@ -20021,22 +23680,29 @@ void InitMonster__Fiiiii(int i, int rd, int mtype, int x, int y) {
 
 // address: 0x8007FDD0
 int AddMonster__FiiiiUc(int x, int y, int dir, int mtype, int InMap) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
 // address: 0x8007FE70
 void M_StartStand__Fii(int i, int md) {
-	struct MonsterStruct *pmonster;
-	int _mx;
-	int _my;
+	// register: 3
+	// size: 0x68
+	register struct MonsterStruct *pmonster;
+	// register: 5
+	register int _mx;
+	// register: 3
+	register int _my;
 }
 
 
 // address: 0x8007FFD4
 void M_UpdateLeader__Fi(int i) {
-	int x;
-	int tmp;
+	// register: 5
+	register int x;
+	// register: 2
+	register int tmp;
 }
 
 
@@ -20047,36 +23713,53 @@ void ActivateSpawn__Fiiii(int i, int x, int y, int dir) {
 
 // address: 0x80080184
 unsigned char SpawnSkeleton__Fiii(int ii, int x, int y) {
-	int monstok[3][3];
-	int i;
-	int j;
-	int xx;
-	int yy;
-	int rs;
-	unsigned char savail;
+	// address: 0xFFFFFF98
+	// size: 0x24
+	auto int monstok[3][3];
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 16
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 4
+	register int rs;
+	// register: 20
+	register unsigned char savail;
 }
 
 
 // address: 0x80080374
 void M_StartSpStand__Fii(int i, int md) {
-	struct MonsterStruct *pmonster;
-	int _mx;
-	int _my;
+	// register: 2
+	// size: 0x68
+	register struct MonsterStruct *pmonster;
+	// register: 3
+	register int _mx;
+	// register: 5
+	register int _my;
 }
 
 
 // address: 0x8008045C
 unsigned char PosOkMonst__Fiii(int i, int x, int y) {
-	unsigned char ret;
-	int oi;
-	int mi;
-	unsigned char fire;
+	// register: 18
+	register unsigned char ret;
+	// register: 3
+	register int oi;
+	// register: 4
+	register int mi;
+	// register: 19
+	register unsigned char fire;
 }
 
 
 // address: 0x800806C0
 unsigned char CanPut__Fii(int i, int j) {
-	int oi;
+	// register: 3
+	register int oi;
 }
 
 
@@ -20087,42 +23770,54 @@ int encode_enemy__Fi(int m) {
 
 // address: 0x800809D4
 unsigned short GetAutomapType__FiiUc(int x, int y, unsigned char view) {
-	unsigned short rv;
-	unsigned char f;
-	unsigned char AMLWallFlag;
-	unsigned char AMRWallFlag;
+	// register: 5
+	register unsigned short rv;
+	// register: 4
+	register unsigned char f;
+	// register: 7
+	register unsigned char AMLWallFlag;
+	// register: 8
+	register unsigned char AMRWallFlag;
 }
 
 
 // address: 0x80080AA8
 void SetAutomapView__Fii(int x, int y) {
-	int xx;
-	int yy;
-	unsigned short s;
-	unsigned short d;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 2
+	register unsigned short s;
+	// register: 3
+	register unsigned short d;
 }
 
 
 // address: 0x80080EF8
 void AddWarpMissile__Fiii(int i, int x, int y) {
-	int mi;
+	// register: 2
+	register int mi;
 }
 
 
 // address: 0x80080FE8
 void SyncPortals__Fv() {
 	{
-		int i;
+		// register: 17
+		register int i;
 		{
 			{
 				{
 					{
 						{
 							{
-								int x;
+								// register: 6
+								register int x;
 								{
 									{
-										int y;
+										// register: 4
+										register int y;
 									}
 								}
 							}
@@ -20157,9 +23852,13 @@ void DelMis__Fii(int mi, int i) {
 
 // address: 0x80081280
 void RemovePortalMissile__Fi(int id) {
-	int i;
-	int mi;
-	struct MissileStruct *m;
+	// register: 18
+	register int i;
+	// register: 17
+	register int mi;
+	// register: 16
+	// size: 0x4C
+	register struct MissileStruct *m;
 }
 
 
@@ -20197,7 +23896,8 @@ void Init__13CompLevelMaps(struct CompLevelMaps *this) {
 // address: 0x80081734
 void InitAllMaps__13CompLevelMaps(struct CompLevelMaps *this) {
 	{
-		int f;
+		// register: 17
+		register int f;
 	}
 }
 
@@ -20216,7 +23916,8 @@ void ReleaseMap__13CompLevelMapsP6DLevel(struct CompLevelMaps *this, struct DLev
 // address: 0x800818A4
 void ImportData__13CompLevelMapsP14CompressedLevs(struct CompLevelMaps *this, struct CompressedLevs *Levs) {
 	{
-		int f;
+		// register: 18
+		register int f;
 		{
 		}
 	}
@@ -20225,9 +23926,11 @@ void ImportData__13CompLevelMapsP14CompressedLevs(struct CompLevelMaps *this, st
 
 // address: 0x80081950
 int ExportData__13CompLevelMapsPUc(struct CompLevelMaps *this, unsigned char *U8Dest) {
-	unsigned char *BinPtr;
+	// register: 17
+	register unsigned char *BinPtr;
 	{
-		int f;
+		// register: 19
+		register int f;
 	}
 }
 
@@ -20235,7 +23938,8 @@ int ExportData__13CompLevelMapsPUc(struct CompLevelMaps *this, unsigned char *U8
 // address: 0x800819FC
 void MakeSureMapXDecomped__13CompLevelMapsi(struct CompLevelMaps *this, int MapNum) {
 	{
-		int f;
+		// register: 17
+		register int f;
 		{
 			{
 				{
@@ -20257,24 +23961,30 @@ void Init__4AMap(struct AMap *this) {
 
 // address: 0x80081B14
 int WriteCompressed__4AMapPUcRC9CompClass(struct AMap *this, unsigned char *Dest, struct CompClass *CompObj) {
-	unsigned char *Data;
+	// register: 16
+	register unsigned char *Data;
 }
 
 
 // address: 0x80081B88
 void SetCompData__4AMapPCUci(struct AMap *this, unsigned char *Data, int NewSize) {
-	long NewHnd;
-	unsigned char *Dest;
+	// register: 17
+	register long NewHnd;
+	// register: 16
+	register unsigned char *Dest;
 }
 
 
 // address: 0x80081C78
 // size: 0x1258
 struct DLevel *GetMap__4AMap(struct AMap *this) {
-	struct DLevel *NewCurrLevel;
+	// register: 16
+	// size: 0x1258
+	register struct DLevel *NewCurrLevel;
 	{
 		{
-			long NewHnd;
+			// register: 17
+			register long NewHnd;
 		}
 	}
 }
@@ -20287,18 +23997,26 @@ void ReleaseMap__4AMapP6DLevel(struct AMap *this, struct DLevel *Dl) {
 
 // address: 0x80081E28
 void CompressMap__4AMapRC9CompClass(struct AMap *this, struct CompClass *CompObj) {
-	long NewHnd;
-	unsigned char *Dest;
-	struct DLevel *Dlev;
-	long SplitHnd;
+	// register: 18
+	register long NewHnd;
+	// register: 17
+	register unsigned char *Dest;
+	// register: 17
+	// size: 0x1258
+	register struct DLevel *Dlev;
+	// register: 2
+	register long SplitHnd;
 }
 
 
 // address: 0x80081FEC
 void DecompressMap__4AMapRC9CompClass(struct AMap *this, struct CompClass *CompObj) {
-	long NewHnd;
-	unsigned char *Dest;
-	unsigned char *Src;
+	// register: 18
+	register long NewHnd;
+	// register: 16
+	register unsigned char *Dest;
+	// register: 16
+	register unsigned char *Src;
 }
 
 
@@ -20335,18 +24053,25 @@ void GO_DoGameOver__Fv() {
 
 // address: 0x8008224C
 void GameOverTask__FP4TASK(struct TASK *T) {
-	bool TimeOut;
-	int TimeOutTime;
-	int lasttick;
+	// register: 19
+	register bool TimeOut;
+	// register: 17
+	register int TimeOutTime;
+	// register: 18
+	register int lasttick;
 	{
 		{
 			{
-				struct CPad *Pad;
+				// register: 4
+				// size: 0xEC
+				register struct CPad *Pad;
 				{
 					{
-						int ntick;
+						// register: 16
+						register int ntick;
 						{
-							int f;
+							// register: 16
+							register int f;
 						}
 					}
 				}
@@ -20358,11 +24083,18 @@ void GameOverTask__FP4TASK(struct TASK *T) {
 
 // address: 0x80082450
 void PrintGameOver__Fv() {
-	struct Dialog PBack;
-	struct RECT PRect;
-	int otpos;
-	int oldDotpos;
-	int oldTotpos;
+	// address: 0xFFFFFFD8
+	// size: 0x10
+	auto struct Dialog PBack;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT PRect;
+	// register: 16
+	register int otpos;
+	// register: 18
+	register int oldDotpos;
+	// register: 16
+	register int oldTotpos;
 }
 
 
@@ -20409,7 +24141,9 @@ int GetMaxOtPos__7CBlocks_addr_80082698() {
 
 // address: 0x800826A0
 void VER_InitVersion__Fv() {
-	char VerString[120];
+	// address: 0xFFFFFF80
+	// size: 0x78
+	auto char VerString[120];
 }
 
 
@@ -20425,8 +24159,10 @@ int CharPair2Num__FPc(char *Str) {
 
 // address: 0x8008271C
 int FindGetItem__FiUsi(int idx, unsigned short ci, int iseed) {
-	int i;
-	int ii;
+	// register: 8
+	register int i;
+	// register: 7
+	register int ii;
 }
 
 
@@ -20443,7 +24179,8 @@ void DPIECE_ERROR__Fv() {
 // address: 0x800827E0
 void AllocdPiece__Fv() {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
@@ -20456,12 +24193,15 @@ void FreedPiece__Fv() {
 // address: 0x8008287C
 void ConvertdPiece__Fv() {
 	{
-		int y;
+		// register: 17
+		register int y;
 		{
 			{
-				int x;
+				// register: 16
+				register int x;
 				{
-					short dp;
+					// register: 18
+					register short dp;
 				}
 			}
 		}
@@ -20561,23 +24301,32 @@ unsigned char TSK_OpenModule(unsigned long MemType);
 // address: 0x80020010
 // size: 0x5C
 struct TASK *TSK_AddTask(unsigned long Id, void (*Main)(), int StackSize, int DataSize) {
-	struct TASK *RetTask;
-	long hndTask;
-	struct GAL_STRUCT G[4];
+	// register: 16
+	// size: 0x5C
+	register struct TASK *RetTask;
+	// register: 17
+	register long hndTask;
+	// address: 0xFFFFFFC8
+	// size: 0x20
+	auto struct GAL_STRUCT G[4];
 }
 
 
 // address: 0x800201F8
 void TSK_DoTasks() {
 	{
-		struct TASK *NextT;
+		// register: 16
+		// size: 0x5C
+		register struct TASK *NextT;
 	}
 }
 
 
 // address: 0x800203B8
 void TSK_Sleep(int Frames) {
-	struct TASK *T;
+	// address: 0xFFFFFFF0
+	// size: 0x5C
+	auto struct TASK *T;
 }
 
 
@@ -20597,14 +24346,17 @@ struct TASK *TSK_GetFirstActive();
 // address: 0x800205A8
 unsigned char TSK_IsStackCorrupted(struct TASK *T) {
 	{
-		int LongsOk;
+		// register: 4
+		register int LongsOk;
 	}
 }
 
 
 // address: 0x80020624
 void TSK_JumpAndResetStack(void (*RunFunc)()) {
-	struct TASK *T;
+	// register: 6
+	// size: 0x5C
+	register struct TASK *T;
 }
 
 
@@ -20621,8 +24373,12 @@ unsigned char TSK_IsCurrentTask(struct TASK *T);
 // address: 0x800206D8
 // size: 0x5C
 struct TASK *TSK_Exist(struct TASK *T, unsigned long Id, unsigned long Mask) {
-	struct TASK *ptrTask;
-	struct TASK *RetTask;
+	// register: 3
+	// size: 0x5C
+	register struct TASK *ptrTask;
+	// register: 7
+	// size: 0x5C
+	register struct TASK *RetTask;
 }
 
 
@@ -20634,20 +24390,30 @@ void TSK_ClearExecFilter();
 
 // address: 0x8002076C
 int TSK_KillTasks(struct TASK *CallingT, unsigned long Id, unsigned long Mask) {
-	int TasksKilled;
-	struct TASK *T;
-	unsigned char WasCurrentTaskKilled;
+	// register: 17
+	register int TasksKilled;
+	// register: 4
+	// size: 0x5C
+	register struct TASK *T;
+	// register: 18
+	register unsigned char WasCurrentTaskKilled;
 	{
-		struct TASK *NextT;
+		// register: 16
+		// size: 0x5C
+		register struct TASK *NextT;
 	}
 }
 
 
 // address: 0x8002086C
 void TSK_IterateTasks(unsigned long Id, unsigned long Mask, void (*CallBack)()) {
-	struct TASK *T;
+	// register: 4
+	// size: 0x5C
+	register struct TASK *T;
 	{
-		struct TASK *NextT;
+		// register: 16
+		// size: 0x5C
+		register struct TASK *NextT;
 	}
 }
 
@@ -20686,25 +24452,29 @@ void ExecuteTask(struct TASK *T);
 
 // address: 0x80020A88
 void (*TSK_SetDoTasksPrologue(void (*Func)()))() {
-	void (*Old)();
+	// register: 2
+	register void (*Old)();
 }
 
 
 // address: 0x80020AA0
 void (*TSK_SetDoTasksEpilogue(void (*Func)()))() {
-	void (*Old)();
+	// register: 2
+	register void (*Old)();
 }
 
 
 // address: 0x80020AB8
 void (*TSK_SetTaskPrologue(void (*Pro)()))() {
-	void (*Old)();
+	// register: 2
+	register void (*Old)();
 }
 
 
 // address: 0x80020AD0
 void (*TSK_SetTaskEpilogue(void (*Epi)()))() {
-	void (*Old)();
+	// register: 2
+	register void (*Old)();
 }
 
 
@@ -20719,25 +24489,29 @@ void TSK_SetExtraStackProtection(unsigned char OnOff);
 
 // address: 0x80020B44
 void (*TSK_SetStackFloodCallback(void (*Func)()))() {
-	void (*OldFunc)();
+	// register: 2
+	register void (*OldFunc)();
 }
 
 
 // address: 0x80020B5C
 int TSK_SetExtraStackSize(int Size) {
-	int OldSize;
+	// register: 3
+	register int OldSize;
 }
 
 
 // address: 0x80020B84
 void ExtraMarkStack(unsigned long *Stack, int SizeLongs) {
-	int f;
+	// register: 3
+	register int f;
 }
 
 
 // address: 0x80020BB0
 int CheckExtraStack(unsigned long *Stack, int LongsToCheck) {
-	unsigned long f;
+	// register: 3
+	register unsigned long f;
 }
 
 
@@ -20767,13 +24541,15 @@ unsigned char GU_InitModule();
 
 // address: 0x80020CC4
 void GU_SetRndSeed(unsigned long *Tab) {
-	int f;
+	// register: 5
+	register int f;
 }
 
 
 // address: 0x80020CF4
 unsigned long GU_GetRnd() {
-	unsigned long RetVal;
+	// register: 6
+	register unsigned long RetVal;
 }
 
 
@@ -20824,8 +24600,10 @@ void GTIMSYS_ResetTimer();
 
 // address: 0x80020F38
 unsigned long GTIMSYS_InitTimer() {
-	int f;
-	unsigned long Total;
+	// register: 17
+	register int f;
+	// register: 16
+	register unsigned long Total;
 }
 
 
@@ -20856,7 +24634,8 @@ unsigned char GSYS_CheckPtr(void *Ptr) {
 
 // address: 0x80021268
 unsigned char GSYS_IsStackOutOfBounds(void *Stack, unsigned long StackSize) {
-	unsigned long ThisSp;
+	// register: 3
+	register unsigned long ThisSp;
 }
 
 
@@ -20865,34 +24644,55 @@ void GAL_SetErrorChecking(unsigned char OnOff);
 
 // address: 0x800212E4
 long GAL_SplitBlock(long CurBlock, unsigned long Size) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *MemHdr;
-	struct MEM_HDR *SplitBlock;
+	// register: 19
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *SplitBlock;
 }
 
 
 // address: 0x80021404
 void GAL_InitModule() {
-	int f;
+	// register: 17
+	register int f;
 }
 
 
 // address: 0x800214BC
 unsigned char GAL_AddMemType(struct MEM_INIT_INFO *M) {
-	struct MEM_INIT_INFO *P;
-	struct MEM_HDR *FreeMemHdr;
-	unsigned long Addr1;
-	unsigned long Addr2;
+	// register: 4
+	// size: 0x28
+	register struct MEM_INIT_INFO *P;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *FreeMemHdr;
+	// register: 5
+	register unsigned long Addr1;
+	// register: 3
+	register unsigned long Addr2;
 }
 
 
 // address: 0x800215DC
 long GAL_Alloc(unsigned long Size, unsigned long Type, char *Name) {
-	struct MEM_HDR *Block;
-	struct MEM_INIT_INFO *M;
-	unsigned long FullSize;
-	struct MEM_HDR *(*FRoute)();
-	unsigned char High;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *Block;
+	// register: 18
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 19
+	register unsigned long FullSize;
+	// register: 20
+	// size: 0x1C
+	register struct MEM_HDR *(*FRoute)();
+	// register: 23
+	register unsigned char High;
 	{
 	}
 }
@@ -20900,48 +24700,71 @@ long GAL_Alloc(unsigned long Size, unsigned long Type, char *Name) {
 
 // address: 0x80021774
 void *GAL_Lock(long Handle) {
-	struct MEM_HDR *MemHdr;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
 }
 
 
 // address: 0x800217DC
 unsigned char GAL_Unlock(long Handle) {
-	struct MEM_HDR *MemHdr;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
 }
 
 
 // address: 0x80021860
 unsigned char GAL_Free(long Handle) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *MemHdr;
+	// register: 16
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
 }
 
 
 // address: 0x80021908
 unsigned long GAL_GetFreeMem(unsigned long Type) {
-	unsigned long FreeMem;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	register unsigned long FreeMem;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 	{
-		struct MEM_HDR *Block;
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *Block;
 	}
 }
 
 
 // address: 0x8002197C
 unsigned long GAL_GetUsedMem(unsigned long Type) {
-	unsigned long FreeMem;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	register unsigned long FreeMem;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 	{
-		struct MEM_HDR *Block;
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *Block;
 	}
 }
 
 
 // address: 0x800219F0
 unsigned long GAL_LargestFreeBlock(unsigned long Type) {
-	unsigned long Largest;
-	struct MEM_HDR *Index;
-	struct MEM_INIT_INFO *MI;
+	// register: 5
+	register unsigned long Largest;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *MI;
 }
 
 
@@ -20958,8 +24781,10 @@ unsigned char IsActiveValidHandle(long Handle) {
 
 // address: 0x80021B10
 void *AlignPtr(void *P, unsigned long Align) {
-	unsigned long Addr;
-	unsigned long Temp;
+	// register: 4
+	register unsigned long Addr;
+	// register: 2
+	register unsigned long Temp;
 }
 
 
@@ -20969,79 +24794,119 @@ unsigned long AlignSize(unsigned long Size, unsigned long Align);
 // address: 0x80021B70
 // size: 0x1C
 struct MEM_HDR *FindClosestSizedBlock(struct MEM_HDR *Head, unsigned long Size) {
-	struct MEM_HDR *Closest;
-	struct MEM_HDR *Index;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *Closest;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
 }
 
 
 // address: 0x80021BC8
 // size: 0x1C
 struct MEM_HDR *FindHighestMemBlock(struct MEM_HDR *Head, unsigned long Size) {
-	struct MEM_HDR *Closest;
-	struct MEM_HDR *Index;
-	void *Highest;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *Closest;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 7
+	register void *Highest;
 }
 
 
 // address: 0x80021C30
 // size: 0x1C
 struct MEM_HDR *FindLowestMemBlock(struct MEM_HDR *Head, unsigned long Size) {
-	struct MEM_HDR *Closest;
-	struct MEM_HDR *Index;
-	unsigned long Lowest;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *Closest;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 7
+	register unsigned long Lowest;
 }
 
 
 // address: 0x80021C98
 // size: 0x28
 struct MEM_INIT_INFO *GetMemInitInfoBlockFromType(unsigned long Type) {
-	struct MEM_INIT_INFO *P;
+	// register: 3
+	// size: 0x28
+	register struct MEM_INIT_INFO *P;
 }
 
 
 // address: 0x80021CD4
 void MergeToEmptyList(struct MEM_INIT_INFO *MI, struct MEM_HDR *M) {
-	struct MEM_HDR *Index;
-	struct MEM_HDR *NextIndex;
-	void *Start;
-	void *End;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 18
+	// size: 0x1C
+	register struct MEM_HDR *NextIndex;
+	// register: 19
+	register void *Start;
+	// register: 21
+	register void *End;
 	{
-		void *ThisStart;
-		void *ThisEnd;
+		// register: 2
+		register void *ThisStart;
+		// register: 4
+		register void *ThisEnd;
 	}
 }
 
 
 // address: 0x80021DA8
 long GAL_AllocAt(unsigned long Size, void *Addr, unsigned long Type, char *Name) {
-	struct MEM_HDR *Block;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *Block;
+	// register: 17
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
 
 // address: 0x80021E84
 long LoAlloc(struct MEM_INIT_INFO *M, struct MEM_HDR *Block, void *Addr, unsigned long Size, char *Name) {
-	struct MEM_HDR *SplitBlock;
-	unsigned long PhysSize;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *SplitBlock;
+	// register: 20
+	register unsigned long PhysSize;
 }
 
 
 // address: 0x8002201C
 // size: 0x1C
 struct MEM_HDR *FindBlockInTheseBounds(struct MEM_HDR *Head, void *Addr, unsigned long Size) {
-	struct MEM_HDR *Index;
-	unsigned char Done;
-	unsigned long ThisStart;
-	unsigned long ThisEnd;
-	unsigned long Start;
-	unsigned long End;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 7
+	register unsigned char Done;
+	// register: 3
+	register unsigned long ThisStart;
+	// register: 2
+	register unsigned long ThisEnd;
+	// register: 5
+	register unsigned long Start;
+	// register: 6
+	register unsigned long End;
 }
 
 
 // address: 0x80022088
 // size: 0x1C
 struct MEM_HDR *GetFreeMemHdrBlock() {
-	struct MEM_HDR *RetBlock;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *RetBlock;
 }
 
 
@@ -21050,18 +24915,26 @@ void ReleaseMemHdrBlock(struct MEM_HDR *Index);
 
 // address: 0x80022150
 void GAL_IterateEmptyMem(unsigned long MemType, void (*Func)()) {
-	struct MEM_INIT_INFO *M;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 	{
-		struct MEM_HDR *Block;
+		// register: 16
+		// size: 0x1C
+		register struct MEM_HDR *Block;
 	}
 }
 
 
 // address: 0x800221D4
 void GAL_IterateUsedMem(unsigned long MemType, void (*Func)()) {
-	struct MEM_INIT_INFO *M;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 	{
-		struct MEM_HDR *Block;
+		// register: 16
+		// size: 0x1C
+		register struct MEM_HDR *Block;
 	}
 }
 
@@ -21071,15 +24944,21 @@ unsigned char GAL_SetMemName(long Hnd, char *Text);
 
 // address: 0x800222E0
 unsigned long GAL_TotalMem(unsigned long Type) {
-	unsigned long TotalMem;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	register unsigned long TotalMem;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
 
 // address: 0x80022334
 void *GAL_MemBase(unsigned long Type) {
-	void *Ret;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	register void *Ret;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
 
@@ -21093,22 +24972,31 @@ unsigned char GSetError(enum GAL_ERROR_CODE Err);
 
 // address: 0x80022468
 unsigned char GAL_CheckMem(unsigned long Type) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *MemHdr;
-	unsigned long TotalMem;
+	// register: 17
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
+	// register: 18
+	register unsigned long TotalMem;
 }
 
 
 // address: 0x80022564
 unsigned char CheckCollisions(struct MEM_INIT_INFO *M, struct MEM_HDR *MemHdr) {
-	struct MEM_HDR *CheckHdr;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *CheckHdr;
 }
 
 
 // address: 0x80022610
 unsigned char AreBlocksColliding(struct MEM_HDR *Hdr1, struct MEM_HDR *Hdr2) {
-	unsigned long Addr1;
-	unsigned long Addr2;
+	// register: 5
+	register unsigned long Addr1;
+	// register: 6
+	register unsigned long Addr2;
 }
 
 
@@ -21124,20 +25012,30 @@ char *GAL_GetLastErrorText();
 
 // address: 0x800226D0
 int GAL_HowManyEmptyRegions(unsigned long Type) {
-	struct MEM_INIT_INFO *m;
-	int Count;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *m;
+	// register: 3
+	register int Count;
 	{
-		struct MEM_HDR *mh;
+		// register: 2
+		// size: 0x1C
+		register struct MEM_HDR *mh;
 	}
 }
 
 
 // address: 0x80022738
 int GAL_HowManyUsedRegions(unsigned long Type) {
-	struct MEM_INIT_INFO *m;
-	int Count;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *m;
+	// register: 3
+	register int Count;
 	{
-		struct MEM_HDR *mh;
+		// register: 2
+		// size: 0x1C
+		register struct MEM_HDR *mh;
 	}
 }
 
@@ -21153,7 +25051,9 @@ int GAL_GetTimeStamp();
 
 // address: 0x800227E0
 long GAL_AlignSizeToType(unsigned long Size, unsigned long MemType) {
-	struct MEM_INIT_INFO *Mi;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *Mi;
 }
 
 
@@ -21164,8 +25064,10 @@ long GAL_AllocMultiStruct(struct GAL_STRUCT *G, unsigned long Type, char *Name) 
 
 // address: 0x80022880
 unsigned int GAL_ProcessMultiStruct(struct GAL_STRUCT *G, unsigned long Type) {
-	unsigned int TotalMem;
-	int f;
+	// register: 17
+	register unsigned int TotalMem;
+	// register: 18
+	register int f;
 }
 
 
@@ -21176,24 +25078,42 @@ long GAL_GetSize(long hnd) {
 
 // address: 0x80022988
 unsigned char GazDefragMem(unsigned long MemType) {
-	struct MEM_HDR *LockedBlocks;
-	struct MEM_INIT_INFO *M;
-	struct MEM_REG Reg;
+	// address: 0xFFFFFFE0
+	// size: 0x1C
+	auto struct MEM_HDR *LockedBlocks;
+	// register: 17
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct MEM_REG Reg;
 	{
-		struct MEM_HDR *NewEmptyBlock;
-		struct MEM_HDR *ListOfBlocksInRegion;
-		unsigned long ShuffledSize;
-		int GapSize;
+		// register: 5
+		// size: 0x1C
+		register struct MEM_HDR *NewEmptyBlock;
+		// address: 0xFFFFFFE4
+		// size: 0x1C
+		auto struct MEM_HDR *ListOfBlocksInRegion;
+		// register: 18
+		register unsigned long ShuffledSize;
+		// register: 16
+		register int GapSize;
 	}
 }
 
 
 // address: 0x80022AF0
 void PutBlocksInRegionIntoList(struct MEM_REG *Reg, struct MEM_HDR **ToList, struct MEM_HDR **FromList) {
-	struct MEM_HDR *ThisBlock;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *ThisBlock;
 	{
-		struct MEM_HDR *NextBlock;
-		struct MEM_REG MemReg;
+		// register: 17
+		// size: 0x1C
+		register struct MEM_HDR *NextBlock;
+		// address: 0xFFFFFFE0
+		// size: 0x8
+		auto struct MEM_REG MemReg;
 	}
 }
 
@@ -21204,16 +25124,24 @@ unsigned char CollideRegions(struct MEM_REG *Reg1, struct MEM_REG *Reg2);
 // address: 0x80022BC8
 void DeleteEmptyBlocks(struct MEM_INIT_INFO *M) {
 	{
-		struct MEM_HDR *ThisBlock;
+		// register: 16
+		// size: 0x1C
+		register struct MEM_HDR *ThisBlock;
 	}
 }
 
 
 // address: 0x80022C34
 unsigned char GetRegion(struct MEM_REG *Reg, struct MEM_HDR *LockedBlocks, struct MEM_INIT_INFO *M) {
-	struct MEM_HDR *FirstBlock;
-	struct MEM_HDR *SecondBlock;
-	struct MEM_REG NewReg;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *FirstBlock;
+	// register: 2
+	// size: 0x1C
+	register struct MEM_HDR *SecondBlock;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct MEM_REG NewReg;
 }
 
 
@@ -21221,44 +25149,64 @@ unsigned char GetRegion(struct MEM_REG *Reg, struct MEM_HDR *LockedBlocks, struc
 // size: 0x1C
 struct MEM_HDR *FindNextBlock(void *Addr, struct MEM_HDR *Blocks) {
 	{
-		unsigned long BlockAddr;
+		// register: 2
+		register unsigned long BlockAddr;
 	}
 }
 
 
 // address: 0x80022D68
 unsigned long ShuffleBlocks(struct MEM_HDR *Blocks, struct MEM_REG *Reg, struct MEM_INIT_INFO *M) {
-	unsigned long NewSize;
-	void *MemBase;
-	struct MEM_HDR *ThisBlock;
+	// register: 18
+	register unsigned long NewSize;
+	// register: 17
+	register void *MemBase;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *ThisBlock;
 }
 
 
 // address: 0x80022DF8
 void PutAllLockedBlocksOntoList(struct MEM_HDR **ToHead, struct MEM_HDR **FromHead) {
-	struct MEM_HDR *CurHdr;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *CurHdr;
 	{
-		struct MEM_HDR *NextCurHdr;
+		// register: 17
+		// size: 0x1C
+		register struct MEM_HDR *NextCurHdr;
 	}
 }
 
 
 // address: 0x80022E74
 void SortMemHdrListByAddr(struct MEM_HDR **Head) {
-	unsigned char DidASwap;
-	struct MEM_HDR *CurHdr;
-	struct MEM_HDR *NextHdr;
+	// register: 7
+	register unsigned char DidASwap;
+	// register: 5
+	// size: 0x1C
+	register struct MEM_HDR *CurHdr;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *NextHdr;
 	{
-		struct MEM_HDR *OldPrev;
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *OldPrev;
 	}
 }
 
 
 // address: 0x80022F28
 void GraftMemHdrList(struct MEM_HDR **ToList, struct MEM_HDR **FromList) {
-	struct MEM_HDR *OldFirst;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *OldFirst;
 	{
-		struct MEM_HDR *LastHdr;
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *LastHdr;
 	}
 }
 
@@ -21271,14 +25219,18 @@ void GAL_SetVerbosity(enum GAL_VERB_LEV G);
 
 // address: 0x80023008
 int CountFreeBlocks() {
-	struct MEM_HDR *RetBlock;
-	int Count;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *RetBlock;
+	// register: 2
+	register int Count;
 }
 
 
 // address: 0x80023034
 void SetBlockName(struct MEM_HDR *MemHdr, char *NewName) {
-	int IndexSoFar;
+	// register: 6
+	register int IndexSoFar;
 }
 
 
@@ -21290,13 +25242,16 @@ unsigned long GAL_GetLastTypeAlloced();
 
 // address: 0x8002309C
 void (*GAL_SetAllocFilter(void (*NewFilter)()))() {
-	void (*OldFilter)();
+	// register: 2
+	register void (*OldFilter)();
 }
 
 
 // address: 0x800230B4
 unsigned char GAL_SortUsedRegionsBySize(unsigned long MemType) {
-	struct MEM_INIT_INFO *M;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
 
@@ -21305,7 +25260,9 @@ unsigned char SortSize(struct MEM_HDR *B1, struct MEM_HDR *B2);
 
 // address: 0x80023118
 unsigned char GAL_SortUsedRegionsByAddress(unsigned long MemType) {
-	struct MEM_INIT_INFO *M;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
 
@@ -21314,48 +25271,79 @@ unsigned char SortAddr(struct MEM_HDR *B1, struct MEM_HDR *B2);
 
 // address: 0x8002317C
 void SortMemHdrList(struct MEM_HDR **Head, unsigned char (*CompFunc)()) {
-	unsigned char DidASwap;
-	struct MEM_HDR *CurHdr;
-	struct MEM_HDR *NextHdr;
+	// register: 18
+	register unsigned char DidASwap;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *CurHdr;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *NextHdr;
 	{
-		struct MEM_HDR *OldPrev;
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *OldPrev;
 	}
 }
 
 
 // address: 0x80025538
 int vsprintf(char *str, char *fmt, char *ap) {
-	struct FILE f;
+	// address: 0xFFFFFFD8
+	// size: 0x1C
+	auto struct FILE f;
 }
 
 
 // address: 0x80025584
 int _doprnt(char *fmt0, char *argp, struct FILE *fp) {
-	char *fmt;
-	int ch;
-	int cnt;
-	int n;
-	char *t;
-	unsigned long _ulong;
-	int base;
-	int dprec;
-	int fieldsz;
-	int flags;
-	int fpprec;
-	int prec;
-	int realsz;
-	int size;
-	int width;
-	char sign;
-	char *digs;
+	// register: 22
+	register char *fmt;
+	// register: 4
+	register int ch;
+	// address: 0xFFFFFFA8
+	auto int cnt;
+	// register: 16
+	register int n;
+	// register: 17
+	register char *t;
+	// register: 3
+	register unsigned long _ulong;
+	// register: 5
+	register int base;
+	// address: 0xFFFFFFB0
+	auto int dprec;
+	// register: 30
+	register int fieldsz;
+	// register: 19
+	register int flags;
+	// address: 0xFFFFFFB8
+	auto int fpprec;
+	// register: 20
+	register int prec;
+	// register: 20
+	register int realsz;
+	// register: 23
+	register int size;
+	// address: 0xFFFFFFC0
+	auto int width;
+	// register: 6
+	register char sign;
+	// address: 0xFFFFFFC8
+	auto char *digs;
+	// address: 0x800256D8
 	bool rflag;
+	// address: 0x80025A40
 	bool nosign;
+	// address: 0x80025AEC
 	bool pforw;
 	{
-		char c;
+		// register: 2
+		register char c;
 		{
 			{
-				char *p;
+				// register: 2
+				register char *p;
 			}
 		}
 	}

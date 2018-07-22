@@ -74,7 +74,8 @@ void FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont(int X, int Y, enum TXT_JUST Just
 // address: 0x80139CD4
 void FeAddTable__FP11FeMenuTablei(struct FeMenuTable *Table, int Count) {
 	{
-		int Loop;
+		// register: 17
+		register int Loop;
 	}
 }
 
@@ -82,10 +83,12 @@ void FeAddTable__FP11FeMenuTablei(struct FeMenuTable *Table, int Count) {
 // address: 0x80139D50
 void FeAddNameTable__FPUci(unsigned char *Table, int Count) {
 	{
-		int YLoop;
+		// register: 21
+		register int YLoop;
 		{
 			{
-				int XLoop;
+				// register: 3
+				register int XLoop;
 			}
 		}
 	}
@@ -94,16 +97,32 @@ void FeAddNameTable__FPUci(unsigned char *Table, int Count) {
 
 // address: 0x80139E78
 void FeDrawBuffer__Fv() {
-	struct Dialog FeBack;
-	struct RECT FeRect;
-	struct RECT ARect;
-	int X;
-	int Y;
-	enum TXT_JUST Just;
-	struct TextDat *PanelGfx;
-	int SelX;
-	int SelY;
-	char Text[2];
+	// address: 0xFFFFFF98
+	// size: 0x10
+	auto struct Dialog FeBack;
+	// address: 0xFFFFFFA8
+	// size: 0x8
+	auto struct RECT FeRect;
+	// address: 0xFFFFFFB0
+	// size: 0x8
+	auto struct RECT ARect;
+	// register: 17
+	register int X;
+	// register: 19
+	register int Y;
+	// register: 20
+	// size: 0x4
+	register enum TXT_JUST Just;
+	// address: 0xFFFFFFC0
+	// size: 0x70
+	auto struct TextDat *PanelGfx;
+	// register: 4
+	register int SelX;
+	// register: 18
+	register int SelY;
+	// address: 0xFFFFFFB8
+	// size: 0x2
+	auto char Text[2];
 	{
 		{
 			{
@@ -111,7 +130,8 @@ void FeDrawBuffer__Fv() {
 					{
 						{
 							{
-								int Loop;
+								// register: 21
+								register int Loop;
 								{
 									{
 										{
@@ -119,11 +139,14 @@ void FeDrawBuffer__Fv() {
 												{
 													{
 														{
-															struct POLY_FT4 *Ft4;
+															// register: 2
+															// size: 0x28
+															register struct POLY_FT4 *Ft4;
 															{
 																{
 																	{
-																		int Loop;
+																		// register: 18
+																		register int Loop;
 																	}
 																}
 															}
@@ -146,26 +169,32 @@ void FeDrawBuffer__Fv() {
 
 // address: 0x8013A4A4
 void FeNewMenu__FP7FeTable(struct FeTable *Menu) {
-	struct FeTable *LastMenu;
-	void (*FuncPtr)();
+	// register: 3
+	// size: 0x1C
+	register struct FeTable *LastMenu;
+	// register: 2
+	register void (*FuncPtr)();
 }
 
 
 // address: 0x8013A524
 void FePrevMenu__Fv() {
-	void (*FuncPtr)();
+	// register: 2
+	register void (*FuncPtr)();
 }
 
 
 // address: 0x8013A66C
 void FeSelUp__Fi(int No) {
-	int OldSel;
+	// register: 6
+	register int OldSel;
 }
 
 
 // address: 0x8013A754
 void FeSelDown__Fi(int No) {
-	int OldSel;
+	// register: 6
+	register int OldSel;
 }
 
 
@@ -238,9 +267,15 @@ void FePlayerClassMenuCtrl__Fv() {
 
 // address: 0x8013AFB4
 void FeDrawChrClass__Fv() {
-	struct Dialog FeBack;
-	struct RECT FeRect;
-	char TempStr[4];
+	// address: 0xFFFFFFB0
+	// size: 0x10
+	auto struct Dialog FeBack;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT FeRect;
+	// address: 0xFFFFFFC8
+	// size: 0x4
+	auto char TempStr[4];
 	{
 		{
 			{
@@ -280,7 +315,9 @@ void FeNewNameMenuCtrl__Fv() {
 										{
 											{
 												{
-													char asd[2];
+													// address: 0xFFFFFFD8
+													// size: 0x2
+													auto char asd[2];
 												}
 											}
 										}
@@ -299,12 +336,14 @@ void FeNewNameMenuCtrl__Fv() {
 // address: 0x8013BAB4
 void FeCopyPlayerInfoForReturn__Fv() {
 	{
-		int Loop;
+		// register: 16
+		register int Loop;
 		{
 			{
 				{
 					{
-						int i;
+						// register: 2
+						register int i;
 					}
 				}
 			}
@@ -335,7 +374,8 @@ void FeInitLoadChar2Menu__Fv() {
 
 // address: 0x8013BD48
 void FeInitDifficultyMenu__Fv() {
-	int MaxLevel;
+	// register: 4
+	register int MaxLevel;
 }
 
 
@@ -386,9 +426,13 @@ void FeInitMainStuff__FP4TASK(struct TASK *T2) {
 
 // address: 0x8013C50C
 void FrontEndTask__FP4TASK(struct TASK *T) {
-	int len;
-	int Fefadeval;
-	struct TASK *T2;
+	// register: 16
+	register int len;
+	// register: 17
+	register int Fefadeval;
+	// register: 19
+	// size: 0x5C
+	register struct TASK *T2;
 }
 
 
@@ -425,20 +469,35 @@ void InitCredits__Fv() {
 
 // address: 0x8013D248
 int PrintCredits__Fiiiiii(int StrNo, int Y, int CharFade, int RFlag, int GFlag, int BFlag) {
-	int CharHeight;
-	int Loop;
-	int Width;
-	char *EndPtr;
-	int X;
-	int x0;
-	int x1;
-	int x2;
-	int x3;
-	int Fade;
-	struct POLY_FT4 *Ft4;
-	int Col;
-	int DoneFlag;
-	char *Str;
+	// register: 18
+	register int CharHeight;
+	// register: 16
+	register int Loop;
+	// register: 21
+	register int Width;
+	// address: 0xFFFFFF98
+	auto char *EndPtr;
+	// address: 0xFFFFFFA0
+	auto int X;
+	// register: 9
+	register int x0;
+	// register: 30
+	register int x1;
+	// register: 23
+	register int x2;
+	// register: 22
+	register int x3;
+	// register: 17
+	register int Fade;
+	// address: 0xFFFFFF78
+	// size: 0x28
+	auto struct POLY_FT4 *Ft4;
+	// register: 5
+	register int Col;
+	// address: 0xFFFFFFA8
+	auto int DoneFlag;
+	// register: 19
+	register char *Str;
 }
 
 
@@ -454,21 +513,31 @@ void DrawCreditsSubTitle__Fiiiii(int SubTitleNo, int SubTitleFade, int SubTitleM
 
 // address: 0x8013DBE8
 int CredCountNL__Fi(int Str) {
-	int Count;
-	char *StrPtr;
+	// register: 16
+	register int Count;
+	// register: 4
+	register char *StrPtr;
 }
 
 
 // address: 0x8013DC54
 void DoCredits__Fv() {
-	struct CScreen CreditsBack;
-	int Y;
-	int Fade;
-	int Mode;
-	unsigned short TextNo;
-	unsigned long CreditsCount;
+	// address: 0xFFFFFF58
+	// size: 0x7C
+	auto struct CScreen CreditsBack;
+	// register: 8
+	register int Y;
+	// register: 19
+	register int Fade;
+	// register: 20
+	register int Mode;
+	// register: 21
+	register unsigned short TextNo;
+	// register: 30
+	register unsigned long CreditsCount;
 	{
-		int YOfs;
+		// register: 17
+		register int YOfs;
 		{
 			{
 				{
@@ -509,25 +578,31 @@ struct FRAME_HDR *GetFr__7TextDati(struct TextDat *this, int FrNum) {
 
 // address: 0x801426F8
 void endian_swap__FPUci(unsigned char *b, int byts) {
-	unsigned char t;
+	// register: 3
+	register unsigned char t;
 }
 
 
 // address: 0x8014272C
 void sjis_endian_swap__FPUci(unsigned char *b, int byts) {
-	unsigned char t;
+	// register: 2
+	register unsigned char t;
 }
 
 
 // address: 0x80142774
 unsigned short to_sjis__Fc(char asc) {
-	struct sjis *sp;
+	// register: 6
+	// size: 0x4
+	register struct sjis *sp;
 }
 
 
 // address: 0x801427F4
 char to_ascii__FUs(unsigned short sjis) {
-	struct sjis *sp;
+	// register: 8
+	// size: 0x4
+	register struct sjis *sp;
 }
 
 
@@ -548,11 +623,18 @@ int sjis_to_ascii__FPUsPc(unsigned short *sjis, char *asc) {
 
 // address: 0x80142998
 void read_card_directory__Fi(int card_number) {
-	char path[80];
-	struct DIRENTRY *dir;
-	int i;
-	int fh;
-	int r;
+	// address: 0xFFFFFF78
+	// size: 0x50
+	auto char path[80];
+	// register: 17
+	// size: 0x28
+	register struct DIRENTRY *dir;
+	// register: 19
+	register int i;
+	// register: 17
+	register int fh;
+	// register: 18
+	register int r;
 }
 
 
@@ -563,44 +645,67 @@ int test_card_format__Fi(int card_number) {
 
 // address: 0x80142CE4
 int checksum_data__FPci(char *buf, int size) {
-	int chk;
+	// register: 6
+	register int chk;
 }
 
 
 // address: 0x80142D20
 int delete_card_file__Fii(int card_number, int file) {
-	char path[80];
+	// address: 0xFFFFFFA0
+	// size: 0x50
+	auto char path[80];
 }
 
 
 // address: 0x80142E18
 int read_card_file__FiiiPc(int card_number, int file, int id, char *buf) {
-	int okay;
-	int tries;
-	int fd;
-	int r;
-	int size;
-	int checksumerror;
-	struct file_header h;
-	char path[80];
+	// register: 19
+	register int okay;
+	// register: 20
+	register int tries;
+	// register: 17
+	register int fd;
+	// register: 2
+	register int r;
+	// register: 16
+	register int size;
+	// register: 22
+	register int checksumerror;
+	// address: 0xFFFFFD90
+	// size: 0x200
+	auto struct file_header h;
+	// address: 0xFFFFFF90
+	// size: 0x50
+	auto char path[80];
 }
 
 
 // address: 0x80142FF4
 int format_card__Fi(int card_number) {
-	char path[80];
+	// address: 0xFFFFFFA0
+	// size: 0x50
+	auto char path[80];
 }
 
 
 // address: 0x801430B8
 int write_card_file__FiiPcT2PUcPUsiT4(int card_number, int id, char *name, char *title, unsigned char *icon, unsigned short *clut, int size, unsigned char *buf) {
-	struct file_header h;
-	int fd;
-	int failed;
-	int e;
-	char path[80];
+	// address: 0xFFFFFD88
+	// size: 0x200
+	auto struct file_header h;
+	// register: 16
+	register int fd;
+	// register: 19
+	register int failed;
+	// register: 20
+	register int e;
+	// address: 0xFFFFFF88
+	// size: 0x50
+	auto char path[80];
 	{
-		int Loop;
+		// register: 4
+		register int Loop;
 	}
 }
 
@@ -612,13 +717,15 @@ void new_card__Fi(int card_number) {
 
 // address: 0x801434A0
 void service_card__Fi(int card_number) {
-	int last_status;
+	// register: 4
+	register int last_status;
 }
 
 
 // address: 0x80159590
 int GetFileNumber__FiPc(int side, char *file_name) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
@@ -629,8 +736,12 @@ int DoSaveOptions__Fv() {
 
 // address: 0x80159678
 int DoSaveGame__Fv() {
-	char temp_name[32];
-	char *Classes[3];
+	// address: 0xFFFFFFC0
+	// size: 0x20
+	auto char temp_name[32];
+	// address: 0xFFFFFFE0
+	// size: 0xC
+	auto char *Classes[3];
 }
 
 
@@ -639,7 +750,8 @@ void DoLoadGame__Fv() {
 	{
 		{
 			{
-				int result;
+				// register: 3
+				register int result;
 			}
 		}
 	}
@@ -648,7 +760,8 @@ void DoLoadGame__Fv() {
 
 // address: 0x80159894
 int DoFrontEndLoadCharacter__Fi(int slot) {
-	int result;
+	// register: 16
+	register int result;
 	{
 	}
 }
@@ -676,40 +789,65 @@ void McInitLoadGameMenu__Fv() {
 
 // address: 0x80159A6C
 void McMainKeyCtrl__Fv() {
-	struct RECT um;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT um;
 }
 
 
 // address: 0x80159D08
 void McCharCardMenuCtrl__Fv() {
-	struct CPad *P;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
 }
 
 
 // address: 0x80159F50
 void McMainCharKeyCtrl__Fv() {
-	int Spacing;
-	int yoff;
-	int SelX;
-	int len;
-	struct RECT um;
-	struct CPad *P;
+	// register: 19
+	register int Spacing;
+	// register: 17
+	register int yoff;
+	// register: 16
+	register int SelX;
+	// register: 17
+	register int len;
+	// address: 0xFFFFFFD0
+	// size: 0x8
+	auto struct RECT um;
+	// register: 18
+	// size: 0xEC
+	register struct CPad *P;
 }
 
 
 // address: 0x8015A3BC
 void ShowAlertBox__Fv() {
-	struct Dialog SBack;
-	struct RECT um;
-	int W;
-	int H;
-	int X;
-	int Y;
-	int otpos;
-	int oldBot;
-	int oldTot;
-	int lines;
-	int yprintpos;
+	// address: 0xFFFFFFA8
+	// size: 0x10
+	auto struct Dialog SBack;
+	// address: 0xFFFFFFB8
+	// size: 0x8
+	auto struct RECT um;
+	// register: 17
+	register int W;
+	// register: 30
+	register int H;
+	// register: 2
+	register int X;
+	// register: 2
+	register int Y;
+	// register: 16
+	register int otpos;
+	// address: 0xFFFFFFC0
+	auto int oldBot;
+	// address: 0xFFFFFFC8
+	auto int oldTot;
+	// register: 18
+	register int lines;
+	// register: 16
+	register int yprintpos;
 }
 
 
@@ -720,17 +858,21 @@ bool GetLoadStatusMessage__FPc(char *file_name) {
 
 // address: 0x8015A67C
 bool GetSaveStatusMessage__FiPc(int fileblocks, char *file_name) {
-	int i;
-	int blocks;
+	// register: 4
+	register int i;
+	// register: 7
+	register int blocks;
 }
 
 
 // address: 0x8015A79C
 void ShowGameFiles__FPciiG4RECTi(char *filename, int saveflag, int Spacing, struct RECT ORect, int yoff) {
 	{
-		int i;
+		// register: 17
+		register int i;
 		{
-			int FileNo;
+			// register: 5
+			register int FileNo;
 		}
 	}
 }
@@ -738,15 +880,23 @@ void ShowGameFiles__FPciiG4RECTi(char *filename, int saveflag, int Spacing, stru
 
 // address: 0x8015A90C
 void ShowCharacterFiles__FiiG4RECTi(int cs, int Spacing, struct RECT ORect, int yoff) {
-	int sn;
+	// register: 4
+	register int sn;
 	{
-		int j;
+		// register: 19
+		register int j;
 		{
-			int fileno;
-			int r;
-			int g;
-			int b;
-			char TempStr[64];
+			// register: 3
+			register int fileno;
+			// register: 18
+			register int r;
+			// register: 17
+			register int g;
+			// register: 16
+			register int b;
+			// address: 0xFFFFFF90
+			// size: 0x40
+			auto char TempStr[64];
 		}
 	}
 }
@@ -759,32 +909,49 @@ void PackItem__FP12PkItemStructPC10ItemStruct(struct PkItemStruct *id, struct It
 
 // address: 0x8015AB98
 void PackPlayer__FP14PkPlayerStructi(struct PkPlayerStruct *pPack, int pnum) {
-	int i;
-	struct PkItemStruct *pki;
-	struct ItemStruct *pi;
-	struct PlayerStruct *pPlayer;
+	// register: 19
+	register int i;
+	// register: 17
+	// size: 0x14
+	register struct PkItemStruct *pki;
+	// register: 16
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 20
+	// size: 0x19E8
+	register struct PlayerStruct *pPlayer;
 }
 
 
 // address: 0x8015ADAC
 void UnPackItem__FPC12PkItemStructP10ItemStruct(struct PkItemStruct *is, struct ItemStruct *id) {
-	char AC;
+	// register: 2
+	register char AC;
 }
 
 
 // address: 0x8015AEE0
 void VerifyGoldSeeds__FP12PlayerStruct(struct PlayerStruct *pPlayer) {
-	int i;
-	int j;
+	// register: 18
+	register int i;
+	// register: 5
+	register int j;
 }
 
 
 // address: 0x8015AFB8
 void UnPackPlayer__FPC14PkPlayerStructiUc(struct PkPlayerStruct *pPack, int pnum, unsigned char killok) {
-	struct ItemStruct *pi;
-	struct PkItemStruct *pki;
-	struct PlayerStruct *pPlayer;
-	int i;
+	// register: 17
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 18
+	// size: 0x14
+	register struct PkItemStruct *pki;
+	// register: 19
+	// size: 0x19E8
+	register struct PlayerStruct *pPlayer;
+	// register: 16
+	register int i;
 }
 
 
@@ -795,15 +962,19 @@ void ConstructSlotName__FPci(char *TempStr, int slot) {
 
 // address: 0x8015B37C
 int GetSpinnerWidth__Fi(int j) {
-	char TempStr[64];
-	int len;
+	// address: 0xFFFFFFB8
+	// size: 0x40
+	auto char TempStr[64];
+	// register: 2
+	register int len;
 }
 
 
 // address: 0x8015B420
 char *ReconstructSlotName__Fii(int side, int file) {
 	{
-		int i;
+		// register: 3
+		register int i;
 	}
 }
 
@@ -876,7 +1047,8 @@ char BLoad__Fv() {
 
 // address: 0x8015B994
 int ILoad__Fv() {
-	int rv;
+	// register: 2
+	register int rv;
 }
 
 
@@ -912,22 +1084,31 @@ void SaveQuest__Fi(int i) {
 
 // address: 0x8015BC5C
 int PSX_GM_SaveGame__FiPcT1(int card_number, char *name, char *title) {
-	int i;
-	int result;
-	int tries;
-	unsigned char *SaveBuff;
-	int SaveSize;
-	int savesize;
+	// register: 16
+	register int i;
+	// register: 3
+	register int result;
+	// register: 19
+	register int tries;
+	// register: 21
+	register unsigned char *SaveBuff;
+	// register: 16
+	register int SaveSize;
+	// register: 16
+	register int savesize;
 	{
-		int delete_file_number;
+		// register: 2
+		register int delete_file_number;
 	}
 }
 
 
 // address: 0x8015C1BC
 int PSX_GM_LoadGame__FUcii(unsigned char firstflag, int card_number, int file) {
-	int result;
-	unsigned char *LoadBuff;
+	// register: 2
+	register int result;
+	// register: 19
+	register unsigned char *LoadBuff;
 }
 
 
@@ -943,11 +1124,16 @@ int PSX_CH_LoadBlock__Fii(int card_number, int file) {
 
 // address: 0x8015C3B0
 int PSX_CH_SaveGame__Fii(int card_number, int slot) {
-	int result;
-	int tries;
-	char TempStr[64];
+	// register: 2
+	register int result;
+	// register: 17
+	register int tries;
+	// address: 0xFFFFFFA0
+	// size: 0x40
+	auto char TempStr[64];
 	{
-		int delete_file_number;
+		// register: 2
+		register int delete_file_number;
 	}
 }
 
@@ -969,19 +1155,27 @@ void GetIcon__Fv() {
 
 // address: 0x8015C6D4
 int PSX_OPT_LoadGame__Fiib(int card_number, int file, bool KillHandler) {
-	int result;
-	unsigned char *LoadBuff;
+	// register: 16
+	register int result;
+	// register: 7
+	register unsigned char *LoadBuff;
 }
 
 
 // address: 0x8015C730
 int PSX_OPT_SaveGame__FiPc(int card_number, char *filename) {
-	int result;
-	int tries;
-	char TempStr[64];
-	unsigned char *SaveBuff;
+	// register: 2
+	register int result;
+	// register: 16
+	register int tries;
+	// address: 0xFFFFFFA0
+	// size: 0x40
+	auto char TempStr[64];
+	// register: 19
+	register unsigned char *SaveBuff;
 	{
-		int delete_file_number;
+		// register: 2
+		register int delete_file_number;
 	}
 }
 
@@ -998,9 +1192,12 @@ void SaveOptions__Fv() {
 
 // address: 0x8015C9CC
 int RestoreLoadedData__Fb(bool firstflag) {
-	unsigned char *LoadBuff;
-	int DataSize;
-	int i;
+	// register: 2
+	register unsigned char *LoadBuff;
+	// register: 18
+	register int DataSize;
+	// register: 16
+	register int i;
 }
 
 

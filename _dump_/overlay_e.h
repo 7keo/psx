@@ -40,7 +40,9 @@ extern struct DR_ENV mdec_drenv[2];
 
 // address: 0x80155E1C
 void _cd_seek(int sec) {
-	struct CdlFILE RetFile;
+	// address: 0xFFFFFFE0
+	// size: 0x18
+	auto struct CdlFILE RetFile;
 }
 
 
@@ -76,7 +78,8 @@ void install_stream_handlers() {
 
 // address: 0x801561C0
 void cdstream_service() {
-	int timeout_occured;
+	// register: 16
+	register int timeout_occured;
 }
 
 
@@ -102,21 +105,27 @@ void close_cdstream() {
 
 // address: 0x80156540
 void wait_cdstream() {
-	int start_wait;
+	// address: 0xFFFFFFF0
+	auto int start_wait;
 }
 
 
 // address: 0x801565F8
 int open_cdstream(char *fname, int secoffs, int seclen) {
-	int len;
-	struct CdlFILE RetFile;
+	// register: 16
+	register int len;
+	// address: 0xFFFFFFD8
+	// size: 0x18
+	auto struct CdlFILE RetFile;
 }
 
 
 // address: 0x80156720
 int set_mdec_img_buffer(unsigned char *p) {
-	int i;
-	int tsz;
+	// register: 5
+	register int i;
+	// register: 6
+	register int tsz;
 }
 
 
@@ -127,7 +136,8 @@ void start_mdec_decode(unsigned char *data, int x, int y, int w, int h) {
 
 // address: 0x801568B0
 void DCT_out_handler() {
-	unsigned long OldGp;
+	// register: 17
+	register unsigned long OldGp;
 }
 
 
@@ -143,24 +153,38 @@ void init_mdec_buffer(char *buf, int size) {
 
 // address: 0x801569EC
 int split_poly_area(struct POLY_FT4 *p, struct POLY_FT4 *bp, int offs, struct RECT *r, int sx, int sy, int correct) {
-	int xx;
-	int x;
-	int y;
-	int xs;
-	int ys;
-	int w;
-	int h;
-	int n;
-	int ox;
-	int oy;
+	// register: 30
+	register int xx;
+	// register: 20
+	register int x;
+	// register: 22
+	register int y;
+	// register: 23
+	register int xs;
+	// address: 0xFFFFFFA8
+	auto int ys;
+	// register: 19
+	register int w;
+	// register: 21
+	register int h;
+	// address: 0xFFFFFFB0
+	auto int n;
+	// address: 0xFFFFFFB8
+	auto int ox;
+	// address: 0xFFFFFFC0
+	auto int oy;
 }
 
 
 // address: 0x80156DD4
 void rebuild_mdec_polys(int x, int y) {
-	int px;
-	int py;
-	struct POLY_FT4 *p;
+	// register: 7
+	register int px;
+	// register: 14
+	register int py;
+	// register: 15
+	// size: 0x28
+	register struct POLY_FT4 *p;
 }
 
 
@@ -171,8 +195,10 @@ void clear_mdec_frame() {
 
 // address: 0x80156FB4
 void draw_mdec_polys(int bright) {
-	int i;
-	unsigned char cdbuf;
+	// register: 10
+	register int i;
+	// register: 17
+	register unsigned char cdbuf;
 }
 
 
@@ -188,16 +214,22 @@ int is_frame_decoded() {
 
 // address: 0x8015734C
 void init_mdec_polys(int x, int y, int w, int h, int bx1, int by1, int bx2, int by2, int correct) {
-	struct RECT r;
-	int i;
+	// address: 0xFFFFFFB0
+	// size: 0x8
+	auto struct RECT r;
+	// register: 9
+	register int i;
 }
 
 
 // address: 0x801576DC
 void set_mdec_poly_bright(int br) {
-	int a;
-	int b;
-	int c;
+	// register: 9
+	register int a;
+	// register: 7
+	register int b;
+	// register: 5
+	register int c;
 }
 
 
@@ -208,9 +240,12 @@ int init_mdec_stream(unsigned char *buftop, int sectors_per_frame, int mdec_fram
 
 // address: 0x80157794
 void init_mdec_audio(int rate) {
-	struct SpuCommonAttr comm_attr;
+	// address: 0xFFFFFFC8
+	// size: 0x28
+	auto struct SpuCommonAttr comm_attr;
 	{
-		int f;
+		// register: 16
+		register int f;
 	}
 }
 
@@ -227,17 +262,24 @@ void stop_mdec_audio() {
 
 // address: 0x80157900
 void play_mdec_audio(unsigned char *data, struct asec *h) {
-	int i;
-	int b;
-	int offs;
-	struct SpuVoiceAttr voice_attr;
-	unsigned char *dp;
+	// register: 16
+	register int i;
+	// register: 6
+	register int b;
+	// register: 19
+	register int offs;
+	// address: 0xFFFFFF98
+	// size: 0x40
+	auto struct SpuVoiceAttr voice_attr;
+	// register: 4
+	register unsigned char *dp;
 }
 
 
 // address: 0x80157C34
 void set_mdec_audio_volume(short vol, struct SpuVoiceAttr voice_attr) {
-	int i;
+	// register: 16
+	register int i;
 }
 
 
@@ -253,27 +295,37 @@ void stop_mdec_stream() {
 
 // address: 0x80157D54
 void dequeue_stream() {
-	struct _mdecanim *a;
+	// register: 16
+	// size: 0x14
+	register struct _mdecanim *a;
 }
 
 
 // address: 0x80157E40
 void dequeue_animation() {
-	struct _mdecanim *a;
+	// register: 16
+	// size: 0x14
+	register struct _mdecanim *a;
 }
 
 
 // address: 0x80157FF0
 void decode_mdec_stream(int frames_elapsed) {
-	unsigned char *data;
-	struct strheader *h;
-	int req_frame;
+	// address: 0xFFFFFFF0
+	auto unsigned char *data;
+	// address: 0xFFFFFFF4
+	// size: 0x20
+	auto struct strheader *h;
+	// register: 16
+	register int req_frame;
 }
 
 
 // address: 0x801581D0
 void play_mdec_stream(char *filename, int speed, int start, int end) {
-	struct _mdecanim *a;
+	// register: 3
+	// size: 0x14
+	register struct _mdecanim *a;
 }
 
 
@@ -284,7 +336,9 @@ void clear_mdec_queue() {
 
 // address: 0x80158298
 void StrClearVRAM() {
-	struct RECT clrRect;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT clrRect;
 }
 
 
@@ -295,21 +349,38 @@ short PlayFMVOverLay(char *filename, int w, int h) {
 
 // address: 0x801583E0
 void LoPlayFMVOverLay() {
-	int start;
-	int end;
-	int start_time;
-	int br;
-	int fade;
-	int user_quit;
-	struct RECT r;
-	struct CPad *P1;
-	struct CPad *P2;
-	char *filename;
-	int w;
-	int h;
-	long vm;
+	// register: 23
+	register int start;
+	// register: 30
+	register int end;
+	// register: 20
+	register int start_time;
+	// register: 19
+	register int br;
+	// register: 21
+	register int fade;
+	// register: 2
+	register int user_quit;
+	// address: 0xFFFFFFD0
+	// size: 0x8
+	auto struct RECT r;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P1;
+	// register: 18
+	// size: 0xEC
+	register struct CPad *P2;
+	// register: 17
+	register char *filename;
+	// register: 18
+	register int w;
+	// register: 22
+	register int h;
+	// register: 3
+	register long vm;
 	{
-		int i;
+		// register: 16
+		register int i;
 	}
 }
 

@@ -1661,10 +1661,10 @@ enum _235fake {
 };
 
 enum _236fake {
-	_DUPLICATE_GAL_PHANTOM_MEM         = 0,
-	_DUPLICATE_GAL_FIRST_FREE_MEM_TYPE = 1,
-	_DUPLICATE_GAL_FLAGS               = 32768,
-	_DUPLICATE_GAL_HIGH                = 32768,
+	GAL_PHANTOM_MEM_DUPLICATE_0         = 0,
+	GAL_FIRST_FREE_MEM_TYPE_DUPLICATE_0 = 1,
+	GAL_FLAGS_DUPLICATE_0               = 32768,
+	GAL_HIGH_DUPLICATE_0                = 32768,
 };
 
 struct __vtbl_ptr_type {
@@ -7579,7 +7579,7 @@ struct TextDataStruct {
 };
 
 // size: 0x68
-struct _duplicate_MonsterStruct {
+struct MonsterStruct_duplicate_0 {
 	// offset: 0000
 	int mtalkmsg;
 	// offset: 0004
