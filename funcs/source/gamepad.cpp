@@ -1,258 +1,420 @@
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80077F90
+// C:\diabpsx\SOURCE\GAMEPAD.CPP
+
+#include "types.h"
+
+// address: 0x80077F90
 void ClrCursor__Fi(int num) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80077FEC
+
+// address: 0x80077FEC
 void HappyMan__Fi(int n) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80077FFC
+
+// address: 0x80077FFC
 void flyabout__7GamePad(struct GamePad *this) {
-	int cp;
-	int owx;
-	int owy;
-	int wx;
-	int wy;
-	struct CBlocks *gblocks;
-	int step;
+	// register: 16
+	register int cp;
+	// register: 20
+	register int owx;
+	// register: 21
+	register int owy;
+	// register: 17
+	register int wx;
+	// register: 18
+	register int wy;
+	// register: 23
+	// size: 0x108
+	register struct CBlocks *gblocks;
+	// register: 4
+	register int step;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800783F8
+
+// address: 0x800783F8
 void CloseInvChr__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078440
+
+// address: 0x80078440
 void WorldToOffset__Fiii(int pnum, int WorldX, int WorldY) {
-	int x;
-	int y;
-	struct PlayerStruct *player;
+	// register: 8
+	register int x;
+	// register: 7
+	register int y;
+	// register: 3
+	// size: 0x19E8
+	register struct PlayerStruct *player;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800784C0
+
+// address: 0x800784C0
 char pad_UpIsUpRight__Fic(int pval, char other) {
-	int walk_dir;
+	// register: 3
+	register int walk_dir;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007857C
-struct GamePad* __7GamePadi(struct GamePad *this, int player_num) {
+
+// address: 0x8007857C
+// size: 0xD4
+struct GamePad *__7GamePadi(struct GamePad *this, int player_num) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078630
+
+// address: 0x80078630
 void SetMoveStyle__7GamePadc(struct GamePad *this, char style_num) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078638
+
+// address: 0x80078638
 void SetDownButton__7GamePadiPFi_v(struct GamePad *this, int pad_val, void (*func)()) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007867C
+
+// address: 0x8007867C
 void SetComboDownButton__7GamePadiPFi_v(struct GamePad *this, int pad_val, void (*func)()) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800786C0
+
+// address: 0x800786C0
 void SetAllButtons__7GamePadP11KEY_ASSIGNS(struct GamePad *this, struct KEY_ASSIGNS *actions) {
-	int i;
+	// register: 18
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078928
+
+// address: 0x80078928
 void GetAllButtons__7GamePadP11KEY_ASSIGNS(struct GamePad *this, struct KEY_ASSIGNS *actions) {
-	int i;
-	int oc;
+	// register: 19
+	register int i;
+	// register: 20
+	register int oc;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078AE0
+
+// address: 0x80078AE0
 int GetActionButton__7GamePadPFi_v(struct GamePad *this, void (*func)()) {
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078B3C
+
+// address: 0x80078B3C
 void SetUpAction__7GamePadPFi_vT1(struct GamePad *this, void (*func)(), void (*upfunc)()) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078B78
+
+// address: 0x80078B78
 void RunFunc__7GamePadi(struct GamePad *this, int pad) {
-	int i;
+	// register: 2
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80078C64
+
+// address: 0x80078C64
 void ButtonDown__7GamePadi(struct GamePad *this, int button) {
+	{
+		{
+			{
+				{
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007907C
+
+// address: 0x8007907C
 void TestButtons__7GamePad(struct GamePad *this) {
-	int hand;
-	int joydown;
+	// register: 16
+	register int hand;
+	// register: 18
+	register int joydown;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80079188
-unknown CheckCentre__7GamePadi(struct GamePad *this, int dir) {
-	int wx;
-	int wy;
-	int ret;
+
+// address: 0x80079188
+bool CheckCentre__7GamePadi(struct GamePad *this, int dir) {
+	// register: 3
+	register int wx;
+	// register: 4
+	register int wy;
+	// register: 6
+	register int ret;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80079280
+
+// address: 0x80079280
 int CheckDirs__7GamePadi(struct GamePad *this, int dir) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800792B0
+
+// address: 0x800792B0
 int CheckDirs__7GamePadiii(struct GamePad *this, int dir, int wx, int wy) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800793B8
+
+// address: 0x800793B8
 int CheckSide__7GamePadi(struct GamePad *this, int dir) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800793F8
-unknown newDirOk__7GamePadi(struct GamePad *this, int dir) {
-	int x;
-	int y;
-	int wx;
-	int wy;
+
+// address: 0x800793F8
+bool newDirOk__7GamePadi(struct GamePad *this, int dir) {
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
+	{
+		{
+			// register: 6
+			register int wx;
+			// register: 7
+			register int wy;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x800794A8
+
+// address: 0x800794A8
 int CheckDiagBodge__7GamePadi(struct GamePad *this, int dir) {
-	int x;
-	int y;
-	int lnd;
-	int rnd;
-	int wx;
-	int wy;
-	char *poffset_x;
-	char *poffset_y;
-	unknown pl;
-	unknown pr;
-	unknown pf;
-	unknown pll;
-	unknown prr;
+	// address: 0xFFFFFF90
+	auto int x;
+	// address: 0xFFFFFF98
+	auto int y;
+	// register: 30
+	register int lnd;
+	// register: 23
+	register int rnd;
+	// address: 0xFFFFFFA0
+	auto int wx;
+	// address: 0xFFFFFFA8
+	auto int wy;
+	// register: 19
+	register char *poffset_x;
+	// register: 20
+	register char *poffset_y;
+	// register: 22
+	register bool pl;
+	// register: 21
+	register bool pr;
+	// address: 0xFFFFFFB0
+	auto bool pf;
+	// address: 0xFFFFFFB8
+	auto bool pll;
+	// address: 0xFFFFFFC0
+	auto bool prr;
+	{
+		{
+			{
+				{
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007979C
+
+// address: 0x8007979C
 int CheckIsoBodge__7GamePadi(struct GamePad *this, int dir) {
-	int x;
-	int y;
-	int newdir;
-	int wx;
-	int wy;
-	int lnd;
-	int rnd;
-	char *poffset_x;
-	char *poffset_y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
+	// register: 17
+	register int newdir;
+	// register: 21
+	register int wx;
+	// register: 22
+	register int wy;
+	// address: 0xFFFFFFB0
+	auto int lnd;
+	// address: 0xFFFFFFB8
+	auto int rnd;
+	// register: 18
+	register char *poffset_x;
+	// register: 19
+	register char *poffset_y;
+	{
+		{
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80079B08
+
+// address: 0x80079B08
 int CheckBodge__7GamePadi(struct GamePad *this, int dir) {
-	int fx;
-	int fy;
-	struct map_info *dm;
-	int wx;
-	int wy;
+	// register: 5
+	register int fx;
+	// register: 6
+	register int fy;
+	// register: 4
+	// size: 0x8
+	register struct map_info *dm;
+	{
+		{
+			// register: 5
+			register int wx;
+			// register: 6
+			register int wy;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80079C68
+
+// address: 0x80079C68
 void walk__7GamePadi(struct GamePad *this, int cmd) {
-	int xv;
-	int yv;
-	int dir;
-	struct PlayerStruct *plr2;
+	// register: 18
+	register int xv;
+	// register: 19
+	register int yv;
+	// register: 17
+	register int dir;
+	// register: 3
+	// size: 0x19E8
+	register struct PlayerStruct *plr2;
+	{
+		{
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x80079FB0
+
+// address: 0x80079FB0
 void check_around_player__7GamePad(struct GamePad *this) {
-	int x;
-	int y;
-	struct ItemStruct *pi;
+	// register: 19
+	register int x;
+	// register: 18
+	register int y;
+	{
+		{
+			{
+				{
+					// register: 16
+					// size: 0x6C
+					register struct ItemStruct *pi;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007A2EC
+
+// address: 0x8007A2EC
 void show_combos__7GamePad(struct GamePad *this) {
-	int y;
-	struct RECT crect;
-	enum TXT_JUST J;
-	int i;
+	// register: 21
+	register int y;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct RECT crect;
+	// register: 22
+	// size: 0x4
+	register enum TXT_JUST J;
+	{
+		// register: 20
+		register int i;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007A578
+
+// address: 0x8007A578
 void Handle__7GamePad(struct GamePad *this) {
-	int cp;
-	int abut;
-	int owait;
-	int dir;
+	// register: 18
+	register int cp;
+	{
+		{
+			{
+				{
+					{
+						{
+							{
+								{
+									// register: 2
+									register int abut;
+									{
+										{
+											// register: 16
+											register int owait;
+											{
+												{
+													// register: 5
+													register int dir;
+													{
+														{
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007AC34
+
+// address: 0x8007AC34
 void GamePadTask__FP4TASK(struct TASK *T) {
-	int omp;
-	int oms;
+	// register: 17
+	register int omp;
+	// register: 18
+	register int oms;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007AD2C
-struct GamePad* GetGamePad__Fi(int pnum) {
+
+// address: 0x8007AD2C
+// size: 0xD4
+struct GamePad *GetGamePad__Fi(int pnum) {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007AD4C
+
+// address: 0x8007AD4C
 void PostGamePad__Fiiii(int val, int var1, int var2, int var3) {
-	struct GamePad *GP1;
-	struct GamePad *GP2;
+	// register: 3
+	// size: 0xD4
+	register struct GamePad *GP1;
+	// register: 8
+	// size: 0xD4
+	register struct GamePad *GP2;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007AE50
+
+// address: 0x8007AE50
 void Init_GamePad__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007AE80
+
+// address: 0x8007AE80
 void InitGamePadVars__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007B00C
+
+// address: 0x8007B00C
 int SetWalkStyle__Fii(int pnum, int style) {
-	int ret;
-	struct KEY_ASSIGNS *ta;
+	// register: 17
+	register int ret;
+	// register: 17
+	// size: 0x10
+	register struct KEY_ASSIGNS *ta;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007B07C
+
+// address: 0x8007B07C
 char GetPadStyle__Fi(int pnum) {
-	struct GamePad *GPad;
+	// register: 2
+	// size: 0xD4
+	register struct GamePad *GPad;
 }
 
-// Path: C:\diabpsx\SOURCE\GAMEPAD.CPP
-// Addr: 0x8007B0A0
-void _GLOBAL_.I.flyflag() {
+
+// address: 0x8007B0A0
+void _GLOBAL__I_flyflag() {
 }
+
 

@@ -1,48 +1,61 @@
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077D14
+// C:\diabpsx\SOURCE\SOUND.CPP
+
+#include "types.h"
+
+// address: 0x80077D14
 void snd_update__FUc(unsigned char bStopAll) {
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077D1C
+
+// address: 0x80077D1C
 void snd_stop_snd__FP4TSnd(struct TSnd *pSnd) {
-	int v;
+	{
+		// register: 16
+		register int v;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077D58
+
+// address: 0x80077D58
 void snd_play_snd__FP4TSFXll(struct TSFX *pSnd, long lVolume, long lPan) {
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077DA0
+
+// address: 0x80077DA0
 void snd_play_msnd__FUsll(unsigned short pszName, long lVolume, long lPan) {
-	int padj;
+	// register: 18
+	register int padj;
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077E40
+
+// address: 0x80077E40
 void snd_init__FUl(unsigned long hWnd) {
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077E50
+
+// address: 0x80077E50
 void music_stop__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077E90
+
+// address: 0x80077E90
 void music_fade__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077ED0
+
+// address: 0x80077ED0
 void music_start__Fi(int nTrack) {
-	int MusicVolume;
+	{
+		{
+			// register: 3
+			register int MusicVolume;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\SOUND.CPP
-// Addr: 0x80077F70
+
+// address: 0x80077F70
 unsigned char snd_playing__Fi(int SFXNo) {
 }
+
 

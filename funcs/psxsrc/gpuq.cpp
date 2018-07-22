@@ -1,43 +1,75 @@
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x800833B0
+// C:\diabpsx\PSXSRC\GPUQ.CPP
+
+#include "types.h"
+
+// address: 0x800833B0
 void CheckMaxArgs__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x800833E4
+
+// address: 0x800833E4
 unsigned char GPUQ_InitModule__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x800833F0
+
+// address: 0x800833F0
 void GPUQ_FlushQ__Fv() {
-	int f;
-	struct LOAD_IMAGE_ARGS *Img;
-	void *ImgMem;
-	unsigned char GalRet;
+	// register: 18
+	register int f;
+	// register: 16
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Img;
+	{
+		{
+			{
+				{
+					{
+						{
+							// register: 17
+							register void *ImgMem;
+							{
+								{
+									// register: 2
+									register unsigned char GalRet;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x80083564
+
+// address: 0x80083564
 void GPUQ_LoadImage__FP4RECTli(struct RECT *Rect, long ImgHandle, int Offset) {
-	struct LOAD_IMAGE_ARGS *Args;
+	// register: 4
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Args;
 }
 
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x80083618
+
+// address: 0x80083618
 void GPUQ_DiscardHandle__Fl(long hnd) {
-	int f;
+	// register: 6
+	register int f;
 }
 
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x800836B8
+
+// address: 0x800836B8
 void GPUQ_LoadClutAddr__FiiiPv(int X, int Y, int Cols, void *Addr) {
-	struct LOAD_IMAGE_ARGS *Args;
+	// register: 3
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Args;
 }
 
-// Path: C:\diabpsx\PSXSRC\GPUQ.CPP
-// Addr: 0x80083754
+
+// address: 0x80083754
 void GPUQ_MoveImage__FP4RECTii(struct RECT *R, int x, int y) {
-	struct LOAD_IMAGE_ARGS *Args;
+	// register: 2
+	// size: 0x1C
+	register struct LOAD_IMAGE_ARGS *Args;
 }
+
 

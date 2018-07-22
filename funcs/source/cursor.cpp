@@ -1,55 +1,89 @@
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037734
+// C:\diabpsx\SOURCE\CURSOR.CPP
+
+#include "types.h"
+
+// address: 0x80037734
 void InitCursor__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x8003773C
+
+// address: 0x8003773C
 void FreeCursor__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037744
+
+// address: 0x80037744
 void SetICursor__Fi(int i) {
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x800377A0
+
+// address: 0x800377A0
 void SetCursor__Fi(int i) {
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037804
+
+// address: 0x80037804
 void NewCursor__Fi(int i) {
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037824
+
+// address: 0x80037824
 void InitLevelCursor__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037884
+
+// address: 0x80037884
 void CheckTown__Fv() {
-	int ocursmx;
-	int ocursmy;
-	int i;
-	int mx;
-	int dir;
+	// register: 11
+	register int ocursmx;
+	// register: 10
+	register int ocursmy;
+	{
+		// register: 9
+		register int i;
+		{
+			// register: 3
+			register int mx;
+			{
+				{
+					{
+						// register: 8
+						register int dir;
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037B18
+
+// address: 0x80037B18
 void CheckRportal__Fv() {
-	int ocursmx;
-	int ocursmy;
-	int i;
-	int mx;
-	int dir;
+	// register: 11
+	register int ocursmx;
+	// register: 10
+	register int ocursmy;
+	{
+		// register: 9
+		register int i;
+		{
+			// register: 3
+			register int mx;
+			{
+				{
+					{
+						// register: 8
+						register int dir;
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CURSOR.CPP
-// Addr: 0x80037D80
+
+// address: 0x80037D80
 void CheckCursMove__Fv() {
 }
+
 

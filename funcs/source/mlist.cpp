@@ -1,37 +1,73 @@
-// Path: C:\diabpsx\SOURCE\MLIST.CPP
-// Addr: 0x8007D5F8
+// C:\diabpsx\SOURCE\MLIST.CPP
+
+#include "types.h"
+
+// address: 0x8007D5F8
 void ML_Init__Fv() {
-	int f;
+	{
+		// register: 3
+		register int f;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\MLIST.CPP
-// Addr: 0x8007D630
+
+// address: 0x8007D630
 int ML_GetList__Fi(int Level) {
-	int RetVal;
+	// register: 2
+	register int RetVal;
 }
 
-// Path: C:\diabpsx\SOURCE\MLIST.CPP
-// Addr: 0x8007D6B0
+
+// address: 0x8007D6B0
 int ML_SetRandomList__Fi(int Level) {
-	int NumOfLists;
+	// register: 4
+	register int NumOfLists;
 }
 
-// Path: C:\diabpsx\SOURCE\MLIST.CPP
-// Addr: 0x8007D748
+
+// address: 0x8007D748
 int ML_SetList__Fii(int Level, int List) {
-	int NumOfLists;
+	// register: 2
+	register int NumOfLists;
 }
 
-// Path: C:\diabpsx\SOURCE\MLIST.CPP
-// Addr: 0x8007D7F8
+
+// address: 0x8007D7F8
 int ML_GetPresetMonsters__FiPiUl(int currlevel, int *typelist, unsigned long QuestsNeededMask) {
-	struct MonstList *Mlist;
-	int NumOfMonsters;
-	int ThisList;
-	int Index[10];
-	unsigned int f;
-	int i;
-	int minl;
-	int maxl;
+	// register: 10
+	// size: 0x10
+	register struct MonstList *Mlist;
+	// register: 18
+	register int NumOfMonsters;
+	// register: 16
+	register int ThisList;
+	// address: 0xFFFFFFC0
+	// size: 0x28
+	auto int Index[10];
+	{
+		// register: 9
+		register unsigned int f;
+		{
+			{
+				{
+					{
+						// register: 7
+						register int i;
+						{
+							{
+								{
+									// register: 4
+									register int minl;
+									// register: 2
+									register int maxl;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
+
 

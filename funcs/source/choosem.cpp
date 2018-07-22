@@ -1,57 +1,99 @@
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155A04
+// C:\diabpsx\SOURCE\CHOOSEM.CPP
+
+#include "types.h"
+
+// address: 0x80155A04
 unsigned long CM_QuestToBitPattern__Fi(int QuestNum) {
-	unsigned long RetVal;
+	// register: 16
+	register unsigned long RetVal;
 }
 
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155ADC
+
+// address: 0x80155ADC
 void CM_ShowMonsterList__Fii(int Level, int List) {
 }
 
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155AE4
+
+// address: 0x80155AE4
 int CM_ChooseMonsterList__FiUl(int Level, unsigned long QuestsNeededMask) {
-	struct DEF_ARGS *A;
-	int ListChosen;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	{
+		{
+			// address: 0xFFFFFFE8
+			auto int ListChosen;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155B84
+
+// address: 0x80155B84
 int NoUiListChoose__FiUl(int Level, unsigned long QuestsNeededMask) {
 }
 
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155B8C
+
+// address: 0x80155B8C
 void ChooseTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *A;
-	int *List;
-	int Level;
-	unsigned int NumOfLists;
-	unsigned long QuestsNeededMask;
-	unsigned char ListsToChooseFrom[50];
-	unsigned int Selection;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	// register: 18
+	register int *List;
+	// register: 16
+	register int Level;
+	// register: 16
+	register unsigned int NumOfLists;
+	// register: 17
+	register unsigned long QuestsNeededMask;
+	// address: 0xFFFFFFB8
+	// size: 0x32
+	auto unsigned char ListsToChooseFrom[50];
+	// register: 2
+	register unsigned int Selection;
 }
 
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155C5C
+
+// address: 0x80155C5C
 void ShowTask__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *A;
-	int List;
-	int Level;
-	unknown Finished;
-	struct MonstLevel *ThisLev;
-	char Buffer[100];
-	unsigned int f;
-	struct MonstList *ThisList;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *A;
+	// address: 0xFFFFFFC8
+	auto int List;
+	// register: 16
+	register int Level;
+	// register: 20
+	register bool Finished;
+	// address: 0xFFFFFFD0
+	// size: 0x8
+	auto struct MonstLevel *ThisLev;
+	// address: 0xFFFFFF60
+	// size: 0x64
+	auto char Buffer[100];
+	{
+		// register: 16
+		register unsigned int f;
+		// register: 18
+		// size: 0x10
+		register struct MonstList *ThisList;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CHOOSEM.CPP
-// Addr: 0x80155E8C
+
+// address: 0x80155E8C
 int GetListsAvailable__FiUlPUc(int Level, unsigned long QuestsNeededMask, unsigned char *ListofLists) {
-	int NumOfChoices;
-	int NumOfLists;
-	struct MonstLevel *ThisLev;
-	int f;
+	// register: 17
+	register int NumOfChoices;
+	// register: 19
+	register int NumOfLists;
+	// register: 20
+	// size: 0x8
+	register struct MonstLevel *ThisLev;
+	{
+		// register: 16
+		register int f;
+	}
 }
+
 

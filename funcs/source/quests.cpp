@@ -1,127 +1,197 @@
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x800674B4
+// C:\diabpsx\SOURCE\QUESTS.CPP
+
+#include "types.h"
+
+// address: 0x800674B4
 void CheckRPortalOK__FPiT0(int *rx, int *ry) {
-	int nx;
-	int ny;
+	// register: 6
+	register int nx;
+	// register: 3
+	register int ny;
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x800674F4
+
+// address: 0x800674F4
 void CheckQuests__Fv() {
-	int i;
-	int rportx;
-	int rporty;
-	int omp;
-	int pl;
-	struct PlayerStruct *player;
+	// register: 20
+	register int i;
+	// address: 0xFFFFFFD8
+	auto int rportx;
+	// address: 0xFFFFFFDC
+	auto int rporty;
+	// register: 21
+	register int omp;
+	{
+		{
+			{
+				// register: 17
+				register int pl;
+				{
+					// register: 4
+					// size: 0x19E8
+					register struct PlayerStruct *player;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x800679CC
+
+// address: 0x800679CC
 unsigned char ForceQuests__Fv() {
-	int i;
-	int ql;
-	int qx;
-	int qy;
-	int j;
+	{
+		// register: 6
+		register int i;
+		{
+			// register: 16
+			register int ql;
+			// register: 18
+			register int qx;
+			// register: 17
+			register int qy;
+			{
+				// register: 4
+				register int j;
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80067B70
+
+// address: 0x80067B70
 unsigned char QuestStatus__Fi(int i) {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80067C04
+
+// address: 0x80067C04
 void CheckQuestKill__FiUc(int m, unsigned char sendmsg) {
-	int i;
-	int j;
+	{
+		{
+			{
+				{
+					{
+						{
+							{
+								{
+									{
+										{
+											// register: 16
+											register int i;
+											// register: 17
+											register int j;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x800681CC
+
+// address: 0x800681CC
 void SetReturnLvlPos__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x800682DC
+
+// address: 0x800682DC
 void GetReturnLvlPos__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068330
+
+// address: 0x80068330
 void ResyncQuests__Fv() {
-	int i;
-	int tren;
+	// register: 16
+	register int i;
+	// register: 16
+	register int tren;
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x8006881C
+
+// address: 0x8006881C
 void PrintQLString__FiiUcPcc(int x, int y, unsigned char cjustflag, char *str, int col) {
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-	int len;
+	// register: 10
+	register unsigned char r;
+	// register: 9
+	register unsigned char g;
+	// register: 8
+	register unsigned char b;
+	{
+		{
+			// register: 17
+			register int len;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068A70
+
+// address: 0x80068A70
 void DrawQuestLog__Fv() {
-	int i;
-	int l;
-	int q;
-	int totlines;
+	// register: 16
+	register int i;
+	// register: 17
+	register int l;
+	// register: 2
+	register int q;
+	// register: 18
+	register int totlines;
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068C68
+
+// address: 0x80068C68
 void DrawQuestLogTSK__FP4TASK(struct TASK *T) {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068D40
+
+// address: 0x80068D40
 void StartQuestlog__Fv() {
-	int i;
+	// register: 5
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068E74
+
+// address: 0x80068E74
 void QuestlogUp__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068F0C
+
+// address: 0x80068F0C
 void QuestlogDown__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80068FC0
+
+// address: 0x80068FC0
 void RemoveQLog__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80069078
+
+// address: 0x80069078
 void QuestlogEnter__Fv() {
-	int q;
+	// register: 16
+	register int q;
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80069144
+
+// address: 0x80069144
 void QuestlogESC__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x8006916C
+
+// address: 0x8006916C
 void SetMultiQuest__FiiUci(int q, int s, unsigned char l, int v1) {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x800691EC
-void _GLOBAL_.D.questlog() {
+
+// address: 0x800691EC
+void _GLOBAL__D_questlog() {
 }
 
-// Path: C:\diabpsx\SOURCE\QUESTS.CPP
-// Addr: 0x80069214
-void _GLOBAL_.I.questlog() {
+
+// address: 0x80069214
+void _GLOBAL__I_questlog() {
 }
+
 

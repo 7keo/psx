@@ -1,201 +1,279 @@
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80037FAC
+// C:\diabpsx\SOURCE\DIABLO.CPP
+
+#include "types.h"
+
+// address: 0x80037FAC
 void FreeGameMem__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80037FE4
+
+// address: 0x80037FE4
 void start_game__FUi(unsigned int uMsg) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x800380D4
+
+// address: 0x800380D4
 void free_game__Fv() {
-	int i;
+	{
+		// register: 16
+		register int i;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038148
+
+// address: 0x80038148
 void LittleStart__FUcUc(unsigned char bNewGame, unsigned char bSinglePlayer) {
-	unsigned char fExitProgram;
-	unsigned int uMsg;
+	// address: 0xFFFFFFF0
+	auto unsigned char fExitProgram;
+	// register: 4
+	register unsigned int uMsg;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x8003820C
+
+// address: 0x8003820C
 unsigned char StartGame__FUcUc(unsigned char bNewGame, unsigned char bSinglePlayer) {
-	unsigned char fExitProgram;
-	unsigned int uMsg;
+	{
+		// address: 0xFFFFFFE0
+		auto unsigned char fExitProgram;
+		// register: 16
+		register unsigned int uMsg;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x8003840C
+
+// address: 0x8003840C
 void run_game_loop__FUi(unsigned int uMsg) {
-	unsigned long (*saveProc)();
-	struct MSG msg;
+	// register: 18
+	register unsigned long (*saveProc)();
+	// address: 0xFFFFFFD0
+	// size: 0x1C
+	auto struct MSG msg;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038574
+
+// address: 0x80038574
 unsigned char TryIconCurs__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038894
+
+// address: 0x80038894
 unsigned long DisableInputWndProc__FUlUilUl(unsigned long hWnd, unsigned int uMsg, long wParam, unsigned long lParam) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x8003889C
+
+// address: 0x8003889C
 unsigned long GM_Game__FUlUilUl(unsigned long hWnd, unsigned int uMsg, long wParam, unsigned long lParam) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038930
+
+// address: 0x80038930
 void LoadLvlGFX__Fv() {
-	char *LoadFile;
+	// register: 16
+	register char *LoadFile;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x800389E8
+
+// address: 0x800389E8
 void LoadMegaTiles__FPCc(char *LoadFile) {
-	struct FileIO *MyIo;
+	// register: 16
+	// size: 0x14
+	register struct FileIO *MyIo;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038A78
+
+// address: 0x80038A78
 void LoadAllGFX__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038A98
+
+// address: 0x80038A98
 void CreateLevel__Fi(int lvldir) {
-	long hnd;
+	// address: 0xFFFFFFF0
+	auto long hnd;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038B90
+
+// address: 0x80038B90
 void LoCreateLevel__FPv() {
-	int lvldir;
+	// register: 5
+	register int lvldir;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038CF4
+
+// address: 0x80038CF4
 void ClearOutDungeonMap__Fv() {
-	unknown istown;
-	unsigned short val;
-	int x;
-	int y;
-	int y;
-	int x;
-	int x;
-	int y;
-	int y;
-	int x;
-	int x;
-	int y;
-	int y;
-	int y;
-	int x;
-	int x;
+	// register: 17
+	register bool istown;
+	// register: 16
+	register unsigned short val;
+	{
+		// register: 6
+		register int x;
+		{
+			{
+				// register: 4
+				register int y;
+				{
+					// register: 7
+					register int y;
+					// register: 6
+					register int x;
+					{
+						{
+							// register: 4
+							register int x;
+							{
+								// register: 5
+								register int y;
+								// register: 6
+								register int x;
+								{
+									{
+										// register: 4
+										register int x;
+										{
+											// register: 5
+											register int y;
+											// register: 6
+											register int x;
+											{
+												{
+													// register: 4
+													register int x;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038EF4
+
+// address: 0x80038EF4
 void AddQuestItems__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038F94
+
+// address: 0x80038F94
 void AllSolid__Fii(int x, int y) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80038FD4
+
+// address: 0x80038FD4
 void FillCrapBits__Fv() {
-	struct QuestStruct *qs;
-	int x;
-	int y;
+	// register: 18
+	// size: 0x14
+	register struct QuestStruct *qs;
+	{
+		{
+			{
+				{
+					// register: 16
+					register int x;
+					// register: 17
+					register int y;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039174
+
+// address: 0x80039174
 void Lsaveplrpos__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039220
+
+// address: 0x80039220
 void Lrestoreplrpos__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039270
+
+// address: 0x80039270
 void LoadGameLevel__FUci(unsigned char firstflag, int lvldir) {
-	int i;
-	int j;
-	unsigned char visited;
+	// register: 16
+	register int i;
+	// register: 4
+	register int j;
+	{
+		{
+			// register: 6
+			register unsigned char visited;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039BA8
+
+// address: 0x80039BA8
 void SetSpeed__F9GM_SPEEDS(enum GM_SPEEDS Speed) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039BBC
+
+// address: 0x80039BBC
+// size: 0x4
 enum GM_SPEEDS GetSpeed__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039BC8
+
+// address: 0x80039BC8
 void game_logic__Fv() {
-	int Frames;
-	int ThisTick;
-	int SinceLast;
+	// register: 17
+	register int Frames;
+	// register: 18
+	register int ThisTick;
+	// register: 16
+	register int SinceLast;
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039DB0
+
+// address: 0x80039DB0
 void timeout_cursor__FUc(unsigned char bTimeout) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039E58
+
+// address: 0x80039E58
 void game_loop__FUc(unsigned char bStartup) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039EB8
+
+// address: 0x80039EB8
 void alloc_plr__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039EC0
+
+// address: 0x80039EC0
 void plr_encrypt__FUc(unsigned char bEncrypt) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039EC8
+
+// address: 0x80039EC8
 void assert_fail__FiPCcT1(int nLineNo, char *pszFile, char *pszFail) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039EE8
+
+// address: 0x80039EE8
 void assert_fail__FiPCc(int nLineNo, char *pszFile) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039F08
+
+// address: 0x80039F08
 void app_fatal(char *pszFile) {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039F38
+
+// address: 0x80039F38
 void DoMemCardFromFrontEnd__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DIABLO.CPP
-// Addr: 0x80039F60
+
+// address: 0x80039F60
 void DoMemCardFromInGame__Fv() {
 }
+
 

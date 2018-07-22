@@ -1,14 +1,23 @@
-// Path: C:\diabpsx\SOURCE\DEAD.CPP
-// Addr: 0x80037D88
+// C:\diabpsx\SOURCE\DEAD.CPP
+
+#include "types.h"
+
+// address: 0x80037D88
 void InitDead__Fv() {
-	int nd;
-	int i;
-	int mi;
-	int mtypes[190];
+	// register: 6
+	register int nd;
+	// register: 7
+	register int i;
+	// register: 2
+	register int mi;
+	// address: 0xFFFFFCF8
+	// size: 0x2F8
+	auto int mtypes[190];
 }
 
-// Path: C:\diabpsx\SOURCE\DEAD.CPP
-// Addr: 0x80037F8C
+
+// address: 0x80037F8C
 void AddDead__Fiici(int dx, int dy, char dv, int ddir) {
 }
+
 

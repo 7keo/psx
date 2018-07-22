@@ -1,116 +1,188 @@
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x80089C60
+// C:\diabpsx\PSXSRC\PRINTY.CPP
+
+#include "types.h"
+
+// address: 0x80089C60
 void Set__7FontTab(struct FontTab *this) {
-	int Loop;
-	int f;
-	int Loop;
+	{
+		// register: 16
+		register int Loop;
+		{
+			// register: 16
+			register int f;
+			// register: 16
+			register int Loop;
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x80089CFC
+
+// address: 0x80089CFC
 void InitPrinty__Fv() {
-	int otpos;
+	// register: 16
+	register int otpos;
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x80089DAC
+
+// address: 0x80089DAC
 void SetTextDat__5CFontP7TextDat(struct CFont *this, struct TextDat *NewDat) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x80089DB4
+
+// address: 0x80089DB4
 int KanjiPrintChar__5CFontUsUsUsUcUcUc(struct CFont *this, unsigned short Cx, unsigned short Cy, unsigned short kan, int R, int G, int B) {
-	unsigned char R;
-	unsigned char G;
-	unsigned char B;
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x80089EEC
+
+// address: 0x80089EEC
 int PrintChar__5CFontUsUsUcUcUcUc(struct CFont *this, unsigned short Cx, unsigned short Cy, unsigned char C, int R, int G, int B) {
-	unsigned char R;
-	unsigned char G;
-	unsigned char B;
-	int Cw;
+	// register: 18
+	register int Cw;
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008A090
+
+// address: 0x8008A090
 int Print__5CFontiiPc8TXT_JUSTP4RECTUcUcUc(struct CFont *this, int X, int Y, char *Str, enum TXT_JUST Justify, struct RECT *TextWindow, int R, int G, int B) {
-	struct RECT *TextWindow;
-	unsigned char R;
-	unsigned char G;
-	unsigned char B;
-	int Cx;
-	int Cy;
-	int WrapCount;
-	char *EndPtr;
-	char *SpacePtr;
-	int CharW;
-	int SpaceW;
-	int _WindowW;
-	int WindowW;
-	int WindowH;
-	int WindowX;
-	int WindowY;
-	struct RECT ClipRect;
-	unsigned short kan;
-	char *OrigStr;
-	unsigned char c;
-	char c;
-	char c;
+	// register: 20
+	register int Cx;
+	// register: 22
+	register int Cy;
+	// address: 0xFFFFFF70
+	auto int WrapCount;
+	// register: 17
+	register char *EndPtr;
+	// register: 21
+	register char *SpacePtr;
+	// register: 3
+	register int CharW;
+	// register: 16
+	register int SpaceW;
+	// address: 0xFFFFFF78
+	auto int _WindowW;
+	// register: 23
+	register int WindowW;
+	// address: 0xFFFFFF80
+	auto int WindowH;
+	// address: 0xFFFFFF88
+	auto int WindowX;
+	// address: 0xFFFFFF90
+	auto int WindowY;
+	// address: 0xFFFFFF50
+	// size: 0x8
+	auto struct RECT ClipRect;
+	// register: 2
+	register unsigned short kan;
+	// address: 0xFFFFFF98
+	auto char *OrigStr;
+	{
+		{
+			// register: 5
+			register unsigned char c;
+			{
+				{
+					{
+						{
+							// register: 16
+							register char c;
+							{
+								{
+									{
+										// register: 8
+										register char c;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008A6C8
+
+// address: 0x8008A6C8
 int GetWrap__5CFontPcP4RECT(struct CFont *this, char *Str, struct RECT *TextWindow) {
-	int WrapCount;
-	char *EndPtr;
-	char *SpacePtr;
-	char *LastSpacePtr;
-	int CharW;
-	int SpaceW;
-	int WindowW;
-	int _WindowW;
-	unsigned char c;
-	char c;
+	// register: 22
+	register int WrapCount;
+	// register: 16
+	register char *EndPtr;
+	// register: 19
+	register char *SpacePtr;
+	// register: 23
+	register char *LastSpacePtr;
+	// register: 3
+	register int CharW;
+	// register: 17
+	register int SpaceW;
+	// register: 20
+	register int WindowW;
+	// register: 30
+	register int _WindowW;
+	{
+		{
+			// register: 5
+			register unsigned char c;
+			{
+				{
+					{
+						{
+							// register: 17
+							register char c;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008A938
+
+// address: 0x8008A938
 int GetWrapWidth__5CFontPcP4RECT(struct CFont *this, char *Str, struct RECT *TextWindow) {
-	char *EndPtr;
-	char *SpacePtr;
-	int CharW;
-	int SpaceW;
-	int WindowW;
-	unsigned char c;
+	// register: 16
+	register char *EndPtr;
+	// register: 19
+	register char *SpacePtr;
+	// register: 3
+	register int CharW;
+	// register: 18
+	register int SpaceW;
+	// register: 20
+	register int WindowW;
+	{
+		// register: 5
+		register unsigned char c;
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008AAA4
+
+// address: 0x8008AAA4
 int GetStrWidth__5CFontPc(struct CFont *this, char *Str) {
-	int Width;
+	// register: 17
+	register int Width;
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008AB20
+
+// address: 0x8008AB20
 void SetChar__5CFontiUs(struct CFont *this, int ch, unsigned short Frm) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008ABA0
+
+// address: 0x8008ABA0
 int SetOTpos__5CFonti(struct CFont *this, int OT) {
-	int OldOT;
+	// register: 2
+	register int OldOT;
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008ABAC
+
+// address: 0x8008ABAC
 int GetCharWidth__5CFontUc(struct CFont *this, unsigned char ch) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PRINTY.CPP
-// Addr: 0x8008AC80
-void _GLOBAL_.I.WHITER() {
+
+// address: 0x8008AC80
+void _GLOBAL__I_WHITER() {
 }
+
 

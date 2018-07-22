@@ -1,18 +1,30 @@
-// Path: C:\diabpsx\SOURCE\COREAUTO.CPP
-// Addr: 0x800809D4
+// C:\diabpsx\SOURCE\COREAUTO.CPP
+
+#include "types.h"
+
+// address: 0x800809D4
 unsigned short GetAutomapType__FiiUc(int x, int y, unsigned char view) {
-	unsigned short rv;
-	unsigned char f;
-	unsigned char AMLWallFlag;
-	unsigned char AMRWallFlag;
+	// register: 5
+	register unsigned short rv;
+	// register: 4
+	register unsigned char f;
+	// register: 7
+	register unsigned char AMLWallFlag;
+	// register: 8
+	register unsigned char AMRWallFlag;
 }
 
-// Path: C:\diabpsx\SOURCE\COREAUTO.CPP
-// Addr: 0x80080AA8
+
+// address: 0x80080AA8
 void SetAutomapView__Fii(int x, int y) {
-	int xx;
-	int yy;
-	unsigned short s;
-	unsigned short d;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// register: 2
+	register unsigned short s;
+	// register: 3
+	register unsigned short d;
 }
+
 

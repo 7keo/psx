@@ -1,70 +1,140 @@
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x80074478
+// C:\diabpsx\SOURCE\TOWN.CPP
+
+#include "types.h"
+
+// address: 0x80074478
 void T_DrawView__Fii(int StartX, int StartY) {
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x80074628
-void T_FillSector__FPUcT0iiiib(unsigned char *P3Tiles, unsigned char *pSector, int xi, int yi, int w, int h, unknown AddSec) {
-	unknown AddSec;
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long ii;
-	unsigned short *Map;
-	long Dave;
+
+// address: 0x80074628
+void T_FillSector__FPUcT0iiiib(unsigned char *P3Tiles, unsigned char *pSector, int xi, int yi, int w, int h, bool AddSec) {
+	// register: 17
+	register int i;
+	// register: 22
+	register int j;
+	// register: 20
+	register int xx;
+	// address: 0xFFFFFFB8
+	auto int yy;
+	// register: 6
+	register long v1;
+	// register: 18
+	register long v2;
+	// register: 19
+	register long v3;
+	// register: 21
+	register long v4;
+	// address: 0xFFFFFFC0
+	auto long ii;
+	{
+		{
+			// register: 9
+			register unsigned short *Map;
+			{
+				{
+					{
+						{
+							// register: 2
+							register long Dave;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x8007486C
+
+// address: 0x8007486C
 void T_FillTile__FPUciii(unsigned char *P3Tiles, int xx, int yy, int t) {
-	long v1;
-	long v2;
-	long v3;
-	long v4;
+	// register: 6
+	register long v1;
+	// register: 6
+	register long v2;
+	// register: 6
+	register long v3;
+	// register: 6
+	register long v4;
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x8007497C
+
+// address: 0x8007497C
 void TownFixupBodges__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x800749BC
+
+// address: 0x800749BC
 void T_Pass3__Fv() {
-	unsigned char *pSector;
-	int xx;
-	int yy;
-	int y;
-	int x;
+	// register: 19
+	register unsigned char *pSector;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	{
+		// register: 5
+		register int y;
+		{
+			{
+				// register: 4
+				register int x;
+				{
+					{
+						{
+							{
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x80074D48
+
+// address: 0x80074D48
 void CreateTown__Fi(int entry) {
-	int y;
-	int x;
+	{
+		// register: 5
+		register int y;
+		{
+			{
+				// register: 4
+				register int x;
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x80074E9C
-unsigned char* GRL_LoadFileInMemSig__FPCcPUl(char *Name, unsigned long *Len) {
-	struct FileIO *MyIo;
-	char SmallName[20];
-	unsigned char *Dest;
-	int FileLen;
+
+// address: 0x80074E9C
+unsigned char *GRL_LoadFileInMemSig__FPCcPUl(char *Name, unsigned long *Len) {
+	// register: 18
+	// size: 0x14
+	register struct FileIO *MyIo;
+	// address: 0xFFFFFFD8
+	// size: 0x14
+	auto char SmallName[20];
+	// register: 16
+	register unsigned char *Dest;
+	// register: 16
+	register int FileLen;
 }
 
-// Path: C:\diabpsx\SOURCE\TOWN.CPP
-// Addr: 0x80074F80
+
+// address: 0x80074F80
 void GRL_StripDir__FPcPCc(char *Dest, char *Src) {
-	char *BSlash;
-	char *FSlash;
-	char *Last;
+	// register: 17
+	register char *BSlash;
+	// register: 3
+	register char *FSlash;
+	{
+		{
+			// register: 5
+			register char *Last;
+		}
+	}
 }
+
 

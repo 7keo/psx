@@ -1,63 +1,86 @@
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086C40
-struct CdIO* __4CdIOUl(struct CdIO *this, unsigned long OurMemId) {
+// C:\diabpsx\PSXSRC\CDIO.CPP
+
+#include "types.h"
+
+// address: 0x80086C40
+// size: 0x14
+struct CdIO *__4CdIOUl(struct CdIO *this, unsigned long OurMemId) {
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086C84
-void _._4CdIO(struct CdIO *this, int __in_chrg) {
+
+// address: 0x80086C84
+void ___4CdIO(struct CdIO *this, int __in_chrg) {
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086CDC
-unknown FileExists__4CdIOPCc(struct CdIO *this, char *Name) {
+
+// address: 0x80086CDC
+bool FileExists__4CdIOPCc(struct CdIO *this, char *Name) {
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086D00
-unknown LoReadFileAtAddr__4CdIOPCcPUci(struct CdIO *this, char *Name, unsigned char *Dest, int Len) {
+
+// address: 0x80086D00
+bool LoReadFileAtAddr__4CdIOPCcPUci(struct CdIO *this, char *Name, unsigned char *Dest, int Len) {
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086D9C
+
+// address: 0x80086D9C
 int GetFileLength__4CdIOPCc(struct CdIO *this, char *Name) {
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086DC0
-unknown LoSave__4CdIOPCcPUci(struct CdIO *this, char *Name, unsigned char *Addr, int Len) {
-	int FileHnd;
+
+// address: 0x80086DC0
+bool LoSave__4CdIOPCcPUci(struct CdIO *this, char *Name, unsigned char *Addr, int Len) {
+	// register: 16
+	register int FileHnd;
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086E94
-unknown CD_GetCdlFILE__FPCcP7CdlFILE(char *Name, struct CdlFILE *RetFile) {
-	char SearchBuffer[256];
+
+// address: 0x80086E94
+bool CD_GetCdlFILE__FPCcP7CdlFILE(char *Name, struct CdlFILE *RetFile) {
+	// address: 0xFFFFFEF8
+	// size: 0x100
+	auto char SearchBuffer[256];
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x80086EE4
-unknown LoStreamFile__4CdIOPCciPFPUciib_bii(struct CdIO *this, char *Name, int Slice, unknown (*Func)(), int Offset, int Size) {
-	int Offset;
-	int Size;
-	unsigned char *Dest;
-	int OrigSize;
-	unsigned long Pos;
-	struct STRHDR *sh;
-	int ah;
-	unsigned char Count;
-	int Lumpfile;
-	int SizeToRead;
-	unsigned char *ptr;
+
+// address: 0x80086EE4
+bool LoStreamFile__4CdIOPCciPFPUciib_bii(struct CdIO *this, char *Name, int Slice, bool (*Func)(), int Offset, int Size) {
+	// address: 0xFFFFFFC8
+	auto unsigned char *Dest;
+	// address: 0xFFFFFFD0
+	auto int OrigSize;
+	// register: 19
+	register unsigned long Pos;
+	// register: 23
+	// size: 0x14
+	register struct STRHDR *sh;
+	// register: 16
+	register int ah;
+	// register: 22
+	register unsigned char Count;
+	// register: 30
+	register int Lumpfile;
+	{
+		// register: 17
+		register int SizeToRead;
+		// register: 20
+		register unsigned char *ptr;
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\CDIO.CPP
-// Addr: 0x8008710C
-unknown LoAsyncStreamFile__4CdIOPCciPFPUciib_bii(struct CdIO *this, char *Name, int Slice, unknown (*Func)(), int Offset, int Size) {
-	int Size;
-	long hndText;
-	unsigned char *Dest;
-	int OrigSize;
-	int SizeToRead;
+
+// address: 0x8008710C
+bool LoAsyncStreamFile__4CdIOPCciPFPUciib_bii(struct CdIO *this, char *Name, int Slice, bool (*Func)(), int Offset, int Size) {
+	// register: 19
+	register long hndText;
+	// register: 18
+	register unsigned char *Dest;
+	// register: 21
+	register int OrigSize;
+	{
+		// register: 16
+		register int SizeToRead;
+	}
 }
+
 

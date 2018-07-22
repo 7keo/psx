@@ -1,353 +1,682 @@
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x8003017C
-unsigned char TrimCol__Fs(short col) {
+// C:\diabpsx\SOURCE\CONTROL.CPP
+
+#include "types.h"
+
+// address: 0x8003017C
+unsigned char TrimCol__Fs_addr_8003017C(short col) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800301B4
+
+// address: 0x800301B4
 void DrawSpellCel__FllUclUcc(long xp, long yp, unsigned char Trans, long nCel, int w, int sel) {
-	unsigned char w;
-	char sel;
-	struct TextDat *ThisDat;
-	struct FRAME_HDR *Fr;
-	struct POLY_FT4 *Ft4;
-	struct POLY_GT4 *GT4;
-	struct TP_LOAD_HDR *Tp;
-	int SpellW;
-	int SpellH;
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
-	int x0;
-	int x1;
-	int x2;
-	int x3;
-	int y0;
-	int y1;
-	int y2;
-	int y3;
-	int u0;
-	int u1;
-	int u2;
-	int u3;
-	int v0;
-	int v1;
-	int v2;
-	int v3;
-	int otpos;
-	int X;
-	int Y;
-	int SW;
-	int SH;
-	struct PAL *Pal;
-	int st;
+	// address: 0xFFFFFF78
+	// size: 0x70
+	auto struct TextDat *ThisDat;
+	// register: 17
+	// size: 0xC
+	register struct FRAME_HDR *Fr;
+	// register: 6
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 19
+	// size: 0x34
+	register struct POLY_GT4 *GT4;
+	// address: 0xFFFFFF80
+	// size: 0x4
+	auto struct TP_LOAD_HDR *Tp;
+	// register: 19
+	register int SpellW;
+	// register: 16
+	register int SpellH;
+	// register: 18
+	register unsigned char r;
+	// address: 0xFFFFFF88
+	auto unsigned char g;
+	// address: 0xFFFFFF90
+	auto unsigned char b;
+	// register: 13
+	register int x0;
+	// register: 12
+	register int x1;
+	// register: 16
+	register int x2;
+	// register: 15
+	register int x3;
+	// register: 24
+	register int y0;
+	// register: 11
+	register int y1;
+	// register: 9
+	register int y2;
+	// register: 14
+	register int y3;
+	// register: 4
+	register int u0;
+	// register: 5
+	register int u1;
+	// register: 10
+	register int u2;
+	// register: 8
+	register int u3;
+	// register: 6
+	register int v0;
+	// register: 7
+	register int v1;
+	// register: 3
+	register int v2;
+	// register: 2
+	register int v3;
+	// address: 0xFFFFFF98
+	auto int otpos;
+	{
+		{
+			{
+				{
+					// register: 22
+					register int X;
+					// register: 23
+					register int Y;
+					// register: 21
+					register int SW;
+					// register: 20
+					register int SH;
+					// register: 3
+					// size: 0x8
+					register struct PAL *Pal;
+					// address: 0xFFFFFFD0
+					auto int st;
+					{
+						{
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80030D38
+
+// address: 0x80030D38
 void SetSpellTrans__Fc(char t) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80030D44
+
+// address: 0x80030D44
 void DrawSpellBookTSK__FP4TASK(struct TASK *T) {
-	int CountDown;
-	int i;
-	int omp;
+	// register: 17
+	register int CountDown;
+	// register: 16
+	register int i;
+	{
+		// register: 16
+		register int omp;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80030ED4
+
+// address: 0x80030ED4
 void DrawSpeedSpellTSK__FP4TASK(struct TASK *T) {
-	struct DEF_ARGS *args;
-	int pnum;
-	unknown alive;
-	int old_opts;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
+	// register: 17
+	register int pnum;
+	// register: 19
+	register bool alive;
+	{
+		// register: 18
+		register int old_opts;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80031004
+
+// address: 0x80031004
 void ToggleSpell__Fi(int pnum) {
-	struct DEF_ARGS *args;
+	// register: 2
+	// size: 0x10
+	register struct DEF_ARGS *args;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800310B8
+
+// address: 0x800310B8
 void DrawSpellList__Fv() {
-	int x;
-	int y;
-	int i;
-	int j;
-	int t;
-	unsigned long mask;
-	unsigned long spl;
-	int s;
-	int c;
-	int v;
-	int NoSpells;
-	unsigned char trans;
-	struct PlayerStruct *player;
-	struct CPad *P;
-	int lx;
-	int ly;
-	int NoYSpells;
-	int NoXSpells;
-	int PLEFT;
-	int PRIGHT;
-	unknown Flag;
+	// register: 18
+	register int x;
+	// register: 20
+	register int y;
+	// register: 22
+	register int i;
+	// register: 19
+	register int j;
+	// register: 4
+	register int t;
+	// address: 0xFFFFFFA0
+	auto unsigned long mask;
+	// address: 0xFFFFFFA8
+	auto unsigned long spl;
+	// register: 5
+	register int s;
+	// register: 17
+	register int c;
+	// register: 23
+	register int v;
+	// address: 0xFFFFFFB0
+	auto int NoSpells;
+	// register: 6
+	register unsigned char trans;
+	// register: 21
+	// size: 0x19E8
+	register struct PlayerStruct *player;
+	// register: 18
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 21
+	register int lx;
+	// register: 22
+	register int ly;
+	// register: 16
+	register int NoYSpells;
+	// register: 17
+	register int NoXSpells;
+	// register: 19
+	register int PLEFT;
+	// register: 20
+	register int PRIGHT;
+	{
+		{
+			{
+				{
+					{
+						{
+							// register: 4
+							register bool Flag;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80031D54
+
+// address: 0x80031D54
 void SetSpell__Fi(int pnum) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80031E60
+
+// address: 0x80031E60
 void AddPanelString__FPCci(char *str, int just) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80031F20
+
+// address: 0x80031F20
 void ClearPanel__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80031F50
+
+// address: 0x80031F50
 void InitPanelStr__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80031F70
+
+// address: 0x80031F70
 void InitControlPan__Fv() {
-	int i;
+	// register: 3
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x8003219C
+
+// address: 0x8003219C
 void DrawCtrlPan__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800321C8
+
+// address: 0x800321C8
 void DoAutoMap__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80032228
+
+// address: 0x80032228
 void CheckPanelInfo__Fv() {
-	int *_pSpell[1];
-	int c;
-	int s;
-	int v;
+	// register: 17
+	// size: 0x4
+	register int (*_pSpell)[1];
+	// register: 16
+	register int c;
+	// register: 5
+	register int s;
+	// register: 16
+	register int v;
+	{
+		{
+			{
+				{
+					{
+						{
+							{
+								{
+									{
+										{
+											{
+												{
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80032948
+
+// address: 0x80032948
 void FreeControlPan__Fv() {
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
+	{
+		// register: 4
+		register void *p__p;
+		{
+			// register: 4
+			register void *p__p;
+			{
+				// register: 4
+				register void *p__p;
+				{
+					// register: 4
+					register void *p__p;
+					{
+						// register: 4
+						register void *p__p;
+						{
+							// register: 4
+							register void *p__p;
+							{
+								// register: 4
+								register void *p__p;
+								{
+									// register: 4
+									register void *p__p;
+									{
+										// register: 4
+										register void *p__p;
+										{
+											// register: 4
+											register void *p__p;
+											{
+												// register: 4
+												register void *p__p;
+												{
+													// register: 4
+													register void *p__p;
+													{
+														// register: 4
+														register void *p__p;
+														{
+															// register: 4
+															register void *p__p;
+															{
+																// register: 4
+																register void *p__p;
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80032A58
+
+// address: 0x80032A58
 int CPrintString__FiPci(int No, char *pszStr, int Just) {
-	enum TXT_JUST Justify;
-	unsigned char R;
-	unsigned char G;
-	unsigned char B;
+	// register: 6
+	// size: 0x4
+	register enum TXT_JUST Justify;
+	// register: 8
+	register unsigned char R;
+	// register: 5
+	register unsigned char G;
+	// register: 3
+	register unsigned char B;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80032B74
+
+// address: 0x80032B74
 void PrintInfo__Fv() {
-	int NoOfLines;
-	int nOffset1;
-	int nlines;
-	int PageOffset;
-	int i;
-	int i;
-	int i;
+	// register: 18
+	register int NoOfLines;
+	// register: 20
+	register int nOffset1;
+	// register: 19
+	register int nlines;
+	// register: 22
+	register int PageOffset;
+	{
+		{
+			{
+				// register: 17
+				register int i;
+				{
+					{
+						{
+							{
+								// register: 17
+								register int i;
+								{
+									// register: 16
+									register int i;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80032FA4
+
+// address: 0x80032FA4
 void DrawInfoBox__FP4RECT(struct RECT *InfoRect) {
-	int pnum;
-	int nGold;
+	// register: 16
+	register int pnum;
+	{
+		{
+			{
+				{
+					{
+						{
+							// register: 17
+							register int nGold;
+							{
+								{
+									{
+										{
+											{
+												{
+													{
+														{
+															{
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800336D8
+
+// address: 0x800336D8
 void MY_PlrStringXY__Fv() {
-	struct CSDATA *ptr;
-	char r;
-	char g;
-	char b;
-	int x;
-	int y;
-	int w;
-	int len;
-	struct RECT Angle;
+	// register: 22
+	// size: 0x28
+	register struct CSDATA *ptr;
+	// address: 0xFFFFFFB8
+	auto char r;
+	// address: 0xFFFFFFC0
+	auto char g;
+	// address: 0xFFFFFFC8
+	auto char b;
+	// register: 23
+	register int x;
+	// register: 30
+	register int y;
+	// address: 0xFFFFFFD0
+	auto int w;
+	// register: 21
+	register int len;
+	// address: 0xFFFFFFB0
+	// size: 0x8
+	auto struct RECT Angle;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80033DE8
+
+// address: 0x80033DE8
 void ADD_PlrStringXY__FPCcc(char *pszStr, char col) {
-	struct CSDATA *ptr;
+	// register: 16
+	// size: 0x28
+	register struct CSDATA *ptr;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80033E90
+
+// address: 0x80033E90
 void DrawPlus__Fii(int n, int pnum) {
-	struct TextDat *ThisDat;
-	struct POLY_FT4 *Ft4;
-	int otpos;
-	int x;
-	int y;
+	// register: 17
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 4
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 18
+	register int otpos;
+	// register: 3
+	register int x;
+	// register: 7
+	register int y;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80034028
+
+// address: 0x80034028
 void ChrCheckValidButton__Fi(int move) {
-	int pc;
-	int count;
-	int i;
+	// register: 2
+	register int pc;
+	// register: 3
+	register int count;
+	{
+		// register: 6
+		register int i;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80034334
+
+// address: 0x80034334
 void DrawArrows__Fv() {
-	struct TextDat *ThisDat;
-	struct POLY_FT4 *Ft4;
-	unsigned char flip;
-	int x;
-	int otpos;
+	// register: 18
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 10
+	// size: 0x28
+	register struct POLY_FT4 *Ft4;
+	// register: 16
+	register unsigned char flip;
+	// register: 17
+	register int x;
+	// register: 19
+	register int otpos;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80034434
+
+// address: 0x80034434
 void BuildChr__Fv() {
-	char c;
-	char chrstr[64];
-	long mind;
-	long maxd;
-	int hper;
-	int ac;
+	// register: 17
+	register char c;
+	// address: 0xFFFFFFB0
+	// size: 0x40
+	auto char chrstr[64];
+	// register: 18
+	register long mind;
+	// register: 16
+	register long maxd;
+	// register: 16
+	register int hper;
+	// register: 16
+	register int ac;
+	{
+		{
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80035698
+
+// address: 0x80035698
 void DrawChr__Fv() {
-	char chrstr[64];
-	int pc;
-	struct CPad *P;
-	int llus;
-	int move;
+	// address: 0xFFFFFFB0
+	// size: 0x40
+	auto char chrstr[64];
+	// register: 2
+	register int pc;
+	// register: 17
+	// size: 0xEC
+	register struct CPad *P;
+	{
+		{
+			// register: 18
+			register int llus;
+			// register: 16
+			register int move;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80035B48
+
+// address: 0x80035B48
 void DrawChrTSK__FP4TASK(struct TASK *T) {
-	int omp;
+	// register: 16
+	register int omp;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80035C58
+
+// address: 0x80035C58
 void DrawLevelUpIcon__Fi(int pnum) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80035CEC
+
+// address: 0x80035CEC
 void CheckChrBtns__Fv() {
-	int pc;
+	// register: 16
+	register int pc;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80036074
+
+// address: 0x80036074
 int DrawDurIcon4Item__FPC10ItemStructii(struct ItemStruct *pItem, int x, int c) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800360F8
+
+// address: 0x800360F8
 void RedBack__Fv() {
-	struct TextDat *ThisDat;
-	struct POLY_FT4 *FT4;
+	// register: 16
+	// size: 0x70
+	register struct TextDat *ThisDat;
+	// register: 7
+	// size: 0x28
+	register struct POLY_FT4 *FT4;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800361F0
+
+// address: 0x800361F0
 void PrintSBookStr__FiiiPCcUcUc(int x, int y, int cspel, char *pszStr, int bright, int Staff) {
-	unsigned char bright;
-	unsigned char Staff;
-	unsigned char r;
-	unsigned char g;
-	unsigned char b;
+	// register: 4
+	register unsigned char r;
+	// register: 3
+	register unsigned char g;
+	// register: 5
+	register unsigned char b;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80036478
+
+// address: 0x80036478
 char GetSBookTrans__FiUc(int ii, unsigned char townok) {
-	char st;
+	// register: 16
+	register char st;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x800366D8
-void DrawSpellBook__Fb(unknown DrawBg) {
-	int i;
-	int ii;
-	int x;
-	int y;
-	int mind;
-	int maxd;
-	int sx;
-	int sy;
-	unsigned long tspls;
-	char st;
-	char c;
-	int v;
-	unsigned char bright;
-	char Num[4];
-	int bw;
-	struct CPad *P;
-	int lsbooktab;
-	int lcur_spel;
+
+// address: 0x800366D8
+void DrawSpellBook__Fb(bool DrawBg) {
+	// register: 19
+	register int i;
+	// register: 18
+	register int ii;
+	// register: 18
+	register int x;
+	// register: 21
+	register int y;
+	// address: 0xFFFFFFC0
+	auto int mind;
+	// address: 0xFFFFFFC4
+	auto int maxd;
+	// register: 30
+	register int sx;
+	// register: 23
+	register int sy;
+	// address: 0xFFFFFFC8
+	auto unsigned long tspls;
+	// register: 20
+	register char st;
+	// register: 17
+	register char c;
+	// register: 17
+	register int v;
+	// register: 22
+	register unsigned char bright;
+	// address: 0xFFFFFFB8
+	// size: 0x4
+	auto char Num[4];
+	// register: 22
+	register int bw;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
+	// register: 18
+	register int lsbooktab;
+	// register: 19
+	register int lcur_spel;
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80037280
+
+// address: 0x80037280
 void CheckSBook__Fv() {
-	unsigned long tspls;
-	char st;
-	int cspel;
-	unknown splok;
+	// register: 6
+	register unsigned long tspls;
+	// register: 7
+	register char st;
+	// register: 8
+	register int cspel;
+	{
+		{
+			{
+				// register: 2
+				register bool splok;
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x8003751C
-char* get_pieces_str__Fi(int nGold) {
+
+// address: 0x8003751C
+char *get_pieces_str__Fi(int nGold) {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80037550
-void _GLOBAL_.D.DrawLevelUpFlag() {
+
+// address: 0x80037550
+void _GLOBAL__D_DrawLevelUpFlag() {
 }
 
-// Path: C:\diabpsx\SOURCE\CONTROL.CPP
-// Addr: 0x80037578
-void _GLOBAL_.I.DrawLevelUpFlag() {
+
+// address: 0x80037578
+void _GLOBAL__I_DrawLevelUpFlag() {
 }
+
 

@@ -1,305 +1,462 @@
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F4A8
+// C:\diabpsx\SOURCE\DRLG_L4.CPP
+
+#include "types.h"
+
+// address: 0x8014F4A8
 void DRLG_L4Shadows__Fv() {
-	int x;
-	int y;
-	unsigned char okflag;
+	// register: 6
+	register int x;
+	// register: 8
+	register int y;
+	// register: 2
+	register unsigned char okflag;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F56C
+
+// address: 0x8014F56C
 void InitL4Dungeon__Fv() {
-	int j;
-	int i;
-	int j;
-	int j;
-	int i;
+	{
+		// register: 5
+		register int j;
+		{
+			{
+				// register: 4
+				register int i;
+				{
+					// register: 7
+					register int j;
+					{
+						{
+							// register: 4
+							register int i;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F620
+
+// address: 0x8014F620
 void DRLG_LoadL4SP__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F6C4
+
+// address: 0x8014F6C4
 void DRLG_FreeL4SP__Fv() {
-	void *p__p;
+	{
+		// register: 4
+		register void *p__p;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F6F4
+
+// address: 0x8014F6F4
 void DRLG_L4SetSPRoom__Fii(int rx1, int ry1) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
+	// register: 12
+	register int rw;
+	// register: 13
+	register int rh;
+	// register: 7
+	register int i;
+	// register: 10
+	register int j;
+	// register: 8
+	register unsigned char *sp;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F7F4
+
+// address: 0x8014F7F4
 void L4makeDmt__Fv() {
-	int i;
-	int j;
-	int idx;
-	int val;
-	int dmty;
+	// register: 10
+	register int i;
+	// register: 11
+	register int j;
+	// register: 2
+	register int idx;
+	// register: 2
+	register int val;
+	// register: 12
+	register int dmty;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F898
+
+// address: 0x8014F898
 int L4HWallOk__Fii(int i, int j) {
-	int x;
-	unsigned char wallok;
+	// register: 9
+	register int x;
+	// register: 3
+	register unsigned char wallok;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014F9E8
+
+// address: 0x8014F9E8
 int L4VWallOk__Fii(int i, int j) {
-	int y;
-	unsigned char wallok;
+	// register: 10
+	register int y;
+	// register: 3
+	register unsigned char wallok;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014FB58
+
+// address: 0x8014FB58
 void L4HorizWall__Fiii(int i, int j, int dx) {
-	int xx;
+	// register: 7
+	register int xx;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014FD28
+
+// address: 0x8014FD28
 void L4VertWall__Fiii(int i, int j, int dy) {
-	int yy;
+	// register: 3
+	register int yy;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8014FEEC
+
+// address: 0x8014FEEC
 void L4AddWall__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 2
+	register int x;
+	// register: 2
+	register int y;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80150394
+
+// address: 0x80150394
 void L4tileFix__Fv() {
-	int j;
+	// register: 15
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8015257C
+
+// address: 0x8015257C
 void DRLG_L4Subs__Fv() {
-	int x;
-	int y;
-	int i;
-	int rv;
+	// register: 17
+	register int x;
+	// register: 19
+	register int y;
+	// register: 4
+	register int i;
+	// register: 3
+	register int rv;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8015275C
+
+// address: 0x8015275C
 void L4makeDungeon__Fv() {
-	int i;
-	int j;
-	int l;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 10
+	register int l;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80152994
+
+// address: 0x80152994
 void uShape__Fv() {
-	int j;
-	int i;
-	int rv;
+	// register: 6
+	register int j;
+	// register: 7
+	register int i;
+	// register: 4
+	register int rv;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80152C30
+
+// address: 0x80152C30
 long GetArea__Fv() {
-	int i;
-	int j;
-	long rv;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 6
+	register long rv;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80152C8C
+
+// address: 0x80152C8C
 void L4drawRoom__Fiiii(int x, int y, int width, int height) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80152CF4
+
+// address: 0x80152CF4
 unsigned char L4checkRoom__Fiiii(int x, int y, int width, int height) {
-	int i;
-	int j;
+	// register: 8
+	register int i;
+	// register: 9
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80152D90
+
+// address: 0x80152D90
 void L4roomGen__Fiiiii(int x, int y, int w, int h, int dir) {
-	int dir;
-	int rx;
-	int ry;
-	int ry2;
-	int height;
-	int width;
-	int cx1;
-	int cy1;
-	int cw;
-	int ch;
-	int num;
-	int dirProb;
-	int ran;
+	// register: 23
+	register int rx;
+	// register: 30
+	register int ry;
+	// register: 19
+	register int ry2;
+	// register: 18
+	register int height;
+	// register: 20
+	register int width;
+	// register: 19
+	register int cx1;
+	// register: 16
+	register int cy1;
+	// register: 21
+	register int cw;
+	// register: 17
+	register int ch;
+	// register: 22
+	register int num;
+	// register: 3
+	register int dirProb;
+	// register: 3
+	register int ran;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153078
+
+// address: 0x80153078
 void L4firstRoom__Fv() {
-	int x;
-	int y;
-	int w;
-	int h;
-	int rndx;
-	int rndy;
-	int xmin;
-	int xmax;
-	int ymin;
-	int ymax;
+	// register: 19
+	register int x;
+	// register: 16
+	register int y;
+	// register: 18
+	register int w;
+	// register: 17
+	register int h;
+	// register: 4
+	register int rndx;
+	// register: 5
+	register int rndy;
+	// register: 16
+	register int xmin;
+	// register: 4
+	register int xmax;
+	// register: 16
+	register int ymin;
+	// register: 4
+	register int ymax;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153284
+
+// address: 0x80153284
 void L4SaveQuads__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
+	// register: 6
+	register int i;
+	// register: 9
+	register int j;
+	// register: 11
+	register int x;
+	// register: 12
+	register int y;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153344
+
+// address: 0x80153344
 void DRLG_L4SetRoom__FPUcii(unsigned char *pSetPiece, int rx1, int ry1) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
+	// register: 12
+	register int rw;
+	// register: 13
+	register int rh;
+	// register: 7
+	register int i;
+	// register: 10
+	register int j;
+	// register: 8
+	register unsigned char *sp;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153418
+
+// address: 0x80153418
 void DRLG_LoadDiabQuads__FUc(unsigned char preflag) {
-	unsigned char *ptrSetPiece;
+	// register: 4
+	register unsigned char *ptrSetPiece;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153614
+
+// address: 0x80153614
 unsigned char DRLG_L4PlaceMiniSet__FPCUciiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int ldir) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int i;
-	int ii;
-	int numt;
-	int found;
-	int bailcnt;
+	// register: 17
+	register int sx;
+	// register: 16
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 20
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 30
+	register int i;
+	// register: 9
+	register int ii;
+	// address: 0xFFFFFFA0
+	auto int numt;
+	// register: 8
+	register int found;
+	// register: 19
+	register int bailcnt;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153A30
+
+// address: 0x80153A30
 void DRLG_L4FTVR__Fiiiii(int i, int j, int x, int y, int d) {
-	int d;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80153ED8
+
+// address: 0x80153ED8
 void DRLG_L4FloodTVal__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 20
+	register int xx;
+	// register: 21
+	register int yy;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x801540F0
+
+// address: 0x801540F0
 unsigned char IsDURWall__Fc(char d) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80154120
+
+// address: 0x80154120
 unsigned char IsDLLWall__Fc(char dd) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80154150
+
+// address: 0x80154150
 void DRLG_L4TransFix__Fv() {
-	int j;
-	int yy;
+	// register: 7
+	register int j;
+	// address: 0xFFFFFFB8
+	auto int yy;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x801544BC
+
+// address: 0x801544BC
 void DRLG_L4Corners__Fv() {
-	int i;
-	int j;
+	// register: 7
+	register int i;
+	// register: 9
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80154550
+
+// address: 0x80154550
 void L4FixRim__Fv() {
-	int j;
+	{
+		{
+			// register: 3
+			register int j;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x8015458C
+
+// address: 0x8015458C
 void DRLG_L4GeneralFix__Fv() {
-	int i;
-	int j;
+	// register: 6
+	register int i;
+	// register: 8
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80154630
+
+// address: 0x80154630
 void DRLG_L4SetWalls__Fv() {
-	int i;
-	int j;
-	int yy;
-	int v;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 8
+	register int yy;
+	{
+		{
+			{
+				{
+					// register: 2
+					register int v;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x801546E0
+
+// address: 0x801546E0
 void DRLG_L4__Fi(int entry) {
-	unsigned char doneflag;
-	int i;
-	int j;
-	int spi;
-	int spj;
+	// register: 4
+	register unsigned char doneflag;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 5
+	register int spi;
+	// register: 3
+	register int spj;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x80154FE0
+
+// address: 0x80154FE0
 void DRLG_L4Pass3__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long lv;
+	// register: 23
+	register int i;
+	// register: 30
+	register int j;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 6
+	register long v1;
+	// register: 22
+	register long v2;
+	// register: 20
+	register long v3;
+	// register: 21
+	register long v4;
+	// register: 2
+	register long lv;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L4.CPP
-// Addr: 0x801551F8
+
+// address: 0x801551F8
 void CreateL4Dungeon__FUii(unsigned int rseed, int entry) {
-	void *p__p;
-	void *p__p;
-	void *p__p;
-	void *p__p;
+	{
+		// register: 4
+		register void *p__p;
+		{
+			// register: 4
+			register void *p__p;
+			{
+				// register: 4
+				register void *p__p;
+				{
+					// register: 4
+					register void *p__p;
+				}
+			}
+		}
+	}
 }
+
 

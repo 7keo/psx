@@ -1,7 +1,13 @@
-// Path: C:\diabpsx\SOURCE\COREINV.CPP
-// Addr: 0x8008271C
+// C:\diabpsx\SOURCE\COREINV.CPP
+
+#include "types.h"
+
+// address: 0x8008271C
 int FindGetItem__FiUsi(int idx, unsigned short ci, int iseed) {
-	int i;
-	int ii;
+	// register: 8
+	register int i;
+	// register: 7
+	register int ii;
 }
+
 

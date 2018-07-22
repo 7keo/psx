@@ -1,219 +1,311 @@
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004BC68
+// C:\diabpsx\SOURCE\LIGHTING.CPP
+
+#include "types.h"
+
+// address: 0x8004BC68
 int veclen2__Fii(int ix, int iy) {
-	int t;
+	// register: 4
+	register int t;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004BCD0
+
+// address: 0x8004BCD0
 void set_light_bands__Fv() {
-	int v;
-	int y;
-	unsigned char *l;
+	// register: 3
+	register int v;
+	// register: 5
+	register int y;
+	// register: 4
+	register unsigned char *l;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004BD40
+
+// address: 0x8004BD40
 void SetLightFX__FiisssUcUcUc(int x, int y, short s_r, short s_g, int s_b, int d_r, int d_g, int d_b) {
-	unsigned char d_g;
-	unsigned char d_b;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004BDAC
+
+// address: 0x8004BDAC
 void SetWeirdFX__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004BE20
+
+// address: 0x8004BE20
 void DoLighting__Fiiii(int nXPos, int nYPos, int nRadius, int Lnum) {
-	int xoff;
-	int yoff;
-	int x;
-	int y;
-	int v;
-	int colour_mask;
-	int shift_mask;
-	int shake;
-	int light_x;
-	int light_y;
-	int block_x;
-	int block_y;
-	int dist_y;
-	int max_x;
-	int mult;
-	int mult_st;
-	int radius_block;
-	int scr_x;
-	int scr_y;
-	int temp_x;
-	int temp_y;
-	int weirdy;
-	int cont;
+	// register: 9
+	register int xoff;
+	// register: 10
+	register int yoff;
+	// register: 20
+	register int x;
+	// register: 30
+	register int y;
+	// register: 3
+	register int v;
+	// register: 22
+	register int colour_mask;
+	// register: 17
+	register int shift_mask;
+	// register: 12
+	register int shake;
+	// address: 0xFFFFFFA8
+	auto int light_x;
+	// address: 0xFFFFFFB0
+	auto int light_y;
+	// address: 0xFFFFFFB8
+	auto int block_x;
+	// register: 9
+	register int block_y;
+	// register: 23
+	register int dist_y;
+	// register: 11
+	register int max_x;
+	// register: 5
+	register int mult;
+	// register: 7
+	register int mult_st;
+	// register: 21
+	register int radius_block;
+	// register: 7
+	register int scr_x;
+	// register: 8
+	register int scr_y;
+	// register: 6
+	register int temp_x;
+	// register: 5
+	register int temp_y;
+	// register: 18
+	register int weirdy;
+	// register: 11
+	register int cont;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004CAF4
+
+// address: 0x8004CAF4
 void DoUnLight__Fv() {
-	int x;
-	int y;
-	int max_x;
-	int max_y;
-	int nXPos;
-	int nYPos;
-	unsigned char *r;
-	unsigned char *g;
-	unsigned char *b;
-	int radius_block_x;
-	int radius_block_y;
+	// register: 9
+	register int x;
+	// register: 3
+	register int y;
+	// register: 16
+	register int max_x;
+	// register: 15
+	register int max_y;
+	// register: 13
+	register int nXPos;
+	// register: 14
+	register int nYPos;
+	// register: 7
+	register unsigned char *r;
+	// register: 6
+	register unsigned char *g;
+	// register: 5
+	register unsigned char *b;
+	// register: 24
+	register int radius_block_x;
+	// register: 25
+	register int radius_block_y;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004CD38
+
+// address: 0x8004CD38
 void DoUnVision__Fiiii(int nXPos, int nYPos, int nRadius, int num) {
-	int i;
-	int j;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int vis_flag;
+	// register: 9
+	register int i;
+	// register: 3
+	register int j;
+	// register: 3
+	register int x1;
+	// register: 12
+	register int y1;
+	// register: 4
+	register int x2;
+	// register: 5
+	register int y2;
+	// register: 7
+	register int vis_flag;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004CE40
+
+// address: 0x8004CE40
 void DoVision__FiiiUcUc(int nXPos, int nYPos, int nRadius, unsigned char doautomap, int visible) {
-	int nCrawlX;
-	int nCrawlY;
-	int nLineLen;
-	int nBlockerFlag;
-	int j;
-	int k;
-	int v;
-	int x1adj;
-	int x2adj;
-	int y1adj;
-	int y2adj;
-	int vis_flag;
+	// register: 18
+	register int nCrawlX;
+	// register: 19
+	register int nCrawlY;
+	// address: 0xFFFFFFA0
+	auto int nLineLen;
+	// register: 6
+	register int nBlockerFlag;
+	// address: 0xFFFFFFA8
+	auto int j;
+	// register: 30
+	register int k;
+	// register: 3
+	register int v;
+	// register: 21
+	register int x1adj;
+	// register: 23
+	register int x2adj;
+	// register: 20
+	register int y1adj;
+	// register: 22
+	register int y2adj;
+	// address: 0xFFFFFFB0
+	auto int vis_flag;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D268
+
+// address: 0x8004D268
 void FreeLightTable__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D270
+
+// address: 0x8004D270
 void InitLightTable__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D278
+
+// address: 0x8004D278
 void MakeLightTable__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D280
+
+// address: 0x8004D280
 void InitLightMax__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D2A4
+
+// address: 0x8004D2A4
 void InitLighting__Fv() {
-	int i;
+	// register: 2
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D2E8
+
+// address: 0x8004D2E8
 int AddLight__Fiii(int x, int y, int r) {
-	int lid;
-	struct LightListStruct2 *ll;
+	// register: 7
+	register int lid;
+	// register: 2
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D340
+
+// address: 0x8004D340
 void AddUnLight__Fi(int i) {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D364
+
+// address: 0x8004D364
 void ChangeLightRadius__Fii(int i, int r) {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D384
+
+// address: 0x8004D384
 void ChangeLightXY__Fiii(int i, int x, int y) {
-	struct LightListStruct2 *ll;
+	// register: 3
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D3B0
+
+// address: 0x8004D3B0
 void light_fix__Fi(int i) {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D3B8
+
+// address: 0x8004D3B8
 void ChangeLightOff__Fiii(int i, int x, int y) {
-	struct LightListStruct2 *ll;
+	// register: 2
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D3E0
+
+// address: 0x8004D3E0
 void ChangeLight__Fiiii(int i, int x, int y, int r) {
-	struct LightListStruct2 *ll;
+	// register: 2
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D40C
+
+// address: 0x8004D40C
 void ChangeLightColour__Fii(int i, int c) {
-	struct LightListStruct2 *ll;
+	// register: 4
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D434
+
+// address: 0x8004D434
 void ProcessLightList__Fv() {
-	int i;
-	int j;
-	unsigned char temp;
-	struct LightListStruct2 *ll;
+	// register: 7
+	register int i;
+	// register: 16
+	register int j;
+	// register: 4
+	register unsigned char temp;
+	// register: 3
+	// size: 0x8
+	register struct LightListStruct2 *ll;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D54C
+
+// address: 0x8004D54C
 void SavePreLighting__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D554
+
+// address: 0x8004D554
 void InitVision__Fv() {
-	int i;
+	// register: 4
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D5A8
+
+// address: 0x8004D5A8
 int AddVision__FiiiUc(int x, int y, int r, unsigned char mine) {
-	int vid;
-	struct LightListStruct *vl;
+	// register: 8
+	register int vid;
+	{
+		{
+			// register: 2
+			// size: 0xE
+			register struct LightListStruct *vl;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D61C
+
+// address: 0x8004D61C
 void ChangeVisionRadius__Fii(int id, int r) {
-	int i;
+	// register: 8
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D6D0
+
+// address: 0x8004D6D0
 void ChangeVisionXY__Fiii(int id, int x, int y) {
-	int i;
-	struct LightListStruct *vl;
+	// register: 9
+	register int i;
+	// register: 8
+	// size: 0xE
+	register struct LightListStruct *vl;
 }
 
-// Path: C:\diabpsx\SOURCE\LIGHTING.CPP
-// Addr: 0x8004D754
+
+// address: 0x8004D754
 void ProcessVisionList__Fv() {
-	int i;
-	unsigned char delflag;
-	struct LightListStruct *vl;
+	// register: 17
+	register int i;
+	// register: 4
+	register unsigned char delflag;
+	// register: 18
+	// size: 0xE
+	register struct LightListStruct *vl;
 }
+
 

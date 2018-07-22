@@ -1,110 +1,150 @@
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x801426F8
+// C:\diabpsx\PSXSRC\MEMCARD.CPP
+
+#include "types.h"
+
+// address: 0x801426F8
 void endian_swap__FPUci(unsigned char *b, int byts) {
-	unsigned char t;
+	// register: 3
+	register unsigned char t;
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x8014272C
+
+// address: 0x8014272C
 void sjis_endian_swap__FPUci(unsigned char *b, int byts) {
-	unsigned char t;
+	// register: 2
+	register unsigned char t;
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142774
+
+// address: 0x80142774
 unsigned short to_sjis__Fc(char asc) {
-	struct sjis *sp;
+	// register: 6
+	// size: 0x4
+	register struct sjis *sp;
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x801427F4
+
+// address: 0x801427F4
 char to_ascii__FUs(unsigned short sjis) {
-	struct sjis *sp;
+	// register: 8
+	// size: 0x4
+	register struct sjis *sp;
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x8014287C
+
+// address: 0x8014287C
 void ascii_to_sjis__FPUcPUs(unsigned char *asc, unsigned short *sjis) {
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142904
+
+// address: 0x80142904
 int is_sjis__FPUc(unsigned char *buf) {
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142910
+
+// address: 0x80142910
 int sjis_to_ascii__FPUsPc(unsigned short *sjis, char *asc) {
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142998
+
+// address: 0x80142998
 void read_card_directory__Fi(int card_number) {
-	char path[80];
-	struct DIRENTRY *dir;
-	int i;
-	int fh;
-	int r;
+	// address: 0xFFFFFF78
+	// size: 0x50
+	auto char path[80];
+	// register: 17
+	// size: 0x28
+	register struct DIRENTRY *dir;
+	// register: 19
+	register int i;
+	// register: 17
+	register int fh;
+	// register: 18
+	register int r;
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142BF4
+
+// address: 0x80142BF4
 int test_card_format__Fi(int card_number) {
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142CE4
+
+// address: 0x80142CE4
 int checksum_data__FPci(char *buf, int size) {
-	int chk;
+	// register: 6
+	register int chk;
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142D20
+
+// address: 0x80142D20
 int delete_card_file__Fii(int card_number, int file) {
-	char path[80];
+	// address: 0xFFFFFFA0
+	// size: 0x50
+	auto char path[80];
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142E18
+
+// address: 0x80142E18
 int read_card_file__FiiiPc(int card_number, int file, int id, char *buf) {
-	int okay;
-	int tries;
-	int fd;
-	int r;
-	int size;
-	int checksumerror;
-	struct file_header h;
-	char path[80];
+	// register: 19
+	register int okay;
+	// register: 20
+	register int tries;
+	// register: 17
+	register int fd;
+	// register: 2
+	register int r;
+	// register: 16
+	register int size;
+	// register: 22
+	register int checksumerror;
+	// address: 0xFFFFFD90
+	// size: 0x200
+	auto struct file_header h;
+	// address: 0xFFFFFF90
+	// size: 0x50
+	auto char path[80];
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x80142FF4
+
+// address: 0x80142FF4
 int format_card__Fi(int card_number) {
-	char path[80];
+	// address: 0xFFFFFFA0
+	// size: 0x50
+	auto char path[80];
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x801430B8
+
+// address: 0x801430B8
 int write_card_file__FiiPcT2PUcPUsiT4(int card_number, int id, char *name, char *title, unsigned char *icon, unsigned short *clut, int size, unsigned char *buf) {
-	unsigned short *clut;
-	int size;
-	unsigned char *buf;
-	struct file_header h;
-	int fd;
-	int failed;
-	int e;
-	char path[80];
-	int Loop;
+	// address: 0xFFFFFD88
+	// size: 0x200
+	auto struct file_header h;
+	// register: 16
+	register int fd;
+	// register: 19
+	register int failed;
+	// register: 20
+	register int e;
+	// address: 0xFFFFFF88
+	// size: 0x50
+	auto char path[80];
+	{
+		// register: 4
+		register int Loop;
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x8014340C
+
+// address: 0x8014340C
 void new_card__Fi(int card_number) {
 }
 
-// Path: C:\diabpsx\PSXSRC\MEMCARD.CPP
-// Addr: 0x801434A0
+
+// address: 0x801434A0
 void service_card__Fi(int card_number) {
-	int last_status;
+	// register: 4
+	register int last_status;
 }
+
 

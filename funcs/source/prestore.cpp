@@ -1,17 +1,36 @@
-// Path: C:\diabpsx\SOURCE\PRESTORE.CPP
-// Addr: 0x80162CDC
+// C:\diabpsx\SOURCE\PRESTORE.CPP
+
+#include "types.h"
+
+// address: 0x80162CDC
 void InitStores__Fv() {
-	int Loop;
-	int i;
+	{
+		// register: 6
+		register int Loop;
+		{
+			{
+				// register: 5
+				register int i;
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PRESTORE.CPP
-// Addr: 0x80162DD0
+
+// address: 0x80162DD0
 void SetupTownStores__Fv() {
-	int i;
-	int l;
-	int OldMyPtr;
-	int OldSeed;
-	int Loop;
+	// register: 4
+	register int i;
+	// register: 16
+	register int l;
+	// register: 20
+	register int OldMyPtr;
+	// register: 19
+	register int OldSeed;
+	{
+		// register: 17
+		register int Loop;
+	}
 }
+
 

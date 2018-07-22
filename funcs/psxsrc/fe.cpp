@@ -1,238 +1,386 @@
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x80139C24
+// C:\diabpsx\PSXSRC\FE.CPP
+
+#include "types.h"
+
+// address: 0x80139C24
 void FeInitBuffer__Fv() {
+	{
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x80139C50
+
+// address: 0x80139C50
 void FeAddEntry__Fii8TXT_JUSTUsP7FeTableP5CFont(int X, int Y, enum TXT_JUST Just, unsigned short Str, struct FeTable *MenuPtr, struct CFont *Font) {
-	struct FeTable *MenuPtr;
-	struct CFont *Font;
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x80139CD4
+
+// address: 0x80139CD4
 void FeAddTable__FP11FeMenuTablei(struct FeMenuTable *Table, int Count) {
-	int Loop;
+	{
+		// register: 17
+		register int Loop;
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x80139D50
+
+// address: 0x80139D50
 void FeAddNameTable__FPUci(unsigned char *Table, int Count) {
-	int YLoop;
-	int XLoop;
+	{
+		// register: 21
+		register int YLoop;
+		{
+			{
+				// register: 3
+				register int XLoop;
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x80139E78
+
+// address: 0x80139E78
 void FeDrawBuffer__Fv() {
-	struct Dialog FeBack;
-	struct RECT FeRect;
-	struct RECT ARect;
-	int X;
-	int Y;
-	enum TXT_JUST Just;
-	struct TextDat *PanelGfx;
-	int SelX;
-	int SelY;
-	char Text[2];
-	int Loop;
-	struct POLY_FT4 *Ft4;
-	int Loop;
+	// address: 0xFFFFFF98
+	// size: 0x10
+	auto struct Dialog FeBack;
+	// address: 0xFFFFFFA8
+	// size: 0x8
+	auto struct RECT FeRect;
+	// address: 0xFFFFFFB0
+	// size: 0x8
+	auto struct RECT ARect;
+	// register: 17
+	register int X;
+	// register: 19
+	register int Y;
+	// register: 20
+	// size: 0x4
+	register enum TXT_JUST Just;
+	// address: 0xFFFFFFC0
+	// size: 0x70
+	auto struct TextDat *PanelGfx;
+	// register: 4
+	register int SelX;
+	// register: 18
+	register int SelY;
+	// address: 0xFFFFFFB8
+	// size: 0x2
+	auto char Text[2];
+	{
+		{
+			{
+				{
+					{
+						{
+							{
+								// register: 21
+								register int Loop;
+								{
+									{
+										{
+											{
+												{
+													{
+														{
+															// register: 2
+															// size: 0x28
+															register struct POLY_FT4 *Ft4;
+															{
+																{
+																	{
+																		// register: 18
+																		register int Loop;
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A4A4
+
+// address: 0x8013A4A4
 void FeNewMenu__FP7FeTable(struct FeTable *Menu) {
-	struct FeTable *LastMenu;
-	void (*FuncPtr)();
+	// register: 3
+	// size: 0x1C
+	register struct FeTable *LastMenu;
+	// register: 2
+	register void (*FuncPtr)();
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A524
+
+// address: 0x8013A524
 void FePrevMenu__Fv() {
-	void (*FuncPtr)();
+	// register: 2
+	register void (*FuncPtr)();
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A66C
+
+// address: 0x8013A66C
 void FeSelUp__Fi(int No) {
-	int OldSel;
+	// register: 6
+	register int OldSel;
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A754
+
+// address: 0x8013A754
 void FeSelDown__Fi(int No) {
-	int OldSel;
+	// register: 6
+	register int OldSel;
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A83C
+
+// address: 0x8013A83C
 int FeGetCursor__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A850
+
+// address: 0x8013A850
 void FeSelect__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013A8A0
+
+// address: 0x8013A8A0
 void FeMainKeyCtrl__FP7CScreen(struct CScreen *FeScreen) {
+	{
+		{
+			{
+				{
+					{
+						{
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AA68
+
+// address: 0x8013AA68
 void InitDummyMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AA70
+
+// address: 0x8013AA70
 void InitFrontEnd__FP9FE_CREATE(struct FE_CREATE *CreateStruct) {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013ABA4
+
+// address: 0x8013ABA4
 void FeInitMainMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AC20
+
+// address: 0x8013AC20
 void FeInitNewGameMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013ACB0
+
+// address: 0x8013ACB0
 void FeNewGameMenuCtrl__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AE64
+
+// address: 0x8013AE64
 void FeInitPlayer1ClassMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AEE8
+
+// address: 0x8013AEE8
 void FeInitPlayer2ClassMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AF6C
+
+// address: 0x8013AF6C
 void FePlayerClassMenuCtrl__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013AFB4
+
+// address: 0x8013AFB4
 void FeDrawChrClass__Fv() {
-	struct Dialog FeBack;
-	struct RECT FeRect;
-	char TempStr[4];
+	// address: 0xFFFFFFB0
+	// size: 0x10
+	auto struct Dialog FeBack;
+	// address: 0xFFFFFFC0
+	// size: 0x8
+	auto struct RECT FeRect;
+	// address: 0xFFFFFFC8
+	// size: 0x4
+	auto char TempStr[4];
+	{
+		{
+			{
+				{
+					{
+						{
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013B43C
+
+// address: 0x8013B43C
 void FeInitNewP1NameMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013B498
+
+// address: 0x8013B498
 void FeInitNewP2NameMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013B4EC
+
+// address: 0x8013B4EC
 void FeNewNameMenuCtrl__Fv() {
-	char asd[2];
+	{
+		{
+			{
+				{
+					{
+						{
+							{
+								{
+									{
+										{
+											{
+												{
+													// address: 0xFFFFFFD8
+													// size: 0x2
+													auto char asd[2];
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BAB4
+
+// address: 0x8013BAB4
 void FeCopyPlayerInfoForReturn__Fv() {
-	int Loop;
-	int i;
+	{
+		// register: 16
+		register int Loop;
+		{
+			{
+				{
+					{
+						// register: 2
+						register int i;
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BBC8
+
+// address: 0x8013BBC8
 void FeEnterGame__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BBF0
+
+// address: 0x8013BBF0
 void FeInitLoadMemcardSelect__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BC70
+
+// address: 0x8013BC70
 void FeInitLoadChar1Menu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BCD8
+
+// address: 0x8013BCD8
 void FeInitLoadChar2Menu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BD48
+
+// address: 0x8013BD48
 void FeInitDifficultyMenu__Fv() {
-	int MaxLevel;
+	// register: 4
+	register int MaxLevel;
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BDEC
+
+// address: 0x8013BDEC
 void FeDifficultyMenuCtrl__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BED0
+
+// address: 0x8013BED0
 void FeInitBackgroundMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BF1C
+
+// address: 0x8013BF1C
 void FeInitBook1Menu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BF6C
+
+// address: 0x8013BF6C
 void FeInitBook2Menu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013BFBC
+
+// address: 0x8013BFBC
 void FeBackBookMenuCtrl__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013C200
+
+// address: 0x8013C200
 void PlayDemo__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013C214
+
+// address: 0x8013C214
 void FadeFEOut__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013C2D8
+
+// address: 0x8013C2D8
 void DrawBackTSK__FP4TASK(struct TASK *T) {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013C460
+
+// address: 0x8013C460
 void FeInitMainStuff__FP4TASK(struct TASK *T2) {
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013C50C
+
+// address: 0x8013C50C
 void FrontEndTask__FP4TASK(struct TASK *T) {
-	int len;
-	int Fefadeval;
-	struct TASK *T2;
+	// register: 16
+	register int len;
+	// register: 17
+	register int Fefadeval;
+	// register: 19
+	// size: 0x5C
+	register struct TASK *T2;
 }
 
-// Path: C:\diabpsx\PSXSRC\FE.CPP
-// Addr: 0x8013C9B8
+
+// address: 0x8013C9B8
 void DrawFeTwinkle__Fii(int TwinkX, int TwinkY) {
 }
+
 

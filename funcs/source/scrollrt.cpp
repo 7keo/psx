@@ -1,10 +1,14 @@
-// Path: C:\diabpsx\SOURCE\SCROLLRT.CPP
-// Addr: 0x8006931C
+// C:\diabpsx\SOURCE\SCROLLRT.CPP
+
+#include "types.h"
+
+// address: 0x8006931C
 void DrawView__Fii(int StartX, int StartY) {
 }
 
-// Path: C:\diabpsx\SOURCE\SCROLLRT.CPP
-// Addr: 0x800694D0
+
+// address: 0x800694D0
 void DrawAndBlit__Fv() {
 }
+
 

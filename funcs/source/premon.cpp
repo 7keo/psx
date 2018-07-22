@@ -1,171 +1,329 @@
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015F6E8
+// C:\diabpsx\SOURCE\PREMON.CPP
+
+#include "types.h"
+
+// address: 0x8015F6E8
 void SwapMonsterType__FPi(int *oldmt) {
-	int mt;
+	// register: 5
+	register int mt;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015F75C
+
+// address: 0x8015F75C
 unsigned char MonstPlace__Fii(int xp, int yp) {
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015F828
+
+// address: 0x8015F828
 void InitMonsterGFX__Fi(int monst) {
-	int anim;
-	char strBuff[256];
-	int mtype;
-	struct MonsterData *pmonsterdata;
+	// register: 6
+	register int anim;
+	// address: 0xFFFFFF00
+	// size: 0x100
+	auto char strBuff[256];
+	// register: 3
+	register int mtype;
+	// register: 7
+	// size: 0x3C
+	register struct MonsterData *pmonsterdata;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015F900
+
+// address: 0x8015F900
 void PlaceMonster__Fiiii(int i, int mtype, int x, int y) {
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015F98C
+
+// address: 0x8015F98C
 int AddMonsterType__Fii(int type, int placeflag) {
-	int i;
-	unsigned char done;
+	// register: 16
+	register int i;
+	// register: 4
+	register unsigned char done;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015FA88
+
+// address: 0x8015FA88
 void GetMonsterTypes__FUl(unsigned long QuestMask) {
-	int typelist[190];
-	int mt;
-	int nt;
+	// address: 0xFFFFFCE8
+	// size: 0x2F8
+	auto int typelist[190];
+	// address: 0xFFFFFFE0
+	auto int mt;
+	// register: 17
+	register int nt;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015FB48
+
+// address: 0x8015FB48
 void ClrAllMonsters__Fv() {
-	int i;
-	struct MonsterStruct *Monst;
+	// register: 17
+	register int i;
+	// register: 16
+	// size: 0x68
+	register struct MonsterStruct *Monst;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015FC80
+
+// address: 0x8015FC80
 void InitLevelMonsters__Fv() {
-	int i;
+	// register: 3
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8015FD04
+
+// address: 0x8015FD04
 void GetLevelMTypes__Fv() {
-	int i;
-	int minl;
-	int maxl;
-	int typelist[190];
-	int mt;
-	int nt;
-	char mamask;
-	unsigned long QuestMask;
-	int skeltypes[111];
-	int numskeltypes;
+	// register: 17
+	register int i;
+	// register: 4
+	register int minl;
+	// register: 2
+	register int maxl;
+	// address: 0xFFFFFB20
+	// size: 0x2F8
+	auto int typelist[190];
+	// address: 0xFFFFFFD8
+	auto int mt;
+	// register: 17
+	register int nt;
+	// register: 20
+	register char mamask;
+	// register: 18
+	register unsigned long QuestMask;
+	{
+		{
+			{
+				{
+					// address: 0xFFFFFE18
+					// size: 0x1BC
+					auto int skeltypes[111];
+					// register: 19
+					register int numskeltypes;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x801601D8
+
+// address: 0x801601D8
 void PlaceQuestMonsters__Fv() {
-	int skeltype;
-	unsigned char *setp;
+	// register: 16
+	register int skeltype;
+	// register: 16
+	register unsigned char *setp;
+	{
+		{
+			{
+				{
+					{
+						{
+							{
+								{
+									{
+										{
+											{
+												{
+													{
+														{
+															{
+																{
+																	{
+																		{
+																			{
+																				{
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x8016059C
+
+// address: 0x8016059C
 void LoadDiabMonsts__Fv() {
-	unsigned char *lpSetPiece;
+	// register: 16
+	register unsigned char *lpSetPiece;
+	{
+		{
+			{
+				{
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x801606AC
+
+// address: 0x801606AC
 void PlaceGroup__FiiUci(int mtype, int num, unsigned char leaderf, int leader) {
-	int xp;
-	int yp;
-	int x1;
-	int y1;
-	int j;
-	int placed;
-	int try1;
-	int try2;
-	int rd;
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 21
+	register int x1;
+	// register: 23
+	register int y1;
+	// register: 20
+	register int j;
+	// register: 19
+	register int placed;
+	// address: 0xFFFFFFA8
+	auto int try1;
+	// register: 22
+	register int try2;
+	// register: 2
+	register int rd;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80160CA0
+
+// address: 0x80160CA0
 void SetMapMonsters__FPUcii(unsigned char *pMap, int startx, int starty) {
-	int i;
-	int j;
-	unsigned short rw;
-	unsigned short rh;
-	unsigned short *lm;
-	int mt;
+	// register: 16
+	register int i;
+	// register: 18
+	register int j;
+	// register: 2
+	register unsigned short rw;
+	// register: 20
+	register unsigned short rh;
+	// register: 17
+	register unsigned short *lm;
+	// address: 0xFFFFFFC8
+	auto int mt;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80160ED4
+
+// address: 0x80160ED4
 void InitMonsters__Fv() {
-	int i;
-	int mtype;
-	int na;
-	int nt;
-	int scattertypes[111];
-	int numscattypes;
-	long fv;
-	long j;
-	int numplacemonsters;
-	int s;
-	int t;
+	// register: 18
+	register int i;
+	// register: 16
+	register int mtype;
+	// register: 5
+	register int na;
+	// register: 20
+	register int nt;
+	// address: 0xFFFFFE08
+	// size: 0x1BC
+	auto int scattertypes[111];
+	// register: 21
+	register int numscattypes;
+	// register: 17
+	register long fv;
+	// register: 16
+	register long j;
+	// register: 4
+	register int numplacemonsters;
+	// register: 17
+	register int s;
+	// register: 16
+	register int t;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80161288
+
+// address: 0x80161288
 void PlaceUniqueMonst__Fiii(int uniqindex, int miniontype, int unpackfilesize) {
-	struct UniqMonstStruct *Uniq;
-	struct MonsterStruct *Monst;
-	int xp;
-	int yp;
-	int x;
-	int y;
-	unsigned char done;
-	int count;
-	int count2;
-	char filestr[64];
-	int uniqtype;
-	int i;
-	unsigned char zharflag;
-	int mMinDamage;
-	int mMaxDamage;
-	int monstype;
+	// address: 0xFFFFFFA0
+	// size: 0x18
+	auto struct UniqMonstStruct *Uniq;
+	// register: 20
+	// size: 0x68
+	register struct MonsterStruct *Monst;
+	// register: 23
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 17
+	register int x;
+	// register: 16
+	register int y;
+	// register: 3
+	register unsigned char done;
+	// register: 19
+	register int count;
+	// address: 0xFFFFFFA8
+	auto int count2;
+	// address: 0xFFFFFF40
+	// size: 0x40
+	auto char filestr[64];
+	// address: 0xFFFFFFB0
+	auto int uniqtype;
+	// register: 5
+	register int i;
+	// address: 0xFFFFFFB8
+	auto unsigned char zharflag;
+	// register: 16
+	register int mMinDamage;
+	// register: 17
+	register int mMaxDamage;
+	{
+		{
+			// address: 0xFFFFFF80
+			auto int monstype;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80161BCC
+
+// address: 0x80161BCC
 void PlaceUniques__Fv() {
-	int u;
-	int mt;
-	unsigned char done;
-	int monsttype;
+	// register: 17
+	register int u;
+	// register: 5
+	register int mt;
+	// register: 16
+	register unsigned char done;
+	{
+		{
+			{
+				{
+					// address: 0xFFFFFFE0
+					auto int monsttype;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80161D5C
+
+// address: 0x80161D5C
 int PreSpawnSkeleton__Fv() {
-	int i;
-	int j;
-	int skeltypes;
-	int skel;
+	// register: 16
+	register int i;
+	// register: 19
+	register int j;
+	// register: 18
+	register int skeltypes;
+	// register: 16
+	register int skel;
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80161E94
+
+// address: 0x80161E94
 void decode_enemy__Fii(int m, int enemy) {
 }
 
-// Path: C:\diabpsx\SOURCE\PREMON.CPP
-// Addr: 0x80161FB0
+
+// address: 0x80161FB0
 unsigned char IsGoat__Fi(int mt) {
 }
+
 

@@ -1,24 +1,32 @@
-// Path: C:\diabpsx\PSXSRC\TMALLOC.CPP
-// Addr: 0x800882A8
-void* Tmalloc__Fi(int MemSize) {
-	long MyHnd;
-	void *Addr;
+// C:\diabpsx\PSXSRC\TMALLOC.CPP
+
+#include "types.h"
+
+// address: 0x800882A8
+void *Tmalloc__Fi(int MemSize) {
+	// register: 16
+	register long MyHnd;
+	// register: 17
+	register void *Addr;
 }
 
-// Path: C:\diabpsx\PSXSRC\TMALLOC.CPP
-// Addr: 0x8008839C
+
+// address: 0x8008839C
 void Tfree__FPv(void *Addr) {
 }
 
-// Path: C:\diabpsx\PSXSRC\TMALLOC.CPP
-// Addr: 0x8008844C
+
+// address: 0x8008844C
 void InitTmalloc__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\TMALLOC.CPP
-// Addr: 0x80088474
+
+// address: 0x80088474
 void strupr__FPc(char *Buffa) {
-	char *TempBuf;
-	char TempChar;
+	// register: 4
+	register char *TempBuf;
+	// register: 3
+	register char TempChar;
 }
+
 

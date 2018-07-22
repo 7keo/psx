@@ -1,336 +1,513 @@
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80148F98
+// C:\diabpsx\SOURCE\DRLG_L3.CPP
+
+#include "types.h"
+
+// address: 0x80148F98
 void InitL3Dungeon__Fv() {
-	int i;
-	int j;
+	// register: 5
+	register int i;
+	// register: 4
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014901C
+
+// address: 0x8014901C
 void SetBlankL3Dungeon__Fv() {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149078
+
+// address: 0x80149078
 void FixL3Dungeon__Fv() {
-	int x;
-	int y;
+	// register: 5
+	register int x;
+	// register: 6
+	register int y;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x801490EC
+
+// address: 0x801490EC
 int DRLG_L3FillRoom__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
-	int v;
-	int rv;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 4
+	register int v;
+	// register: 2
+	register int rv;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014933C
+
+// address: 0x8014933C
 void DRLG_L3CreateBlock__Fiiii(int x, int y, int obs, int dir) {
-	int blksizex;
-	int blksizey;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int contflag;
+	// register: 17
+	register int blksizex;
+	// register: 16
+	register int blksizey;
+	// register: 18
+	register int x1;
+	// register: 19
+	register int y1;
+	// register: 22
+	register int x2;
+	// register: 30
+	register int y2;
+	// register: 20
+	register int contflag;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x801495BC
+
+// address: 0x801495BC
 void DRLG_L3FloorArea__Fiiii(int x1, int y1, int x2, int y2) {
-	int i;
-	int j;
+	// register: 3
+	register int i;
+	// register: 5
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149624
+
+// address: 0x80149624
 void DRLG_L3FillDiags__Fv() {
-	int j;
-	int v;
+	// register: 22
+	register int j;
+	// register: 16
+	register int v;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149750
+
+// address: 0x80149750
 void DRLG_L3FillSingles__Fv() {
-	int i;
-	int j;
-	int v;
+	// register: 12
+	register int i;
+	// register: 13
+	register int j;
+	// register: 3
+	register int v;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014981C
+
+// address: 0x8014981C
 void DRLG_L3FillStraights__Fv() {
-	int i;
-	int j;
-	int xc;
-	int xs;
-	int yc;
-	int ys;
-	int k;
+	// register: 19
+	register int i;
+	// register: 18
+	register int j;
+	// register: 5
+	register int xc;
+	// register: 22
+	register int xs;
+	// register: 4
+	register int yc;
+	// address: 0xFFFFFFD0
+	auto int ys;
+	// register: 16
+	register int k;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149BC8
+
+// address: 0x80149BC8
 void DRLG_L3Edges__Fv() {
-	int j;
+	// register: 3
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149C08
+
+// address: 0x80149C08
 int DRLG_L3GetFloorArea__Fv() {
-	int i;
-	int j;
-	int gfa;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
+	// register: 6
+	register int gfa;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149C58
+
+// address: 0x80149C58
 void DRLG_L3MakeMegas__Fv() {
-	int v;
+	// register: 6
+	register int v;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x80149D94
+
+// address: 0x80149D94
 void DRLG_L3River__Fv() {
-	int rx;
-	int ry;
-	int px;
-	int py;
-	int dir;
-	int pdir;
-	int nodir;
-	int nodir2;
-	int dircheck;
-	int river[3][100];
-	int rivercnt;
-	int riveramt;
-	int i;
-	int trys;
-	int found;
-	int bridge;
-	int lpcnt;
-	int bail;
+	// register: 16
+	register int rx;
+	// register: 18
+	register int ry;
+	// register: 5
+	register int px;
+	// register: 6
+	register int py;
+	// register: 17
+	register int dir;
+	// register: 30
+	register int pdir;
+	// address: 0xFFFFFF98
+	auto int nodir;
+	// register: 19
+	register int nodir2;
+	// register: 20
+	register int dircheck;
+	// address: 0xFFFFFAE8
+	// size: 0x4B0
+	auto int river[100][3];
+	// register: 21
+	register int rivercnt;
+	// address: 0xFFFFFFA0
+	auto int riveramt;
+	// register: 9
+	register int i;
+	// address: 0xFFFFFFA8
+	auto int trys;
+	// register: 8
+	register int found;
+	// register: 16
+	register int bridge;
+	// register: 18
+	register int lpcnt;
+	// register: 19
+	register int bail;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014A7BC
+
+// address: 0x8014A7BC
 int DRLG_L3SpawnEdge__FiiPi(int x, int y, int *totarea) {
-	unsigned char i;
+	// register: 17
+	register unsigned char i;
+	// address: 0x801486B4
+	// size: 0xF
+	static unsigned char spawntable[15];
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014AA48
+
+// address: 0x8014AA48
 int DRLG_L3Spawn__FiiPi(int x, int y, int *totarea) {
-	unsigned char i;
+	// register: 19
+	register unsigned char i;
+	// address: 0x801486C4
+	// size: 0xF
+	static unsigned char spawntable[15];
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014AC54
+
+// address: 0x8014AC54
 void DRLG_L3Pool__Fv() {
-	int i;
-	int j;
-	int found;
-	int dunx;
-	int duny;
-	int totarea;
-	int poolchance;
-	unsigned char k;
+	// register: 8
+	register int i;
+	// register: 4
+	register int j;
+	// register: 16
+	register int found;
+	// register: 17
+	register int dunx;
+	// register: 18
+	register int duny;
+	// address: 0xFFFFFFD8
+	auto int totarea;
+	// register: 4
+	register int poolchance;
+	// register: 3
+	register unsigned char k;
+	// address: 0x801486D4
+	// size: 0xF
+	static unsigned char poolsub[15];
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014AEA4
+
+// address: 0x8014AEA4
 void DRLG_L3PoolFix__Fv() {
-	int duny;
+	// register: 10
+	register int duny;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B0C4
+
+// address: 0x8014B0C4
 int DRLG_L3PlaceMiniSet__FPCUciiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int ldir) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int i;
-	int ii;
-	int numt;
-	int found;
-	int trys;
+	// register: 17
+	register int sx;
+	// register: 16
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 19
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 30
+	register int i;
+	// register: 9
+	register int ii;
+	// address: 0xFFFFFFA0
+	auto int numt;
+	// register: 8
+	register int found;
+	// register: 20
+	register int trys;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B430
+
+// address: 0x8014B430
 void DRLG_L3PlaceRndSet__FPCUci(unsigned char *miniset, int rndper) {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int ii;
-	int kk;
-	int found;
+	// register: 17
+	register int sx;
+	// register: 22
+	register int sy;
+	// register: 18
+	register int sw;
+	// register: 21
+	register int sh;
+	// register: 4
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 9
+	register int ii;
+	// register: 16
+	register int kk;
+	// register: 8
+	register int found;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B76C
+
+// address: 0x8014B76C
 unsigned char WoodVertU__Fii(int i, int y) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B818
+
+// address: 0x8014B818
 unsigned char WoodVertD__Fii(int i, int y) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B8B4
+
+// address: 0x8014B8B4
 unsigned char WoodHorizL__Fii(int x, int j) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B948
+
+// address: 0x8014B948
 unsigned char WoodHorizR__Fii(int x, int j) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014B9CC
+
+// address: 0x8014B9CC
 void AddFenceDoors__Fv() {
-	int j;
+	// register: 8
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014BAB0
+
+// address: 0x8014BAB0
 void FenceDoorFix__Fv() {
-	int j;
+	// register: 11
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014BCA4
+
+// address: 0x8014BCA4
 void DRLG_L3Wood__Fv() {
-	int i;
-	int j;
-	int x;
-	int y;
-	int xx;
-	int yy;
-	int rt;
-	int rp;
-	int skip;
-	int x1;
-	int y1;
-	int x2;
-	int y2;
+	// register: 22
+	register int i;
+	// register: 23
+	register int j;
+	// register: 18
+	register int x;
+	// register: 19
+	register int y;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
+	// address: 0xFFFFFFC8
+	auto int rt;
+	// register: 3
+	register int rp;
+	// register: 20
+	register int skip;
+	// register: 16
+	register int x1;
+	// register: 16
+	register int y1;
+	// register: 17
+	register int x2;
+	// register: 17
+	register int y2;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014C478
+
+// address: 0x8014C478
 int DRLG_L3Anvil__Fv() {
-	int sx;
-	int sy;
-	int sw;
-	int sh;
-	int xx;
-	int yy;
-	int ii;
-	int found;
-	int trys;
+	// register: 18
+	register int sx;
+	// register: 11
+	register int sy;
+	// register: 17
+	register int sw;
+	// register: 19
+	register int sh;
+	// register: 5
+	register int xx;
+	// register: 7
+	register int yy;
+	// register: 8
+	register int ii;
+	// register: 6
+	register int found;
+	// register: 12
+	register int trys;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014C6D0
+
+// address: 0x8014C6D0
 void FixL3Warp__Fv() {
-	int j;
+	// register: 10
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014C7B8
+
+// address: 0x8014C7B8
 void FixL3HallofHeroes__Fv() {
-	int i;
-	int j;
+	// register: 6
+	register int i;
+	// register: 9
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014C90C
+
+// address: 0x8014C90C
 void DRLG_L3LockRec__Fii(int x, int y) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014C9A8
+
+// address: 0x8014C9A8
 unsigned char DRLG_L3Lockout__Fv() {
-	int i;
-	int j;
-	int t;
-	int fx;
-	int fy;
+	// register: 7
+	register int i;
+	// register: 3
+	register int j;
+	// register: 16
+	register int t;
+	// register: 4
+	register int fx;
+	// register: 5
+	register int fy;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014CA68
+
+// address: 0x8014CA68
 void DRLG_L3SetWalls__Fv() {
-	int i;
-	int j;
-	int yy;
-	int v;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 9
+	register int yy;
+	{
+		{
+			{
+				{
+					// register: 3
+					register int v;
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014CB1C
+
+// address: 0x8014CB1C
 void DRLG_L3__Fi(int entry) {
-	int x1;
-	int y1;
-	int x2;
-	int y2;
-	int sx1;
-	int i;
-	int j;
-	int found;
-	unsigned char genok;
+	// register: 19
+	register int x1;
+	// register: 18
+	register int y1;
+	// register: 16
+	register int x2;
+	// register: 17
+	register int y2;
+	// register: 4
+	register int sx1;
+	// register: 6
+	register int i;
+	// register: 7
+	register int j;
+	// register: 16
+	register int found;
+	// register: 2
+	register unsigned char genok;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014D238
+
+// address: 0x8014D238
 void DRLG_L3Pass3__Fv() {
-	int i;
-	int j;
-	int xx;
-	int yy;
-	long v1;
-	long v2;
-	long v3;
-	long v4;
-	long lv;
+	// register: 23
+	register int i;
+	// register: 30
+	register int j;
+	// register: 17
+	register int xx;
+	// register: 18
+	register int yy;
+	// register: 6
+	register long v1;
+	// register: 22
+	register long v2;
+	// register: 20
+	register long v3;
+	// register: 21
+	register long v4;
+	// register: 2
+	register long lv;
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014D450
+
+// address: 0x8014D450
 void CreateL3Dungeon__FUii(unsigned int rseed, int entry) {
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014D4C8
+
+// address: 0x8014D4C8
 void LoadL3Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 9
+	register int rw;
+	// register: 10
+	register int rh;
+	// register: 16
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\DRLG_L3.CPP
-// Addr: 0x8014D64C
+
+// address: 0x8014D64C
 void LoadPreL3Dungeon__FPcii(char *sFileName, int vx, int vy) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	unsigned char *pLevelMap;
-	unsigned char *lm;
+	// register: 5
+	register int i;
+	// register: 6
+	register int j;
+	// register: 9
+	register int rw;
+	// register: 10
+	register int rh;
+	// register: 12
+	register unsigned char *pLevelMap;
+	// register: 8
+	register unsigned char *lm;
+	{
+	}
 }
+
 

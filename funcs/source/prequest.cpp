@@ -1,82 +1,138 @@
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015E7DC
+// C:\diabpsx\SOURCE\PREQUEST.CPP
+
+#include "types.h"
+
+// address: 0x8015E7DC
 void InitQuests__Fv() {
-	int i;
-	int gri;
-	int deltaq;
-	struct ItemStruct *Item;
+	// address: 0xFFFFFFE8
+	auto int i;
+	// register: 3
+	register int gri;
+	// register: 16
+	register int deltaq;
+	{
+		{
+			// register: 4
+			// size: 0x6C
+			register struct ItemStruct *Item;
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015ED8C
+
+// address: 0x8015ED8C
 void DrawButcher__Fv() {
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015EDD0
+
+// address: 0x8015EDD0
 void DrawSkelKing__Fiii(int q, int x, int y) {
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015EE64
+
+// address: 0x8015EE64
 void DrawWarLord__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 13
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 8
+	register int j;
+	// register: 9
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015EF60
+
+// address: 0x8015EF60
 void DrawSChamber__Fiii(int q, int x, int y) {
-	int i;
-	int j;
-	int rw;
-	int rh;
-	int xx;
-	int yy;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 7
+	register int i;
+	// register: 9
+	register int j;
+	// register: 13
+	register int rw;
+	// register: 12
+	register int rh;
+	// register: 2
+	register int xx;
+	// register: 2
+	register int yy;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015F09C
+
+// address: 0x8015F09C
 void DrawLTBanner__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 10
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015F178
+
+// address: 0x8015F178
 void DrawBlind__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 10
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015F254
+
+// address: 0x8015F254
 void DrawBlood__Fii(int x, int y) {
-	int rw;
-	int rh;
-	int i;
-	int j;
-	unsigned char *sp;
-	unsigned char *setp;
+	// register: 10
+	register int rw;
+	// register: 11
+	register int rh;
+	// register: 5
+	register int i;
+	// register: 7
+	register int j;
+	// register: 8
+	register unsigned char *sp;
+	// register: 4
+	register unsigned char *setp;
+	{
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\PREQUEST.CPP
-// Addr: 0x8015F334
+
+// address: 0x8015F334
 void DRLG_CheckQuests__Fii(int x, int y) {
-	int i;
+	// register: 18
+	register int i;
 }
+
 

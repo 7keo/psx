@@ -1,40 +1,55 @@
-// Path: C:\diabpsx\SOURCE\SPELLS.CPP
-// Addr: 0x80077054
+// C:\diabpsx\SOURCE\SPELLS.CPP
+
+#include "types.h"
+
+// address: 0x80077054
 int GetManaAmount__Fii(int id, int sn) {
-	int i;
-	int sl;
-	int ma;
-	int adj;
+	// register: 3
+	register int i;
+	// register: 8
+	register int sl;
+	// register: 6
+	register int ma;
+	// register: 7
+	register int adj;
 }
 
-// Path: C:\diabpsx\SOURCE\SPELLS.CPP
-// Addr: 0x80077308
+
+// address: 0x80077308
 void UseMana__Fii(int id, int sn) {
-	int ma;
+	// register: 2
+	register int ma;
 }
 
-// Path: C:\diabpsx\SOURCE\SPELLS.CPP
-// Addr: 0x80077498
+
+// address: 0x80077498
 unsigned char CheckSpell__FiicUc(int id, int sn, char st, unsigned char manaonly) {
 }
 
-// Path: C:\diabpsx\SOURCE\SPELLS.CPP
-// Addr: 0x80077538
+
+// address: 0x80077538
 void CastSpell__Fiiiiiiii(int id, int spl, int sx, int sy, int dx, int dy, int caster, int spllvl) {
-	int i;
-	int dir;
+	// register: 17
+	register int i;
+	// register: 21
+	register int dir;
 }
 
-// Path: C:\diabpsx\SOURCE\SPELLS.CPP
-// Addr: 0x80077850
+
+// address: 0x80077850
 void DoResurrect__Fii(int pnum, int rid) {
-	struct PlayerStruct *ptrplr;
+	// register: 16
+	// size: 0x19E8
+	register struct PlayerStruct *ptrplr;
 }
 
-// Path: C:\diabpsx\SOURCE\SPELLS.CPP
-// Addr: 0x80077AB8
+
+// address: 0x80077AB8
 void DoHealOther__Fii(int pnum, int rid) {
-	int i;
-	long l;
+	// register: 16
+	register int i;
+	// register: 17
+	register long l;
 }
+
 

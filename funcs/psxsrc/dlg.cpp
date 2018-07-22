@@ -1,176 +1,261 @@
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159590
+// C:\diabpsx\PSXSRC\DLG.CPP
+
+#include "types.h"
+
+// address: 0x80159590
 int GetFileNumber__FiPc(int side, char *file_name) {
-	int i;
+	// register: 16
+	register int i;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159650
+
+// address: 0x80159650
 int DoSaveOptions__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159678
+
+// address: 0x80159678
 int DoSaveGame__Fv() {
-	char temp_name[32];
-	char *Classes[3];
+	// address: 0xFFFFFFC0
+	// size: 0x20
+	auto char temp_name[32];
+	// address: 0xFFFFFFE0
+	// size: 0xC
+	auto char *Classes[3];
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x801597F0
+
+// address: 0x801597F0
 void DoLoadGame__Fv() {
-	int result;
+	{
+		{
+			{
+				// register: 3
+				register int result;
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159894
+
+// address: 0x80159894
 int DoFrontEndLoadCharacter__Fi(int slot) {
-	int result;
+	// register: 16
+	register int result;
+	{
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x801598EC
+
+// address: 0x801598EC
 void McInitLoadCard1Menu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015992C
+
+// address: 0x8015992C
 void McInitLoadCard2Menu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015996C
+
+// address: 0x8015996C
 void ChooseCardLoad__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159A08
+
+// address: 0x80159A08
 void McInitLoadGameMenu__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159A6C
+
+// address: 0x80159A6C
 void McMainKeyCtrl__Fv() {
-	struct RECT um;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct RECT um;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159D08
+
+// address: 0x80159D08
 void McCharCardMenuCtrl__Fv() {
-	struct CPad *P;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *P;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x80159F50
+
+// address: 0x80159F50
 void McMainCharKeyCtrl__Fv() {
-	int Spacing;
-	int yoff;
-	int SelX;
-	int len;
-	struct RECT um;
-	struct CPad *P;
+	// register: 19
+	register int Spacing;
+	// register: 17
+	register int yoff;
+	// register: 16
+	register int SelX;
+	// register: 17
+	register int len;
+	// address: 0xFFFFFFD0
+	// size: 0x8
+	auto struct RECT um;
+	// register: 18
+	// size: 0xEC
+	register struct CPad *P;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015A3BC
+
+// address: 0x8015A3BC
 void ShowAlertBox__Fv() {
-	struct Dialog SBack;
-	struct RECT um;
-	int W;
-	int H;
-	int X;
-	int Y;
-	int otpos;
-	int oldBot;
-	int oldTot;
-	int lines;
-	int yprintpos;
+	// address: 0xFFFFFFA8
+	// size: 0x10
+	auto struct Dialog SBack;
+	// address: 0xFFFFFFB8
+	// size: 0x8
+	auto struct RECT um;
+	// register: 17
+	register int W;
+	// register: 30
+	register int H;
+	// register: 2
+	register int X;
+	// register: 2
+	register int Y;
+	// register: 16
+	register int otpos;
+	// address: 0xFFFFFFC0
+	auto int oldBot;
+	// address: 0xFFFFFFC8
+	auto int oldTot;
+	// register: 18
+	register int lines;
+	// register: 16
+	register int yprintpos;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015A5C8
-unknown GetLoadStatusMessage__FPc(char *file_name) {
+
+// address: 0x8015A5C8
+bool GetLoadStatusMessage__FPc(char *file_name) {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015A67C
-unknown GetSaveStatusMessage__FiPc(int fileblocks, char *file_name) {
-	int i;
-	int blocks;
+
+// address: 0x8015A67C
+bool GetSaveStatusMessage__FiPc(int fileblocks, char *file_name) {
+	// register: 4
+	register int i;
+	// register: 7
+	register int blocks;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015A79C
+
+// address: 0x8015A79C
 void ShowGameFiles__FPciiG4RECTi(char *filename, int saveflag, int Spacing, struct RECT ORect, int yoff) {
-	int yoff;
-	int i;
-	int FileNo;
+	{
+		// register: 17
+		register int i;
+		{
+			// register: 5
+			register int FileNo;
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015A90C
+
+// address: 0x8015A90C
 void ShowCharacterFiles__FiiG4RECTi(int cs, int Spacing, struct RECT ORect, int yoff) {
-	int yoff;
-	int sn;
-	int j;
-	int fileno;
-	int r;
-	int g;
-	int b;
-	char TempStr[64];
+	// register: 4
+	register int sn;
+	{
+		// register: 19
+		register int j;
+		{
+			// register: 3
+			register int fileno;
+			// register: 18
+			register int r;
+			// register: 17
+			register int g;
+			// register: 16
+			register int b;
+			// address: 0xFFFFFF90
+			// size: 0x40
+			auto char TempStr[64];
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015AAEC
+
+// address: 0x8015AAEC
 void PackItem__FP12PkItemStructPC10ItemStruct(struct PkItemStruct *id, struct ItemStruct *is) {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015AB98
+
+// address: 0x8015AB98
 void PackPlayer__FP14PkPlayerStructi(struct PkPlayerStruct *pPack, int pnum) {
-	int i;
-	struct PkItemStruct *pki;
-	struct ItemStruct *pi;
-	struct PlayerStruct *pPlayer;
+	// register: 19
+	register int i;
+	// register: 17
+	// size: 0x14
+	register struct PkItemStruct *pki;
+	// register: 16
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 20
+	// size: 0x19E8
+	register struct PlayerStruct *pPlayer;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015ADAC
+
+// address: 0x8015ADAC
 void UnPackItem__FPC12PkItemStructP10ItemStruct(struct PkItemStruct *is, struct ItemStruct *id) {
-	char AC;
+	// register: 2
+	register char AC;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015AEE0
+
+// address: 0x8015AEE0
 void VerifyGoldSeeds__FP12PlayerStruct(struct PlayerStruct *pPlayer) {
-	int i;
-	int j;
+	// register: 18
+	register int i;
+	// register: 5
+	register int j;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015AFB8
+
+// address: 0x8015AFB8
 void UnPackPlayer__FPC14PkPlayerStructiUc(struct PkPlayerStruct *pPack, int pnum, unsigned char killok) {
-	struct ItemStruct *pi;
-	struct PkItemStruct *pki;
-	struct PlayerStruct *pPlayer;
-	int i;
+	// register: 17
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 18
+	// size: 0x14
+	register struct PkItemStruct *pki;
+	// register: 19
+	// size: 0x19E8
+	register struct PlayerStruct *pPlayer;
+	// register: 16
+	register int i;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015B284
+
+// address: 0x8015B284
 void ConstructSlotName__FPci(char *TempStr, int slot) {
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015B37C
+
+// address: 0x8015B37C
 int GetSpinnerWidth__Fi(int j) {
-	char TempStr[64];
-	int len;
+	// address: 0xFFFFFFB8
+	// size: 0x40
+	auto char TempStr[64];
+	// register: 2
+	register int len;
 }
 
-// Path: C:\diabpsx\PSXSRC\DLG.CPP
-// Addr: 0x8015B420
-char* ReconstructSlotName__Fii(int side, int file) {
-	int i;
+
+// address: 0x8015B420
+char *ReconstructSlotName__Fii(int side, int file) {
+	{
+		// register: 3
+		register int i;
+	}
 }
+
 

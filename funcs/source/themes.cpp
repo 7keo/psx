@@ -1,241 +1,383 @@
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015BC0C
+// C:\diabpsx\SOURCE\THEMES.CPP
+
+#include "types.h"
+
+// address: 0x8015BC0C
 unsigned char TFit_Shrine__Fi(int i) {
-	int xp;
-	int yp;
-	int found;
+	// register: 17
+	register int xp;
+	// register: 21
+	register int yp;
+	// address: 0xFFFFFFB0
+	auto int found;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015BEFC
+
+// address: 0x8015BEFC
 unsigned char TFit_Obj5__Fi(int t) {
-	int xp;
-	int yp;
-	int i;
-	int r;
-	int rs;
-	unsigned char found;
+	// register: 19
+	register int xp;
+	// register: 20
+	register int yp;
+	// register: 18
+	register int i;
+	// register: 22
+	register int r;
+	// register: 30
+	register int rs;
+	// register: 21
+	register unsigned char found;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C0C0
+
+// address: 0x8015C0C0
 unsigned char TFit_SkelRoom__Fi(int t) {
-	int i;
+	// register: 16
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C170
+
+// address: 0x8015C170
 unsigned char TFit_GoatShrine__Fi(int t) {
-	int i;
+	// register: 16
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C208
+
+// address: 0x8015C208
 unsigned char CheckThemeObj3__Fiiii(int xp, int yp, int t, int f) {
-	int i;
+	{
+		// register: 18
+		register int i;
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C354
+
+// address: 0x8015C354
 unsigned char TFit_Obj3__Fi(int t) {
-	int xp;
-	int yp;
-	char objrnd[4];
+	// register: 16
+	register int xp;
+	// register: 17
+	register int yp;
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char objrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C414
+
+// address: 0x8015C414
 unsigned char CheckThemeReqs__Fi(int t) {
-	unsigned char rv;
+	// register: 5
+	register unsigned char rv;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C4E0
+
+// address: 0x8015C4E0
 unsigned char SpecialThemeFit__Fii(int i, int t) {
-	unsigned char rv;
+	// register: 3
+	register unsigned char rv;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C6BC
+
+// address: 0x8015C6BC
 unsigned char CheckThemeRoom__Fi(int tv) {
-	int i;
-	int j;
-	int tarea;
+	// register: 16
+	register int i;
+	// register: 17
+	register int j;
+	// register: 4
+	register int tarea;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015C980
+
+// address: 0x8015C980
 void InitThemes__Fv() {
-	int i;
-	int t;
+	// register: 17
+	register int i;
+	// register: 16
+	register int t;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015CCCC
+
+// address: 0x8015CCCC
 void HoldThemeRooms__Fv() {
-	int i;
-	int x;
-	int y;
+	// register: 6
+	register int i;
+	// register: 4
+	register int x;
+	// register: 5
+	register int y;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015CDB0
+
+// address: 0x8015CDB0
 void PlaceThemeMonsts__Fii(int t, int f) {
-	int xp;
-	int yp;
-	int mtype;
-	int scattertypes[111];
-	int numscattypes;
-	int i;
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 19
+	register int mtype;
+	// address: 0xFFFFFE18
+	// size: 0x1BC
+	auto int scattertypes[111];
+	// register: 4
+	register int numscattypes;
+	// register: 3
+	register int i;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015CF34
+
+// address: 0x8015CF34
 void Theme_Barrel__Fi(int t) {
-	int xp;
-	int yp;
-	int r;
-	char barrnd[4];
-	char monstrnd[4];
+	// register: 16
+	register int xp;
+	// register: 17
+	register int yp;
+	// register: 4
+	register int r;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char barrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015D090
+
+// address: 0x8015D090
 void Theme_Shrine__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015D178
+
+// address: 0x8015D178
 void Theme_MonstPit__Fi(int t) {
-	int r;
-	int ixp;
-	int iyp;
-	char monstrnd[4];
+	// register: 19
+	register int r;
+	// register: 16
+	register int ixp;
+	// register: 17
+	register int iyp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015D2BC
+
+// address: 0x8015D2BC
 void Theme_SkelRoom__Fi(int t) {
-	int xp;
-	int yp;
-	char monstrnd[4];
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFE8
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015D5F8
+
+// address: 0x8015D5F8
 void Theme_Treasure__Fi(int t) {
-	int xp;
-	int yp;
-	int i;
-	char treasrnd[4];
-	char monstrnd[4];
-	int rv;
+	// register: 16
+	register int xp;
+	// register: 18
+	register int yp;
+	// register: 4
+	register int i;
+	// address: 0xFFFFFFD0
+	// size: 0x4
+	auto char treasrnd[4];
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
+	{
+		{
+			{
+				{
+					{
+						{
+							// register: 17
+							register int rv;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015D83C
+
+// address: 0x8015D83C
 void Theme_Library__Fi(int t) {
-	int xp;
-	int yp;
-	int oi;
-	char librnd[4];
-	char monstrnd[4];
-	int lnumobjects;
+	// register: 17
+	register int xp;
+	// register: 19
+	register int yp;
+	// register: 2
+	register int oi;
+	// address: 0xFFFFFFD0
+	// size: 0x4
+	auto char librnd[4];
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
+	{
+		{
+			{
+				{
+					{
+						{
+							// register: 16
+							register int lnumobjects;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015DAC0
+
+// address: 0x8015DAC0
 void Theme_Torture__Fi(int t) {
-	int xp;
-	int yp;
-	char tortrnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char tortrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015DC18
+
+// address: 0x8015DC18
 void Theme_BloodFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015DC8C
+
+// address: 0x8015DC8C
 void Theme_Decap__Fi(int t) {
-	int xp;
-	int yp;
-	char decaprnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char decaprnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015DDE4
+
+// address: 0x8015DDE4
 void Theme_PurifyingFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015DE58
+
+// address: 0x8015DE58
 void Theme_ArmorStand__Fi(int t) {
-	int xp;
-	int yp;
-	char armorrnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char armorrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015DFD4
+
+// address: 0x8015DFD4
 void Theme_GoatShrine__Fi(int t) {
-	int xx;
-	int yy;
+	// register: 16
+	register int xx;
+	// register: 17
+	register int yy;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E108
+
+// address: 0x8015E108
 void Theme_Cauldron__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E17C
+
+// address: 0x8015E17C
 void Theme_MurkyFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E1F0
+
+// address: 0x8015E1F0
 void Theme_TearFountain__Fi(int t) {
-	char monstrnd[4];
+	// address: 0xFFFFFFF0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E264
+
+// address: 0x8015E264
 void Theme_BrnCross__Fi(int t) {
-	int xp;
-	int yp;
-	char monstrnd[4];
-	char bcrossrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char monstrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char bcrossrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E3C0
+
+// address: 0x8015E3C0
 void Theme_WeaponRack__Fi(int t) {
-	int xp;
-	int yp;
-	char weaponrnd[4];
-	char monstrnd[4];
+	// register: 17
+	register int xp;
+	// register: 18
+	register int yp;
+	// address: 0xFFFFFFD8
+	// size: 0x4
+	auto char weaponrnd[4];
+	// address: 0xFFFFFFE0
+	// size: 0x4
+	auto char monstrnd[4];
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E53C
+
+// address: 0x8015E53C
 void UpdateL4Trans__Fv() {
-	int i;
-	int j;
+	// register: 4
+	register int i;
+	// register: 5
+	register int j;
 }
 
-// Path: C:\diabpsx\SOURCE\THEMES.CPP
-// Addr: 0x8015E598
+
+// address: 0x8015E598
 void CreateThemeRooms__Fv() {
-	int i;
+	// register: 16
+	register int i;
 }
+
 

@@ -1,66 +1,86 @@
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x800894E0
+// C:\diabpsx\PSXSRC\PADS.CPP
+
+#include "types.h"
+
+// address: 0x800B071C
+void PAD_Open__Fv() {
+}
+
+
+// address: 0x800894E0
 unsigned long ReadPadStream__Fv() {
-	unsigned char *p0;
-	unsigned char *p1;
-	unsigned long rval;
+	// register: 19
+	register unsigned char *p0;
+	// register: 18
+	register unsigned char *p1;
+	// register: 16
+	register unsigned long rval;
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x800895F8
+
+// address: 0x800895F8
 void PAD_Handler__Fv() {
-	unsigned long JVal;
-	unsigned long v;
-	unsigned char fin;
+	// register: 20
+	register unsigned long JVal;
+	// register: 3
+	register unsigned long v;
+	// register: 16
+	register unsigned char fin;
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x800897F4
-struct CPad* PAD_GetPad__FiUc(int PadNum, unsigned char both) {
+
+// address: 0x800897F4
+// size: 0xEC
+struct CPad *PAD_GetPad__FiUc(int PadNum, unsigned char both) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x800898A4
+
+// address: 0x800898A4
 void NewVal__4CPadUs(struct CPad *this, unsigned short New) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x80089918
+
+// address: 0x80089918
 void BothNewVal__4CPadUsUs(struct CPad *this, unsigned short New, unsigned short New2) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x800899AC
+
+// address: 0x800899AC
 unsigned short Trans__4CPadUs(struct CPad *this, unsigned short PadVal) {
-	unsigned short RetVal;
+	// register: 2
+	register unsigned short RetVal;
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x80089AD0
+
+// address: 0x80089AD0
 void Flush__4CPad(struct CPad *this) {
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x80089B24
+
+// address: 0x80089B24
 void InitClickBits__FPUs(unsigned short *CountArray) {
-	int f;
+	// register: 2
+	register int f;
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x80089B44
+
+// address: 0x80089B44
 unsigned short MakeClickBits__FiiiPUs(int Switch, int Closed, int Speed, unsigned short *CountArray) {
-	unsigned short Click;
-	unsigned short BitMask;
-	int ResetSpeed;
+	// register: 9
+	register unsigned short Click;
+	// register: 3
+	register unsigned short BitMask;
+	{
+		{
+			// register: 8
+			register int ResetSpeed;
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x80089BD0
-void _GLOBAL_.I.Pad0() {
+
+// address: 0x80089BD0
+void _GLOBAL__I_Pad0() {
 }
 
-// Path: C:\diabpsx\PSXSRC\PADS.CPP
-// Addr: 0x800B071C
-void PAD_Open__Fv() {
-}
 

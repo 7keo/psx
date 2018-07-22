@@ -1,463 +1,652 @@
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800212D4
-void GAL_SetErrorChecking(unsigned char OnOff) {
-}
+// C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800212E4
+#include "types.h"
+
+// address: 0x800212D4
+void GAL_SetErrorChecking(unsigned char OnOff);
+
+// address: 0x800212E4
 long GAL_SplitBlock(long CurBlock, unsigned long Size) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *MemHdr;
-	struct MEM_HDR *SplitBlock;
+	// register: 19
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *SplitBlock;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021404
+
+// address: 0x80021404
 void GAL_InitModule() {
-	int f;
+	// register: 17
+	register int f;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800214BC
+
+// address: 0x800214BC
 unsigned char GAL_AddMemType(struct MEM_INIT_INFO *M) {
-	struct MEM_INIT_INFO *P;
-	struct MEM_HDR *FreeMemHdr;
-	unsigned long Addr1;
-	unsigned long Addr2;
+	// register: 4
+	// size: 0x28
+	register struct MEM_INIT_INFO *P;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *FreeMemHdr;
+	// register: 5
+	register unsigned long Addr1;
+	// register: 3
+	register unsigned long Addr2;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800215DC
+
+// address: 0x800215DC
 long GAL_Alloc(unsigned long Size, unsigned long Type, char *Name) {
-	struct MEM_HDR *Block;
-	struct MEM_INIT_INFO *M;
-	unsigned long FullSize;
-	struct MEM_HDR *(*FRoute)();
-	unsigned char High;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *Block;
+	// register: 18
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 19
+	register unsigned long FullSize;
+	// register: 20
+	// size: 0x1C
+	register struct MEM_HDR *(*FRoute)();
+	// register: 23
+	register unsigned char High;
+	{
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021774
-void* GAL_Lock(long Handle) {
-	struct MEM_HDR *MemHdr;
+
+// address: 0x80021774
+void *GAL_Lock(long Handle) {
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800217DC
+
+// address: 0x800217DC
 unsigned char GAL_Unlock(long Handle) {
-	struct MEM_HDR *MemHdr;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021860
+
+// address: 0x80021860
 unsigned char GAL_Free(long Handle) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *MemHdr;
+	// register: 16
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021908
+
+// address: 0x80021908
 unsigned long GAL_GetFreeMem(unsigned long Type) {
-	unsigned long FreeMem;
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *Block;
+	// register: 16
+	register unsigned long FreeMem;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	{
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *Block;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002197C
+
+// address: 0x8002197C
 unsigned long GAL_GetUsedMem(unsigned long Type) {
-	unsigned long FreeMem;
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *Block;
+	// register: 16
+	register unsigned long FreeMem;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	{
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *Block;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800219F0
+
+// address: 0x800219F0
 unsigned long GAL_LargestFreeBlock(unsigned long Type) {
-	unsigned long Largest;
-	struct MEM_HDR *Index;
-	struct MEM_INIT_INFO *MI;
+	// register: 5
+	register unsigned long Largest;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *MI;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021A6C
-void AttachHdrToList(struct MEM_HDR **Head, struct MEM_HDR *Block) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021A8C
-void DetachHdrFromList(struct MEM_HDR **Head, struct MEM_HDR *Block) {
-}
+// address: 0x80021A6C
+void AttachHdrToList(struct MEM_HDR **Head, struct MEM_HDR *Block);
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021AD8
+// address: 0x80021A8C
+void DetachHdrFromList(struct MEM_HDR **Head, struct MEM_HDR *Block);
+
+// address: 0x80021AD8
 unsigned char IsActiveValidHandle(long Handle) {
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021B10
-void* AlignPtr(void *P, unsigned long Align) {
-	unsigned long Addr;
-	unsigned long Temp;
+
+// address: 0x80021B10
+void *AlignPtr(void *P, unsigned long Align) {
+	// register: 4
+	register unsigned long Addr;
+	// register: 2
+	register unsigned long Temp;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021B40
-unsigned long AlignSize(unsigned long Size, unsigned long Align) {
+
+// address: 0x80021B40
+unsigned long AlignSize(unsigned long Size, unsigned long Align);
+
+// address: 0x80021B70
+// size: 0x1C
+struct MEM_HDR *FindClosestSizedBlock(struct MEM_HDR *Head, unsigned long Size) {
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *Closest;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021B70
-struct MEM_HDR* FindClosestSizedBlock(struct MEM_HDR *Head, unsigned long Size) {
-	struct MEM_HDR *Closest;
-	struct MEM_HDR *Index;
+
+// address: 0x80021BC8
+// size: 0x1C
+struct MEM_HDR *FindHighestMemBlock(struct MEM_HDR *Head, unsigned long Size) {
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *Closest;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 7
+	register void *Highest;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021BC8
-struct MEM_HDR* FindHighestMemBlock(struct MEM_HDR *Head, unsigned long Size) {
-	struct MEM_HDR *Closest;
-	struct MEM_HDR *Index;
-	void *Highest;
+
+// address: 0x80021C30
+// size: 0x1C
+struct MEM_HDR *FindLowestMemBlock(struct MEM_HDR *Head, unsigned long Size) {
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *Closest;
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 7
+	register unsigned long Lowest;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021C30
-struct MEM_HDR* FindLowestMemBlock(struct MEM_HDR *Head, unsigned long Size) {
-	struct MEM_HDR *Closest;
-	struct MEM_HDR *Index;
-	unsigned long Lowest;
+
+// address: 0x80021C98
+// size: 0x28
+struct MEM_INIT_INFO *GetMemInitInfoBlockFromType(unsigned long Type) {
+	// register: 3
+	// size: 0x28
+	register struct MEM_INIT_INFO *P;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021C98
-struct MEM_INIT_INFO* GetMemInitInfoBlockFromType(unsigned long Type) {
-	struct MEM_INIT_INFO *P;
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021CD4
+// address: 0x80021CD4
 void MergeToEmptyList(struct MEM_INIT_INFO *MI, struct MEM_HDR *M) {
-	struct MEM_HDR *Index;
-	struct MEM_HDR *NextIndex;
-	void *Start;
-	void *End;
-	void *ThisStart;
-	void *ThisEnd;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 18
+	// size: 0x1C
+	register struct MEM_HDR *NextIndex;
+	// register: 19
+	register void *Start;
+	// register: 21
+	register void *End;
+	{
+		// register: 2
+		register void *ThisStart;
+		// register: 4
+		register void *ThisEnd;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021DA8
+
+// address: 0x80021DA8
 long GAL_AllocAt(unsigned long Size, void *Addr, unsigned long Type, char *Name) {
-	struct MEM_HDR *Block;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *Block;
+	// register: 17
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80021E84
+
+// address: 0x80021E84
 long LoAlloc(struct MEM_INIT_INFO *M, struct MEM_HDR *Block, void *Addr, unsigned long Size, char *Name) {
-	struct MEM_HDR *SplitBlock;
-	unsigned long PhysSize;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *SplitBlock;
+	// register: 20
+	register unsigned long PhysSize;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002201C
-struct MEM_HDR* FindBlockInTheseBounds(struct MEM_HDR *Head, void *Addr, unsigned long Size) {
-	struct MEM_HDR *Index;
-	unsigned char Done;
-	unsigned long ThisStart;
-	unsigned long ThisEnd;
-	unsigned long Start;
-	unsigned long End;
+
+// address: 0x8002201C
+// size: 0x1C
+struct MEM_HDR *FindBlockInTheseBounds(struct MEM_HDR *Head, void *Addr, unsigned long Size) {
+	// register: 4
+	// size: 0x1C
+	register struct MEM_HDR *Index;
+	// register: 7
+	register unsigned char Done;
+	// register: 3
+	register unsigned long ThisStart;
+	// register: 2
+	register unsigned long ThisEnd;
+	// register: 5
+	register unsigned long Start;
+	// register: 6
+	register unsigned long End;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022088
-struct MEM_HDR* GetFreeMemHdrBlock() {
-	struct MEM_HDR *RetBlock;
+
+// address: 0x80022088
+// size: 0x1C
+struct MEM_HDR *GetFreeMemHdrBlock() {
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *RetBlock;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022110
-void ReleaseMemHdrBlock(struct MEM_HDR *Index) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022150
+// address: 0x80022110
+void ReleaseMemHdrBlock(struct MEM_HDR *Index);
+
+// address: 0x80022150
 void GAL_IterateEmptyMem(unsigned long MemType, void (*Func)()) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *Block;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	{
+		// register: 16
+		// size: 0x1C
+		register struct MEM_HDR *Block;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800221D4
+
+// address: 0x800221D4
 void GAL_IterateUsedMem(unsigned long MemType, void (*Func)()) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *Block;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	{
+		// register: 16
+		// size: 0x1C
+		register struct MEM_HDR *Block;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022270
-unsigned char GAL_SetMemName(long Hnd, char *Text) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800222E0
+// address: 0x80022270
+unsigned char GAL_SetMemName(long Hnd, char *Text);
+
+// address: 0x800222E0
 unsigned long GAL_TotalMem(unsigned long Type) {
-	unsigned long TotalMem;
-	struct MEM_INIT_INFO *M;
+	// register: 16
+	register unsigned long TotalMem;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022334
-void* GAL_MemBase(unsigned long Type) {
-	void *Ret;
-	struct MEM_INIT_INFO *M;
+
+// address: 0x80022334
+void *GAL_MemBase(unsigned long Type) {
+	// register: 16
+	register void *Ret;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022388
+
+// address: 0x80022388
 unsigned char GAL_DefragMem(unsigned long type) {
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002240C
-unsigned char GSetError(enum GAL_ERROR_CODE Err) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022468
+// address: 0x8002240C
+unsigned char GSetError(enum GAL_ERROR_CODE Err);
+
+// address: 0x80022468
 unsigned char GAL_CheckMem(unsigned long Type) {
-	struct MEM_INIT_INFO *M;
-	struct MEM_HDR *MemHdr;
-	unsigned long TotalMem;
+	// register: 17
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *MemHdr;
+	// register: 18
+	register unsigned long TotalMem;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022564
+
+// address: 0x80022564
 unsigned char CheckCollisions(struct MEM_INIT_INFO *M, struct MEM_HDR *MemHdr) {
-	struct MEM_HDR *CheckHdr;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *CheckHdr;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022610
+
+// address: 0x80022610
 unsigned char AreBlocksColliding(struct MEM_HDR *Hdr1, struct MEM_HDR *Hdr2) {
-	unsigned long Addr1;
-	unsigned long Addr2;
+	// register: 5
+	register unsigned long Addr1;
+	// register: 6
+	register unsigned long Addr2;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022668
-char* GAL_GetErrorText(enum GAL_ERROR_CODE Err) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022698
-enum GAL_ERROR_CODE GAL_GetLastErrorCode() {
-}
+// address: 0x80022668
+char *GAL_GetErrorText(enum GAL_ERROR_CODE Err);
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800226A8
-char* GAL_GetLastErrorText() {
-}
+// address: 0x80022698
+// size: 0x4
+enum GAL_ERROR_CODE GAL_GetLastErrorCode();
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800226D0
+// address: 0x800226A8
+char *GAL_GetLastErrorText();
+
+// address: 0x800226D0
 int GAL_HowManyEmptyRegions(unsigned long Type) {
-	struct MEM_INIT_INFO *m;
-	int Count;
-	struct MEM_HDR *mh;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *m;
+	// register: 3
+	register int Count;
+	{
+		// register: 2
+		// size: 0x1C
+		register struct MEM_HDR *mh;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022738
+
+// address: 0x80022738
 int GAL_HowManyUsedRegions(unsigned long Type) {
-	struct MEM_INIT_INFO *m;
-	int Count;
-	struct MEM_HDR *mh;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *m;
+	// register: 3
+	register int Count;
+	{
+		// register: 2
+		// size: 0x1C
+		register struct MEM_HDR *mh;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800227A0
-void GAL_SetTimeStamp(int Time) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800227B0
-void GAL_IncTimeStamp() {
-}
+// address: 0x800227A0
+void GAL_SetTimeStamp(int Time);
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800227D0
-int GAL_GetTimeStamp() {
-}
+// address: 0x800227B0
+void GAL_IncTimeStamp();
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800227E0
+// address: 0x800227D0
+int GAL_GetTimeStamp();
+
+// address: 0x800227E0
 long GAL_AlignSizeToType(unsigned long Size, unsigned long MemType) {
-	struct MEM_INIT_INFO *Mi;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *Mi;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022830
+
+// address: 0x80022830
 long GAL_AllocMultiStruct(struct GAL_STRUCT *G, unsigned long Type, char *Name) {
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022880
+
+// address: 0x80022880
 unsigned int GAL_ProcessMultiStruct(struct GAL_STRUCT *G, unsigned long Type) {
-	unsigned int TotalMem;
-	int f;
+	// register: 17
+	register unsigned int TotalMem;
+	// register: 18
+	register int f;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002292C
+
+// address: 0x8002292C
 long GAL_GetSize(long hnd) {
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022988
+
+// address: 0x80022988
 unsigned char GazDefragMem(unsigned long MemType) {
-	struct MEM_HDR *LockedBlocks;
-	struct MEM_INIT_INFO *M;
-	struct MEM_REG Reg;
-	struct MEM_HDR *NewEmptyBlock;
-	struct MEM_HDR *ListOfBlocksInRegion;
-	unsigned long ShuffledSize;
-	int GapSize;
+	// address: 0xFFFFFFE0
+	// size: 0x1C
+	auto struct MEM_HDR *LockedBlocks;
+	// register: 17
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
+	// address: 0xFFFFFFD8
+	// size: 0x8
+	auto struct MEM_REG Reg;
+	{
+		// register: 5
+		// size: 0x1C
+		register struct MEM_HDR *NewEmptyBlock;
+		// address: 0xFFFFFFE4
+		// size: 0x1C
+		auto struct MEM_HDR *ListOfBlocksInRegion;
+		// register: 18
+		register unsigned long ShuffledSize;
+		// register: 16
+		register int GapSize;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022AF0
+
+// address: 0x80022AF0
 void PutBlocksInRegionIntoList(struct MEM_REG *Reg, struct MEM_HDR **ToList, struct MEM_HDR **FromList) {
-	struct MEM_HDR *ThisBlock;
-	struct MEM_HDR *NextBlock;
-	struct MEM_REG MemReg;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *ThisBlock;
+	{
+		// register: 17
+		// size: 0x1C
+		register struct MEM_HDR *NextBlock;
+		// address: 0xFFFFFFE0
+		// size: 0x8
+		auto struct MEM_REG MemReg;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022B94
-unsigned char CollideRegions(struct MEM_REG *Reg1, struct MEM_REG *Reg2) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022BC8
+// address: 0x80022B94
+unsigned char CollideRegions(struct MEM_REG *Reg1, struct MEM_REG *Reg2);
+
+// address: 0x80022BC8
 void DeleteEmptyBlocks(struct MEM_INIT_INFO *M) {
-	struct MEM_HDR *ThisBlock;
+	{
+		// register: 16
+		// size: 0x1C
+		register struct MEM_HDR *ThisBlock;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022C34
+
+// address: 0x80022C34
 unsigned char GetRegion(struct MEM_REG *Reg, struct MEM_HDR *LockedBlocks, struct MEM_INIT_INFO *M) {
-	struct MEM_HDR *FirstBlock;
-	struct MEM_HDR *SecondBlock;
-	struct MEM_REG NewReg;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *FirstBlock;
+	// register: 2
+	// size: 0x1C
+	register struct MEM_HDR *SecondBlock;
+	// address: 0xFFFFFFE8
+	// size: 0x8
+	auto struct MEM_REG NewReg;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022D2C
-struct MEM_HDR* FindNextBlock(void *Addr, struct MEM_HDR *Blocks) {
-	unsigned long BlockAddr;
+
+// address: 0x80022D2C
+// size: 0x1C
+struct MEM_HDR *FindNextBlock(void *Addr, struct MEM_HDR *Blocks) {
+	{
+		// register: 2
+		register unsigned long BlockAddr;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022D68
+
+// address: 0x80022D68
 unsigned long ShuffleBlocks(struct MEM_HDR *Blocks, struct MEM_REG *Reg, struct MEM_INIT_INFO *M) {
-	unsigned long NewSize;
-	void *MemBase;
-	struct MEM_HDR *ThisBlock;
+	// register: 18
+	register unsigned long NewSize;
+	// register: 17
+	register void *MemBase;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *ThisBlock;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022DF8
+
+// address: 0x80022DF8
 void PutAllLockedBlocksOntoList(struct MEM_HDR **ToHead, struct MEM_HDR **FromHead) {
-	struct MEM_HDR *CurHdr;
-	struct MEM_HDR *NextCurHdr;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *CurHdr;
+	{
+		// register: 17
+		// size: 0x1C
+		register struct MEM_HDR *NextCurHdr;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022E74
+
+// address: 0x80022E74
 void SortMemHdrListByAddr(struct MEM_HDR **Head) {
-	unsigned char DidASwap;
-	struct MEM_HDR *CurHdr;
-	struct MEM_HDR *NextHdr;
-	struct MEM_HDR *OldPrev;
+	// register: 7
+	register unsigned char DidASwap;
+	// register: 5
+	// size: 0x1C
+	register struct MEM_HDR *CurHdr;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *NextHdr;
+	{
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *OldPrev;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022F28
+
+// address: 0x80022F28
 void GraftMemHdrList(struct MEM_HDR **ToList, struct MEM_HDR **FromList) {
-	struct MEM_HDR *OldFirst;
-	struct MEM_HDR *LastHdr;
+	// register: 6
+	// size: 0x1C
+	register struct MEM_HDR *OldFirst;
+	{
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *LastHdr;
+	}
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022F84
-void GAL_MemDump(unsigned long Type) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80022FF8
-void GAL_SetVerbosity(enum GAL_VERB_LEV G) {
-}
+// address: 0x80022F84
+void GAL_MemDump(unsigned long Type);
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80023008
+// address: 0x80022FF8
+void GAL_SetVerbosity(enum GAL_VERB_LEV G);
+
+// address: 0x80023008
 int CountFreeBlocks() {
-	struct MEM_HDR *RetBlock;
-	int Count;
+	// register: 3
+	// size: 0x1C
+	register struct MEM_HDR *RetBlock;
+	// register: 2
+	register int Count;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80023034
+
+// address: 0x80023034
 void SetBlockName(struct MEM_HDR *MemHdr, char *NewName) {
-	int IndexSoFar;
+	// register: 6
+	register int IndexSoFar;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002307C
-int GAL_GetNumFreeHeaders() {
+
+// address: 0x8002307C
+int GAL_GetNumFreeHeaders();
+
+// address: 0x8002308C
+unsigned long GAL_GetLastTypeAlloced();
+
+// address: 0x8002309C
+void (*GAL_SetAllocFilter(void (*NewFilter)()))() {
+	// register: 2
+	register void (*OldFilter)();
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002308C
-unsigned long GAL_GetLastTypeAlloced() {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002309C
-void ()()* GAL_SetAllocFilter(void (*NewFilter)()) {
-	void (*OldFilter)();
-}
-
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x800230B4
+// address: 0x800230B4
 unsigned char GAL_SortUsedRegionsBySize(unsigned long MemType) {
-	struct MEM_INIT_INFO *M;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80023108
-unsigned char SortSize(struct MEM_HDR *B1, struct MEM_HDR *B2) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x80023118
+// address: 0x80023108
+unsigned char SortSize(struct MEM_HDR *B1, struct MEM_HDR *B2);
+
+// address: 0x80023118
 unsigned char GAL_SortUsedRegionsByAddress(unsigned long MemType) {
-	struct MEM_INIT_INFO *M;
+	// register: 2
+	// size: 0x28
+	register struct MEM_INIT_INFO *M;
 }
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002316C
-unsigned char SortAddr(struct MEM_HDR *B1, struct MEM_HDR *B2) {
-}
 
-// Path: C:\DIABPSX\GLIBDEV\SOURCE\GAL.C
-// Addr: 0x8002317C
+// address: 0x8002316C
+unsigned char SortAddr(struct MEM_HDR *B1, struct MEM_HDR *B2);
+
+// address: 0x8002317C
 void SortMemHdrList(struct MEM_HDR **Head, unsigned char (*CompFunc)()) {
-	unsigned char DidASwap;
-	struct MEM_HDR *CurHdr;
-	struct MEM_HDR *NextHdr;
-	struct MEM_HDR *OldPrev;
+	// register: 18
+	register unsigned char DidASwap;
+	// register: 16
+	// size: 0x1C
+	register struct MEM_HDR *CurHdr;
+	// register: 17
+	// size: 0x1C
+	register struct MEM_HDR *NextHdr;
+	{
+		// register: 3
+		// size: 0x1C
+		register struct MEM_HDR *OldPrev;
+	}
 }
+
 

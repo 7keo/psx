@@ -1,103 +1,153 @@
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x8008463C
+// C:\diabpsx\PSXSRC\DAVEO.CPP
+
+#include "types.h"
+
+// address: 0x8008463C
 void ReadPad__Fi(int NoDeb) {
-	struct CPad *DPad;
-	int New;
-	int cmem;
-	int p1mema;
-	int p1memb;
-	int p2mema;
-	int p2memb;
-	int diffm;
+	// register: 16
+	// size: 0xEC
+	register struct CPad *DPad;
+	// register: 2
+	register int New;
+	// register: 4
+	register int cmem;
+	// register: 5
+	register int p1mema;
+	// register: 6
+	register int p1memb;
+	// register: 7
+	register int p2mema;
+	// register: 8
+	register int p2memb;
+	// register: 9
+	register int diffm;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800847C4
+
+// address: 0x800847C4
 void DummyPoll__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800847CC
+
+// address: 0x800847CC
 void DaveOwens__Fv() {
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800847D4
+
+// address: 0x800847D4
 void DaveCentreStuff__Fv() {
-	char TempStr[40];
+	// address: 0xFFFFFFC0
+	// size: 0x28
+	auto char TempStr[40];
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x8008491C
+
+// address: 0x8008491C
 void PlaceStoreGold2__Fil(int myplr, long v) {
-	int i;
-	int ii;
-	int xx;
-	int yy;
-	unsigned char done;
+	// register: 17
+	register int i;
+	// register: 20
+	register int ii;
+	// register: 22
+	register int xx;
+	// register: 19
+	register int yy;
+	// register: 4
+	register unsigned char done;
+	{
+		{
+			{
+				{
+				}
+			}
+		}
+	}
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x80084B44
+
+// address: 0x80084B44
 void GivePlayerDosh__Fil(int PlayerNo, long cost) {
-	int i;
+	// register: 18
+	register int i;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x80084CF8
+
+// address: 0x80084CF8
 int CalcItemVal__FP10ItemStruct(struct ItemStruct *Item) {
-	int cost;
+	// register: 2
+	register int cost;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x80084D54
+
+// address: 0x80084D54
 void RemoveDupInvItem__Fii(int pnum, int iv) {
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x80084F44
+
+// address: 0x80084F44
 long DetectDup__FP10ItemStructi(struct ItemStruct *Item, int PlayerNo) {
-	long Value;
-	struct ItemStruct *pi;
-	int i;
-	int InvItem;
-	long DupSell;
-	unsigned char Flag;
+	// register: 6
+	register long Value;
+	// register: 3
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 17
+	register int i;
+	// register: 18
+	register int InvItem;
+	// register: 21
+	register long DupSell;
+	// register: 19
+	register unsigned char Flag;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800851C0
+
+// address: 0x800851C0
 void WinterSales__Fi(int PlayerNo) {
-	int Value;
-	int i;
-	int InvItem;
-	struct ItemStruct *pi;
-	unsigned char Flag;
+	// register: 16
+	register int Value;
+	// register: 17
+	register int i;
+	// register: 18
+	register int InvItem;
+	// register: 19
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 21
+	register unsigned char Flag;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800853FC
+
+// address: 0x800853FC
 int SpecUn__FP10ItemStruct(struct ItemStruct *pi) {
-	int MrHappy;
+	// register: 5
+	register int MrHappy;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800854D0
+
+// address: 0x800854D0
 void EnableQuestItemsPleeeeeeeeeeeeeeeeeez__Fv() {
-	int Uid;
+	// register: 3
+	register int Uid;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x80085518
+
+// address: 0x80085518
 void KeefDaFeef__Fi(int PlayerNo) {
-	int i;
-	int InvItem;
-	struct ItemStruct *pi;
-	unsigned char Flag;
+	// register: 18
+	register int i;
+	// register: 20
+	register int InvItem;
+	// register: 16
+	// size: 0x6C
+	register struct ItemStruct *pi;
+	// register: 19
+	register unsigned char Flag;
 }
 
-// Path: C:\diabpsx\PSXSRC\DAVEO.CPP
-// Addr: 0x800857F8
+
+// address: 0x800857F8
 void ClearQuestFlags__Fv() {
 }
+
 

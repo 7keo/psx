@@ -1,9 +1,17 @@
-// Path: C:\diabpsx\PSXSRC\LZNP.CPP
-// Addr: 0x800881D4
+// C:\diabpsx\PSXSRC\LZNP.CPP
+
+#include "types.h"
+
+// address: 0x800881D4
 int LZNP_Decode__FPUcT0(unsigned char *in, unsigned char *out) {
-	int i;
-	int j;
-	unsigned int flags;
-	unsigned char *OriginalOut;
+	// register: 6
+	register int i;
+	// register: 3
+	register int j;
+	// register: 7
+	register unsigned int flags;
+	// register: 8
+	register unsigned char *OriginalOut;
 }
+
 
