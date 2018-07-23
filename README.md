@@ -18,6 +18,14 @@ The debug information split into overlays.
 * `overlays`: function and global variable declarations
 	- 	`overlays/overlay_c.h` contains the functions and global variables of the overlay with ID `$c`
 
+The debug info split into Python scripts for importing into IDA.
+
+* `ida`: Python scripts for importing symbol information into IDA
+	- `ida/make_psx.py` set names of symbols
+	- `ida/set_funcs.py` set function signatures
+	- `ida/set_vars.py` set types of global variables
+	- `ida/overlay_c/make_psx.py` set names of symbols in overlay with ID `$c`
+
 ### Overlays
 
 * Overlay ID `$b`: `FRONTEND.BIN`
