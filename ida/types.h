@@ -2152,6 +2152,10 @@ struct P_TAG {
 	unsigned char b0;
 	// offset: 0007
 	unsigned char code;
+	// offset: 0000 (24 bytes)
+	// unsigned int addr;
+	// offset: 0018 (8 bytes)
+	// unsigned int len;
 };
 
 // size: 0x4
@@ -3632,6 +3636,16 @@ struct TASK {
 	unsigned short XtraLongs;
 	// offset: 005A
 	unsigned short MaxStackSizeBytes;
+	// offset: 0080 (1 bytes)
+	// unsigned long fToInit;
+	// offset: 0081 (1 bytes)
+	// unsigned long fToDie;
+	// offset: 0082 (1 bytes)
+	// unsigned long fKillable;
+	// offset: 0083 (1 bytes)
+	// unsigned long fActive;
+	// offset: 0084 (1 bytes)
+	// unsigned long fXtraStack;
 };
 
 // size: 0x2
@@ -3920,6 +3934,36 @@ struct ItemStruct {
 
 // size: 0xC
 struct FRAME_HDR {
+	// offset: 0000 (32 bytes)
+	// unsigned int FrOffset;
+	// offset: 0020 (8 bytes)
+	// int X;
+	// offset: 0028 (8 bytes)
+	// int Y;
+	// offset: 0030 (8 bytes)
+	// unsigned int PalNum;
+	// offset: 0038 (1 bytes)
+	// unsigned int NotTrans;
+	// offset: 0039 (1 bytes)
+	// unsigned int Rotated;
+	// offset: 003A (1 bytes)
+	// unsigned int InVRAM;
+	// offset: 003B (2 bytes)
+	// unsigned int CompType;
+	// offset: 003D (1 bytes)
+	// unsigned int Floor;
+	// offset: 003E (1 bytes)
+	// unsigned int Cycle;
+	// offset: 003F (1 bytes)
+	// unsigned int pad;
+	// offset: 0040 (9 bytes)
+	// unsigned int W;
+	// offset: 0049 (9 bytes)
+	// unsigned int H;
+	// offset: 0052 (1 bytes)
+	// unsigned int PentaGram;
+	// offset: 0053 (13 bytes)
+	// unsigned int pad2;
 };
 
 // size: 0x4
@@ -3971,10 +4015,20 @@ struct CBlockHdr {
 struct PAL {
 	// offset: 0004 (2 bytes)
 	unsigned short Cols[1];
+	// offset: 0000 (1 bytes)
+	// unsigned int InVram;
+	// offset: 0001 (31 bytes)
+	// unsigned int NumOfCols;
 };
 
 // size: 0x4
 struct PAL_INVRAM {
+	// offset: 0000 (1 bytes)
+	// unsigned int InVram;
+	// offset: 0001 (15 bytes)
+	// unsigned int Pad;
+	// offset: 0010 (16 bytes)
+	// unsigned int clut;
 };
 
 // size: 0x8
@@ -3995,10 +4049,44 @@ struct ALL_DECOMP_BUFFERS {
 
 // size: 0x28
 struct SPR_HDR {
+	// offset: 0000 (32 bytes)
+	// unsigned int DecompOffset;
+	// offset: 0020 (32 bytes)
+	// unsigned int CreatureOffset;
+	// offset: 0040 (32 bytes)
+	// unsigned int PalOffset;
+	// offset: 0060 (32 bytes)
+	// unsigned int FrameOffset;
+	// offset: 0080 (32 bytes)
+	// unsigned int BaseFrame;
+	// offset: 00A0 (32 bytes)
+	// unsigned int DestTPage;
+	// offset: 00C0 (32 bytes)
+	// unsigned int ComponentOffset;
+	// offset: 00E0 (32 bytes)
+	// unsigned int NumOfCreatures;
+	// offset: 0100 (16 bytes)
+	// unsigned int NumOfFrames;
+	// offset: 0110 (16 bytes)
+	// unsigned int NumOfPals;
+	// offset: 0120 (8 bytes)
+	// unsigned int TWidth;
+	// offset: 0128 (8 bytes)
+	// unsigned int THeight;
+	// offset: 0130 (8 bytes)
+	// unsigned int IsTiles;
+	// offset: 0138 (8 bytes)
+	// unsigned int Spare;
 };
 
 // size: 0x4
 struct TP_LOAD_HDR {
+	// offset: 0000 (8 bytes)
+	// unsigned int U;
+	// offset: 0008 (8 bytes)
+	// unsigned int V;
+	// offset: 0010 (16 bytes)
+	// unsigned int tpage;
 };
 
 // size: 0x4
@@ -5722,6 +5810,22 @@ struct shapetbl {
 	short centery;
 	// offset: 0010
 	char data;
+	// offset: 0000 (8 bytes)
+	// unsigned int type;
+	// offset: 0008 (24 bytes)
+	// int next;
+	// offset: 0060 (12 bytes)
+	// int shapex;
+	// offset: 006C (2 bytes)
+	// int reserved;
+	// offset: 006E (1 bytes)
+	// int transposed;
+	// offset: 006F (1 bytes)
+	// int rotated;
+	// offset: 0070 (12 bytes)
+	// int shapey;
+	// offset: 007C (4 bytes)
+	// int mipmaps;
 };
 
 // size: 0x9C
@@ -5856,6 +5960,18 @@ struct FONTFILE {
 	char filesize[4];
 	// offset: 001C
 	long shape;
+	// offset: 0080 (16 bytes)
+	// int palette;
+	// offset: 0090 (16 bytes)
+	// int width;
+	// offset: 00A0 (16 bytes)
+	// int height;
+	// offset: 00B0 (16 bytes)
+	// int xinc;
+	// offset: 00C0 (16 bytes)
+	// int xoffset;
+	// offset: 00D0 (16 bytes)
+	// int yoffset;
 };
 
 // size: 0x1E8
@@ -5968,6 +6084,30 @@ struct graphicsmodeinfostruct {
 	int bpp;
 	// offset: 000C
 	int shapetype;
+	// offset: 0080 (1 bytes)
+	// int banked;
+	// offset: 0081 (1 bytes)
+	// int pagedbanks;
+	// offset: 0082 (1 bytes)
+	// int modex;
+	// offset: 0083 (1 bytes)
+	// int pageflip;
+	// offset: 0084 (1 bytes)
+	// int zbuffer;
+	// offset: 0085 (1 bytes)
+	// int hwdram;
+	// offset: 0086 (1 bytes)
+	// int hwblit;
+	// offset: 0087 (1 bytes)
+	// int hwfill;
+	// offset: 0088 (1 bytes)
+	// int hwscale;
+	// offset: 0089 (1 bytes)
+	// int hwtmask;
+	// offset: 008A (1 bytes)
+	// int hwtexture;
+	// offset: 008B (1 bytes)
+	// int hwvbl;
 };
 
 // size: 0x8
@@ -6894,10 +7034,48 @@ struct PcPkPlayerStruct {
 	unsigned char Pad[24];
 	// offset: 04D4
 	char DeadLevel;
+	// offset: 01A8 (32 bytes)
+	// int pExperience;
+	// offset: 01C8 (32 bytes)
+	// int pGold;
+	// offset: 01E8 (32 bytes)
+	// int pHPBase;
+	// offset: 0208 (32 bytes)
+	// int pMaxHPBase;
+	// offset: 0228 (32 bytes)
+	// int pManaBase;
+	// offset: 0248 (32 bytes)
+	// int pMaxManaBase;
+	// offset: 0390 (32 bytes)
+	// int pMemSpells;
+	// offset: 03B0 (32 bytes)
+	// int pMemSpells2;
+	// offset: 2680 (32 bytes)
+	// int pDiabloKillLevel;
 };
 
 // size: 0x14
 struct PkItemStruct {
+	// offset: 0000 (32 bytes)
+	// unsigned int dwBuff;
+	// offset: 0020 (32 bytes)
+	// int iSeed;
+	// offset: 0040 (16 bytes)
+	// unsigned int iCreateInfo;
+	// offset: 0050 (16 bytes)
+	// unsigned int idx;
+	// offset: 0060 (16 bytes)
+	// unsigned int wValue;
+	// offset: 0070 (8 bytes)
+	// unsigned int bId;
+	// offset: 0078 (8 bytes)
+	// unsigned int bDur;
+	// offset: 0080 (8 bytes)
+	// unsigned int bMDur;
+	// offset: 0088 (8 bytes)
+	// unsigned int bCh;
+	// offset: 0090 (8 bytes)
+	// unsigned int bMCh;
 };
 
 // size: 0x4F8
@@ -6984,6 +7162,12 @@ struct LOAD_IMAGE_ARGS {
 	unsigned short DestX;
 	// offset: 001A
 	unsigned short DestY;
+	// offset: 0040 (1 bytes)
+	// unsigned int UseAddr;
+	// offset: 0041 (1 bytes)
+	// unsigned int DiscardAfterDump;
+	// offset: 0042 (1 bytes)
+	// unsigned int IsMove;
 };
 
 // size: 0x1C
@@ -7686,18 +7870,34 @@ struct DeadStruct {
 
 // size: 0x4
 struct MStr {
+	// offset: 0000 (8 bytes)
+	// unsigned int Index;
+	// offset: 0008 (24 bytes)
+	// unsigned int MyMonst;
 };
 
 // size: 0x4
 struct IStr {
+	// offset: 0000 (8 bytes)
+	// unsigned int Index;
+	// offset: 0008 (24 bytes)
+	// unsigned int MyItem;
 };
 
 // size: 0x4
 struct MissStr {
+	// offset: 0000 (8 bytes)
+	// unsigned int Index;
+	// offset: 0008 (24 bytes)
+	// unsigned int MyMiss;
 };
 
 // size: 0x4
 struct OStr {
+	// offset: 0000 (8 bytes)
+	// unsigned int Index;
+	// offset: 0008 (24 bytes)
+	// unsigned int MyObject;
 };
 
 // size: 0x3
@@ -7738,6 +7938,10 @@ struct DR_LOAD2 {
 	struct RECT rect;
 	// offset: 0010 (52 bytes)
 	unsigned long p[13];
+	// offset: 0000 (24 bytes)
+	// unsigned int addr;
+	// offset: 0018 (8 bytes)
+	// unsigned int len;
 };
 
 // size: 0x10
@@ -7882,6 +8086,10 @@ struct GsF_LIGHT {
 
 // size: 0x4
 struct GsOT_TAG {
+	// offset: 0000 (24 bytes)
+	// unsigned int p;
+	// offset: 0018 (8 bytes)
+	// unsigned char num;
 };
 
 // size: 0x14
