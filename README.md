@@ -1,6 +1,6 @@
 # psx
 
-The aim of this project is to facilitate an understanding of the inner workings of the Diablo 1 game engine, as based on the debug information of the Japanese release of Diablo 1 on Playstation 1.
+The aim of this project is to facilitate an understanding of the inner workings of the Diablo 1 game engine, as based on the debug information of the Japanese release of Diablo 1 on Playstation 1 (SLPS-01416) and an early build of the European release of Diablo 1 on Playstation 1 (SLES-01156) with the code name *Easy as Pie*.
 
 ## Directory structure
 
